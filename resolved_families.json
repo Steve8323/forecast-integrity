@@ -1,0 +1,795 @@
+[
+  {
+    "family_id": "res_geo_moldova_eu",
+    "domain": "geopolitics",
+    "base_events": {
+      "PAS_MAJORITY": {
+        "text": "The Party of Action and Solidarity (PAS) wins at least 51 of the 101 seats in Moldova's parliamentary election held on 28 September 2025",
+        "resolution": "Resolves YES if the official seat allocation published by Moldova's Central Electoral Commission and validated by the Constitutional Court gives PAS 51 or more of the 101 seats in the Parliament of Moldova. Baseline: PAS won 63 seats in the July 2021 election; the main opposition is the Russia-leaning Patriotic Electoral Bloc.",
+        "source": "Central Electoral Commission of the Republic of Moldova (a.cec.md) official validated results",
+        "resolve_by": "2025-11-30",
+        "outcome": 1,
+        "verified": "Checked the final result of the 28 September 2025 election: PAS took 50.20% of the vote and 55 of 101 seats, retaining an outright single-party majority. Other blocs: Patriotic Electoral Bloc 26, Alternative 8, Our Party 6, Democracy at Home 6."
+      },
+      "EU_CLUSTER": {
+        "text": "The European Union formally opens the first negotiating cluster with Moldova at an EU-Moldova intergovernmental accession conference on or before 31 December 2025",
+        "resolution": "Resolves YES if an EU-Moldova intergovernmental conference held on or before 2025-12-31 formally opens at least one negotiating cluster (for example Cluster 1, Fundamentals), as recorded in a Council of the European Union press release. Screening reports, informal openings, Commission recommendations, and enlargement package documents do NOT count. Baseline: the European Council decided in December 2023 to open accession negotiations with Moldova; formally opening a cluster requires unanimity among the 27 member states.",
+        "source": "Council of the European Union press releases on EU-Moldova intergovernmental conferences (consilium.europa.eu)",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the accession timeline: no cluster was formally opened with Moldova during 2025. Screening of the chapters ran through 2025 and Hungary's veto (tied to Ukraine) blocked formal openings; the workaround of informal chapter openings began only on 17 March 2026, and Cluster 1 (Fundamentals) was formally opened on 15 June 2026, with Cluster 6 following on 14 July 2026."
+      }
+    },
+    "targets": [
+      {
+        "tid": "res_geo_moldova_eu.pas",
+        "kind": "unconditional",
+        "text": "Moldova elects all 101 members of its Parliament on 28 September 2025 under a single nationwide closed-list proportional system with a 5% threshold for parties. The governing pro-European Party of Action and Solidarity (PAS) won 63 seats at the previous election in 2021; its main challenger is the Russia-leaning Patriotic Electoral Bloc, and the campaign has been marked by allegations of large-scale foreign vote-buying. What is the probability that PAS wins at least 51 of the 101 seats, that is, an outright single-party majority?",
+        "expr": "PAS_MAJORITY"
+      },
+      {
+        "tid": "res_geo_moldova_eu.cluster",
+        "kind": "unconditional",
+        "text": "The European Council decided in December 2023 to open accession negotiations with Moldova, and the European Commission has since been screening Moldova's alignment with the EU acquis chapter by chapter. Formally opening a negotiating cluster requires unanimity among all 27 member states at an EU-Moldova intergovernmental conference, and Hungary has linked Moldova's progress to Ukraine's. What is the probability that the EU formally opens the first negotiating cluster with Moldova at an intergovernmental accession conference on or before 31 December 2025? Screening reports, Commission recommendations, and informal openings do not count.",
+        "expr": "EU_CLUSTER"
+      },
+      {
+        "tid": "res_geo_moldova_eu.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) the Party of Action and Solidarity (PAS) wins at least 51 of the 101 seats in Moldova's parliamentary election of 28 September 2025, an outright single-party majority (it held 63 seats going into the election); AND (2) the European Union formally opens the first negotiating cluster with Moldova at an EU-Moldova intergovernmental accession conference on or before 31 December 2025?",
+        "expr": "PAS_MAJORITY and EU_CLUSTER"
+      },
+      {
+        "tid": "res_geo_moldova_eu.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (1) the Party of Action and Solidarity (PAS) wins at least 51 of the 101 seats in Moldova's parliamentary election of 28 September 2025, an outright single-party majority; OR (2) the European Union formally opens the first negotiating cluster with Moldova at an EU-Moldova intergovernmental accession conference on or before 31 December 2025?",
+        "expr": "PAS_MAJORITY or EU_CLUSTER"
+      },
+      {
+        "tid": "res_geo_moldova_eu.cluster_g_pas",
+        "kind": "conditional",
+        "text": "Assume that the Party of Action and Solidarity (PAS) wins at least 51 of the 101 seats in Moldova's parliamentary election of 28 September 2025, an outright single-party majority. Under that assumption, what is the probability that the European Union formally opens the first negotiating cluster with Moldova at an EU-Moldova intergovernmental accession conference on or before 31 December 2025? Opening a cluster requires unanimity among the 27 member states, and Hungary has linked Moldova's progress to Ukraine's.",
+        "expr": "EU_CLUSTER",
+        "given": "PAS_MAJORITY"
+      },
+      {
+        "tid": "res_geo_moldova_eu.no_cluster",
+        "kind": "unconditional",
+        "text": "What is the probability that the European Union does NOT formally open any negotiating cluster with Moldova at an EU-Moldova intergovernmental accession conference on or before 31 December 2025, given that the European Council decided in December 2023 to open accession negotiations and that opening a cluster requires unanimity among all 27 member states?",
+        "expr": "not EU_CLUSTER"
+      }
+    ],
+    "axioms_tested": ["product_rule", "disjunction_identity", "complement", "conjunction_bound"],
+    "resolved_outcomes": {
+      "res_geo_moldova_eu.pas": 1,
+      "res_geo_moldova_eu.cluster": 0,
+      "res_geo_moldova_eu.both": 0,
+      "res_geo_moldova_eu.either": 1,
+      "res_geo_moldova_eu.cluster_g_pas": 0,
+      "res_geo_moldova_eu.no_cluster": 1
+    }
+  },
+  {
+    "family_id": "res_geo_germany_govt",
+    "domain": "geopolitics",
+    "base_events": {
+      "AFD_SECOND": {
+        "text": "Alternative for Germany (AfD) wins the second-largest number of seats of any party or parliamentary group in the Bundestag elected on 23 February 2025",
+        "resolution": "Resolves YES if the final seat allocation certified by the Federal Returning Officer for the 23 February 2025 Bundestag election gives AfD strictly more seats than every party or group other than the largest, counting CDU/CSU as a single group. Baseline: in the 2021 Bundestag election AfD finished fifth with 83 seats; the SPD led with 206 and CDU/CSU had 197.",
+        "source": "Bundeswahlleiterin (bundeswahlleiterin.de) final official result of the 2025 Bundestag election",
+        "resolve_by": "2025-03-31",
+        "outcome": 1,
+        "verified": "Checked the final 2025 Bundestag result: CDU/CSU 208 seats (28.5%), AfD 152 seats (20.8%), SPD 120 (16.4%), Greens 85 (11.6%), Die Linke 64 (8.8%), SSW 1. AfD was second both by seats and by vote share."
+      },
+      "MERZ_FIRST_BALLOT": {
+        "text": "Friedrich Merz is elected Federal Chancellor by the Bundestag on the first ballot held for that purpose, that ballot occurring on or before 31 May 2025",
+        "resolution": "Resolves YES if, at the first ballot held by the Bundestag to elect a Federal Chancellor after the 23 February 2025 election, Friedrich Merz receives the votes of a majority of the members of the Bundestag (Article 63(2) of the Basic Law), and that ballot takes place on or before 2025-05-31. Baseline: no candidate for Chancellor had ever failed to be elected on the first ballot in the history of the Federal Republic.",
+        "source": "Bundestag plenary protocol (bundestag.de) recording the chancellor election ballots",
+        "resolve_by": "2025-05-31",
+        "outcome": 0,
+        "verified": "Checked the 6 May 2025 chancellor election: Merz received 310 votes on the first ballot, short of the 316 required in the 630-seat Bundestag, the first time in German history a chancellor candidate failed at the first attempt."
+      },
+      "MERZ_CHANCELLOR": {
+        "text": "Friedrich Merz is elected Federal Chancellor by the Bundestag on or before 31 May 2025",
+        "resolution": "Resolves YES if the Bundestag elects Friedrich Merz as Federal Chancellor at any ballot held on or before 2025-05-31, as recorded in the Bundestag plenary protocol. Baseline: CDU/CSU won the 23 February 2025 election and entered coalition talks with the SPD.",
+        "source": "Bundestag plenary protocol (bundestag.de) recording the chancellor election ballots",
+        "resolve_by": "2025-05-31",
+        "outcome": 1,
+        "verified": "Checked the 6 May 2025 session: after failing with 310 votes on the first ballot, Merz was elected on a second ballot the same day with 325 votes and was sworn in immediately afterwards."
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "MERZ_FIRST_BALLOT", "b": "MERZ_CHANCELLOR"}
+    ],
+    "targets": [
+      {
+        "tid": "res_geo_germany_govt.afd2",
+        "kind": "unconditional",
+        "text": "Germany holds an early federal election on 23 February 2025 after the collapse of the traffic-light coalition. At the previous election in 2021 Alternative for Germany (AfD) finished fifth with 83 seats, behind the SPD (206) and CDU/CSU (197). What is the probability that AfD wins the second-largest number of seats of any party or parliamentary group in the newly elected Bundestag, counting CDU/CSU as a single group?",
+        "expr": "AFD_SECOND"
+      },
+      {
+        "tid": "res_geo_germany_govt.merz1",
+        "kind": "unconditional",
+        "text": "After the February 2025 German federal election, CDU/CSU leader Friedrich Merz negotiated a coalition with the SPD and was put forward for election as Federal Chancellor by the Bundestag, where a candidate needs the votes of a majority of all members (316 of 630) to be elected. No candidate for Chancellor had ever failed on the first ballot in the history of the Federal Republic. What is the probability that Friedrich Merz is elected Federal Chancellor on the FIRST ballot held for that purpose, with that ballot taking place on or before 31 May 2025?",
+        "expr": "MERZ_FIRST_BALLOT"
+      },
+      {
+        "tid": "res_geo_germany_govt.merz_any",
+        "kind": "unconditional",
+        "text": "After the February 2025 German federal election, CDU/CSU leader Friedrich Merz negotiated a coalition with the SPD and was put forward for election as Federal Chancellor by the Bundestag, where a candidate needs the votes of a majority of all members to be elected and further ballots may follow a failed one. What is the probability that Friedrich Merz is elected Federal Chancellor by the Bundestag at any ballot held on or before 31 May 2025?",
+        "expr": "MERZ_CHANCELLOR"
+      },
+      {
+        "tid": "res_geo_germany_govt.first_g_any",
+        "kind": "conditional",
+        "text": "Assume that Friedrich Merz is elected Federal Chancellor by the Bundestag at some ballot held on or before 31 May 2025. Under that assumption, what is the probability that he is elected on the FIRST ballot held for that purpose, rather than on a later one? A candidate needs the votes of a majority of all 630 members of the Bundestag to be elected.",
+        "expr": "MERZ_FIRST_BALLOT",
+        "given": "MERZ_CHANCELLOR"
+      },
+      {
+        "tid": "res_geo_germany_govt.afd2_and_merz",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) Alternative for Germany (AfD) wins the second-largest number of seats of any party or parliamentary group in the Bundestag elected on 23 February 2025, counting CDU/CSU as a single group (AfD was fifth with 83 seats in 2021); AND (2) Friedrich Merz is elected Federal Chancellor by the Bundestag at some ballot held on or before 31 May 2025?",
+        "expr": "AFD_SECOND and MERZ_CHANCELLOR"
+      },
+      {
+        "tid": "res_geo_germany_govt.any_g_first",
+        "kind": "conditional",
+        "text": "Assume that Friedrich Merz is elected Federal Chancellor by the Bundestag on the FIRST ballot held for that purpose, that ballot taking place on or before 31 May 2025. Under that assumption, what is the probability that Friedrich Merz is elected Federal Chancellor by the Bundestag at some ballot held on or before 31 May 2025?",
+        "expr": "MERZ_CHANCELLOR",
+        "given": "MERZ_FIRST_BALLOT"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound"],
+    "resolved_outcomes": {
+      "res_geo_germany_govt.afd2": 1,
+      "res_geo_germany_govt.merz1": 0,
+      "res_geo_germany_govt.merz_any": 1,
+      "res_geo_germany_govt.first_g_any": 0,
+      "res_geo_germany_govt.afd2_and_merz": 1,
+      "res_geo_germany_govt.any_g_first": null
+    }
+  },
+  {
+    "family_id": "res_macro_fed_range",
+    "domain": "macro_rates",
+    "base_events": {
+      "FF_HIGH": {
+        "text": "The upper bound of the FOMC's target range for the federal funds rate in effect on 31 December 2025 is 4.25% or higher",
+        "resolution": "Resolves YES if the upper limit of the target range for the federal funds rate stated in the most recent FOMC implementation note in effect on 2025-12-31 is 4.25% or higher. Baseline: the FOMC cut the range three times in late 2024 to 4.25-4.50% and then held it at 4.25-4.50% at every meeting through June 2025.",
+        "source": "Federal Reserve open market operations history (federalreserve.gov/monetarypolicy/openmarket.htm) and FOMC implementation notes",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the Federal Reserve's 2025 open market operations table: three 25 bp cuts, on 18 September (to 4.00-4.25%), 30 October (to 3.75-4.00%) and 11 December (to 3.50-3.75%). Upper bound on 2025-12-31 was 3.75%, so not 4.25% or higher."
+      },
+      "FF_MID": {
+        "text": "The upper bound of the FOMC's target range for the federal funds rate in effect on 31 December 2025 is at least 3.75% and below 4.25%",
+        "resolution": "Resolves YES if the upper limit of the target range for the federal funds rate stated in the most recent FOMC implementation note in effect on 2025-12-31 is greater than or equal to 3.75% and strictly less than 4.25%. Baseline: the range was 4.25-4.50% from December 2024 through June 2025.",
+        "source": "Federal Reserve open market operations history (federalreserve.gov/monetarypolicy/openmarket.htm) and FOMC implementation notes",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the Federal Reserve's 2025 open market operations table: the final 2025 change was the 11 December cut to 3.50-3.75%, so the upper bound in effect on 2025-12-31 was exactly 3.75%, which falls in this bucket."
+      },
+      "FF_LOW": {
+        "text": "The upper bound of the FOMC's target range for the federal funds rate in effect on 31 December 2025 is below 3.75%",
+        "resolution": "Resolves YES if the upper limit of the target range for the federal funds rate stated in the most recent FOMC implementation note in effect on 2025-12-31 is strictly less than 3.75%. Baseline: the range was 4.25-4.50% from December 2024 through June 2025.",
+        "source": "Federal Reserve open market operations history (federalreserve.gov/monetarypolicy/openmarket.htm) and FOMC implementation notes",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the Federal Reserve's 2025 open market operations table: the upper bound on 2025-12-31 was 3.75%, which is not strictly below 3.75%. Four or more cuts in 2025 would have been required for this bucket; only three occurred."
+      }
+    },
+    "constraints": [
+      {"type": "exclusive", "events": ["FF_HIGH", "FF_MID", "FF_LOW"]},
+      {"type": "exhaustive", "events": ["FF_HIGH", "FF_MID", "FF_LOW"]}
+    ],
+    "targets": [
+      {
+        "tid": "res_macro_fed_range.high",
+        "kind": "unconditional",
+        "text": "The Federal Open Market Committee cut its target range for the federal funds rate three times in late 2024 to 4.25-4.50% and then held it there at every meeting through June 2025 while it assessed the inflation effects of new tariffs. Four scheduled meetings remain in 2025 (July, September, October and December). What is the probability that the UPPER bound of the target range in effect on 31 December 2025 is 4.25% or higher, that is, at most two 25 basis point cuts are delivered over the rest of the year?",
+        "expr": "FF_HIGH"
+      },
+      {
+        "tid": "res_macro_fed_range.mid",
+        "kind": "unconditional",
+        "text": "The Federal Open Market Committee held its target range for the federal funds rate at 4.25-4.50% at every meeting from December 2024 through June 2025, with four scheduled meetings remaining in 2025. What is the probability that the UPPER bound of the target range in effect on 31 December 2025 is at least 3.75% but below 4.25%, that is, exactly two or three 25 basis point cuts are delivered over the rest of the year?",
+        "expr": "FF_MID"
+      },
+      {
+        "tid": "res_macro_fed_range.low",
+        "kind": "unconditional",
+        "text": "The Federal Open Market Committee held its target range for the federal funds rate at 4.25-4.50% at every meeting from December 2024 through June 2025, with four scheduled meetings remaining in 2025. What is the probability that the UPPER bound of the target range in effect on 31 December 2025 is below 3.75%, that is, cuts totalling more than 75 basis points are delivered over the rest of the year?",
+        "expr": "FF_LOW"
+      },
+      {
+        "tid": "res_macro_fed_range.mid_or_low",
+        "kind": "unconditional",
+        "text": "The Federal Open Market Committee held its target range for the federal funds rate at 4.25-4.50% from December 2024 through June 2025. What is the probability that the UPPER bound of the target range in effect on 31 December 2025 is below 4.25%, that is, the Committee delivers cuts totalling at least 25 basis points over the remainder of 2025?",
+        "expr": "FF_MID or FF_LOW"
+      },
+      {
+        "tid": "res_macro_fed_range.not_high",
+        "kind": "unconditional",
+        "text": "The Federal Open Market Committee held its target range for the federal funds rate at 4.25-4.50% from December 2024 through June 2025. What is the probability that it is NOT the case that the upper bound of the target range in effect on 31 December 2025 is 4.25% or higher?",
+        "expr": "not FF_HIGH"
+      },
+      {
+        "tid": "res_macro_fed_range.low_g_cut",
+        "kind": "conditional",
+        "text": "Assume that the Federal Open Market Committee, which held its target range for the federal funds rate at 4.25-4.50% from December 2024 through June 2025, delivers enough easing over the remainder of 2025 that the upper bound of the target range in effect on 31 December 2025 is below 4.25%. Under that assumption, what is the probability that the upper bound in effect on 31 December 2025 is below 3.75%, rather than at 3.75% or 4.00%?",
+        "expr": "FF_LOW",
+        "given": "FF_MID or FF_LOW"
+      }
+    ],
+    "axioms_tested": ["partition_sums_to_one", "complement", "disjunction_identity", "product_rule"],
+    "resolved_outcomes": {
+      "res_macro_fed_range.high": 0,
+      "res_macro_fed_range.mid": 1,
+      "res_macro_fed_range.low": 0,
+      "res_macro_fed_range.mid_or_low": 1,
+      "res_macro_fed_range.not_high": 1,
+      "res_macro_fed_range.low_g_cut": 0
+    }
+  },
+  {
+    "family_id": "res_macro_japan_boj",
+    "domain": "macro_rates",
+    "base_events": {
+      "BOJ_075": {
+        "text": "The Bank of Japan's target for the uncollateralized overnight call rate is set at 0.75% or higher at some point on or before 31 December 2025",
+        "resolution": "Resolves YES if a Bank of Japan Monetary Policy Meeting statement issued on or before 2025-12-31 sets the target for the uncollateralized overnight call rate at 0.75% or higher. Baseline: the Bank raised the target to around 0.5% in January 2025 and left it unchanged at every meeting through the first half of 2025.",
+        "source": "Bank of Japan Monetary Policy Meeting statements (boj.or.jp/en/mopo/mpmdeci/)",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the BOJ's December 2025 decision: on 19 December 2025 the Policy Board voted unanimously to raise the policy rate to 0.75%, the highest level since 1995. No hike occurred at the earlier 2025 meetings after January."
+      },
+      "BOJ_100": {
+        "text": "The Bank of Japan's target for the uncollateralized overnight call rate is set at 1.00% or higher at some point on or before 31 December 2025",
+        "resolution": "Resolves YES if a Bank of Japan Monetary Policy Meeting statement issued on or before 2025-12-31 sets the target for the uncollateralized overnight call rate at 1.00% or higher. Baseline: the Bank raised the target to around 0.5% in January 2025 and left it unchanged at every meeting through the first half of 2025.",
+        "source": "Bank of Japan Monetary Policy Meeting statements (boj.or.jp/en/mopo/mpmdeci/)",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the BOJ's 2025 decisions: the only hike after January 2025 was the 19 December 2025 move to 0.75%. The rate never reached 1.00% during 2025."
+      },
+      "TAKAICHI_PM": {
+        "text": "Sanae Takaichi is designated Prime Minister of Japan by the National Diet on or before 31 December 2025",
+        "resolution": "Resolves YES if both houses of the National Diet (or the House of Representatives under Article 67 of the Constitution) designate Sanae Takaichi as Prime Minister on or before 2025-12-31 and she is appointed. Baseline: the Liberal Democratic Party lost its upper house majority in the July 2025 election and Prime Minister Shigeru Ishiba came under heavy pressure to step down; Takaichi lost the September 2024 LDP leadership run-off to Ishiba.",
+        "source": "Prime Minister's Office of Japan (japan.kantei.go.jp) announcements of the designation and appointment of the Prime Minister",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the Prime Minister's Office record: on the afternoon of 21 October 2025 a vote to designate the Prime Minister was held in both the House of Representatives and the House of Councillors and Sanae Takaichi was designated, becoming Japan's first female Prime Minister."
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "BOJ_100", "b": "BOJ_075"}
+    ],
+    "targets": [
+      {
+        "tid": "res_macro_japan_boj.boj075",
+        "kind": "unconditional",
+        "text": "The Bank of Japan ended negative interest rates in March 2024 and raised its target for the uncollateralized overnight call rate to around 0.5% in January 2025, then left it unchanged at every Monetary Policy Meeting through the first half of 2025 while it assessed the effect of US tariffs on the Japanese economy. What is the probability that the Bank sets the target at 0.75% or higher at some point on or before 31 December 2025?",
+        "expr": "BOJ_075"
+      },
+      {
+        "tid": "res_macro_japan_boj.boj100",
+        "kind": "unconditional",
+        "text": "The Bank of Japan raised its target for the uncollateralized overnight call rate to around 0.5% in January 2025 and left it unchanged at every Monetary Policy Meeting through the first half of 2025. What is the probability that the Bank sets the target at 1.00% or higher at some point on or before 31 December 2025?",
+        "expr": "BOJ_100"
+      },
+      {
+        "tid": "res_macro_japan_boj.takaichi",
+        "kind": "unconditional",
+        "text": "Japan's ruling Liberal Democratic Party lost its majority in the House of Councillors at the July 2025 election, leaving Prime Minister Shigeru Ishiba under heavy pressure to resign. Sanae Takaichi, a fiscal expansionist who has criticised rapid monetary tightening, lost the September 2024 LDP leadership run-off to Ishiba. What is the probability that Sanae Takaichi is designated Prime Minister of Japan by the National Diet on or before 31 December 2025?",
+        "expr": "TAKAICHI_PM"
+      },
+      {
+        "tid": "res_macro_japan_boj.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) the Bank of Japan sets its target for the uncollateralized overnight call rate at 0.75% or higher at some point on or before 31 December 2025 (the target has been around 0.5% since January 2025); AND (2) Sanae Takaichi is designated Prime Minister of Japan by the National Diet on or before 31 December 2025?",
+        "expr": "BOJ_075 and TAKAICHI_PM"
+      },
+      {
+        "tid": "res_macro_japan_boj.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (1) the Bank of Japan sets its target for the uncollateralized overnight call rate at 0.75% or higher at some point on or before 31 December 2025 (the target has been around 0.5% since January 2025); OR (2) Sanae Takaichi is designated Prime Minister of Japan by the National Diet on or before 31 December 2025?",
+        "expr": "BOJ_075 or TAKAICHI_PM"
+      },
+      {
+        "tid": "res_macro_japan_boj.boj100_g_075",
+        "kind": "conditional",
+        "text": "Assume that the Bank of Japan, whose target for the uncollateralized overnight call rate has been around 0.5% since January 2025, sets that target at 0.75% or higher at some point on or before 31 December 2025. Under that assumption, what is the probability that it sets the target at 1.00% or higher at some point on or before 31 December 2025?",
+        "expr": "BOJ_100",
+        "given": "BOJ_075"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "disjunction_identity", "conjunction_bound"],
+    "resolved_outcomes": {
+      "res_macro_japan_boj.boj075": 1,
+      "res_macro_japan_boj.boj100": 0,
+      "res_macro_japan_boj.takaichi": 1,
+      "res_macro_japan_boj.both": 1,
+      "res_macro_japan_boj.either": 1,
+      "res_macro_japan_boj.boj100_g_075": 0
+    }
+  },
+  {
+    "family_id": "res_energy_oil_hormuz",
+    "domain": "energy",
+    "base_events": {
+      "WTI_60": {
+        "text": "The front-month NYMEX West Texas Intermediate light sweet crude oil futures contract settles below US$60.00 per barrel on at least one trading day in calendar year 2025",
+        "resolution": "Resolves YES if the official CME settlement price of the front-month NYMEX WTI (CL) contract is strictly below US$60.00 per barrel on at least one trading day between 2025-01-01 and 2025-12-31. Baseline: front-month WTI settled around US$71 per barrel at the end of 2024, and the eight OPEC+ countries holding voluntary cuts have signalled they will begin unwinding them during 2025.",
+        "source": "CME Group daily settlement prices for NYMEX WTI crude oil futures (cmegroup.com), corroborated by EIA Cushing WTI spot price series",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked 2025 price action: WTI settled at US$57.13 per barrel on 5 May 2025, a four-year low, after OPEC+ accelerated supply increases, and fell below US$55 again in mid-December 2025. Multiple settlements below US$60 (US$59.58, US$58.29, US$57.13) were reported during 2025."
+      },
+      "WTI_50": {
+        "text": "The front-month NYMEX West Texas Intermediate light sweet crude oil futures contract settles below US$50.00 per barrel on at least one trading day in calendar year 2025",
+        "resolution": "Resolves YES if the official CME settlement price of the front-month NYMEX WTI (CL) contract is strictly below US$50.00 per barrel on at least one trading day between 2025-01-01 and 2025-12-31. Baseline: front-month WTI settled around US$71 per barrel at the end of 2024.",
+        "source": "CME Group daily settlement prices for NYMEX WTI crude oil futures (cmegroup.com), corroborated by EIA Cushing WTI spot price series",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the 2025 lows: the deepest reported levels were the 5 May 2025 four-year low around US$55-57 and a mid-December 2025 dip just below US$55. No source reports any 2025 settlement below US$50; the annual decline was about 20%, the sharpest since 2020, with the annual average under US$70."
+      },
+      "HORMUZ_CLOSED": {
+        "text": "The Strait of Hormuz is closed to commercial shipping for 72 or more consecutive hours at any point in calendar year 2025",
+        "resolution": "Resolves YES if commercial transits of the Strait of Hormuz are suspended for 72 or more consecutive hours at any point between 2025-01-01 and 2025-12-31, as reported by Lloyd's List Intelligence, the Joint Maritime Information Center, or the US Navy's Fifth Fleet. Harassment, seizures of individual vessels, GPS jamming, or elevated war-risk premiums do NOT count.",
+        "source": "Lloyd's List Intelligence transit data and Joint Maritime Information Center (JMIC) advisories",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the June 2025 Israel-Iran war and the US strikes on Iranian nuclear sites: Iran's parliament voted on 22 June 2025 to authorise closing the strait, but the Supreme National Security Council never ordered it and tanker traffic continued throughout. No closure of any duration occurred in 2025."
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "WTI_50", "b": "WTI_60"}
+    ],
+    "targets": [
+      {
+        "tid": "res_energy_oil_hormuz.wti60",
+        "kind": "unconditional",
+        "text": "Front-month NYMEX West Texas Intermediate crude oil futures settled around US$71 per barrel at the end of 2024. The eight OPEC+ countries holding voluntary production cuts have signalled that they will begin unwinding those cuts during 2025, while forecasters expect non-OPEC supply growth to exceed demand growth. What is the probability that the front-month WTI contract settles below US$60.00 per barrel on at least one trading day during calendar year 2025?",
+        "expr": "WTI_60"
+      },
+      {
+        "tid": "res_energy_oil_hormuz.wti50",
+        "kind": "unconditional",
+        "text": "Front-month NYMEX West Texas Intermediate crude oil futures settled around US$71 per barrel at the end of 2024, and the eight OPEC+ countries holding voluntary production cuts have signalled that they will begin unwinding those cuts during 2025. What is the probability that the front-month WTI contract settles below US$50.00 per barrel on at least one trading day during calendar year 2025?",
+        "expr": "WTI_50"
+      },
+      {
+        "tid": "res_energy_oil_hormuz.hormuz",
+        "kind": "unconditional",
+        "text": "About a fifth of global oil consumption transits the Strait of Hormuz, and Iranian officials have repeatedly threatened to close it during periods of confrontation with the United States and Israel. What is the probability that commercial transits of the Strait of Hormuz are suspended for 72 or more consecutive hours at any point during calendar year 2025, as reported by Lloyd's List Intelligence, the Joint Maritime Information Center, or the US Fifth Fleet? Harassment of shipping, seizures of individual vessels, GPS jamming, and higher war-risk premiums do not count.",
+        "expr": "HORMUZ_CLOSED"
+      },
+      {
+        "tid": "res_energy_oil_hormuz.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen during calendar year 2025: (1) the front-month NYMEX West Texas Intermediate crude oil futures contract settles below US$60.00 per barrel on at least one trading day (it settled around US$71 at the end of 2024); AND (2) commercial transits of the Strait of Hormuz are suspended for 72 or more consecutive hours at some point?",
+        "expr": "WTI_60 and HORMUZ_CLOSED"
+      },
+      {
+        "tid": "res_energy_oil_hormuz.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens during calendar year 2025: (1) the front-month NYMEX West Texas Intermediate crude oil futures contract settles below US$60.00 per barrel on at least one trading day (it settled around US$71 at the end of 2024); OR (2) commercial transits of the Strait of Hormuz are suspended for 72 or more consecutive hours at some point?",
+        "expr": "WTI_60 or HORMUZ_CLOSED"
+      },
+      {
+        "tid": "res_energy_oil_hormuz.wti50_g_wti60",
+        "kind": "conditional",
+        "text": "Assume that the front-month NYMEX West Texas Intermediate crude oil futures contract settles below US$60.00 per barrel on at least one trading day during calendar year 2025 (it settled around US$71 at the end of 2024). Under that assumption, what is the probability that it also settles below US$50.00 per barrel on at least one trading day during 2025?",
+        "expr": "WTI_50",
+        "given": "WTI_60"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "disjunction_identity", "conjunction_bound"],
+    "resolved_outcomes": {
+      "res_energy_oil_hormuz.wti60": 1,
+      "res_energy_oil_hormuz.wti50": 0,
+      "res_energy_oil_hormuz.hormuz": 0,
+      "res_energy_oil_hormuz.both": 0,
+      "res_energy_oil_hormuz.either": 1,
+      "res_energy_oil_hormuz.wti50_g_wti60": 0
+    }
+  },
+  {
+    "family_id": "res_energy_us_nuclear",
+    "domain": "energy",
+    "base_events": {
+      "PAL_AUTH": {
+        "text": "The US Nuclear Regulatory Commission approves the licensing actions returning the Palisades Nuclear Plant to operational status, authorizing fuel load and power operation, on or before 31 December 2025",
+        "resolution": "Resolves YES if the NRC issues the licence amendments and approvals that move Palisades from decommissioning status back to an operating licence permitting fuel load and power operation, on or before 2025-12-31, as recorded in NRC correspondence or a public NRC announcement. Baseline: Palisades shut down in May 2022 and entered decommissioning; Holtec applied to reauthorize power operations and received a US Department of Energy loan guarantee of about US$1.5 billion in 2024. No US reactor had ever been restarted after entering decommissioning.",
+        "source": "US Nuclear Regulatory Commission docket and public announcements for the Palisades Nuclear Plant (nrc.gov)",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the NRC actions: on 24 July 2025 the NRC approved Holtec's licensing package to reauthorize power operations, allowing new fuel to be received and loaded into the reactor, and on 25 August 2025 Palisades formally transitioned from decommissioning status to operations status, the first such transition in US history."
+      },
+      "PAL_GRID": {
+        "text": "The Palisades Nuclear Plant delivers electricity to the grid on or before 31 December 2025",
+        "resolution": "Resolves YES if Holtec International, the NRC, or MISO publicly confirms that the Palisades reactor has been synchronized to the grid or has begun generating electricity on or before 2025-12-31. Baseline: Palisades shut down in May 2022; Holtec's publicly stated goal has been to have the roughly 800 MW plant running during 2025.",
+        "source": "Holtec International press releases (holtecinternational.com) and NRC reactor status reports",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the restart schedule: after fuel load authorization in July 2025 and the return to operations status in August 2025, Holtec pushed the restart past the end of 2025. Trade press reported the restart delayed to early 2026, with grid synchronization targeted for late February 2026. No generation occurred in 2025."
+      },
+      "VOGTLE4": {
+        "text": "Vogtle Unit 4 enters commercial operation on or before 31 December 2025",
+        "resolution": "Resolves YES if Georgia Power or Southern Company announces that Unit 4 of the Alvin W. Vogtle Electric Generating Plant has entered commercial operation on or before 2025-12-31. Baseline: Vogtle Unit 3 entered commercial operation in July 2023 after years of delay and large cost overruns; Unit 4 loaded fuel in August 2023 and reached initial criticality in February 2024.",
+        "source": "Georgia Power and Southern Company press releases (georgiapower.com, southerncompany.com)",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the Georgia Power announcement: Vogtle Unit 4, a 1,114 MW AP1000, was declared to have entered commercial operation on 29 April 2024, confirmed in parallel releases from Southern Nuclear, MEAG Power, Dalton Utilities and Westinghouse."
+      }
+    },
+    "targets": [
+      {
+        "tid": "res_energy_us_nuclear.pal_auth",
+        "kind": "unconditional",
+        "text": "The 800 MW Palisades Nuclear Plant in Michigan shut down in May 2022 and entered decommissioning. Its owner Holtec International has applied to the US Nuclear Regulatory Commission to reauthorize power operations, backed by a US Department of Energy loan guarantee of about US$1.5 billion; no US reactor has ever been restarted after entering decommissioning. What is the probability that the NRC approves the licensing actions returning Palisades to operational status, authorizing fuel load and power operation, on or before 31 December 2025?",
+        "expr": "PAL_AUTH"
+      },
+      {
+        "tid": "res_energy_us_nuclear.pal_grid",
+        "kind": "unconditional",
+        "text": "The 800 MW Palisades Nuclear Plant in Michigan shut down in May 2022 and entered decommissioning; its owner Holtec International is seeking to restart it with federal loan support and has stated a goal of having the plant running during 2025. What is the probability that Palisades delivers electricity to the grid on or before 31 December 2025, as confirmed by Holtec, the NRC, or MISO?",
+        "expr": "PAL_GRID"
+      },
+      {
+        "tid": "res_energy_us_nuclear.vogtle4",
+        "kind": "unconditional",
+        "text": "Unit 4 of the Alvin W. Vogtle Electric Generating Plant in Georgia is the second of two AP1000 reactors built at the site. Unit 3 entered commercial operation in July 2023 after years of delay and large cost overruns; Unit 4 loaded fuel in August 2023 and reached initial criticality in February 2024. What is the probability that Georgia Power announces that Vogtle Unit 4 has entered commercial operation on or before 31 December 2025?",
+        "expr": "VOGTLE4"
+      },
+      {
+        "tid": "res_energy_us_nuclear.both_pal",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen on or before 31 December 2025 for the Palisades Nuclear Plant in Michigan, which shut down in May 2022 and entered decommissioning: (1) the US Nuclear Regulatory Commission approves the licensing actions returning the plant to operational status, authorizing fuel load and power operation; AND (2) the plant delivers electricity to the grid?",
+        "expr": "PAL_AUTH and PAL_GRID"
+      },
+      {
+        "tid": "res_energy_us_nuclear.either_pal",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens on or before 31 December 2025 for the Palisades Nuclear Plant in Michigan, which shut down in May 2022 and entered decommissioning: (1) the US Nuclear Regulatory Commission approves the licensing actions returning the plant to operational status, authorizing fuel load and power operation; OR (2) the plant delivers electricity to the grid?",
+        "expr": "PAL_AUTH or PAL_GRID"
+      },
+      {
+        "tid": "res_energy_us_nuclear.grid_g_auth",
+        "kind": "conditional",
+        "text": "Assume that the US Nuclear Regulatory Commission approves, on or before 31 December 2025, the licensing actions returning the Palisades Nuclear Plant in Michigan to operational status, authorizing fuel load and power operation. Under that assumption, what is the probability that Palisades also delivers electricity to the grid on or before 31 December 2025? The plant shut down in May 2022 and has been in decommissioning since.",
+        "expr": "PAL_GRID",
+        "given": "PAL_AUTH"
+      }
+    ],
+    "axioms_tested": ["product_rule", "disjunction_identity", "conjunction_bound"],
+    "resolved_outcomes": {
+      "res_energy_us_nuclear.pal_auth": 1,
+      "res_energy_us_nuclear.pal_grid": 0,
+      "res_energy_us_nuclear.vogtle4": 1,
+      "res_energy_us_nuclear.both_pal": 0,
+      "res_energy_us_nuclear.either_pal": 1,
+      "res_energy_us_nuclear.grid_g_auth": 0
+    }
+  },
+  {
+    "family_id": "res_semis_nvidia_scale",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "NV_5T": {
+        "text": "Nvidia's market capitalization reaches US$5 trillion at any point during calendar year 2025",
+        "resolution": "Resolves YES if Nvidia Corporation's market capitalization, computed from its common stock price and shares outstanding, reaches or exceeds US$5.0 trillion at any point between 2025-01-01 and 2025-12-31, as reported by a major financial data provider or wire service. Baseline: Nvidia first closed above a US$4 trillion market capitalization in July 2025.",
+        "source": "Major financial wire coverage of Nvidia's market capitalization (Reuters, AP) and exchange closing prices",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the milestone: on 29 October 2025 Nvidia became the first company in history to top a US$5 trillion valuation, opening above that level and closing at about US$5.03 trillion, the highest-valued company in the S&P 500."
+      },
+      "NV_Q3_55": {
+        "text": "Nvidia reports total revenue of US$55.0 billion or more for its fiscal third quarter of 2026, the quarter ending 26 October 2025",
+        "resolution": "Resolves YES if the total revenue figure in Nvidia's fiscal Q3 2026 earnings press release is US$55.0 billion or more. Baseline: Nvidia reported fiscal Q2 2026 revenue of US$46.7 billion for the quarter ended 27 July 2025 and guided fiscal Q3 2026 revenue to US$54.0 billion plus or minus 2%, assuming no H20 data center compute revenue from China.",
+        "source": "Nvidia Corporation fiscal Q3 2026 earnings press release (nvidianews.nvidia.com) and Form 8-K",
+        "resolve_by": "2025-12-15",
+        "outcome": 1,
+        "verified": "Checked the earnings release of 19 November 2025: Nvidia reported record revenue of US$57.0 billion for the quarter ending 26 October 2025, up 22% sequentially and 62% year over year, with record Data Center revenue of US$51.2 billion."
+      },
+      "NV_Q3_60": {
+        "text": "Nvidia reports total revenue of US$60.0 billion or more for its fiscal third quarter of 2026, the quarter ending 26 October 2025",
+        "resolution": "Resolves YES if the total revenue figure in Nvidia's fiscal Q3 2026 earnings press release is US$60.0 billion or more. Baseline: Nvidia reported fiscal Q2 2026 revenue of US$46.7 billion and guided fiscal Q3 2026 revenue to US$54.0 billion plus or minus 2%.",
+        "source": "Nvidia Corporation fiscal Q3 2026 earnings press release (nvidianews.nvidia.com) and Form 8-K",
+        "resolve_by": "2025-12-15",
+        "outcome": 0,
+        "verified": "Checked the earnings release of 19 November 2025: reported revenue was US$57.0 billion, above the US$55 billion threshold but below US$60 billion. Guidance for the following quarter was US$65.0 billion plus or minus 2%."
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "NV_Q3_60", "b": "NV_Q3_55"}
+    ],
+    "targets": [
+      {
+        "tid": "res_semis_nvidia_scale.mcap5t",
+        "kind": "unconditional",
+        "text": "Nvidia became the first company to close above a US$4 trillion market capitalization in July 2025, driven by demand for its AI accelerators. What is the probability that Nvidia's market capitalization reaches US$5 trillion at any point during calendar year 2025?",
+        "expr": "NV_5T"
+      },
+      {
+        "tid": "res_semis_nvidia_scale.q3_55",
+        "kind": "unconditional",
+        "text": "Nvidia reported fiscal second quarter 2026 revenue of US$46.7 billion for the quarter ended 27 July 2025 and guided fiscal third quarter 2026 revenue to US$54.0 billion plus or minus 2%, assuming no H20 data center compute revenue from China. What is the probability that Nvidia's fiscal third quarter 2026 earnings press release, for the quarter ending 26 October 2025, reports total revenue of US$55.0 billion or more?",
+        "expr": "NV_Q3_55"
+      },
+      {
+        "tid": "res_semis_nvidia_scale.q3_60",
+        "kind": "unconditional",
+        "text": "Nvidia reported fiscal second quarter 2026 revenue of US$46.7 billion for the quarter ended 27 July 2025 and guided fiscal third quarter 2026 revenue to US$54.0 billion plus or minus 2%. What is the probability that Nvidia's fiscal third quarter 2026 earnings press release, for the quarter ending 26 October 2025, reports total revenue of US$60.0 billion or more?",
+        "expr": "NV_Q3_60"
+      },
+      {
+        "tid": "res_semis_nvidia_scale.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) Nvidia reports total revenue of US$55.0 billion or more for its fiscal third quarter of 2026, the quarter ending 26 October 2025, versus US$46.7 billion in the prior quarter and guidance of US$54.0 billion plus or minus 2%; AND (2) Nvidia's market capitalization reaches US$5 trillion at some point during calendar year 2025, having first closed above US$4 trillion in July 2025?",
+        "expr": "NV_Q3_55 and NV_5T"
+      },
+      {
+        "tid": "res_semis_nvidia_scale.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (1) Nvidia reports total revenue of US$55.0 billion or more for its fiscal third quarter of 2026, the quarter ending 26 October 2025, versus US$46.7 billion in the prior quarter and guidance of US$54.0 billion plus or minus 2%; OR (2) Nvidia's market capitalization reaches US$5 trillion at some point during calendar year 2025, having first closed above US$4 trillion in July 2025?",
+        "expr": "NV_Q3_55 or NV_5T"
+      },
+      {
+        "tid": "res_semis_nvidia_scale.q60_g_q55",
+        "kind": "conditional",
+        "text": "Assume that Nvidia reports total revenue of US$55.0 billion or more for its fiscal third quarter of 2026, the quarter ending 26 October 2025 (it reported US$46.7 billion in the prior quarter and guided to US$54.0 billion plus or minus 2%). Under that assumption, what is the probability that the reported total revenue is US$60.0 billion or more?",
+        "expr": "NV_Q3_60",
+        "given": "NV_Q3_55"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "disjunction_identity", "conjunction_bound"],
+    "resolved_outcomes": {
+      "res_semis_nvidia_scale.mcap5t": 1,
+      "res_semis_nvidia_scale.q3_55": 1,
+      "res_semis_nvidia_scale.q3_60": 0,
+      "res_semis_nvidia_scale.both": 1,
+      "res_semis_nvidia_scale.either": 1,
+      "res_semis_nvidia_scale.q60_g_q55": 0
+    }
+  },
+  {
+    "family_id": "res_semis_intel_rescue",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "US_STAKE": {
+        "text": "The United States federal government acquires an equity stake of 5% or more in Intel Corporation during calendar year 2025",
+        "resolution": "Resolves YES if, between 2025-01-01 and 2025-12-31, the US federal government (through the Department of Commerce or another federal instrumentality) completes the purchase or receipt of common equity in Intel Corporation amounting to 5% or more of the outstanding shares, as disclosed in an Intel press release, Form 8-K, or SEC beneficial ownership filing. Loans, grants, and CHIPS Act awards without an equity component do NOT count. Baseline: Intel was awarded up to US$7.86 billion in direct CHIPS Act funding in November 2024, structured as grants rather than equity.",
+        "source": "Intel Corporation press releases and SEC filings (intc.com, SEC EDGAR CIK 50863)",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the August 2025 transaction: the federal government purchased 433.3 million Intel shares at US$20.47 per share for a 9.9% passive stake, with no board seat, plus a five-year warrant for a further 5% if Intel's ownership of its foundry business falls below 51%."
+      },
+      "NV_INTC": {
+        "text": "Nvidia announces an equity investment of US$5 billion or more in Intel Corporation during calendar year 2025",
+        "resolution": "Resolves YES if Nvidia Corporation or Intel Corporation announces, between 2025-01-01 and 2025-12-31, an agreement under which Nvidia purchases US$5.0 billion or more of Intel common stock. Commercial supply agreements, foundry orders, and joint development deals without an equity purchase do NOT count. Baseline: as of mid-2025 Nvidia held no equity stake in Intel and the two companies were direct competitors in data center compute.",
+        "source": "Nvidia and Intel press releases (nvidianews.nvidia.com, intc.com) and the corresponding Forms 8-K",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the September 2025 announcement: Nvidia agreed to invest US$5 billion in Intel common stock as part of a partnership to co-develop data center and PC products, letting Nvidia pair its Blackwell-based systems with Intel x86 CPUs."
+      },
+      "INTC_Q3_14": {
+        "text": "Intel reports third-quarter 2025 revenue of US$14.0 billion or more",
+        "resolution": "Resolves YES if the consolidated net revenue figure for the third quarter of 2025 in Intel Corporation's Q3 2025 earnings press release is US$14.0 billion or more. Baseline: Intel reported second-quarter 2025 revenue of US$12.9 billion and guided third-quarter 2025 revenue to US$12.6-13.6 billion; full-year 2024 revenue was US$53.1 billion.",
+        "source": "Intel Corporation third-quarter 2025 earnings press release (intc.com) and Form 8-K",
+        "resolve_by": "2025-11-15",
+        "outcome": 0,
+        "verified": "Checked Intel's Q3 2025 report of 23 October 2025: revenue was about US$13.7 billion, above the top of guidance but below US$14.0 billion. Cross-checked against the full-year figure: Intel reported full-year 2025 revenue of US$52.9 billion with Q4 2025 revenue of US$13.7 billion, and Q1/Q2 2025 of US$12.7 billion and US$12.9 billion, leaving about US$13.6-13.7 billion for Q3."
+      }
+    },
+    "targets": [
+      {
+        "tid": "res_semis_intel_rescue.us_stake",
+        "kind": "unconditional",
+        "text": "Intel was awarded up to US$7.86 billion in direct CHIPS Act funding in November 2024, structured as grants rather than equity, and has since come under intense political scrutiny over the future of its US foundry business. What is the probability that the United States federal government acquires an equity stake of 5% or more in Intel Corporation during calendar year 2025? Loans, grants, and CHIPS Act awards without an equity component do not count.",
+        "expr": "US_STAKE"
+      },
+      {
+        "tid": "res_semis_intel_rescue.q3rev",
+        "kind": "unconditional",
+        "text": "Intel reported second-quarter 2025 revenue of US$12.9 billion and guided third-quarter 2025 revenue to US$12.6-13.6 billion; its full-year 2024 revenue was US$53.1 billion. What is the probability that Intel's third-quarter 2025 earnings press release reports consolidated revenue of US$14.0 billion or more?",
+        "expr": "INTC_Q3_14"
+      },
+      {
+        "tid": "res_semis_intel_rescue.nv_inv",
+        "kind": "unconditional",
+        "text": "Nvidia and Intel are direct competitors in data center compute, and as of mid-2025 Nvidia held no equity stake in Intel. What is the probability that Nvidia announces an equity investment of US$5 billion or more in Intel Corporation during calendar year 2025? Commercial supply agreements, foundry orders, and joint development deals without an equity purchase do not count.",
+        "expr": "NV_INTC"
+      },
+      {
+        "tid": "res_semis_intel_rescue.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) the United States federal government acquires an equity stake of 5% or more in Intel Corporation during calendar year 2025 (its November 2024 CHIPS Act award of up to US$7.86 billion was structured as grants, not equity); AND (2) Intel reports third-quarter 2025 revenue of US$14.0 billion or more, versus US$12.9 billion in the second quarter of 2025 and guidance of US$12.6-13.6 billion?",
+        "expr": "US_STAKE and INTC_Q3_14"
+      },
+      {
+        "tid": "res_semis_intel_rescue.rev_g_stake",
+        "kind": "conditional",
+        "text": "Assume that the United States federal government acquires an equity stake of 5% or more in Intel Corporation during calendar year 2025. Under that assumption, what is the probability that Intel reports third-quarter 2025 revenue of US$14.0 billion or more? For reference, Intel reported US$12.9 billion of revenue in the second quarter of 2025 and guided the third quarter to US$12.6-13.6 billion.",
+        "expr": "INTC_Q3_14",
+        "given": "US_STAKE"
+      },
+      {
+        "tid": "res_semis_intel_rescue.nv_g_rev",
+        "kind": "conditional",
+        "text": "Assume that Intel reports third-quarter 2025 revenue of US$14.0 billion or more, versus US$12.9 billion in the second quarter of 2025 and guidance of US$12.6-13.6 billion. Under that assumption, what is the probability that Nvidia announces an equity investment of US$5 billion or more in Intel Corporation during calendar year 2025? As of mid-2025 Nvidia held no equity stake in Intel and the two were direct competitors in data center compute.",
+        "expr": "NV_INTC",
+        "given": "INTC_Q3_14"
+      }
+    ],
+    "axioms_tested": ["product_rule", "conjunction_bound", "called_off_conditional"],
+    "resolved_outcomes": {
+      "res_semis_intel_rescue.us_stake": 1,
+      "res_semis_intel_rescue.q3rev": 0,
+      "res_semis_intel_rescue.nv_inv": 1,
+      "res_semis_intel_rescue.both": 0,
+      "res_semis_intel_rescue.rev_g_stake": 0,
+      "res_semis_intel_rescue.nv_g_rev": null
+    }
+  },
+  {
+    "family_id": "res_ins_us_property_cat",
+    "domain": "insurance",
+    "base_events": {
+      "FAIR_1B": {
+        "text": "The California FAIR Plan levies assessments on its member insurers totalling US$1 billion or more during calendar year 2025",
+        "resolution": "Resolves YES if the total of all assessments on member insurers levied by the California FAIR Plan Association during 2025, as authorized by orders of the California Insurance Commissioner, is US$1.0 billion or more. Baseline: the FAIR Plan had not assessed its members in more than 30 years; its exposure had grown sharply as admitted insurers non-renewed California homeowners policies.",
+        "source": "California Department of Insurance commissioner's orders (insurance.ca.gov) and California FAIR Plan Association announcements",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked Commissioner Ricardo Lara's Order 2025-1: a US$1 billion assessment on member insurers was approved on 11 February 2025 after the Palisades and Eaton fires left the FAIR Plan with roughly US$4 billion in estimated claims. It was the first FAIR Plan assessment in more than 30 years."
+      },
+      "FAIR_2B": {
+        "text": "The California FAIR Plan levies assessments on its member insurers totalling US$2 billion or more during calendar year 2025",
+        "resolution": "Resolves YES if the total of all assessments on member insurers levied by the California FAIR Plan Association during 2025, as authorized by orders of the California Insurance Commissioner, is US$2.0 billion or more. Baseline: the FAIR Plan had not assessed its members in more than 30 years.",
+        "source": "California Department of Insurance commissioner's orders (insurance.ca.gov) and California FAIR Plan Association announcements",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the assessment record for 2025: a single assessment of US$1 billion was levied, approved 11 February 2025. No further FAIR Plan assessment was ordered during 2025, although commentary noted that the US$1 billion might not ultimately prove sufficient."
+      },
+      "US_HURR_LF": {
+        "text": "At least one hurricane makes landfall in the continental United States during the 2025 Atlantic hurricane season",
+        "resolution": "Resolves YES if the National Hurricane Center records at least one landfall in the continental United States, during the 2025 Atlantic hurricane season, by a tropical cyclone that is of hurricane intensity (maximum sustained winds of 74 mph or more) at the time of landfall. Landfalls at tropical storm intensity, in Puerto Rico or other territories, or by post-tropical systems do NOT count. Baseline: the 2024 season produced multiple continental US hurricane landfalls including Beryl, Debby, Francine, Helene and Milton, and pre-season 2025 outlooks called for an above-normal season.",
+        "source": "NOAA National Hurricane Center tropical cyclone reports and season summary (nhc.noaa.gov)",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the 2025 Atlantic season summary: 13 named storms, 5 hurricanes and 4 major hurricanes, but no hurricane made landfall in the United States, the first such season since 2015. The only US landfall was Tropical Storm Chantal near Litchfield Beach, South Carolina on 6 July 2025 with 60 mph winds. The costliest storm, Hurricane Melissa, struck Jamaica."
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "FAIR_2B", "b": "FAIR_1B"}
+    ],
+    "targets": [
+      {
+        "tid": "res_ins_us_property_cat.fair1b",
+        "kind": "unconditional",
+        "text": "The California FAIR Plan is the state's insurer of last resort for property risks, funded by assessments on admitted insurers when its own resources are exhausted. Its exposure has grown sharply as admitted carriers non-renewed California homeowners policies, and it has not assessed its members in more than 30 years. What is the probability that the California FAIR Plan levies assessments on member insurers totalling US$1 billion or more during calendar year 2025?",
+        "expr": "FAIR_1B"
+      },
+      {
+        "tid": "res_ins_us_property_cat.fair2b",
+        "kind": "unconditional",
+        "text": "The California FAIR Plan is the state's insurer of last resort for property risks, funded by assessments on admitted insurers when its own resources are exhausted; it has not assessed its members in more than 30 years. What is the probability that the California FAIR Plan levies assessments on member insurers totalling US$2 billion or more during calendar year 2025?",
+        "expr": "FAIR_2B"
+      },
+      {
+        "tid": "res_ins_us_property_cat.hurr",
+        "kind": "unconditional",
+        "text": "The 2024 Atlantic hurricane season produced several continental United States hurricane landfalls, including Beryl, Debby, Francine, Helene and Milton. What is the probability that at least one tropical cyclone of hurricane intensity, meaning maximum sustained winds of 74 mph or more at the time of landfall, makes landfall in the continental United States during the 2025 Atlantic hurricane season? Landfalls at tropical storm intensity, landfalls in Puerto Rico or other territories, and post-tropical systems do not count.",
+        "expr": "US_HURR_LF"
+      },
+      {
+        "tid": "res_ins_us_property_cat.no_hurr",
+        "kind": "unconditional",
+        "text": "What is the probability that NO tropical cyclone of hurricane intensity, meaning maximum sustained winds of 74 mph or more at the time of landfall, makes landfall in the continental United States during the 2025 Atlantic hurricane season? For reference, the 2024 season produced several such landfalls, including Beryl, Debby, Francine, Helene and Milton.",
+        "expr": "not US_HURR_LF"
+      },
+      {
+        "tid": "res_ins_us_property_cat.fair_and_nohurr",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) the California FAIR Plan, the state's insurer of last resort, levies assessments on its member insurers totalling US$1 billion or more during calendar year 2025, having not assessed members in more than 30 years; AND (2) no tropical cyclone of hurricane intensity makes landfall in the continental United States during the 2025 Atlantic hurricane season?",
+        "expr": "FAIR_1B and not US_HURR_LF"
+      },
+      {
+        "tid": "res_ins_us_property_cat.fair2_g_fair1",
+        "kind": "conditional",
+        "text": "Assume that the California FAIR Plan, the state's insurer of last resort for property risks, levies assessments on its member insurers totalling US$1 billion or more during calendar year 2025, having not assessed members in more than 30 years. Under that assumption, what is the probability that the total of its 2025 assessments reaches US$2 billion or more?",
+        "expr": "FAIR_2B",
+        "given": "FAIR_1B"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "complement", "product_rule", "conjunction_bound"],
+    "resolved_outcomes": {
+      "res_ins_us_property_cat.fair1b": 1,
+      "res_ins_us_property_cat.fair2b": 0,
+      "res_ins_us_property_cat.hurr": 0,
+      "res_ins_us_property_cat.no_hurr": 1,
+      "res_ins_us_property_cat.fair_and_nohurr": 1,
+      "res_ins_us_property_cat.fair2_g_fair1": 0
+    }
+  },
+  {
+    "family_id": "res_pharma_obesity_approvals",
+    "domain": "pharma",
+    "base_events": {
+      "ORAL_SEMA": {
+        "text": "The US Food and Drug Administration approves an oral tablet formulation of semaglutide for chronic weight management on or before 31 December 2025",
+        "resolution": "Resolves YES if the FDA approves a new drug application for an oral (tablet) formulation of semaglutide with an indication for chronic weight management in adults with obesity or overweight, on or before 2025-12-31, as shown in the FDA approval letter, the Drugs@FDA database, or a Novo Nordisk announcement. Approvals limited to type 2 diabetes indications, such as Rybelsus, do NOT count. Baseline: injectable semaglutide (Wegovy) has been approved for weight management since June 2021; Novo Nordisk filed a 25 mg oral semaglutide tablet for weight management with the FDA in early 2025.",
+        "source": "FDA Drugs@FDA database and Novo Nordisk company announcements (novonordisk.com)",
+        "resolve_by": "2025-12-31",
+        "outcome": 1,
+        "verified": "Checked the approval: on 22 December 2025 the FDA approved the once-daily Wegovy pill, 25 mg oral semaglutide, the first and only oral GLP-1 medicine approved for weight management, confirmed by Novo Nordisk's press release and trade coverage."
+      },
+      "CAGRISEMA": {
+        "text": "The US Food and Drug Administration approves cagrilintide/semaglutide (CagriSema) for chronic weight management on or before 31 December 2025",
+        "resolution": "Resolves YES if the FDA approves a new drug application or biologics licence application for the fixed-dose combination of cagrilintide and semaglutide (CagriSema) with an indication for chronic weight management, on or before 2025-12-31, as shown in the FDA approval letter, the Drugs@FDA database, or a Novo Nordisk announcement. Baseline: Novo Nordisk reported REDEFINE-1 phase 3 results in December 2024 showing mean weight loss of about 22.7% at 68 weeks, below investor expectations, and said it planned to file for regulatory approval in the first quarter of 2025 with launch expected in the first quarter of 2026.",
+        "source": "FDA Drugs@FDA database and Novo Nordisk company announcements (novonordisk.com)",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the regulatory status: CagriSema had no FDA approval during 2025 and still had none as of April 2026, when further REDEFINE-5 results were published in The Lancet. The REDEFINE-1 and REDEFINE-2 results appeared in the New England Journal of Medicine in June 2025 with the combination still described as investigational."
+      },
+      "ORFORGLIPRON": {
+        "text": "The US Food and Drug Administration approves orforglipron for chronic weight management on or before 31 December 2025",
+        "resolution": "Resolves YES if the FDA approves a new drug application for orforglipron with an indication for chronic weight management in adults with obesity or overweight, on or before 2025-12-31, as shown in the FDA approval letter, the Drugs@FDA database, or an Eli Lilly announcement. Baseline: Eli Lilly reported ATTAIN-1 phase 3 results for its oral small-molecule GLP-1 agonist in August 2025 and said it expected to complete a submission for weight management by the end of 2025, holding a priority review voucher.",
+        "source": "FDA Drugs@FDA database and Eli Lilly and Company announcements (lilly.com)",
+        "resolve_by": "2025-12-31",
+        "outcome": 0,
+        "verified": "Checked the approval date: the FDA approved orforglipron, branded Foundayo, for adults with obesity or overweight with weight-related conditions on 1 April 2026. Lilly was still reporting new phase 3 data (ATTAIN-MAINTAIN) on 18 December 2025, so no approval occurred during 2025."
+      }
+    },
+    "targets": [
+      {
+        "tid": "res_pharma_obesity_approvals.oral_sema",
+        "kind": "unconditional",
+        "text": "Injectable semaglutide has been approved in the United States for chronic weight management since June 2021, and an oral semaglutide tablet is already approved at lower doses for type 2 diabetes. Novo Nordisk filed a 25 mg oral semaglutide tablet for chronic weight management with the US Food and Drug Administration in early 2025. What is the probability that the FDA approves an oral tablet formulation of semaglutide for chronic weight management on or before 31 December 2025? Approvals limited to type 2 diabetes indications do not count.",
+        "expr": "ORAL_SEMA"
+      },
+      {
+        "tid": "res_pharma_obesity_approvals.cagrisema",
+        "kind": "unconditional",
+        "text": "Novo Nordisk reported phase 3 REDEFINE-1 results for CagriSema, its fixed-dose combination of cagrilintide and semaglutide, in December 2024, showing mean weight loss of about 22.7% at 68 weeks, below investor expectations. The company said it planned to file for regulatory approval in the first quarter of 2025, with launch expected in the first quarter of 2026. What is the probability that the US Food and Drug Administration approves CagriSema for chronic weight management on or before 31 December 2025?",
+        "expr": "CAGRISEMA"
+      },
+      {
+        "tid": "res_pharma_obesity_approvals.orforglipron",
+        "kind": "unconditional",
+        "text": "Eli Lilly reported phase 3 ATTAIN-1 results in August 2025 for orforglipron, an oral small-molecule GLP-1 receptor agonist that, unlike peptide drugs, requires no food or water restrictions. Lilly said it expected to complete its submission to the US Food and Drug Administration for weight management by the end of 2025 and holds a priority review voucher. What is the probability that the FDA approves orforglipron for chronic weight management on or before 31 December 2025?",
+        "expr": "ORFORGLIPRON"
+      },
+      {
+        "tid": "res_pharma_obesity_approvals.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen on or before 31 December 2025: (1) the US Food and Drug Administration approves an oral tablet formulation of semaglutide for chronic weight management, filed by Novo Nordisk in early 2025 (approvals limited to type 2 diabetes do not count); AND (2) the FDA approves CagriSema, Novo Nordisk's cagrilintide/semaglutide combination, for chronic weight management, which the company planned to file in the first quarter of 2025?",
+        "expr": "ORAL_SEMA and CAGRISEMA"
+      },
+      {
+        "tid": "res_pharma_obesity_approvals.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens on or before 31 December 2025: (1) the US Food and Drug Administration approves an oral tablet formulation of semaglutide for chronic weight management, filed by Novo Nordisk in early 2025 (approvals limited to type 2 diabetes do not count); OR (2) the FDA approves CagriSema, Novo Nordisk's cagrilintide/semaglutide combination, for chronic weight management, which the company planned to file in the first quarter of 2025?",
+        "expr": "ORAL_SEMA or CAGRISEMA"
+      },
+      {
+        "tid": "res_pharma_obesity_approvals.cagri_g_oral",
+        "kind": "conditional",
+        "text": "Assume that the US Food and Drug Administration approves an oral tablet formulation of semaglutide for chronic weight management on or before 31 December 2025, from the application Novo Nordisk filed in early 2025. Under that assumption, what is the probability that the FDA also approves CagriSema, Novo Nordisk's cagrilintide/semaglutide combination, for chronic weight management on or before 31 December 2025? The company reported 22.7% mean weight loss at 68 weeks in REDEFINE-1 and planned to file in the first quarter of 2025.",
+        "expr": "CAGRISEMA",
+        "given": "ORAL_SEMA"
+      }
+    ],
+    "axioms_tested": ["product_rule", "disjunction_identity", "conjunction_bound"],
+    "resolved_outcomes": {
+      "res_pharma_obesity_approvals.oral_sema": 1,
+      "res_pharma_obesity_approvals.cagrisema": 0,
+      "res_pharma_obesity_approvals.orforglipron": 0,
+      "res_pharma_obesity_approvals.both": 0,
+      "res_pharma_obesity_approvals.either": 1,
+      "res_pharma_obesity_approvals.cagri_g_oral": 0
+    }
+  }
+]

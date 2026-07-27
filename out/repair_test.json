@@ -1,0 +1,179 @@
+{
+  "model": "claude-sonnet-5",
+  "arms": [
+    {
+      "label": "claude-sonnet-5 fresh",
+      "n_targets": 58,
+      "n_families": 10,
+      "base_rate": 0.5,
+      "brier_raw": 0.2203396551724138,
+      "brier_repaired": 0.1916634366151945,
+      "brier_baserate": 0.25,
+      "delta": -0.028676218557219302,
+      "pct_change": -13.014551799484492,
+      "families_improved": 10,
+      "families_worsened": 0,
+      "skill_raw": 0.1186413793103448,
+      "skill_repaired": 0.233346253539222,
+      "per_family": [
+        {
+          "family_id": "res_geo_moldova_eu",
+          "n_scored": 6,
+          "brier_raw": 0.17753333333333332,
+          "brier_repaired": 0.07090462515070743,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_geo_germany_govt",
+          "n_scored": 5,
+          "brier_raw": 0.000900000000000001,
+          "brier_repaired": 0.0008997473013544093,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_macro_fed_range",
+          "n_scored": 6,
+          "brier_raw": 0.21281666666666665,
+          "brier_repaired": 0.1645062922775901,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_macro_japan_boj",
+          "n_scored": 6,
+          "brier_raw": 0.3085166666666666,
+          "brier_repaired": 0.3082852212628901,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_energy_oil_hormuz",
+          "n_scored": 6,
+          "brier_raw": 0.004333333333333334,
+          "brier_repaired": 0.0032541767011069326,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_energy_us_nuclear",
+          "n_scored": 6,
+          "brier_raw": 0.4281333333333333,
+          "brier_repaired": 0.42610322346563095,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_semis_nvidia_scale",
+          "n_scored": 6,
+          "brier_raw": 0.3330166666666667,
+          "brier_repaired": 0.3310930764355254,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_semis_intel_rescue",
+          "n_scored": 5,
+          "brier_raw": 0.002220000000000001,
+          "brier_repaired": 0.00221873728073931,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_ins_us_property_cat",
+          "n_scored": 6,
+          "brier_raw": 0.5047666666666667,
+          "brier_repaired": 0.45383055552558527,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_pharma_obesity_approvals",
+          "n_scored": 6,
+          "brier_raw": 0.1582333333333333,
+          "brier_repaired": 0.09217064597609925,
+          "arbitrage_raw": null
+        }
+      ]
+    },
+    {
+      "label": "claude-sonnet-5 joint",
+      "n_targets": 58,
+      "n_families": 10,
+      "base_rate": 0.5,
+      "brier_raw": 0.1557831896551724,
+      "brier_repaired": 0.15573990348141556,
+      "brier_baserate": 0.25,
+      "delta": -4.3286173756845736e-05,
+      "pct_change": -0.02778616476698166,
+      "families_improved": 5,
+      "families_worsened": 5,
+      "skill_raw": 0.3768672413793104,
+      "skill_repaired": 0.37704038607433776,
+      "per_family": [
+        {
+          "family_id": "res_geo_moldova_eu",
+          "n_scored": 6,
+          "brier_raw": 0.016450000000000003,
+          "brier_repaired": 0.01646216801960441,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_geo_germany_govt",
+          "n_scored": 5,
+          "brier_raw": 0.0012200000000000015,
+          "brier_repaired": 0.0012197473015546048,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_macro_fed_range",
+          "n_scored": 6,
+          "brier_raw": 0.0073333333333333315,
+          "brier_repaired": 0.007223731353596621,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_macro_japan_boj",
+          "n_scored": 6,
+          "brier_raw": 0.29045,
+          "brier_repaired": 0.29007885381421006,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_energy_oil_hormuz",
+          "n_scored": 6,
+          "brier_raw": 0.004304166666666668,
+          "brier_repaired": 0.004300992193264362,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_energy_us_nuclear",
+          "n_scored": 6,
+          "brier_raw": 0.43040000000000006,
+          "brier_repaired": 0.4303123465710616,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_semis_nvidia_scale",
+          "n_scored": 6,
+          "brier_raw": 0.2331,
+          "brier_repaired": 0.2331244888729149,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_semis_intel_rescue",
+          "n_scored": 5,
+          "brier_raw": 0.17648000000000003,
+          "brier_repaired": 0.17655241789231396,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_ins_us_property_cat",
+          "n_scored": 6,
+          "brier_raw": 0.35445,
+          "brier_repaired": 0.3544762351942592,
+          "arbitrage_raw": null
+        },
+        {
+          "family_id": "res_pharma_obesity_approvals",
+          "n_scored": 6,
+          "brier_raw": 0.021333333333333333,
+          "brier_repaired": 0.021363446639882325,
+          "arbitrage_raw": null
+        }
+      ]
+    }
+  ]
+}

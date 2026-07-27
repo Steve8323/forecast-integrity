@@ -1,0 +1,542 @@
+[
+ {
+  "tid": "res_geo_moldova_eu.pas",
+  "model": "claude-sonnet-5",
+  "p": 0.93,
+  "rationale": "PAS actually won the September 28, 2025 election with 55 seats, securing an outright majority, which is already known historical fact by this later date context.",
+  "asked_utc": "2026-07-27T14:57:30+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.cluster",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Hungary's veto linking Moldova to Ukraine's progress has blocked cluster opening throughout 2024-2025 with no resolution in sight before year-end.",
+  "asked_utc": "2026-07-27T14:57:30+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.both",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "PAS actually won the September 2025 election with a majority (~55 seats), but cluster opening being blocked (Hungarian veto risk on EU enlargement) makes joint success unlikely by year-end.",
+  "asked_utc": "2026-07-27T14:57:30+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.either",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "PAS won the September 2025 election with a majority (~55 seats), which alone triggers YES regardless of EU cluster timing.",
+  "asked_utc": "2026-07-27T14:57:30+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.cluster_g_pas",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "Even with a strong PAS majority, Hungary's veto tied to Ukraine and the short timeframe before year-end make formal cluster opening by 31 Dec 2025 unlikely, though a PAS win could accelerate momentum somewhat.",
+  "asked_utc": "2026-07-27T14:57:30+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.no_cluster",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Moldova opened Cluster 1 (Fundamentals) at an intergovernmental conference in June 2025, so the question of no cluster opening by end-2025 is very likely false.",
+  "asked_utc": "2026-07-27T14:57:30+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.afd2",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "AfD finished second with about 152 seats behind CDU/CSU in the actual February 2025 election result, ahead of SPD.",
+  "asked_utc": "2026-07-27T14:57:30+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.merz1",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Merz famously failed on the first ballot on 6 May 2025, becoming elected only on a second ballot the same day.",
+  "asked_utc": "2026-07-27T14:57:30+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.merz_any",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "Merz was elected chancellor on the second ballot on May 6, 2025, well within the deadline.",
+  "asked_utc": "2026-07-27T14:57:33+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.first_g_any",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Merz famously failed to secure a majority on the first ballot on 6 May 2025, becoming the first Chancellor candidate in FRG history to do so, but won on a second ballot the same day.",
+  "asked_utc": "2026-07-27T14:57:34+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.afd2_and_merz",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "AfD came second in the actual Feb 2025 election result and Merz was elected chancellor in May 2025 (second ballot), so both events occurred as known historical facts.",
+  "asked_utc": "2026-07-27T14:57:34+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.any_g_first",
+  "model": "claude-sonnet-5",
+  "p": 0.99,
+  "rationale": "If Merz was elected on the first ballot, that trivially satisfies being elected on some ballot by that date.",
+  "asked_utc": "2026-07-27T14:57:34+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.high",
+  "model": "claude-sonnet-5",
+  "p": 0.72,
+  "rationale": "Fed has held steady through mid-2025 amid tariff-inflation uncertainty, and markets expect at most 1-2 cuts by year-end, making 4.25% or higher upper bound likely.",
+  "asked_utc": "2026-07-27T14:57:34+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.mid",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "Given Fed rhetoric and market pricing through mid-2025 suggesting 2-3 cuts by year-end, this range captures the most likely outcome though a single cut or no cuts remains plausible.",
+  "asked_utc": "2026-07-27T14:57:34+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.low",
+  "model": "claude-sonnet-5",
+  "p": 0.04,
+  "rationale": "As of mid-2026 hindsight-adjacent context, the Fed cut cautiously in late 2025 amid still-elevated inflation, making more than 75bp of cumulative cuts by year-end unlikely though not impossible.",
+  "asked_utc": "2026-07-27T14:57:34+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.mid_or_low",
+  "model": "claude-sonnet-5",
+  "p": 0.9,
+  "rationale": "By mid-2026 hindsight, Fed had already cut in Sept, Oct, Dec 2025 per known trajectory, so upper bound almost certainly below 4.25% by year-end.",
+  "asked_utc": "2026-07-27T14:57:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.not_high",
+  "model": "claude-sonnet-5",
+  "p": 0.25,
+  "rationale": "With rates held at 4.25-4.50% through mid-2025 and the Fed likely to cut once or twice by year-end given cooling inflation and labor market softening, it's fairly likely the upper bound falls below 4.25% by Dec 31, 2025.",
+  "asked_utc": "2026-07-27T14:57:36+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.low_g_cut",
+  "model": "claude-sonnet-5",
+  "p": 0.2,
+  "rationale": "Given easing occurred below 4.25%, the most likely scenario is two 25bp cuts landing at 3.75-4.00%, with three or more cuts (below 3.75%) being less likely absent a sharp deterioration.",
+  "asked_utc": "2026-07-27T14:57:36+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.boj075",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "BOJ has held steady through mid-2025 amid tariff uncertainty, and a full 25bp hike to 0.75% by year-end would require decisive action in only two remaining meetings, which seems unlikely given cautious BOJ messaging.",
+  "asked_utc": "2026-07-27T14:57:37+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.boj100",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "BOJ has moved gradually in 25bp steps and rate stayed at 0.5% through mid-2025, making a jump to 1.00% by year-end extremely unlikely.",
+  "asked_utc": "2026-07-27T14:57:38+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.takaichi",
+  "model": "claude-sonnet-5",
+  "p": 0.93,
+  "rationale": "Takaichi won the LDP leadership election in October 2025 and was subsequently designated PM by the Diet before year-end, consistent with known outcomes.",
+  "asked_utc": "2026-07-27T14:57:38+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.both",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Takaichi did become PM in late 2025, but BOJ raising to 0.75%+ by Dec 31 2025 is very unlikely given actual policy path stayed near 0.5%, making the joint condition highly improbable.",
+  "asked_utc": "2026-07-27T14:57:38+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.either",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "Takaichi was actually elected LDP leader and became PM in October 2025, so event (2) already resolved YES.",
+  "asked_utc": "2026-07-27T14:57:38+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.boj100_g_075",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Even conditional on a hike to 0.75%, a further hike to 1.00% within the same year would require an extremely aggressive additional move in a single meeting cycle, which is highly unlikely given BOJ's gradualist approach.",
+  "asked_utc": "2026-07-27T14:57:39+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.wti60",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "WTI dropped well below $60 multiple times in 2025 amid OPEC+ supply increases and demand concerns, a well-known market development.",
+  "asked_utc": "2026-07-27T14:57:39+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.wti50",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "WTI traded throughout 2025 mostly in the $55-80 range without falling below $50, based on known market history.",
+  "asked_utc": "2026-07-27T14:57:40+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.hormuz",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Despite periodic tensions including the June 2025 Iran-Israel conflict, no actual 72+ hour closure occurred and full-year 2025 is nearly complete without such an event.",
+  "asked_utc": "2026-07-27T14:57:40+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.both",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "WTI did settle below $60 in 2025, but the Strait of Hormuz never had a 72+ hour commercial transit suspension despite the June 2025 Iran-Israel conflict, making the joint condition fail.",
+  "asked_utc": "2026-07-27T14:57:40+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.either",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "WTI dropped below $60 multiple times in 2025 (e.g., April 2025 tariff shock), so condition 1 alone resolves YES with near certainty.",
+  "asked_utc": "2026-07-27T14:57:41+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.wti50_g_wti60",
+  "model": "claude-sonnet-5",
+  "p": 0.15,
+  "rationale": "WTI did dip below $60 in 2025 (into the mid-$50s during tariff/OPEC supply shocks in April), but sub-$50 would require a much deeper collapse, which did not occur.",
+  "asked_utc": "2026-07-27T14:57:42+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.pal_auth",
+  "model": "claude-sonnet-5",
+  "p": 0.96,
+  "rationale": "NRC approved restart and Palisades achieved fuel load/criticality in fall 2025, well before the deadline.",
+  "asked_utc": "2026-07-27T14:57:42+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.pal_grid",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "Palisades actually restarted and reconnected to the grid in late 2025, achieving criticality October 2025 and grid synchronization before year-end, consistent with Holtec's stated timeline.",
+  "asked_utc": "2026-07-27T14:57:42+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.vogtle4",
+  "model": "claude-sonnet-5",
+  "p": 0.98,
+  "rationale": "Vogtle Unit 4 actually entered commercial operation in April 2024, well before the December 2025 deadline.",
+  "asked_utc": "2026-07-27T14:57:42+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.both_pal",
+  "model": "claude-sonnet-5",
+  "p": 0.95,
+  "rationale": "Palisades restarted and reconnected to the grid in October 2025, with NRC approval granted before that, confirming both events occurred before year-end.",
+  "asked_utc": "2026-07-27T14:57:43+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.either_pal",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "Palisades achieved NRC restart approval and reconnected to the grid in late 2025, restoring power operations before year-end.",
+  "asked_utc": "2026-07-27T14:57:43+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.grid_g_auth",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "Actual events show Palisades achieved NRC approval and restart with grid synchronization occurring shortly after fuel load in 2025, so conditional on NRC approval by year-end, grid delivery very likely followed within the same window given the plant's advanced restart timeline.",
+  "asked_utc": "2026-07-27T14:57:44+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.mcap5t",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Reaching $5T (25% rise from $4T) within 2025 would require an extraordinary rally in a few months, which is highly unlikely given typical volatility and time remaining.",
+  "asked_utc": "2026-07-27T14:57:45+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.q3_55",
+  "model": "claude-sonnet-5",
+  "p": 0.75,
+  "rationale": "Nvidia has consistently beaten guidance by several percent in recent quarters, and 55.0B is only slightly above the top of the guided range (55.08B), plus potential H20 China revenue upside makes a beat likely.",
+  "asked_utc": "2026-07-27T14:57:45+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.q3_60",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "Guidance midpoint is $54B\u00b12% (max ~$55.1B), and Nvidia typically beats by a few percent, so hitting $60B would require an unusually large beat of ~11%, which is possible but unlikely.",
+  "asked_utc": "2026-07-27T14:57:45+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.both",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "Both events are plausible individually (revenue beat ~35-40% likely, $5T market cap by year-end ~30-35% likely) but their joint occurrence, especially reaching $5T market cap within 2025, is a stretch given current date already past most of the year, making the combined probability relatively low.",
+  "asked_utc": "2026-07-27T14:57:46+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.either",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "Q3 revenue beating $55B guidance is quite plausible given Nvidia's consistent beat pattern, making the OR condition likely even though $5T market cap by year-end is less certain.",
+  "asked_utc": "2026-07-27T14:57:46+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.q60_g_q55",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Conditional on beating guidance by \u22651.9%, reaching a further ~9% above guidance to hit $60B is a much larger beat, historically less likely given Nvidia's typical beat magnitude of low-to-mid single digits.",
+  "asked_utc": "2026-07-27T14:57:46+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.us_stake",
+  "model": "claude-sonnet-5",
+  "p": 0.96,
+  "rationale": "In August 2025 the US government converted CHIPS grants into a roughly 10% equity stake in Intel, satisfying the 5% threshold within the 2025 window.",
+  "asked_utc": "2026-07-27T14:57:47+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.q3rev",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "Guidance tops out at $13.6B, so exceeding $14.0B would require a notable beat, which is uncommon though not impossible.",
+  "asked_utc": "2026-07-27T14:57:48+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.nv_inv",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "Nvidia and Intel announced a $5 billion equity investment agreement in September 2025, which fits within the resolution window.",
+  "asked_utc": "2026-07-27T14:57:49+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.both",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "The US government did acquire a ~10% equity stake in Intel in August 2025, but Intel's Q3 2025 revenue came in around $13.6-13.7B, below the $14.0B threshold, making the joint condition unlikely.",
+  "asked_utc": "2026-07-27T14:57:49+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.rev_g_stake",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Q3 guidance topped out at $13.6B, so exceeding $14B would require a large beat beyond guidance, which is unlikely even if the government stake occurred for unrelated policy reasons.",
+  "asked_utc": "2026-07-27T14:57:49+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.nv_g_rev",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "Nvidia already announced a $5 billion equity investment in Intel in September 2025, prior to and independent of Q3 revenue results.",
+  "asked_utc": "2026-07-27T14:57:49+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.fair1b",
+  "model": "claude-sonnet-5",
+  "p": 0.93,
+  "rationale": "The FAIR Plan already levied a $1B+ assessment in early-mid 2025 following LA wildfire losses, as reported by CDI and news outlets.",
+  "asked_utc": "2026-07-27T14:57:50+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.fair2b",
+  "model": "claude-sonnet-5",
+  "p": 0.92,
+  "rationale": "The FAIR Plan already levied a $1B assessment in spring 2025 for LA wildfire losses and had signaled further assessments could follow given claims exceeding $2B, making a cumulative $2B+ total highly likely by year-end.",
+  "asked_utc": "2026-07-27T14:57:50+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.hurr",
+  "model": "claude-sonnet-5",
+  "p": 0.9,
+  "rationale": "Historical base rates show the continental US experiences a hurricane landfall in roughly 85-90% of seasons, especially with an above-normal 2025 outlook.",
+  "asked_utc": "2026-07-27T14:57:50+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.no_hurr",
+  "model": "claude-sonnet-5",
+  "p": 0.18,
+  "rationale": "Most Atlantic seasons produce at least one hurricane-strength landfall in the continental US, so a season with none is relatively uncommon (~15-20% historical base rate).",
+  "asked_utc": "2026-07-27T14:57:52+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.fair_and_nohurr",
+  "model": "claude-sonnet-5",
+  "p": 0.18,
+  "rationale": "The FAIR Plan almost certainly already levied over $1B in assessments following the January 2025 LA wildfires, but the chance that no hurricane makes landfall in the continental US during an active 2025 season is relatively low (~20%), making the joint probability modest.",
+  "asked_utc": "2026-07-27T14:57:52+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.fair2_g_fair1",
+  "model": "claude-sonnet-5",
+  "p": 0.15,
+  "rationale": "The FAIR Plan's first 2025 assessment was set at about $1.0 billion (with a second half potentially recoverable via policyholder surcharge rather than a further assessment), so reaching $2 billion in total assessments within the same calendar year is unlikely but not impossible.",
+  "asked_utc": "2026-07-27T14:57:52+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.oral_sema",
+  "model": "claude-sonnet-5",
+  "p": 0.92,
+  "rationale": "Novo Nordisk announced FDA approval of oral Wegovy in 2025, aligning with their filing timeline and priority review expectations.",
+  "asked_utc": "2026-07-27T14:57:52+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.cagrisema",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Given the launch timeline targeted for Q1 2026 and typical FDA review timelines, approval by end of 2025 is unlikely though not impossible.",
+  "asked_utc": "2026-07-27T14:57:53+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.orforglipron",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Submission expected only by end of 2025, leaving essentially no time for FDA review and approval before the deadline even with a priority voucher.",
+  "asked_utc": "2026-07-27T14:57:53+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.both",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Both approvals were highly unlikely within this timeframe given typical FDA review timelines and no evidence either was approved by end of 2025.",
+  "asked_utc": "2026-07-27T14:57:53+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.either",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "As of mid-2026 neither oral semaglutide for weight loss nor CagriSema had received FDA approval by end of 2025, given typical review timelines and CagriSema's delayed filing/underwhelming data.",
+  "asked_utc": "2026-07-27T14:57:55+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.cagri_g_oral",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "CagriSema was filed only in Q1 2025 with launch expected Q1 2026, so a standard ~10-12 month FDA review would not conclude by end of 2025 even in a world where the earlier-filed oral semaglutide gets approved.",
+  "asked_utc": "2026-07-27T14:57:56+00:00",
+  "arm": "fresh",
+  "sample": 0
+ }
+]

@@ -1,0 +1,542 @@
+[
+ {
+  "tid": "res_geo_moldova_eu.pas",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.93,
+  "rationale": "PAS won a majority (55 seats) in the actual September 2025 election.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.cluster",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Hungary's veto linking Moldova to Ukraine likely blocked formal cluster opening in 2025.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.14,
+  "rationale": "Joint probability given PAS win nearly certain and cluster opening unlikely.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.94,
+  "rationale": "PAS majority alone almost guarantees this resolves YES.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.cluster_g_pas",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.16,
+  "rationale": "Even with PAS majority, Hungary's veto remains the binding constraint on EU cluster opening.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_moldova_eu.no_cluster",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.85,
+  "rationale": "Hungary's linkage of Moldova to Ukraine makes unanimity unlikely by end of 2025.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.afd2",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.97,
+  "rationale": "AfD finished second in the actual Feb 2025 election with ~152 seats behind CDU/CSU.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.merz1",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.03,
+  "rationale": "Merz famously failed on the first ballot on May 6, 2025, an unprecedented event.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.merz_any",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.97,
+  "rationale": "Merz was elected on a second ballot later the same day.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.first_g_any",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.03,
+  "rationale": "Conditional on eventual election, first-ballot success is known to have failed historically.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.afd2_and_merz",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.95,
+  "rationale": "Both AfD second-place and Merz's eventual election occurred.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_geo_germany_govt.any_g_first",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.99,
+  "rationale": "If elected on first ballot, trivially elected by May 31.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.high",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.07,
+  "rationale": "Fed delivered three 25bp cuts (Sept, Oct, Dec 2025) bringing the range to 3.50-3.75%, below 4.25%.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.mid",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.88,
+  "rationale": "The realized upper bound of 3.75% falls in the 3.75-4.25% bucket.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.low",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.07,
+  "rationale": "The range did not drop below 3.75%, staying at 3.75% upper bound.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.mid_or_low",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.93,
+  "rationale": "Cuts were delivered, bringing the upper bound below 4.25%.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.not_high",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.93,
+  "rationale": "Same as above; the range fell below 4.25% by year-end.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_fed_range.low_g_cut",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "Conditional on cuts occurring, the ending upper bound was 3.75%, not below it.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.boj075",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.08,
+  "rationale": "BOJ held rates through 2025 amid tariff uncertainty, with the next hike expected in early 2026.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.boj100",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.02,
+  "rationale": "A full percentage point would require two hikes within the year, very unlikely.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.takaichi",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.93,
+  "rationale": "Takaichi won the LDP leadership contest and was designated PM by the Diet in October 2025.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.07,
+  "rationale": "Requires both the unlikely BOJ hike and the likely Takaichi designation.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.94,
+  "rationale": "Takaichi's designation alone makes this highly likely regardless of BOJ action.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_macro_japan_boj.boj100_g_075",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Even if BOJ reaches 0.75%, a further hike to 1.00% within the same year is less likely.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.wti60",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.97,
+  "rationale": "WTI fell into the mid-$50s during the April 2025 tariff-driven selloff, breaching $60.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.wti50",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "WTI dipped to around $55-57 in 2025 but did not clearly breach $50.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.hormuz",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Despite tensions, no full 72-hour closure of the Strait occurred in 2025.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.045,
+  "rationale": "WTI<60 occurred but Hormuz closure did not, so joint probability is low.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.98,
+  "rationale": "WTI<60 alone almost certainly occurred, making the OR condition highly likely true.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_oil_hormuz.wti50_g_wti60",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "Given WTI dipped below $60, it came close to but likely didn't breach $50.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.pal_auth",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.95,
+  "rationale": "NRC approved Palisades restart licensing actions in 2025 as part of the actual restart process.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.pal_grid",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.93,
+  "rationale": "Palisades successfully reconnected to the grid in fall 2025 per Holtec announcements.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.vogtle4",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.97,
+  "rationale": "Vogtle Unit 4 entered commercial operation in early 2024, well before this deadline.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.both_pal",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.9,
+  "rationale": "Both licensing approval and grid connection occurred together as part of the 2025 restart.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.either_pal",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.96,
+  "rationale": "At least the licensing approval, and likely both, occurred in 2025.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_energy_us_nuclear.grid_g_auth",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.95,
+  "rationale": "Given NRC approval, grid connection followed shortly after as part of the restart sequence.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.mcap5t",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Nvidia would need roughly 25% further gain from ~$4T in a few months, plausible but not likely by year-end.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.q3_55",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "Slightly above guidance midpoint, consistent with Nvidia's pattern of beating guidance.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.q3_60",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Would require a large beat well above guidance range, less likely.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Joint probability of both a strong beat and market cap milestone, roughly product of marginal probabilities with some positive correlation.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.68,
+  "rationale": "Union probability given moderately high individual probabilities and some correlation.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_nvidia_scale.q60_g_q55",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Conditional on beating 55B, probability of reaching 60B is higher than unconditional but still a stretch.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.us_stake",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.93,
+  "rationale": "The US government took a ~10% equity stake in Intel in August 2025 via converted CHIPS grants.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.q3rev",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "Guidance midpoint was ~13.1B with upside possible but 14.0B is above the top of guided range.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.nv_inv",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.85,
+  "rationale": "Nvidia announced a $5B equity investment in Intel in September 2025.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.5,
+  "rationale": "Joint probability of both the government stake (near-certain) and revenue threshold (moderate) occurring.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.rev_g_stake",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "Conditional on the equity stake, revenue trajectory likely similar to unconditional estimate given limited causal link.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_semis_intel_rescue.nv_g_rev",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.87,
+  "rationale": "If revenue is strong, sentiment around Intel improves, slightly raising likelihood of a large Nvidia investment being confirmed.",
+  "asked_utc": "2026-07-27T14:58:01+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.fair1b",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.85,
+  "rationale": "FAIR Plan already levied a $1B+ assessment in 2025 following the January LA wildfires.",
+  "asked_utc": "2026-07-27T14:58:07+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.fair2b",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Known assessment was around $1B, unlikely to reach $2B given reinsurance/other funding sources.",
+  "asked_utc": "2026-07-27T14:58:07+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.hurr",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.82,
+  "rationale": "Most Atlantic seasons produce at least one continental US hurricane landfall.",
+  "asked_utc": "2026-07-27T14:58:07+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.no_hurr",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.18,
+  "rationale": "Complement of the hurricane landfall probability.",
+  "asked_utc": "2026-07-27T14:58:07+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.fair_and_nohurr",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Joint probability of FAIR Plan $1B+ assessment and no continental hurricane landfall.",
+  "asked_utc": "2026-07-27T14:58:07+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_ins_us_property_cat.fair2_g_fair1",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Conditional on reaching $1B, further reaching $2B is less likely given current wildfire-driven estimates near $1B.",
+  "asked_utc": "2026-07-27T14:58:07+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.oral_sema",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.75,
+  "rationale": "Oral semaglutide filing was well-advanced and PDUFA timelines suggest a decision plausible by end-2025.",
+  "asked_utc": "2026-07-27T14:58:08+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.cagrisema",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.06,
+  "rationale": "CagriSema filing timeline and Novo's own guidance pointed to a 2026 launch, making 2025 approval unlikely.",
+  "asked_utc": "2026-07-27T14:58:08+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.orforglipron",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Lilly only expected to complete submission by end-2025, leaving no time for FDA review/approval within the year.",
+  "asked_utc": "2026-07-27T14:58:08+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.04,
+  "rationale": "Requires both oral semaglutide and CagriSema approval, the latter being quite unlikely in this timeframe.",
+  "asked_utc": "2026-07-27T14:58:08+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.77,
+  "rationale": "Driven mainly by the relatively high probability of oral semaglutide approval alone.",
+  "asked_utc": "2026-07-27T14:58:08+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "res_pharma_obesity_approvals.cagri_g_oral",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.07,
+  "rationale": "Oral semaglutide approval doesn't materially change CagriSema's independent, later-stage regulatory timeline.",
+  "asked_utc": "2026-07-27T14:58:08+00:00",
+  "arm": "joint",
+  "sample": 0
+ }
+]
