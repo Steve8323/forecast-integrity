@@ -1,0 +1,535 @@
+[
+  {
+    "family_id": "semis_dram_cycle_micron",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "DRAM_UP": {
+        "text": "TrendForce publishes a press release stating that conventional (non-HBM) DRAM contract prices are expected to rise, or did rise, by 5% or more quarter-over-quarter in 1Q27",
+        "resolution": "Resolves YES if at least one press release published on the TrendForce press center (trendforce.com/presscenter) between 2026-12-01 and 2027-03-31 states that conventional DRAM contract prices (TrendForce's term for non-HBM DRAM) are expected to rise, or did rise, by 5% or more QoQ in 1Q27. A stated range counts only if its lower bound is at least 5% (e.g. '5-10% QoQ' counts; '3-8% QoQ' does not). Resolves NO if the stated 1Q27 change is below +5%, flat, or negative, or if no such press release appears by 2027-03-31. Baseline: TrendForce's 2026-07-03 press release forecast conventional DRAM contract prices to rise 13-18% QoQ in 3Q26 while warning that gains would moderate on weaker consumer demand and a high base.",
+        "source": "TrendForce press center (trendforce.com/presscenter) quarterly memory contract price press release",
+        "resolve_by": "2027-03-31"
+      },
+      "MU_55": {
+        "text": "Micron reports total revenue of $55.0 billion or more for its fiscal first quarter of 2027 (the quarter ending in late November 2026)",
+        "resolution": "Resolves YES if the total revenue figure in Micron Technology's fiscal Q1 2027 earnings press release (expected mid-to-late December 2026) is $55.0 billion or more. Baseline: Micron reported record fiscal Q3 2026 revenue of $41.5 billion on 2026-06-24 and guided fiscal Q4 2026 revenue to $50.0 billion plus or minus $1.0 billion.",
+        "source": "Micron Technology fiscal Q1 2027 earnings press release (investors.micron.com) and the corresponding Form 10-Q",
+        "resolve_by": "2027-01-31"
+      },
+      "MU_62": {
+        "text": "Micron reports total revenue of $62.0 billion or more for its fiscal first quarter of 2027 (the quarter ending in late November 2026)",
+        "resolution": "Resolves YES if the total revenue figure in Micron Technology's fiscal Q1 2027 earnings press release (expected mid-to-late December 2026) is $62.0 billion or more. Baseline: Micron reported record fiscal Q3 2026 revenue of $41.5 billion on 2026-06-24 and guided fiscal Q4 2026 revenue to $50.0 billion plus or minus $1.0 billion.",
+        "source": "Micron Technology fiscal Q1 2027 earnings press release (investors.micron.com) and the corresponding Form 10-Q",
+        "resolve_by": "2027-01-31"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "MU_62", "b": "MU_55"}
+    ],
+    "targets": [
+      {
+        "tid": "semis_dram_cycle_micron.dram_up",
+        "kind": "unconditional",
+        "text": "TrendForce publishes quarterly press releases on memory contract pricing; on 2026-07-03 it forecast that conventional (non-HBM) DRAM contract prices would rise 13-18% quarter-over-quarter in 3Q26 while warning that gains would moderate. What is the probability that a TrendForce press release published between 2026-12-01 and 2027-03-31 states that conventional (non-HBM) DRAM contract prices are expected to rise, or did rise, by 5% or more quarter-over-quarter in 1Q27 (a stated range counts only if its lower bound is at least 5%)?",
+        "expr": "DRAM_UP"
+      },
+      {
+        "tid": "semis_dram_cycle_micron.mu55",
+        "kind": "unconditional",
+        "text": "Micron Technology reported record revenue of $41.5 billion for its fiscal third quarter of 2026 (quarter ended late May 2026) and guided fiscal Q4 2026 revenue to $50.0 billion plus or minus $1.0 billion. What is the probability that Micron's fiscal first quarter 2027 earnings press release (the quarter ending in late November 2026, expected to be released in mid-to-late December 2026) reports total revenue of $55.0 billion or more?",
+        "expr": "MU_55"
+      },
+      {
+        "tid": "semis_dram_cycle_micron.mu62",
+        "kind": "unconditional",
+        "text": "Micron Technology reported record revenue of $41.5 billion for its fiscal third quarter of 2026 (quarter ended late May 2026) and guided fiscal Q4 2026 revenue to $50.0 billion plus or minus $1.0 billion. What is the probability that Micron's fiscal first quarter 2027 earnings press release (the quarter ending in late November 2026, expected to be released in mid-to-late December 2026) reports total revenue of $62.0 billion or more?",
+        "expr": "MU_62"
+      },
+      {
+        "tid": "semis_dram_cycle_micron.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) a TrendForce press release published between 2026-12-01 and 2027-03-31 states that conventional (non-HBM) DRAM contract prices are expected to rise, or did rise, by 5% or more quarter-over-quarter in 1Q27; AND (2) Micron Technology reports total revenue of $55.0 billion or more for its fiscal first quarter of 2027 (the quarter ending in late November 2026), versus $41.5 billion reported for the quarter ended late May 2026 and guidance of $50.0 billion plus or minus $1.0 billion for the quarter ending August 2026?",
+        "expr": "DRAM_UP and MU_55"
+      },
+      {
+        "tid": "semis_dram_cycle_micron.mu55_g_dram",
+        "kind": "conditional",
+        "text": "Assume that a TrendForce press release published between 2026-12-01 and 2027-03-31 states that conventional (non-HBM) DRAM contract prices are expected to rise, or did rise, by 5% or more quarter-over-quarter in 1Q27. Under that assumption, what is the probability that Micron Technology reports total revenue of $55.0 billion or more for its fiscal first quarter of 2027 (the quarter ending in late November 2026)? For reference, Micron reported $41.5 billion for the quarter ended late May 2026 and guided the quarter ending August 2026 to $50.0 billion plus or minus $1.0 billion.",
+        "expr": "MU_55",
+        "given": "DRAM_UP"
+      },
+      {
+        "tid": "semis_dram_cycle_micron.mu55_g_notdram",
+        "kind": "conditional",
+        "text": "Assume that NO TrendForce press release published between 2026-12-01 and 2027-03-31 states that conventional (non-HBM) DRAM contract prices are expected to rise, or did rise, by 5% or more quarter-over-quarter in 1Q27 (i.e. TrendForce reports a smaller increase, flat prices, or falling prices, or publishes nothing on the topic). Under that assumption, what is the probability that Micron Technology reports total revenue of $55.0 billion or more for its fiscal first quarter of 2027 (the quarter ending in late November 2026)? For reference, Micron reported $41.5 billion for the quarter ended late May 2026 and guided the quarter ending August 2026 to $50.0 billion plus or minus $1.0 billion.",
+        "expr": "MU_55",
+        "given": "not DRAM_UP"
+      }
+    ],
+    "axioms_tested": ["product_rule", "law_of_total_probability", "monotonicity", "conjunction_bound"]
+  },
+  {
+    "family_id": "semis_bis_china_nvidia",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "BIS_RULE": {
+        "text": "The U.S. Bureau of Industry and Security publishes a final or interim final rule in the Federal Register between 2026-09-01 and 2027-06-30 that changes export license requirements or license review policy for advanced computing chips (ECCN 3A090 or 4A090 items) destined for China, Hong Kong, or Macau",
+        "resolution": "Resolves YES if federalregister.gov lists at least one Bureau of Industry and Security (BIS) document of type 'Rule' published between 2026-09-01 and 2027-06-30 whose text amends 15 CFR part 742, 15 CFR part 744, or the Commerce Control List entry for ECCN 3A090 or 4A090 in a way that changes license requirements or the license review policy applicable to such items destined for China, Hong Kong, or Macau. Proposed rules, notices, guidance documents, FAQs, and individual license decisions do NOT count. Baseline: BIS published such a rule on 2026-01-15 (91 FR 3421, 'Revision to License Review Policy for Advanced Computing Commodities'), moving H200-class and AMD MI325X-class chips from presumption of denial to case-by-case review; no further rule had been published as of 2026-07-26.",
+        "source": "Federal Register (federalregister.gov), Bureau of Industry and Security agency documents, document type 'Rule'",
+        "resolve_by": "2027-06-30"
+      },
+      "NV_CN_6": {
+        "text": "Nvidia's Form 10-Q for its fiscal third quarter of 2027 (the quarter ending in late October 2026) reports revenue from China (including Hong Kong) of $6.0 billion or more for that three-month period",
+        "resolution": "Resolves YES if the revenue-by-country table in Nvidia's Form 10-Q for the quarter ended on or about 2026-10-25 (expected to be filed in November 2026) shows revenue on the 'China (including Hong Kong)' line of $6,000 million or more for the three months then ended. Baseline: Nvidia reported $4,550 million on this line for the three months ended 2026-04-26, down from $9,659 million a year earlier, and its fiscal Q2 2027 outlook assumed no Data Center compute revenue from China.",
+        "source": "Nvidia Corporation Form 10-Q filed with the SEC (CIK 1045810), 'Revenue by geographic areas' / revenue-by-country disclosure",
+        "resolve_by": "2026-12-15"
+      },
+      "NV_CN_10": {
+        "text": "Nvidia's Form 10-Q for its fiscal third quarter of 2027 (the quarter ending in late October 2026) reports revenue from China (including Hong Kong) of $10.0 billion or more for that three-month period",
+        "resolution": "Resolves YES if the revenue-by-country table in Nvidia's Form 10-Q for the quarter ended on or about 2026-10-25 (expected to be filed in November 2026) shows revenue on the 'China (including Hong Kong)' line of $10,000 million or more for the three months then ended. Baseline: Nvidia reported $4,550 million on this line for the three months ended 2026-04-26, down from $9,659 million a year earlier.",
+        "source": "Nvidia Corporation Form 10-Q filed with the SEC (CIK 1045810), 'Revenue by geographic areas' / revenue-by-country disclosure",
+        "resolve_by": "2026-12-15"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "NV_CN_10", "b": "NV_CN_6"}
+    ],
+    "targets": [
+      {
+        "tid": "semis_bis_china_nvidia.bis_rule",
+        "kind": "unconditional",
+        "text": "On 2026-01-15 the U.S. Bureau of Industry and Security (BIS) published a rule in the Federal Register moving Nvidia H200-class and AMD MI325X-class AI accelerators exported to China from presumption of denial to case-by-case license review, subject to volume caps, a 25% duty, third-party testing, and know-your-customer conditions; no further rule had been published as of 2026-07-26. What is the probability that BIS publishes at least one further final or interim final rule in the Federal Register between 2026-09-01 and 2027-06-30 that changes export license requirements or license review policy for advanced computing chips (ECCN 3A090 or 4A090 items) destined for China, Hong Kong, or Macau? Proposed rules, guidance, FAQs, and individual license decisions do not count.",
+        "expr": "BIS_RULE"
+      },
+      {
+        "tid": "semis_bis_china_nvidia.nv6",
+        "kind": "unconditional",
+        "text": "Nvidia's quarterly Form 10-Q discloses revenue by country, including a line for 'China (including Hong Kong)'. That line was $4,550 million for the three months ended 2026-04-26, down from $9,659 million a year earlier, and Nvidia's outlook for the following quarter assumed no Data Center compute revenue from China. What is the probability that Nvidia's Form 10-Q for the quarter ending on or about 2026-10-25 (expected to be filed in November 2026) reports China (including Hong Kong) revenue of $6,000 million or more for that three-month period?",
+        "expr": "NV_CN_6"
+      },
+      {
+        "tid": "semis_bis_china_nvidia.nv10",
+        "kind": "unconditional",
+        "text": "Nvidia's quarterly Form 10-Q discloses revenue by country, including a line for 'China (including Hong Kong)'. That line was $4,550 million for the three months ended 2026-04-26, down from $9,659 million a year earlier. What is the probability that Nvidia's Form 10-Q for the quarter ending on or about 2026-10-25 (expected to be filed in November 2026) reports China (including Hong Kong) revenue of $10,000 million or more for that three-month period?",
+        "expr": "NV_CN_10"
+      },
+      {
+        "tid": "semis_bis_china_nvidia.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) the U.S. Bureau of Industry and Security publishes at least one final or interim final rule in the Federal Register between 2026-09-01 and 2027-06-30 changing export license requirements or license review policy for advanced computing chips (ECCN 3A090 or 4A090) destined for China, Hong Kong, or Macau; AND (2) Nvidia's Form 10-Q for the quarter ending on or about 2026-10-25 reports revenue from China (including Hong Kong) of $6,000 million or more for that quarter, versus $4,550 million for the quarter ended 2026-04-26?",
+        "expr": "BIS_RULE and NV_CN_6"
+      },
+      {
+        "tid": "semis_bis_china_nvidia.nv6_g_rule",
+        "kind": "conditional",
+        "text": "Assume that the U.S. Bureau of Industry and Security publishes at least one final or interim final rule in the Federal Register between 2026-09-01 and 2027-06-30 that changes export license requirements or license review policy for advanced computing chips (ECCN 3A090 or 4A090 items) destined for China, Hong Kong, or Macau. Under that assumption, what is the probability that Nvidia's Form 10-Q for the quarter ending on or about 2026-10-25 reports revenue from China (including Hong Kong) of $6,000 million or more for that quarter? For reference, that line was $4,550 million for the quarter ended 2026-04-26.",
+        "expr": "NV_CN_6",
+        "given": "BIS_RULE"
+      },
+      {
+        "tid": "semis_bis_china_nvidia.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (1) the U.S. Bureau of Industry and Security publishes at least one final or interim final rule in the Federal Register between 2026-09-01 and 2027-06-30 changing export license requirements or license review policy for advanced computing chips (ECCN 3A090 or 4A090) destined for China, Hong Kong, or Macau; OR (2) Nvidia's Form 10-Q for the quarter ending on or about 2026-10-25 reports revenue from China (including Hong Kong) of $6,000 million or more for that quarter, versus $4,550 million for the quarter ended 2026-04-26?",
+        "expr": "BIS_RULE or NV_CN_6"
+      }
+    ],
+    "axioms_tested": ["product_rule", "disjunction_identity", "monotonicity", "conjunction_bound"]
+  },
+  {
+    "family_id": "semis_tsmc_2027_capex",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "LOW": {
+        "text": "TSMC's 2027 capital expenditure guidance, as given at its fourth-quarter 2026 earnings conference, has a midpoint below US$75 billion (this event also resolves YES if TSMC provides no 2027 capital expenditure guidance by 2027-03-31)",
+        "resolution": "Resolves YES if the 2027 capital budget stated by TSMC at its Q4 2026 quarterly earnings conference (expected mid-January 2027, materials posted at investor.tsmc.com and furnished on Form 6-K) has a midpoint below US$75.0 billion, or if TSMC has provided no 2027 capital expenditure figure by 2027-03-31. Midpoint means the arithmetic average of the stated low and high ends of the range; if a single number is given, that number is the midpoint. Baseline: on 2026-07-16 TSMC raised its 2026 capital expenditure guidance to US$60-64 billion from US$52-56 billion.",
+        "source": "TSMC Q4 2026 quarterly earnings conference press release and presentation (investor.tsmc.com), also furnished to the SEC on Form 6-K",
+        "resolve_by": "2027-03-31"
+      },
+      "MID": {
+        "text": "TSMC's 2027 capital expenditure guidance, as given at its fourth-quarter 2026 earnings conference, has a midpoint of at least US$75 billion but below US$90 billion",
+        "resolution": "Resolves YES if the 2027 capital budget stated by TSMC at its Q4 2026 quarterly earnings conference (expected mid-January 2027) has a midpoint of US$75.0 billion or more and below US$90.0 billion. Midpoint means the arithmetic average of the stated low and high ends of the range; if a single number is given, that number is the midpoint. Resolves NO if no 2027 capital expenditure figure is provided by 2027-03-31. Baseline: on 2026-07-16 TSMC raised its 2026 capital expenditure guidance to US$60-64 billion.",
+        "source": "TSMC Q4 2026 quarterly earnings conference press release and presentation (investor.tsmc.com), also furnished to the SEC on Form 6-K",
+        "resolve_by": "2027-03-31"
+      },
+      "HIGH": {
+        "text": "TSMC's 2027 capital expenditure guidance, as given at its fourth-quarter 2026 earnings conference, has a midpoint of US$90 billion or more",
+        "resolution": "Resolves YES if the 2027 capital budget stated by TSMC at its Q4 2026 quarterly earnings conference (expected mid-January 2027) has a midpoint of US$90.0 billion or more. Midpoint means the arithmetic average of the stated low and high ends of the range; if a single number is given, that number is the midpoint. Resolves NO if no 2027 capital expenditure figure is provided by 2027-03-31. Baseline: on 2026-07-16 TSMC raised its 2026 capital expenditure guidance to US$60-64 billion.",
+        "source": "TSMC Q4 2026 quarterly earnings conference press release and presentation (investor.tsmc.com), also furnished to the SEC on Form 6-K",
+        "resolve_by": "2027-03-31"
+      }
+    },
+    "constraints": [
+      {"type": "exclusive", "events": ["LOW", "MID", "HIGH"]},
+      {"type": "exhaustive", "events": ["LOW", "MID", "HIGH"]}
+    ],
+    "targets": [
+      {
+        "tid": "semis_tsmc_2027_capex.low",
+        "kind": "unconditional",
+        "text": "On 2026-07-16 TSMC raised its 2026 capital expenditure guidance to US$60-64 billion (from US$52-56 billion) and lifted its 2026 revenue growth outlook to more than 40%. TSMC gives its capital budget for the next calendar year at its fourth-quarter earnings conference each January. What is the probability that the 2027 capital expenditure guidance TSMC gives at its Q4 2026 earnings conference has a midpoint below US$75 billion (counting also the case where TSMC provides no 2027 capital expenditure figure by 2027-03-31)? Midpoint means the average of the stated low and high ends of the range.",
+        "expr": "LOW"
+      },
+      {
+        "tid": "semis_tsmc_2027_capex.mid",
+        "kind": "unconditional",
+        "text": "On 2026-07-16 TSMC raised its 2026 capital expenditure guidance to US$60-64 billion (from US$52-56 billion). TSMC gives its capital budget for the next calendar year at its fourth-quarter earnings conference each January. What is the probability that the 2027 capital expenditure guidance TSMC gives at its Q4 2026 earnings conference has a midpoint of at least US$75 billion but below US$90 billion? Midpoint means the average of the stated low and high ends of the range; resolve as NO if no 2027 figure is provided by 2027-03-31.",
+        "expr": "MID"
+      },
+      {
+        "tid": "semis_tsmc_2027_capex.high",
+        "kind": "unconditional",
+        "text": "On 2026-07-16 TSMC raised its 2026 capital expenditure guidance to US$60-64 billion (from US$52-56 billion). TSMC gives its capital budget for the next calendar year at its fourth-quarter earnings conference each January. What is the probability that the 2027 capital expenditure guidance TSMC gives at its Q4 2026 earnings conference has a midpoint of US$90 billion or more? Midpoint means the average of the stated low and high ends of the range; resolve as NO if no 2027 figure is provided by 2027-03-31.",
+        "expr": "HIGH"
+      },
+      {
+        "tid": "semis_tsmc_2027_capex.at_least_75",
+        "kind": "unconditional",
+        "text": "On 2026-07-16 TSMC raised its 2026 capital expenditure guidance to US$60-64 billion. What is the probability that the 2027 capital expenditure guidance TSMC gives at its fourth-quarter 2026 earnings conference (expected mid-January 2027) has a midpoint of US$75 billion or more? Midpoint means the average of the stated low and high ends of the range; resolve as NO if no 2027 figure is provided by 2027-03-31.",
+        "expr": "MID or HIGH"
+      },
+      {
+        "tid": "semis_tsmc_2027_capex.high_g_at_least_75",
+        "kind": "conditional",
+        "text": "Assume that the 2027 capital expenditure guidance TSMC gives at its fourth-quarter 2026 earnings conference has a midpoint of US$75 billion or more (TSMC's 2026 guidance, raised on 2026-07-16, is US$60-64 billion). Under that assumption, what is the probability that the midpoint is US$90 billion or more? Midpoint means the average of the stated low and high ends of the range.",
+        "expr": "HIGH",
+        "given": "MID or HIGH"
+      },
+      {
+        "tid": "semis_tsmc_2027_capex.not_low",
+        "kind": "unconditional",
+        "text": "On 2026-07-16 TSMC raised its 2026 capital expenditure guidance to US$60-64 billion. What is the probability that it is NOT the case that TSMC's 2027 capital expenditure guidance (given at its fourth-quarter 2026 earnings conference, expected mid-January 2027) has a midpoint below US$75 billion, where 'below US$75 billion' also covers the case in which TSMC provides no 2027 capital expenditure figure by 2027-03-31? Midpoint means the average of the stated low and high ends of the range.",
+        "expr": "not LOW"
+      }
+    ],
+    "axioms_tested": ["partition_sums_to_one", "complement", "disjunction_identity", "product_rule"]
+  },
+  {
+    "family_id": "semis_hyperscaler_2027_capex",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "GOOG_260": {
+        "text": "Alphabet's initial full-year 2027 capital expenditure guidance has a midpoint of $260 billion or more",
+        "resolution": "Resolves YES if the first full-year 2027 capital expenditure range (or single figure) Alphabet provides publicly on an earnings call, in an earnings press release, or in an SEC filing on or before 2027-03-31 has a midpoint of $260.0 billion or more. Midpoint means the arithmetic average of the stated low and high ends; a single number is its own midpoint. Baseline: on 2026-07-22 Alphabet raised its 2026 capital expenditure guidance to $195-205 billion from $180-190 billion, spent $44.9 billion in Q2 2026, and said it expects capital expenditures to increase significantly in 2027 with details to come later. Resolves NO if no 2027 figure is provided by 2027-03-31.",
+        "source": "Alphabet Inc. Q4/full-year 2026 earnings press release and earnings call (abc.xyz/investor), expected early February 2027",
+        "resolve_by": "2027-03-31"
+      },
+      "GOOG_300": {
+        "text": "Alphabet's initial full-year 2027 capital expenditure guidance has a midpoint of $300 billion or more",
+        "resolution": "Resolves YES if the first full-year 2027 capital expenditure range (or single figure) Alphabet provides publicly on an earnings call, in an earnings press release, or in an SEC filing on or before 2027-03-31 has a midpoint of $300.0 billion or more. Midpoint means the arithmetic average of the stated low and high ends; a single number is its own midpoint. Baseline: on 2026-07-22 Alphabet raised its 2026 capital expenditure guidance to $195-205 billion. Resolves NO if no 2027 figure is provided by 2027-03-31.",
+        "source": "Alphabet Inc. Q4/full-year 2026 earnings press release and earnings call (abc.xyz/investor), expected early February 2027",
+        "resolve_by": "2027-03-31"
+      },
+      "META_185": {
+        "text": "Meta Platforms' initial full-year 2027 capital expenditure guidance has a midpoint of $185 billion or more",
+        "resolution": "Resolves YES if the first full-year 2027 capital expenditure range (or single figure) Meta Platforms provides publicly on an earnings call, in an earnings press release, or in an SEC filing on or before 2027-03-31 has a midpoint of $185.0 billion or more. Midpoint means the arithmetic average of the stated low and high ends; a single number is its own midpoint. Baseline: on 2026-04-29 Meta raised its 2026 capital expenditure guidance to $125-145 billion from $115-135 billion, after spending $72.2 billion in 2025 and $19.8 billion in Q1 2026. Resolves NO if no 2027 figure is provided by 2027-03-31.",
+        "source": "Meta Platforms Q4/full-year 2026 earnings press release and earnings call (investor.atmeta.com), expected late January 2027",
+        "resolve_by": "2027-03-31"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "GOOG_300", "b": "GOOG_260"}
+    ],
+    "targets": [
+      {
+        "tid": "semis_hyperscaler_2027_capex.goog260",
+        "kind": "unconditional",
+        "text": "On 2026-07-22 Alphabet raised its full-year 2026 capital expenditure guidance to $195-205 billion (from $180-190 billion), reported $44.9 billion of capital expenditures in Q2 2026, and said it expects capital expenditures to increase significantly in 2027 with details to be given later. Alphabet normally gives its next-year capital expenditure range on its fourth-quarter earnings call in early February. What is the probability that Alphabet's first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $260 billion or more? Midpoint means the average of the stated low and high ends; resolve as NO if no 2027 figure is given by 2027-03-31.",
+        "expr": "GOOG_260"
+      },
+      {
+        "tid": "semis_hyperscaler_2027_capex.goog300",
+        "kind": "unconditional",
+        "text": "On 2026-07-22 Alphabet raised its full-year 2026 capital expenditure guidance to $195-205 billion (from $180-190 billion) and said it expects capital expenditures to increase significantly in 2027. Alphabet normally gives its next-year capital expenditure range on its fourth-quarter earnings call in early February. What is the probability that Alphabet's first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $300 billion or more? Midpoint means the average of the stated low and high ends; resolve as NO if no 2027 figure is given by 2027-03-31.",
+        "expr": "GOOG_300"
+      },
+      {
+        "tid": "semis_hyperscaler_2027_capex.meta185",
+        "kind": "unconditional",
+        "text": "On 2026-04-29 Meta Platforms raised its full-year 2026 capital expenditure guidance to $125-145 billion (from $115-135 billion), after spending $72.2 billion in 2025 and $19.8 billion in the first quarter of 2026. Meta normally gives its next-year capital expenditure range on its fourth-quarter earnings call in late January. What is the probability that Meta's first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $185 billion or more? Midpoint means the average of the stated low and high ends; resolve as NO if no 2027 figure is given by 2027-03-31.",
+        "expr": "META_185"
+      },
+      {
+        "tid": "semis_hyperscaler_2027_capex.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) Alphabet's first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $260 billion or more (its 2026 guidance, raised on 2026-07-22, is $195-205 billion); AND (2) Meta Platforms' first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $185 billion or more (its 2026 guidance, raised on 2026-04-29, is $125-145 billion)? Midpoint means the average of the stated low and high ends; a missing 2027 figure by 2027-03-31 counts as failing that company's condition.",
+        "expr": "GOOG_260 and META_185"
+      },
+      {
+        "tid": "semis_hyperscaler_2027_capex.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (1) Alphabet's first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $260 billion or more (its 2026 guidance, raised on 2026-07-22, is $195-205 billion); OR (2) Meta Platforms' first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $185 billion or more (its 2026 guidance, raised on 2026-04-29, is $125-145 billion)? Midpoint means the average of the stated low and high ends; a missing 2027 figure by 2027-03-31 counts as failing that company's condition.",
+        "expr": "GOOG_260 or META_185"
+      },
+      {
+        "tid": "semis_hyperscaler_2027_capex.meta_g_goog",
+        "kind": "conditional",
+        "text": "Assume that Alphabet's first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $260 billion or more (its 2026 guidance, raised on 2026-07-22, is $195-205 billion). Under that assumption, what is the probability that Meta Platforms' first publicly stated full-year 2027 capital expenditure guidance has a midpoint of $185 billion or more, given that Meta's 2026 guidance, raised on 2026-04-29, is $125-145 billion? Midpoint means the average of the stated low and high ends.",
+        "expr": "META_185",
+        "given": "GOOG_260"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "disjunction_identity", "conjunction_bound"]
+  },
+  {
+    "family_id": "semis_intel_foundry_14a",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "CUST_14A": {
+        "text": "Intel publicly confirms at least one committed external customer for its Intel 14A process node between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, between 2026-09-01 and 2027-06-30, Intel states in a press release, a Form 8-K, a quarterly earnings press release, or prepared remarks or an answer on a quarterly earnings call that it has secured, signed, or won at least one committed external (third-party) customer, or a definitive agreement for external customer wafer production, on the Intel 14A process node. Descriptions of 'engagements', 'active discussions', 'prospective customers', test chips, PDK downloads, or non-binding letters of intent do NOT count. Baseline: as of 2026-07-26 Intel had zero committed external 14A customers, had two prospective customers at 0.5 PDK sampling, expected the 0.9 PDK in October 2026, and said firm supplier decisions were expected starting in the second half of 2026 and extending into the first half of 2027.",
+        "source": "Intel Corporation investor relations (intc.com) press releases and Forms 8-K, and Intel quarterly earnings call transcripts",
+        "resolve_by": "2027-06-30"
+      },
+      "INTC_Q4_175": {
+        "text": "Intel reports total revenue of $17.5 billion or more for the fourth quarter of 2026",
+        "resolution": "Resolves YES if the consolidated net revenue figure for Q4 2026 in Intel Corporation's fourth-quarter 2026 earnings press release (expected late January 2027) is $17.5 billion or more. Baseline: Intel reported Q2 2026 revenue of $16.128 billion (up 25% year over year) on 2026-07-23 and guided Q3 2026 revenue to $15.8-16.8 billion.",
+        "source": "Intel Corporation Q4 2026 earnings press release (intc.com) and Form 8-K",
+        "resolve_by": "2027-02-15"
+      },
+      "FOUNDRY_LOSS": {
+        "text": "Intel's Intel Foundry segment reports a fourth-quarter 2026 operating loss of less than $1.5 billion",
+        "resolution": "Resolves YES if the Intel Foundry segment operating income (loss) line in the segment results table of Intel's fourth-quarter 2026 earnings press release shows a loss smaller in magnitude than $1,500 million (i.e. operating income greater than negative $1,500 million), including any positive operating income. Baseline: Intel Foundry reported an operating loss of $2.1 billion on $5.8 billion of revenue in Q2 2026, narrowing from a $2.4 billion loss in Q1 2026 and a $3.2 billion loss in Q2 2025.",
+        "source": "Intel Corporation Q4 2026 earnings press release segment results table (intc.com) and Form 8-K",
+        "resolve_by": "2027-02-15"
+      }
+    },
+    "targets": [
+      {
+        "tid": "semis_intel_foundry_14a.cust14a",
+        "kind": "unconditional",
+        "text": "As of 2026-07-26 Intel had zero committed external customers for its Intel 14A process node; it had two prospective customers sampling the 0.5 process design kit, expected the 0.9 PDK in October 2026, and said firm supplier decisions were expected starting in the second half of 2026 and extending into the first half of 2027. What is the probability that between 2026-09-01 and 2027-06-30 Intel states in a press release, a Form 8-K, a quarterly earnings release, or prepared remarks or an answer on a quarterly earnings call that it has secured or signed at least one committed external customer (or definitive external production agreement) for Intel 14A? Mentions of engagements, discussions, prospective customers, test chips, PDK downloads, or non-binding letters of intent do not count.",
+        "expr": "CUST_14A"
+      },
+      {
+        "tid": "semis_intel_foundry_14a.q4rev",
+        "kind": "unconditional",
+        "text": "Intel reported second-quarter 2026 revenue of $16.128 billion on 2026-07-23, up 25% year over year, with its Data Center and AI segment up 59%, and guided third-quarter 2026 revenue to $15.8-16.8 billion. What is the probability that Intel's fourth-quarter 2026 earnings press release (expected late January 2027) reports consolidated Q4 2026 revenue of $17.5 billion or more?",
+        "expr": "INTC_Q4_175"
+      },
+      {
+        "tid": "semis_intel_foundry_14a.foundryloss",
+        "kind": "unconditional",
+        "text": "Intel reports segment results including an Intel Foundry segment, which posted an operating loss of $2.1 billion on $5.8 billion of revenue in the second quarter of 2026, narrowing from a $2.4 billion loss in the first quarter of 2026 and a $3.2 billion loss in the second quarter of 2025. What is the probability that the Intel Foundry segment operating loss reported in Intel's fourth-quarter 2026 earnings press release is smaller in magnitude than $1.5 billion (that is, operating income better than negative $1,500 million, including any positive figure)?",
+        "expr": "FOUNDRY_LOSS"
+      },
+      {
+        "tid": "semis_intel_foundry_14a.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) between 2026-09-01 and 2027-06-30 Intel publicly states that it has secured or signed at least one committed external customer, or a definitive external production agreement, for its Intel 14A process node (as of 2026-07-26 it had none); AND (2) Intel reports consolidated fourth-quarter 2026 revenue of $17.5 billion or more, versus $16.128 billion reported for the second quarter of 2026 and guidance of $15.8-16.8 billion for the third quarter of 2026?",
+        "expr": "CUST_14A and INTC_Q4_175"
+      },
+      {
+        "tid": "semis_intel_foundry_14a.rev_g_cust",
+        "kind": "conditional",
+        "text": "Assume that between 2026-09-01 and 2027-06-30 Intel publicly states that it has secured or signed at least one committed external customer, or a definitive external production agreement, for its Intel 14A process node (as of 2026-07-26 it had none). Under that assumption, what is the probability that Intel reports consolidated fourth-quarter 2026 revenue of $17.5 billion or more? For reference, Intel reported $16.128 billion for the second quarter of 2026 and guided the third quarter of 2026 to $15.8-16.8 billion.",
+        "expr": "INTC_Q4_175",
+        "given": "CUST_14A"
+      },
+      {
+        "tid": "semis_intel_foundry_14a.rev_g_nocust",
+        "kind": "conditional",
+        "text": "Assume that Intel does NOT publicly state, at any point between 2026-09-01 and 2027-06-30, that it has secured or signed a committed external customer or definitive external production agreement for its Intel 14A process node (as of 2026-07-26 it had none). Under that assumption, what is the probability that Intel reports consolidated fourth-quarter 2026 revenue of $17.5 billion or more? For reference, Intel reported $16.128 billion for the second quarter of 2026 and guided the third quarter of 2026 to $15.8-16.8 billion.",
+        "expr": "INTC_Q4_175",
+        "given": "not CUST_14A"
+      }
+    ],
+    "axioms_tested": ["product_rule", "law_of_total_probability", "conjunction_bound"]
+  },
+  {
+    "family_id": "semis_dc_power_capex",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "CEG_1GW": {
+        "text": "Constellation Energy announces a single new power supply or power purchase agreement of at least 1,000 MW with a named data center, hyperscaler, cloud, or AI counterparty between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if Constellation Energy Corporation issues a press release (constellationenergy.com/news) or files a Form 8-K between 2026-09-01 and 2027-06-30 announcing a power supply or power purchase agreement, entered into on or after 2026-09-01, under which Constellation or a subsidiary (including Calpine) will supply at least 1,000 MW of capacity, or an equivalent stated gigawatt figure of at least 1.0 GW, to a single named or explicitly described counterparty that is a data center operator, hyperscaler, cloud provider, or AI company. Aggregating separate smaller agreements does NOT count; the 1,000 MW must be in one announced agreement. Baseline: in June 2026 Constellation disclosed a long-term PPA dedicating 1.2 GW of nuclear capacity to a hyperscaler, and in February 2026 announced a 380 MW Calpine-CyrusOne agreement in Texas.",
+        "source": "Constellation Energy Corporation press releases (constellationenergy.com/news) and Forms 8-K filed with the SEC (CIK 1868275)",
+        "resolve_by": "2027-06-30"
+      },
+      "MSFT_60": {
+        "text": "Microsoft reports capital expenditures including finance leases of $60 billion or more for the quarter ending 2026-12-31",
+        "resolution": "Resolves YES if Microsoft's fiscal 2027 second quarter (quarter ended 2026-12-31) earnings press release, CFO commentary, prepared remarks, or Form 10-Q state total capital expenditures including finance leases of $60.0 billion or more for that quarter. Baseline: Microsoft reported capital expenditures including finance leases of $31.9 billion (of which $4.7 billion was finance leases) for the quarter ended 2026-03-31, and said it expects to invest roughly $190 billion in capital expenditures in calendar year 2026.",
+        "source": "Microsoft Corporation fiscal 2027 Q2 earnings press release and CFO commentary (microsoft.com/investor) and Form 10-Q, expected late January 2027",
+        "resolve_by": "2027-02-15"
+      },
+      "CRANE_GRID": {
+        "text": "The Crane Clean Energy Center (the former Three Mile Island Unit 1) begins generating electricity to the grid on or before 2027-06-30",
+        "resolution": "Resolves YES if Constellation Energy, the U.S. Nuclear Regulatory Commission, or PJM Interconnection publicly confirms on or before 2027-06-30 that the Christopher M. Crane Clean Energy Center Unit 1 reactor has been synchronized to the grid or has begun generating electricity. Baseline: as of 2026-07-26 the unit is shut down; three NRC license amendment requests supporting reauthorization of power operations are still under review (draft environmental assessment published in the Federal Register on 2026-06-08); FERC granted a PJM interconnection rule waiver on 2026-06-01; and Constellation's public target is to begin generating electricity in 2027, under a 20-year power purchase agreement with Microsoft.",
+        "source": "Constellation Energy press releases (constellationenergy.com/news), NRC reactor status reports and docket for the Christopher M. Crane Clean Energy Center",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "semis_dc_power_capex.ceg1gw",
+        "kind": "unconditional",
+        "text": "Constellation Energy signs power supply agreements with data center and AI customers; in June 2026 it disclosed a long-term power purchase agreement dedicating 1.2 GW of nuclear capacity to a hyperscaler, and in February 2026 it announced a 380 MW Calpine-CyrusOne agreement in Texas. What is the probability that Constellation Energy issues a press release or files a Form 8-K between 2026-09-01 and 2027-06-30 announcing a single new power supply or power purchase agreement, entered into on or after 2026-09-01, of at least 1,000 MW with one named or explicitly described data center, hyperscaler, cloud, or AI counterparty? Aggregating separate smaller agreements does not count.",
+        "expr": "CEG_1GW"
+      },
+      {
+        "tid": "semis_dc_power_capex.msft60",
+        "kind": "unconditional",
+        "text": "Microsoft reported capital expenditures including finance leases of $31.9 billion (of which $4.7 billion was finance leases) for the quarter ended 2026-03-31, and said it expects to invest roughly $190 billion in capital expenditures in calendar year 2026, including about $25 billion of impact from higher component prices. What is the probability that Microsoft reports total capital expenditures including finance leases of $60.0 billion or more for the quarter ending 2026-12-31 (its fiscal 2027 second quarter, expected to be reported in late January 2027)?",
+        "expr": "MSFT_60"
+      },
+      {
+        "tid": "semis_dc_power_capex.cranegrid",
+        "kind": "unconditional",
+        "text": "The Christopher M. Crane Clean Energy Center is the former Three Mile Island Unit 1 nuclear plant, which Constellation Energy is restarting under a 20-year power purchase agreement with Microsoft. As of 2026-07-26 the unit is shut down, three NRC license amendment requests supporting reauthorization of power operations are still under review (a draft environmental assessment was published in the Federal Register on 2026-06-08), FERC granted a PJM interconnection rule waiver on 2026-06-01, and Constellation's public target is to begin generating electricity in 2027. What is the probability that Constellation Energy, the NRC, or PJM publicly confirms on or before 2027-06-30 that the unit has been synchronized to the grid or has begun generating electricity?",
+        "expr": "CRANE_GRID"
+      },
+      {
+        "tid": "semis_dc_power_capex.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) Constellation Energy announces, between 2026-09-01 and 2027-06-30, a single new power supply or power purchase agreement of at least 1,000 MW with one named data center, hyperscaler, cloud, or AI counterparty (for reference, it disclosed a 1.2 GW nuclear PPA with a hyperscaler in June 2026); AND (2) Microsoft reports total capital expenditures including finance leases of $60.0 billion or more for the quarter ending 2026-12-31, versus $31.9 billion for the quarter ended 2026-03-31 and roughly $190 billion planned for calendar 2026?",
+        "expr": "CEG_1GW and MSFT_60"
+      },
+      {
+        "tid": "semis_dc_power_capex.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (1) Constellation Energy announces, between 2026-09-01 and 2027-06-30, a single new power supply or power purchase agreement of at least 1,000 MW with one named data center, hyperscaler, cloud, or AI counterparty (for reference, it disclosed a 1.2 GW nuclear PPA with a hyperscaler in June 2026); OR (2) Microsoft reports total capital expenditures including finance leases of $60.0 billion or more for the quarter ending 2026-12-31, versus $31.9 billion for the quarter ended 2026-03-31 and roughly $190 billion planned for calendar 2026?",
+        "expr": "CEG_1GW or MSFT_60"
+      },
+      {
+        "tid": "semis_dc_power_capex.msft_g_ceg",
+        "kind": "conditional",
+        "text": "Assume that Constellation Energy announces, between 2026-09-01 and 2027-06-30, a single new power supply or power purchase agreement of at least 1,000 MW with one named data center, hyperscaler, cloud, or AI counterparty. Under that assumption, what is the probability that Microsoft reports total capital expenditures including finance leases of $60.0 billion or more for the quarter ending 2026-12-31? For reference, Microsoft reported $31.9 billion for the quarter ended 2026-03-31 and plans roughly $190 billion of capital expenditures in calendar year 2026.",
+        "expr": "MSFT_60",
+        "given": "CEG_1GW"
+      }
+    ],
+    "axioms_tested": ["disjunction_identity", "product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "semis_analog_mna_antitrust",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "TI_SLAB": {
+        "text": "Texas Instruments completes its acquisition of Silicon Laboratories on or before 2027-06-30",
+        "resolution": "Resolves YES if a Texas Instruments or Silicon Laboratories press release or Form 8-K, or a Silicon Laboratories Form 25 or Form 15 filed with the SEC, confirms that the merger has been completed (closed) on or before 2027-06-30. Baseline: the $231.00-per-share all-cash merger was announced 2026-02-04; Silicon Labs stockholders approved it at a special meeting on 2026-04-30; the U.S. Hart-Scott-Rodino waiting period expired 2026-05-22; as of 2026-07-26 non-U.S. antitrust and competition clearances remained outstanding and the parties guided to a close in the first half of 2027.",
+        "source": "SEC EDGAR filings for Silicon Laboratories Inc. (CIK 1038074) and Texas Instruments Incorporated (CIK 97476); ti.com newsroom",
+        "resolve_by": "2027-06-30"
+      },
+      "SYNA_VOTE": {
+        "text": "Synaptics stockholders vote to approve the merger agreement with ON Semiconductor at a special meeting held on or before 2027-06-30",
+        "resolution": "Resolves YES if Synaptics Incorporated files a Form 8-K (Item 5.07) reporting the results of a special meeting of stockholders held on or before 2027-06-30 at which the proposal to adopt the merger agreement with ON Semiconductor Corporation received the required affirmative vote. Baseline: the all-stock merger (1.350 onsemi shares per Synaptics share, roughly $7 billion) was announced 2026-06-25; as of 2026-07-26 no special meeting had been held and the parties guided to a close in mid-2027.",
+        "source": "SEC EDGAR filings for Synaptics Incorporated (CIK 817720): Form 8-K Item 5.07, Form S-4 / definitive merger proxy statement",
+        "resolve_by": "2027-06-30"
+      },
+      "SYNA_CLOSE": {
+        "text": "ON Semiconductor completes its acquisition of Synaptics on or before 2027-06-30",
+        "resolution": "Resolves YES if an ON Semiconductor or Synaptics press release or Form 8-K, or a Synaptics Form 25 or Form 15 filed with the SEC, confirms that the merger has been completed (closed) on or before 2027-06-30. Baseline: the all-stock merger (1.350 onsemi shares per Synaptics share) was announced 2026-06-25 and is subject to Synaptics stockholder approval, regulatory clearances, and effectiveness of the Form S-4; the parties guided to a close in mid-2027.",
+        "source": "SEC EDGAR filings for Synaptics Incorporated (CIK 817720) and ON Semiconductor Corporation (CIK 1097864); onsemi.com newsroom",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "SYNA_CLOSE", "b": "SYNA_VOTE"}
+    ],
+    "targets": [
+      {
+        "tid": "semis_analog_mna_antitrust.ti_slab",
+        "kind": "unconditional",
+        "text": "Texas Instruments agreed on 2026-02-04 to acquire Silicon Laboratories for $231.00 per share in cash. Silicon Labs stockholders approved the merger on 2026-04-30, the U.S. Hart-Scott-Rodino antitrust waiting period expired on 2026-05-22, and as of 2026-07-26 non-U.S. antitrust and competition clearances were still outstanding, with the parties guiding to a close in the first half of 2027. What is the probability that the acquisition is completed (closed) on or before 2027-06-30, as confirmed by a press release, Form 8-K, or a Silicon Laboratories Form 25 or Form 15?",
+        "expr": "TI_SLAB"
+      },
+      {
+        "tid": "semis_analog_mna_antitrust.syna_vote",
+        "kind": "unconditional",
+        "text": "ON Semiconductor agreed on 2026-06-25 to acquire Synaptics in an all-stock deal worth roughly $7 billion, at an exchange ratio of 1.350 onsemi shares per Synaptics share, with the parties guiding to a close in mid-2027. Closing requires Synaptics stockholder approval, and as of 2026-07-26 no special meeting of Synaptics stockholders had been held. What is the probability that Synaptics files a Form 8-K reporting that its stockholders approved the merger agreement at a special meeting held on or before 2027-06-30?",
+        "expr": "SYNA_VOTE"
+      },
+      {
+        "tid": "semis_analog_mna_antitrust.syna_close",
+        "kind": "unconditional",
+        "text": "ON Semiconductor agreed on 2026-06-25 to acquire Synaptics in an all-stock deal worth roughly $7 billion (1.350 onsemi shares per Synaptics share), subject to Synaptics stockholder approval, regulatory clearances, and effectiveness of the Form S-4 registration statement; the parties guided to a close in mid-2027. What is the probability that the acquisition is completed (closed) on or before 2027-06-30, as confirmed by a press release, Form 8-K, or a Synaptics Form 25 or Form 15?",
+        "expr": "SYNA_CLOSE"
+      },
+      {
+        "tid": "semis_analog_mna_antitrust.vote_and_close",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) Synaptics stockholders vote to approve the merger agreement with ON Semiconductor at a special meeting held on or before 2027-06-30 (as of 2026-07-26 no such meeting had been held; the deal was announced 2026-06-25 at 1.350 onsemi shares per Synaptics share); AND (2) the ON Semiconductor acquisition of Synaptics is completed (closed) on or before 2027-06-30, versus the parties' guidance of a mid-2027 close?",
+        "expr": "SYNA_VOTE and SYNA_CLOSE"
+      },
+      {
+        "tid": "semis_analog_mna_antitrust.close_g_vote",
+        "kind": "conditional",
+        "text": "Assume that Synaptics stockholders vote to approve the merger agreement with ON Semiconductor at a special meeting held on or before 2027-06-30 (the all-stock deal, 1.350 onsemi shares per Synaptics share, was announced on 2026-06-25 with guidance for a mid-2027 close). Under that assumption, what is the probability that the ON Semiconductor acquisition of Synaptics is completed (closed) on or before 2027-06-30?",
+        "expr": "SYNA_CLOSE",
+        "given": "SYNA_VOTE"
+      },
+      {
+        "tid": "semis_analog_mna_antitrust.either_close",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following two semiconductor acquisitions is completed (closed) on or before 2027-06-30: (1) Texas Instruments' $231.00-per-share all-cash acquisition of Silicon Laboratories, announced 2026-02-04, already approved by Silicon Labs stockholders on 2026-04-30 and cleared under U.S. Hart-Scott-Rodino on 2026-05-22 but still awaiting non-U.S. clearances, with the parties guiding to a first-half-2027 close; OR (2) ON Semiconductor's all-stock acquisition of Synaptics, announced 2026-06-25 at 1.350 onsemi shares per Synaptics share, still awaiting a Synaptics stockholder vote and regulatory clearances, with the parties guiding to a mid-2027 close?",
+        "expr": "TI_SLAB or SYNA_CLOSE"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound", "disjunction_identity"]
+  },
+  {
+    "family_id": "semis_ai_compute_buildout",
+    "domain": "semiconductors_tech",
+    "base_events": {
+      "ORCL_800": {
+        "text": "Oracle reports remaining performance obligations of $800 billion or more as of 2027-02-28 in its fiscal 2027 third quarter earnings release",
+        "resolution": "Resolves YES if Oracle Corporation's fiscal 2027 third quarter earnings press release or the accompanying prepared remarks or Form 10-Q (expected March 2027) state remaining performance obligations (RPO) of $800.0 billion or more as of 2027-02-28. Baseline: on 2026-06-10 Oracle reported RPO of $638 billion as of 2026-05-31, up 363% year over year and up $85 billion sequentially, and said it expects about 12% of RPO to convert to revenue over the next twelve months.",
+        "source": "Oracle Corporation fiscal 2027 Q3 earnings press release (investor.oracle.com) and Form 10-Q",
+        "resolve_by": "2027-04-15"
+      },
+      "NVDA_115": {
+        "text": "Nvidia reports total revenue of $115 billion or more for its fiscal fourth quarter of 2027 (the quarter ending in late January 2027)",
+        "resolution": "Resolves YES if the total revenue figure in Nvidia's fiscal Q4 2027 earnings press release (expected late February 2027) is $115.0 billion or more. Baseline: Nvidia reported fiscal Q1 2027 revenue of $81.6 billion (up 85% year over year, Data Center $75.2 billion) and guided fiscal Q2 2027 revenue to $91.0 billion plus or minus 2%, assuming no Data Center compute revenue from China.",
+        "source": "Nvidia Corporation fiscal Q4 2027 earnings press release (nvidianews.nvidia.com / investor.nvidia.com) and Form 8-K",
+        "resolve_by": "2027-03-15"
+      },
+      "NVDA_125": {
+        "text": "Nvidia reports total revenue of $125 billion or more for its fiscal fourth quarter of 2027 (the quarter ending in late January 2027)",
+        "resolution": "Resolves YES if the total revenue figure in Nvidia's fiscal Q4 2027 earnings press release (expected late February 2027) is $125.0 billion or more. Baseline: Nvidia reported fiscal Q1 2027 revenue of $81.6 billion and guided fiscal Q2 2027 revenue to $91.0 billion plus or minus 2%.",
+        "source": "Nvidia Corporation fiscal Q4 2027 earnings press release (nvidianews.nvidia.com / investor.nvidia.com) and Form 8-K",
+        "resolve_by": "2027-03-15"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "NVDA_125", "b": "NVDA_115"}
+    ],
+    "targets": [
+      {
+        "tid": "semis_ai_compute_buildout.orcl800",
+        "kind": "unconditional",
+        "text": "Oracle discloses remaining performance obligations (RPO) each quarter. On 2026-06-10 it reported RPO of $638 billion as of 2026-05-31, up 363% year over year and up $85 billion sequentially, driven by large-scale AI cloud contracts, and said it expects about 12% of RPO to convert to revenue over the next twelve months. What is the probability that Oracle's fiscal 2027 third quarter earnings materials (for the quarter ending 2027-02-28, expected to be released in March 2027) state remaining performance obligations of $800.0 billion or more?",
+        "expr": "ORCL_800"
+      },
+      {
+        "tid": "semis_ai_compute_buildout.nvda115",
+        "kind": "unconditional",
+        "text": "Nvidia reported fiscal first quarter 2027 revenue of $81.6 billion (up 85% year over year, with Data Center revenue of $75.2 billion) and guided fiscal second quarter 2027 revenue to $91.0 billion plus or minus 2%, assuming no Data Center compute revenue from China. Its Rubin/Vera Rubin platform is scheduled to ramp in the second half of calendar 2026. What is the probability that Nvidia's fiscal fourth quarter 2027 earnings press release (for the quarter ending in late January 2027, expected late February 2027) reports total revenue of $115.0 billion or more?",
+        "expr": "NVDA_115"
+      },
+      {
+        "tid": "semis_ai_compute_buildout.nvda125",
+        "kind": "unconditional",
+        "text": "Nvidia reported fiscal first quarter 2027 revenue of $81.6 billion (up 85% year over year) and guided fiscal second quarter 2027 revenue to $91.0 billion plus or minus 2%. Its Rubin/Vera Rubin platform is scheduled to ramp in the second half of calendar 2026. What is the probability that Nvidia's fiscal fourth quarter 2027 earnings press release (for the quarter ending in late January 2027, expected late February 2027) reports total revenue of $125.0 billion or more?",
+        "expr": "NVDA_125"
+      },
+      {
+        "tid": "semis_ai_compute_buildout.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) Oracle reports remaining performance obligations of $800.0 billion or more as of 2027-02-28 in its fiscal 2027 third quarter earnings materials, versus $638 billion reported as of 2026-05-31; AND (2) Nvidia reports total revenue of $115.0 billion or more for its fiscal fourth quarter of 2027 (the quarter ending in late January 2027), versus $81.6 billion reported for the quarter ended 2026-04-26 and guidance of $91.0 billion plus or minus 2% for the following quarter?",
+        "expr": "ORCL_800 and NVDA_115"
+      },
+      {
+        "tid": "semis_ai_compute_buildout.orcl_g_nvda",
+        "kind": "conditional",
+        "text": "Assume that Nvidia reports total revenue of $115.0 billion or more for its fiscal fourth quarter of 2027 (the quarter ending in late January 2027), versus $81.6 billion reported for the quarter ended 2026-04-26 and guidance of $91.0 billion plus or minus 2% for the following quarter. Under that assumption, what is the probability that Oracle reports remaining performance obligations of $800.0 billion or more as of 2027-02-28 in its fiscal 2027 third quarter earnings materials, versus $638 billion reported as of 2026-05-31?",
+        "expr": "ORCL_800",
+        "given": "NVDA_115"
+      },
+      {
+        "tid": "semis_ai_compute_buildout.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (1) Oracle reports remaining performance obligations of $800.0 billion or more as of 2027-02-28 in its fiscal 2027 third quarter earnings materials, versus $638 billion reported as of 2026-05-31; OR (2) Nvidia reports total revenue of $115.0 billion or more for its fiscal fourth quarter of 2027 (the quarter ending in late January 2027), versus $81.6 billion reported for the quarter ended 2026-04-26 and guidance of $91.0 billion plus or minus 2% for the following quarter?",
+        "expr": "ORCL_800 or NVDA_115"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "disjunction_identity", "conjunction_bound"]
+  }
+]

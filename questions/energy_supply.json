@@ -1,0 +1,536 @@
+[
+  {
+    "family_id": "en_brent_q4_2026_bands",
+    "domain": "energy",
+    "base_events": {
+      "BR_LT75": {
+        "text": "The arithmetic mean of the EIA daily Europe Brent Spot Price FOB across every publication day from 2026-10-01 through 2026-12-31 is below $75.00 per barrel",
+        "resolution": "Resolves YES if the arithmetic mean of all daily values in EIA series RBRTE (Europe Brent Spot Price FOB, dollars per barrel) dated 2026-10-01 through 2026-12-31 inclusive, computed from the EIA daily history page and rounded to two decimals, is strictly less than 75.00.",
+        "source": "EIA, Europe Brent Spot Price FOB, daily series RBRTE (https://www.eia.gov/dnav/pet/hist/RBRTEd.htm)",
+        "resolve_by": "2027-01-31"
+      },
+      "BR_75_105": {
+        "text": "The arithmetic mean of the EIA daily Europe Brent Spot Price FOB across every publication day from 2026-10-01 through 2026-12-31 is at or above $75.00 per barrel and below $105.00 per barrel",
+        "resolution": "Resolves YES if the arithmetic mean of all daily values in EIA series RBRTE dated 2026-10-01 through 2026-12-31 inclusive, rounded to two decimals, is greater than or equal to 75.00 and strictly less than 105.00.",
+        "source": "EIA, Europe Brent Spot Price FOB, daily series RBRTE (https://www.eia.gov/dnav/pet/hist/RBRTEd.htm)",
+        "resolve_by": "2027-01-31"
+      },
+      "BR_GE105": {
+        "text": "The arithmetic mean of the EIA daily Europe Brent Spot Price FOB across every publication day from 2026-10-01 through 2026-12-31 is at or above $105.00 per barrel",
+        "resolution": "Resolves YES if the arithmetic mean of all daily values in EIA series RBRTE dated 2026-10-01 through 2026-12-31 inclusive, rounded to two decimals, is greater than or equal to 105.00.",
+        "source": "EIA, Europe Brent Spot Price FOB, daily series RBRTE (https://www.eia.gov/dnav/pet/hist/RBRTEd.htm)",
+        "resolve_by": "2027-01-31"
+      }
+    },
+    "constraints": [
+      {"type": "exclusive", "events": ["BR_LT75", "BR_75_105", "BR_GE105"]},
+      {"type": "exhaustive", "events": ["BR_LT75", "BR_75_105", "BR_GE105"]}
+    ],
+    "targets": [
+      {
+        "tid": "en_brent_q4_2026_bands.lt75",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration publishes a daily Europe Brent Spot Price FOB series (series code RBRTE). Take the arithmetic mean of that daily price over every publication day from 1 October 2026 through 31 December 2026; call it the Q4 2026 Brent average. What is the probability that the Q4 2026 Brent average is below $75.00 per barrel?",
+        "expr": "BR_LT75"
+      },
+      {
+        "tid": "en_brent_q4_2026_bands.mid",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration publishes a daily Europe Brent Spot Price FOB series (series code RBRTE). Take the arithmetic mean of that daily price over every publication day from 1 October 2026 through 31 December 2026; call it the Q4 2026 Brent average. What is the probability that the Q4 2026 Brent average is at or above $75.00 per barrel and below $105.00 per barrel?",
+        "expr": "BR_75_105"
+      },
+      {
+        "tid": "en_brent_q4_2026_bands.ge105",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration publishes a daily Europe Brent Spot Price FOB series (series code RBRTE). Take the arithmetic mean of that daily price over every publication day from 1 October 2026 through 31 December 2026; call it the Q4 2026 Brent average. What is the probability that the Q4 2026 Brent average is at or above $105.00 per barrel?",
+        "expr": "BR_GE105"
+      },
+      {
+        "tid": "en_brent_q4_2026_bands.lt105",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration publishes a daily Europe Brent Spot Price FOB series (series code RBRTE). Take the arithmetic mean of that daily price over every publication day from 1 October 2026 through 31 December 2026; call it the Q4 2026 Brent average. What is the probability that the Q4 2026 Brent average is below $105.00 per barrel?",
+        "expr": "BR_LT75 or BR_75_105"
+      },
+      {
+        "tid": "en_brent_q4_2026_bands.ge75",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration publishes a daily Europe Brent Spot Price FOB series (series code RBRTE). Take the arithmetic mean of that daily price over every publication day from 1 October 2026 through 31 December 2026; call it the Q4 2026 Brent average. What is the probability that the Q4 2026 Brent average is at or above $75.00 per barrel?",
+        "expr": "BR_75_105 or BR_GE105"
+      },
+      {
+        "tid": "en_brent_q4_2026_bands.ge105_given_ge75",
+        "kind": "conditional",
+        "text": "The U.S. Energy Information Administration publishes a daily Europe Brent Spot Price FOB series (series code RBRTE). Take the arithmetic mean of that daily price over every publication day from 1 October 2026 through 31 December 2026; call it the Q4 2026 Brent average. Assume it turns out that the Q4 2026 Brent average is at or above $75.00 per barrel. Conditional on that, what is the probability that the Q4 2026 Brent average is at or above $105.00 per barrel?",
+        "expr": "BR_GE105",
+        "given": "BR_75_105 or BR_GE105"
+      }
+    ],
+    "axioms_tested": ["partition_sum", "complement", "disjunction_identity", "product_rule"]
+  },
+
+  {
+    "family_id": "en_opecplus_price_floor",
+    "domain": "energy",
+    "base_events": {
+      "OPEC_PAUSE": {
+        "text": "At one or more of their monthly meetings held between 2026-09-01 and 2026-12-31, the eight OPEC+ countries making voluntary production adjustments announce a combined required crude oil production level for an upcoming month that is unchanged from, or lower than, the level required for the immediately preceding month",
+        "resolution": "Resolves YES if at least one OPEC press release published on opec.org between 2026-09-01 and 2026-12-31 announcing the monthly production decision of the eight countries (Saudi Arabia, Russia, Iraq, UAE, Kuwait, Kazakhstan, Algeria, Oman) states either no change or a reduction in their combined monthly production level relative to the immediately preceding month. Resolves NO if every such press release published in that period announces a further increase. If no such press release is published in the period, resolves YES.",
+        "source": "OPEC press releases (https://www.opec.org/press-releases.html)",
+        "resolve_by": "2026-12-31"
+      },
+      "BR_LT70": {
+        "text": "The EIA daily Europe Brent Spot Price FOB is below $70.00 per barrel on at least one publication day between 2026-09-01 and 2027-03-31",
+        "resolution": "Resolves YES if EIA series RBRTE (Europe Brent Spot Price FOB) reports a value strictly below 70.00 dollars per barrel for at least one date from 2026-09-01 through 2027-03-31 inclusive.",
+        "source": "EIA, Europe Brent Spot Price FOB, daily series RBRTE (https://www.eia.gov/dnav/pet/hist/RBRTEd.htm)",
+        "resolve_by": "2027-04-15"
+      }
+    },
+    "targets": [
+      {
+        "tid": "en_opecplus_price_floor.pause",
+        "kind": "unconditional",
+        "text": "The eight OPEC+ countries that make voluntary crude oil production adjustments (Saudi Arabia, Russia, Iraq, the United Arab Emirates, Kuwait, Kazakhstan, Algeria and Oman) meet monthly and publish their decision through OPEC press releases on opec.org. What is the probability that at one or more of their monthly meetings held between 1 September 2026 and 31 December 2026, they announce a combined required crude oil production level for an upcoming month that is unchanged from, or lower than, the level required for the immediately preceding month (that is, they pause or reverse the sequence of monthly output increases)?",
+        "expr": "OPEC_PAUSE"
+      },
+      {
+        "tid": "en_opecplus_price_floor.brent70",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration publishes a daily Europe Brent Spot Price FOB series (series code RBRTE). What is the probability that this daily Brent spot price is below $70.00 per barrel on at least one publication day between 1 September 2026 and 31 March 2027?",
+        "expr": "BR_LT70"
+      },
+      {
+        "tid": "en_opecplus_price_floor.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) at one or more of their monthly meetings held between 1 September 2026 and 31 December 2026, the eight OPEC+ countries making voluntary crude oil production adjustments (Saudi Arabia, Russia, Iraq, the UAE, Kuwait, Kazakhstan, Algeria and Oman) announce a combined required production level for an upcoming month that is unchanged from, or lower than, the level required for the immediately preceding month; AND (b) the EIA daily Europe Brent Spot Price FOB is below $70.00 per barrel on at least one publication day between 1 September 2026 and 31 March 2027?",
+        "expr": "OPEC_PAUSE and BR_LT70"
+      },
+      {
+        "tid": "en_opecplus_price_floor.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (a) at one or more of their monthly meetings held between 1 September 2026 and 31 December 2026, the eight OPEC+ countries making voluntary crude oil production adjustments (Saudi Arabia, Russia, Iraq, the UAE, Kuwait, Kazakhstan, Algeria and Oman) announce a combined required production level for an upcoming month that is unchanged from, or lower than, the level required for the immediately preceding month; OR (b) the EIA daily Europe Brent Spot Price FOB is below $70.00 per barrel on at least one publication day between 1 September 2026 and 31 March 2027?",
+        "expr": "OPEC_PAUSE or BR_LT70"
+      },
+      {
+        "tid": "en_opecplus_price_floor.pause_given_brent70",
+        "kind": "conditional",
+        "text": "Assume that the EIA daily Europe Brent Spot Price FOB falls below $70.00 per barrel on at least one publication day between 1 September 2026 and 31 March 2027. Conditional on that, what is the probability that at one or more of their monthly meetings held between 1 September 2026 and 31 December 2026, the eight OPEC+ countries making voluntary crude oil production adjustments (Saudi Arabia, Russia, Iraq, the UAE, Kuwait, Kazakhstan, Algeria and Oman) announce a combined required production level for an upcoming month that is unchanged from, or lower than, the level required for the immediately preceding month?",
+        "expr": "OPEC_PAUSE",
+        "given": "BR_LT70"
+      },
+      {
+        "tid": "en_opecplus_price_floor.pause_given_no_brent70",
+        "kind": "conditional",
+        "text": "Assume that the EIA daily Europe Brent Spot Price FOB never falls below $70.00 per barrel on any publication day between 1 September 2026 and 31 March 2027. Conditional on that, what is the probability that at one or more of their monthly meetings held between 1 September 2026 and 31 December 2026, the eight OPEC+ countries making voluntary crude oil production adjustments (Saudi Arabia, Russia, Iraq, the UAE, Kuwait, Kazakhstan, Algeria and Oman) announce a combined required production level for an upcoming month that is unchanged from, or lower than, the level required for the immediately preceding month?",
+        "expr": "OPEC_PAUSE",
+        "given": "not BR_LT70"
+      }
+    ],
+    "axioms_tested": ["product_rule", "disjunction_identity", "conjunction_bound", "total_probability"]
+  },
+
+  {
+    "family_id": "sc_suez_container_freight",
+    "domain": "supply_chain",
+    "base_events": {
+      "SUEZ_55": {
+        "text": "The trailing seven-day mean of daily transit calls for the Suez Canal in the IMF PortWatch daily chokepoint dataset reaches 55.0 or more on at least one day between 2026-09-01 and 2027-06-15",
+        "resolution": "Resolves YES if, using the daily total transit-call counts (field n_total) for the Suez Canal chokepoint in IMF PortWatch's Daily Chokepoints Data, the trailing seven-day arithmetic mean is greater than or equal to 55.0 for at least one date from 2026-09-01 through 2027-06-15. Calibration: that trailing seven-day mean was about 41.6 on 2026-07-19, averaged about 40.5 over July 2025-July 2026, averaged about 73.6 during 2023, and last exceeded 60 on 2023-12-31.",
+        "source": "IMF PortWatch, Daily Chokepoints Data (https://portwatch.imf.org/, machine-readable at https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0)",
+        "resolve_by": "2027-06-30"
+      },
+      "WCI_6000": {
+        "text": "Drewry's World Container Index composite rate reaches $6,000 or more per 40-foot container in at least one weekly assessment published between 2026-09-01 and 2027-06-15",
+        "resolution": "Resolves YES if the composite (global) figure of Drewry's weekly World Container Index, as published on drewry.co.uk, is greater than or equal to US$6,000 per 40ft container in at least one weekly assessment dated between 2026-09-01 and 2027-06-15. The composite was US$4,374 per 40ft container in the assessment of 2026-07-23.",
+        "source": "Drewry World Container Index, weekly composite (https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry)",
+        "resolve_by": "2027-06-30"
+      },
+      "WCI_8000": {
+        "text": "Drewry's World Container Index composite rate reaches $8,000 or more per 40-foot container in at least one weekly assessment published between 2026-09-01 and 2027-06-15",
+        "resolution": "Resolves YES if the composite (global) figure of Drewry's weekly World Container Index, as published on drewry.co.uk, is greater than or equal to US$8,000 per 40ft container in at least one weekly assessment dated between 2026-09-01 and 2027-06-15.",
+        "source": "Drewry World Container Index, weekly composite (https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "WCI_8000", "b": "WCI_6000"}
+    ],
+    "targets": [
+      {
+        "tid": "sc_suez_container_freight.wci6000",
+        "kind": "unconditional",
+        "text": "Drewry publishes a weekly World Container Index with a global composite spot rate per 40-foot container. What is the probability that the composite reaches $6,000 or more per 40-foot container in at least one weekly assessment dated between 1 September 2026 and 15 June 2027?",
+        "expr": "WCI_6000"
+      },
+      {
+        "tid": "sc_suez_container_freight.wci8000",
+        "kind": "unconditional",
+        "text": "Drewry publishes a weekly World Container Index with a global composite spot rate per 40-foot container. What is the probability that the composite reaches $8,000 or more per 40-foot container in at least one weekly assessment dated between 1 September 2026 and 15 June 2027?",
+        "expr": "WCI_8000"
+      },
+      {
+        "tid": "sc_suez_container_freight.suez55",
+        "kind": "unconditional",
+        "text": "IMF PortWatch publishes daily counts of vessel transit calls for the Suez Canal chokepoint. What is the probability that the trailing seven-day mean of those daily Suez Canal transit calls reaches 55.0 or more on at least one day between 1 September 2026 and 15 June 2027?",
+        "expr": "SUEZ_55"
+      },
+      {
+        "tid": "sc_suez_container_freight.wci6000_and_suez55",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) Drewry's weekly World Container Index global composite reaches $6,000 or more per 40-foot container in at least one weekly assessment dated between 1 September 2026 and 15 June 2027; AND (b) the trailing seven-day mean of daily Suez Canal vessel transit calls published by IMF PortWatch reaches 55.0 or more on at least one day between 1 September 2026 and 15 June 2027?",
+        "expr": "WCI_6000 and SUEZ_55"
+      },
+      {
+        "tid": "sc_suez_container_freight.wci6000_given_suez55",
+        "kind": "conditional",
+        "text": "Assume that the trailing seven-day mean of daily Suez Canal vessel transit calls published by IMF PortWatch reaches 55.0 or more on at least one day between 1 September 2026 and 15 June 2027. Conditional on that, what is the probability that Drewry's weekly World Container Index global composite reaches $6,000 or more per 40-foot container in at least one weekly assessment dated between 1 September 2026 and 15 June 2027?",
+        "expr": "WCI_6000",
+        "given": "SUEZ_55"
+      },
+      {
+        "tid": "sc_suez_container_freight.wci6000_given_no_suez55",
+        "kind": "conditional",
+        "text": "Assume that the trailing seven-day mean of daily Suez Canal vessel transit calls published by IMF PortWatch never reaches 55.0 on any day between 1 September 2026 and 15 June 2027. Conditional on that, what is the probability that Drewry's weekly World Container Index global composite reaches $6,000 or more per 40-foot container in at least one weekly assessment dated between 1 September 2026 and 15 June 2027?",
+        "expr": "WCI_6000",
+        "given": "not SUEZ_55"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound", "total_probability"]
+  },
+
+  {
+    "family_id": "en_eu_gas_storage_winter",
+    "domain": "energy",
+    "base_events": {
+      "EU_S70": {
+        "text": "Aggregate European Union gas storage is at least 70.00 percent full on gas day 2026-11-01 according to GIE AGSI+",
+        "resolution": "Resolves YES if the EU aggregate 'Full %' value reported by Gas Infrastructure Europe's AGSI+ transparency platform for gas day 2026-11-01 is greater than or equal to 70.00. EU aggregate storage was 54.2 percent full on 2026-07-21; the mandatory filling target for the 2026 season was relaxed to 80 percent.",
+        "source": "GIE AGSI+ aggregated gas storage inventories, EU aggregate (https://agsi.gie.eu/)",
+        "resolve_by": "2026-11-15"
+      },
+      "EU_S80": {
+        "text": "Aggregate European Union gas storage is at least 80.00 percent full on gas day 2026-11-01 according to GIE AGSI+",
+        "resolution": "Resolves YES if the EU aggregate 'Full %' value reported by Gas Infrastructure Europe's AGSI+ transparency platform for gas day 2026-11-01 is greater than or equal to 80.00.",
+        "source": "GIE AGSI+ aggregated gas storage inventories, EU aggregate (https://agsi.gie.eu/)",
+        "resolve_by": "2026-11-15"
+      },
+      "TTF_80": {
+        "text": "The front-month Dutch TTF natural gas futures contract on ICE Endex settles at or above 80.00 euro per megawatt-hour on at least one trading day between 2026-11-01 and 2027-03-31",
+        "resolution": "Resolves YES if the official ICE Endex daily settlement price for the front-month Dutch TTF Natural Gas Futures contract is greater than or equal to 80.00 EUR/MWh on at least one trading day from 2026-11-01 through 2027-03-31. The front-month contract settled between about 58 and 63 EUR/MWh during the week of 2026-07-20.",
+        "source": "ICE Endex Dutch TTF Natural Gas Futures daily settlement prices (https://www.ice.com/products/27996665/Dutch-TTF-Natural-Gas-Futures)",
+        "resolve_by": "2027-03-31"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "EU_S80", "b": "EU_S70"}
+    ],
+    "targets": [
+      {
+        "tid": "en_eu_gas_storage_winter.stor70",
+        "kind": "unconditional",
+        "text": "Gas Infrastructure Europe's AGSI+ platform reports the aggregate fill level of European Union gas storage as a percentage, for each gas day. What is the probability that the EU aggregate gas storage fill level reported by AGSI+ for gas day 1 November 2026 is at least 70.00 percent?",
+        "expr": "EU_S70"
+      },
+      {
+        "tid": "en_eu_gas_storage_winter.stor80",
+        "kind": "unconditional",
+        "text": "Gas Infrastructure Europe's AGSI+ platform reports the aggregate fill level of European Union gas storage as a percentage, for each gas day. What is the probability that the EU aggregate gas storage fill level reported by AGSI+ for gas day 1 November 2026 is at least 80.00 percent?",
+        "expr": "EU_S80"
+      },
+      {
+        "tid": "en_eu_gas_storage_winter.ttf80",
+        "kind": "unconditional",
+        "text": "The front-month Dutch TTF natural gas futures contract trades on ICE Endex, which publishes an official daily settlement price in euros per megawatt-hour. What is the probability that this front-month settlement price is at or above 80.00 euro per megawatt-hour on at least one trading day between 1 November 2026 and 31 March 2027?",
+        "expr": "TTF_80"
+      },
+      {
+        "tid": "en_eu_gas_storage_winter.stor80_and_ttf80",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) the EU aggregate gas storage fill level reported by Gas Infrastructure Europe's AGSI+ platform for gas day 1 November 2026 is at least 80.00 percent; AND (b) the front-month Dutch TTF natural gas futures contract on ICE Endex settles at or above 80.00 euro per megawatt-hour on at least one trading day between 1 November 2026 and 31 March 2027?",
+        "expr": "EU_S80 and TTF_80"
+      },
+      {
+        "tid": "en_eu_gas_storage_winter.ttf80_given_stor80",
+        "kind": "conditional",
+        "text": "Assume that the EU aggregate gas storage fill level reported by Gas Infrastructure Europe's AGSI+ platform for gas day 1 November 2026 is at least 80.00 percent. Conditional on that, what is the probability that the front-month Dutch TTF natural gas futures contract on ICE Endex settles at or above 80.00 euro per megawatt-hour on at least one trading day between 1 November 2026 and 31 March 2027?",
+        "expr": "TTF_80",
+        "given": "EU_S80"
+      },
+      {
+        "tid": "en_eu_gas_storage_winter.ttf80_given_no_stor80",
+        "kind": "conditional",
+        "text": "Assume that the EU aggregate gas storage fill level reported by Gas Infrastructure Europe's AGSI+ platform for gas day 1 November 2026 is below 80.00 percent. Conditional on that, what is the probability that the front-month Dutch TTF natural gas futures contract on ICE Endex settles at or above 80.00 euro per megawatt-hour on at least one trading day between 1 November 2026 and 31 March 2027?",
+        "expr": "TTF_80",
+        "given": "not EU_S80"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound", "total_probability"]
+  },
+
+  {
+    "family_id": "en_lng_exports_capacity",
+    "domain": "energy",
+    "base_events": {
+      "LNG_18": {
+        "text": "U.S. liquefied natural gas exports average at least 18.0 billion cubic feet per day in at least one calendar month from October 2026 through March 2027",
+        "resolution": "Resolves YES if, for at least one of the months October 2026, November 2026, December 2026, January 2027, February 2027 or March 2027, the EIA Natural Gas Monthly value for liquefied U.S. natural gas exports (series N9133US2, million cubic feet per month) divided by the number of days in that month is greater than or equal to 18,000 MMcf/d. U.S. LNG feedgas deliveries averaged about 17.5 Bcf/d in June 2026 and EIA's July 2026 outlook put 2026 average LNG exports near 17.0 Bcf/d.",
+        "source": "EIA Natural Gas Monthly, Liquefied U.S. Natural Gas Exports, series N9133US2 (https://www.eia.gov/dnav/ng/hist/n9133us2m.htm)",
+        "resolve_by": "2027-06-15"
+      },
+      "LNG_19": {
+        "text": "U.S. liquefied natural gas exports average at least 19.0 billion cubic feet per day in at least one calendar month from October 2026 through March 2027",
+        "resolution": "Resolves YES if, for at least one of the months October 2026 through March 2027, the EIA Natural Gas Monthly value for liquefied U.S. natural gas exports (series N9133US2, million cubic feet per month) divided by the number of days in that month is greater than or equal to 19,000 MMcf/d.",
+        "source": "EIA Natural Gas Monthly, Liquefied U.S. Natural Gas Exports, series N9133US2 (https://www.eia.gov/dnav/ng/hist/n9133us2m.htm)",
+        "resolve_by": "2027-06-15"
+      },
+      "GP_T2": {
+        "text": "Train 2 of the Golden Pass LNG export terminal at Sabine Pass, Texas produces LNG for the first time on or before 2027-06-30",
+        "resolution": "Resolves YES if Golden Pass LNG, ExxonMobil or QatarEnergy publicly announces first LNG production from Golden Pass Train 2, or the EIA Natural Gas Weekly Update reports that Golden Pass Train 2 has begun producing LNG, with the first production dated on or before 2027-06-30. Train 1 produced first LNG in March 2026 and shipped its first cargo on 2026-04-22; operator guidance as of mid-2026 placed Train 2 first production in the first half of 2027 with mechanical completion around end-2026.",
+        "source": "Golden Pass LNG newsroom (https://www.goldenpasslng.com/newsroom) and EIA Natural Gas Weekly Update (https://www.eia.gov/naturalgas/weekly/)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "LNG_19", "b": "LNG_18"}
+    ],
+    "targets": [
+      {
+        "tid": "en_lng_exports_capacity.lng18",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration reports monthly liquefied U.S. natural gas exports in its Natural Gas Monthly. What is the probability that U.S. LNG exports average at least 18.0 billion cubic feet per day in at least one calendar month from October 2026 through March 2027 (monthly export volume divided by the number of days in that month)?",
+        "expr": "LNG_18"
+      },
+      {
+        "tid": "en_lng_exports_capacity.lng19",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration reports monthly liquefied U.S. natural gas exports in its Natural Gas Monthly. What is the probability that U.S. LNG exports average at least 19.0 billion cubic feet per day in at least one calendar month from October 2026 through March 2027 (monthly export volume divided by the number of days in that month)?",
+        "expr": "LNG_19"
+      },
+      {
+        "tid": "en_lng_exports_capacity.gpt2",
+        "kind": "unconditional",
+        "text": "The Golden Pass LNG export terminal at Sabine Pass, Texas has three liquefaction trains; Train 1 produced its first LNG in March 2026. What is the probability that Train 2 of Golden Pass LNG produces LNG for the first time on or before 30 June 2027?",
+        "expr": "GP_T2"
+      },
+      {
+        "tid": "en_lng_exports_capacity.lng18_and_gpt2",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) U.S. liquefied natural gas exports, as reported in the EIA Natural Gas Monthly, average at least 18.0 billion cubic feet per day in at least one calendar month from October 2026 through March 2027; AND (b) Train 2 of the Golden Pass LNG export terminal at Sabine Pass, Texas produces LNG for the first time on or before 30 June 2027?",
+        "expr": "LNG_18 and GP_T2"
+      },
+      {
+        "tid": "en_lng_exports_capacity.lng18_or_gpt2",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (a) U.S. liquefied natural gas exports, as reported in the EIA Natural Gas Monthly, average at least 18.0 billion cubic feet per day in at least one calendar month from October 2026 through March 2027; OR (b) Train 2 of the Golden Pass LNG export terminal at Sabine Pass, Texas produces LNG for the first time on or before 30 June 2027?",
+        "expr": "LNG_18 or GP_T2"
+      },
+      {
+        "tid": "en_lng_exports_capacity.lng18_given_gpt2",
+        "kind": "conditional",
+        "text": "Assume that Train 2 of the Golden Pass LNG export terminal at Sabine Pass, Texas produces LNG for the first time on or before 30 June 2027. Conditional on that, what is the probability that U.S. liquefied natural gas exports, as reported in the EIA Natural Gas Monthly, average at least 18.0 billion cubic feet per day in at least one calendar month from October 2026 through March 2027?",
+        "expr": "LNG_18",
+        "given": "GP_T2"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "disjunction_identity", "product_rule", "conjunction_bound"]
+  },
+
+  {
+    "family_id": "en_us_winter_grid_stress",
+    "domain": "energy",
+    "base_events": {
+      "ERCOT_88": {
+        "text": "ERCOT-wide actual electricity demand reaches at least 88,000 MW in at least one interval between 2026-12-01 and 2027-02-28",
+        "resolution": "Resolves YES if ERCOT reports an ERCOT-wide actual system demand of at least 88,000 MW for at least one 15-minute or hourly interval timestamped between 2026-12-01 00:00 and 2027-02-28 23:59 Central Time, as shown in ERCOT's hourly load data archives or announced on ERCOT's peak demand records page. ERCOT's all-time peak as of 2026-07-21 was 87,403 MW; its winter peak record was about 84,000 MW during Winter Storm Fern in January 2026.",
+        "source": "ERCOT hourly load data archives and ERCOT peak demand records (https://www.ercot.com/gridinfo/load/load_hist and https://www.ercot.com/static-assets/data/news/content/peak-demand-home.htm)",
+        "resolve_by": "2027-03-31"
+      },
+      "ERCOT_92": {
+        "text": "ERCOT-wide actual electricity demand reaches at least 92,000 MW in at least one interval between 2026-12-01 and 2027-02-28",
+        "resolution": "Resolves YES if ERCOT reports an ERCOT-wide actual system demand of at least 92,000 MW for at least one 15-minute or hourly interval timestamped between 2026-12-01 00:00 and 2027-02-28 23:59 Central Time, as shown in ERCOT's hourly load data archives or announced on ERCOT's peak demand records page.",
+        "source": "ERCOT hourly load data archives and ERCOT peak demand records (https://www.ercot.com/gridinfo/load/load_hist and https://www.ercot.com/static-assets/data/news/content/peak-demand-home.htm)",
+        "resolve_by": "2027-03-31"
+      },
+      "ERCOT_EEA": {
+        "text": "ERCOT declares an Energy Emergency Alert at Level 1 or higher at some point between 2026-12-01 and 2027-02-28",
+        "resolution": "Resolves YES if ERCOT publishes at least one market notice, operations notice or post-event report stating that an Energy Emergency Alert (EEA) Level 1, 2 or 3 was declared for the ERCOT region with an effective time between 2026-12-01 and 2027-02-28. ERCOT declared an EEA during Winter Storm Fern in January 2026.",
+        "source": "ERCOT market notices and NOTICE_OPERATIONS archive, plus ERCOT post-event reports (https://www.ercot.com/services/comm/mkt_notices)",
+        "resolve_by": "2027-03-31"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "ERCOT_92", "b": "ERCOT_88"}
+    ],
+    "targets": [
+      {
+        "tid": "en_us_winter_grid_stress.load88",
+        "kind": "unconditional",
+        "text": "ERCOT operates the electric grid covering most of Texas and publishes its actual system-wide demand. What is the probability that ERCOT-wide actual electricity demand reaches at least 88,000 MW in at least one interval between 1 December 2026 and 28 February 2027?",
+        "expr": "ERCOT_88"
+      },
+      {
+        "tid": "en_us_winter_grid_stress.load92",
+        "kind": "unconditional",
+        "text": "ERCOT operates the electric grid covering most of Texas and publishes its actual system-wide demand. What is the probability that ERCOT-wide actual electricity demand reaches at least 92,000 MW in at least one interval between 1 December 2026 and 28 February 2027?",
+        "expr": "ERCOT_92"
+      },
+      {
+        "tid": "en_us_winter_grid_stress.eea",
+        "kind": "unconditional",
+        "text": "When operating reserves fall below defined thresholds, ERCOT declares an Energy Emergency Alert (EEA) at Level 1, 2 or 3 and publishes a corresponding market or operations notice. What is the probability that ERCOT declares an Energy Emergency Alert at Level 1 or higher at some point between 1 December 2026 and 28 February 2027?",
+        "expr": "ERCOT_EEA"
+      },
+      {
+        "tid": "en_us_winter_grid_stress.load88_and_eea",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) ERCOT-wide actual electricity demand reaches at least 88,000 MW in at least one interval between 1 December 2026 and 28 February 2027; AND (b) ERCOT declares an Energy Emergency Alert at Level 1 or higher at some point between 1 December 2026 and 28 February 2027?",
+        "expr": "ERCOT_88 and ERCOT_EEA"
+      },
+      {
+        "tid": "en_us_winter_grid_stress.eea_given_load88",
+        "kind": "conditional",
+        "text": "Assume that ERCOT-wide actual electricity demand reaches at least 88,000 MW in at least one interval between 1 December 2026 and 28 February 2027. Conditional on that, what is the probability that ERCOT declares an Energy Emergency Alert at Level 1 or higher at some point between 1 December 2026 and 28 February 2027?",
+        "expr": "ERCOT_EEA",
+        "given": "ERCOT_88"
+      },
+      {
+        "tid": "en_us_winter_grid_stress.eea_given_no_load88",
+        "kind": "conditional",
+        "text": "Assume that ERCOT-wide actual electricity demand never reaches 88,000 MW in any interval between 1 December 2026 and 28 February 2027. Conditional on that, what is the probability that ERCOT declares an Energy Emergency Alert at Level 1 or higher at some point between 1 December 2026 and 28 February 2027?",
+        "expr": "ERCOT_EEA",
+        "given": "not ERCOT_88"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound", "total_probability"]
+  },
+
+  {
+    "family_id": "sc_elnino_panama_refining",
+    "domain": "supply_chain",
+    "base_events": {
+      "ONI_20": {
+        "text": "The NOAA Climate Prediction Center Oceanic Nino Index value for the November-December-January 2026-27 season is at least +2.0 degrees Celsius",
+        "resolution": "Resolves YES if the NDJ 2026-27 entry in NOAA CPC's Oceanic Nino Index table (cold and warm episodes by season, ERSSTv5 based, ONI_v5 page) is greater than or equal to +2.0 when first published. The AMJ 2026 value was +1.0; NOAA declared an El Nino Advisory on 2026-07-09 and put the chance of a very strong event at roughly 63-75 percent for late 2026.",
+        "source": "NOAA Climate Prediction Center, Oceanic Nino Index table (https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php)",
+        "resolve_by": "2027-03-31"
+      },
+      "PAN_45": {
+        "text": "The Panama Canal Authority sets the maximum authorized transit draft for the Neopanamax locks at 13.72 metres (45.0 feet) Tropical Fresh Water or lower, in effect on at least one day between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if any Advisory to Shipping published by the Panama Canal Authority (ACP) sets a maximum authorized draft for Neopanamax vessels of 13.72 m (45.0 ft) TFW or less that is in effect on at least one day between 2026-09-01 and 2027-06-30. The maximum authorized Neopanamax draft was 14.94 m (49.0 ft) on 2026-07-24, with a reduction to 14.78 m (48.5 ft) scheduled for 2026-08-15; during the 2023-24 drought ACP cut the Neopanamax limit to 44.0 ft.",
+        "source": "Panama Canal Authority Advisories to Shipping (https://pancanal.com/en/advisories/)",
+        "resolve_by": "2027-06-30"
+      },
+      "REF_82": {
+        "text": "The U.S. weekly refinery utilization rate falls to 82.0 percent of operable capacity or below in at least one week ending between 2026-09-04 and 2027-06-11",
+        "resolution": "Resolves YES if EIA's Weekly Petroleum Status Report series WPULEUS3 (U.S. Percent Utilization of Refinery Operable Capacity) reports a value less than or equal to 82.0 for at least one week ending between 2026-09-04 and 2027-06-11 inclusive, using the value as first published. The rate was 96.1 percent for the week ending 2026-07-17; the series fell to about 81 percent during the February 2024 turnaround season.",
+        "source": "EIA Weekly Petroleum Status Report, U.S. Percent Utilization of Refinery Operable Capacity, series WPULEUS3 (https://www.eia.gov/dnav/pet/hist/WPULEUS3w.htm)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "sc_elnino_panama_refining.oni20",
+        "kind": "unconditional",
+        "text": "NOAA's Climate Prediction Center publishes the Oceanic Nino Index (ONI), a three-month running mean of sea surface temperature anomalies in the Nino 3.4 region, with one value per overlapping season. What is the probability that the ONI value for the November-December-January 2026-27 season is at least +2.0 degrees Celsius, the threshold NOAA associates with a very strong El Nino?",
+        "expr": "ONI_20"
+      },
+      {
+        "tid": "sc_elnino_panama_refining.pan45",
+        "kind": "unconditional",
+        "text": "The Panama Canal Authority publishes Advisories to Shipping that set the maximum authorized transit draft for vessels using the Neopanamax locks, lowering it when Gatun Lake levels fall. What is the probability that the Panama Canal Authority sets a maximum authorized Neopanamax transit draft of 13.72 metres (45.0 feet) Tropical Fresh Water or lower, in effect on at least one day between 1 September 2026 and 30 June 2027?",
+        "expr": "PAN_45"
+      },
+      {
+        "tid": "sc_elnino_panama_refining.ref82",
+        "kind": "unconditional",
+        "text": "The U.S. Energy Information Administration publishes a weekly figure for U.S. percent utilization of refinery operable capacity in its Weekly Petroleum Status Report. What is the probability that this weekly U.S. refinery utilization rate falls to 82.0 percent or below in at least one week ending between 4 September 2026 and 11 June 2027?",
+        "expr": "REF_82"
+      },
+      {
+        "tid": "sc_elnino_panama_refining.pan45_and_oni20",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) the NOAA Climate Prediction Center Oceanic Nino Index value for the November-December-January 2026-27 season is at least +2.0 degrees Celsius; AND (b) the Panama Canal Authority sets a maximum authorized Neopanamax transit draft of 13.72 metres (45.0 feet) Tropical Fresh Water or lower, in effect on at least one day between 1 September 2026 and 30 June 2027?",
+        "expr": "PAN_45 and ONI_20"
+      },
+      {
+        "tid": "sc_elnino_panama_refining.pan45_given_oni20",
+        "kind": "conditional",
+        "text": "Assume that the NOAA Climate Prediction Center Oceanic Nino Index value for the November-December-January 2026-27 season turns out to be at least +2.0 degrees Celsius. Conditional on that, what is the probability that the Panama Canal Authority sets a maximum authorized Neopanamax transit draft of 13.72 metres (45.0 feet) Tropical Fresh Water or lower, in effect on at least one day between 1 September 2026 and 30 June 2027?",
+        "expr": "PAN_45",
+        "given": "ONI_20"
+      },
+      {
+        "tid": "sc_elnino_panama_refining.ref82_given_oni20",
+        "kind": "conditional",
+        "text": "Assume that the NOAA Climate Prediction Center Oceanic Nino Index value for the November-December-January 2026-27 season turns out to be at least +2.0 degrees Celsius. Conditional on that, what is the probability that the weekly U.S. percent utilization of refinery operable capacity published by the EIA falls to 82.0 percent or below in at least one week ending between 4 September 2026 and 11 June 2027?",
+        "expr": "REF_82",
+        "given": "ONI_20"
+      }
+    ],
+    "axioms_tested": ["product_rule", "conjunction_bound", "conditional_bound"]
+  },
+
+  {
+    "family_id": "sc_china_rare_earth_controls",
+    "domain": "supply_chain",
+    "base_events": {
+      "RE_EXTEND": {
+        "text": "On or before 2026-11-10, China's Ministry of Commerce publicly announces either an extension of the suspension of its 9 October 2025 rare-earth export-control measures beyond 2026-11-10, or the formal repeal of those measures",
+        "resolution": "Resolves YES if an announcement or notice published by China's Ministry of Commerce (MOFCOM) on or before 2026-11-10 states that the suspension of the export control measures announced on 2025-10-09 is extended past 2026-11-10, or that those measures are repealed or cancelled. Resolves NO if no such MOFCOM announcement is published on or before 2026-11-10. The one-year suspension agreed under the November 2025 US-China trade understanding runs to 2026-11-10.",
+        "source": "China Ministry of Commerce announcements (http://english.mofcom.gov.cn/ and http://www.mofcom.gov.cn/)",
+        "resolve_by": "2026-11-30"
+      },
+      "RE_NEWCTRL": {
+        "text": "Between 2026-09-01 and 2027-03-31, China's Ministry of Commerce announces the addition of at least one further rare-earth element, rare-earth compound, rare-earth alloy or rare-earth permanent-magnet item to China's export control lists or export licensing catalogue",
+        "resolution": "Resolves YES if MOFCOM, alone or jointly with the General Administration of Customs, publishes an announcement dated between 2026-09-01 and 2027-03-31 that adds at least one rare-earth-related item not previously controlled to China's dual-use item export control list or its import-export licensing catalogue. Items added effective 2026-01-01 included samarium, gadolinium and lutetium compounds.",
+        "source": "China Ministry of Commerce announcements (http://english.mofcom.gov.cn/ and http://www.mofcom.gov.cn/)",
+        "resolve_by": "2027-04-15"
+      },
+      "RE_EXP_LOW": {
+        "text": "China's reported monthly exports of rare-earth ores, metals and compounds fall below 4,000 tonnes in at least one month from September 2026 through March 2027",
+        "resolution": "Resolves YES if the monthly export volume for the rare-earths category reported by China's General Administration of Customs (the series covering rare-earth ores, metals and compounds, routinely reported by Reuters and Global Times as China's rare-earth exports) is below 4,000 tonnes for at least one month from September 2026 through March 2027. Reported volumes were 5,104.8 tonnes in June 2026 and 30,482.8 tonnes for January-June 2026 combined.",
+        "source": "China General Administration of Customs monthly trade statistics (http://www.customs.gov.cn/)",
+        "resolve_by": "2027-04-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "sc_china_rare_earth_controls.extend",
+        "kind": "unconditional",
+        "text": "On 9 October 2025 China announced a package of rare-earth export-control measures, whose application was then suspended for one year until 10 November 2026 under a US-China trade understanding. What is the probability that on or before 10 November 2026, China's Ministry of Commerce publicly announces either an extension of that suspension beyond 10 November 2026, or the formal repeal of those measures?",
+        "expr": "RE_EXTEND"
+      },
+      {
+        "tid": "sc_china_rare_earth_controls.no_extend",
+        "kind": "unconditional",
+        "text": "On 9 October 2025 China announced a package of rare-earth export-control measures, whose application was then suspended for one year until 10 November 2026 under a US-China trade understanding. What is the probability that China's Ministry of Commerce does NOT publish, on or before 10 November 2026, any announcement extending that suspension beyond 10 November 2026 or formally repealing those measures?",
+        "expr": "not RE_EXTEND"
+      },
+      {
+        "tid": "sc_china_rare_earth_controls.newctrl",
+        "kind": "unconditional",
+        "text": "China's Ministry of Commerce periodically adds items to China's dual-use export control list and its import-export licensing catalogue. What is the probability that between 1 September 2026 and 31 March 2027, the Ministry of Commerce announces the addition of at least one further rare-earth element, rare-earth compound, rare-earth alloy or rare-earth permanent-magnet item that was not previously controlled?",
+        "expr": "RE_NEWCTRL"
+      },
+      {
+        "tid": "sc_china_rare_earth_controls.newctrl_and_no_extend",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) China's Ministry of Commerce does NOT publish, on or before 10 November 2026, any announcement extending beyond 10 November 2026 the suspension of its 9 October 2025 rare-earth export-control measures, nor any announcement formally repealing those measures; AND (b) between 1 September 2026 and 31 March 2027, the Ministry of Commerce announces the addition of at least one further previously uncontrolled rare-earth element, compound, alloy or permanent-magnet item to China's export control lists or licensing catalogue?",
+        "expr": "RE_NEWCTRL and not RE_EXTEND"
+      },
+      {
+        "tid": "sc_china_rare_earth_controls.newctrl_given_no_extend",
+        "kind": "conditional",
+        "text": "Assume that China's Ministry of Commerce does NOT publish, on or before 10 November 2026, any announcement extending beyond 10 November 2026 the suspension of its 9 October 2025 rare-earth export-control measures, nor any announcement formally repealing those measures. Conditional on that, what is the probability that between 1 September 2026 and 31 March 2027 the Ministry of Commerce announces the addition of at least one further previously uncontrolled rare-earth element, compound, alloy or permanent-magnet item to China's export control lists or licensing catalogue?",
+        "expr": "RE_NEWCTRL",
+        "given": "not RE_EXTEND"
+      },
+      {
+        "tid": "sc_china_rare_earth_controls.exports_and_newctrl",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) China's reported monthly exports of rare-earth ores, metals and compounds, as published in General Administration of Customs monthly trade statistics, fall below 4,000 tonnes in at least one month from September 2026 through March 2027 (they were 5,104.8 tonnes in June 2026); AND (b) between 1 September 2026 and 31 March 2027, China's Ministry of Commerce announces the addition of at least one further previously uncontrolled rare-earth element, compound, alloy or permanent-magnet item to China's export control lists or licensing catalogue?",
+        "expr": "RE_EXP_LOW and RE_NEWCTRL"
+      }
+    ],
+    "axioms_tested": ["complement", "product_rule", "conjunction_bound"]
+  }
+]

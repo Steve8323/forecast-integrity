@@ -1,0 +1,739 @@
+{
+ "meta": {
+  "model": "claude-sonnet-5",
+  "limit": null,
+  "generated_utc": "2026-07-27T02:40:46+00:00",
+  "n_families": 40,
+  "question_errors": [],
+  "true_written_month": "2026-07"
+ },
+ "date_probe": {
+  "n_families": 40,
+  "n_parsed": 40,
+  "true_written_month": "2026-07",
+  "n_already_resolved": 0,
+  "frac_already_resolved": 0.0,
+  "families_claiming_resolved": [],
+  "written_estimate_hist": {
+   "2026-06": 3,
+   "2026-07": 36,
+   "2026-07-26": 1
+  },
+  "months_off_median": 0.0,
+  "months_off_mean_abs": 0.07,
+  "frac_within_2_months_of_truth": 1.0,
+  "mean_confidence": 0.815,
+  "certified_hindsight_free": true,
+  "certificate_rule": "zero families claiming already_resolved AND >=50% of parsed written_estimate within +/-2 months of 2026-07",
+  "caveat": "written_estimate also measures where the model's training cutoff sits; estimates EARLIER than truth are expected and benign, an already_resolved hit is not",
+  "rows": [
+   {
+    "family_id": "en_brent_q4_2026_bands",
+    "domain": "energy",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question concerns Q4 2026 average which lies fully in the future relative to the current date of 2026-07-26.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "en_opecplus_price_floor",
+    "domain": "energy",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question window (Sept 2026-Mar 2027) is entirely future relative to current date, consistent with being written around July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "sc_suez_container_freight",
+    "domain": "supply_chain",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question window starts 1 September 2026 and asks about future data, consistent with the stated current date of 2026-07-26.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "en_eu_gas_storage_winter",
+    "domain": "energy",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Questions ask about future gas storage levels and prices for Nov 2026-Mar 2027, consistent with current date of July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "en_lng_exports_capacity",
+    "domain": "energy",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "References Golden Pass Train 1 first LNG in March 2026 as already occurred and asks about future Oct 2026-Mar 2027 window, consistent with a July 2026 writing date.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "en_us_winter_grid_stress",
+    "domain": "energy",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.9,
+    "clues": "Questions concern a future winter 2026-27 period that has not yet occurred as of the current date.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "sc_elnino_panama_refining",
+    "domain": "supply_chain",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Questions reference future seasons (Nov-Jan 2026-27) and forecast windows extending to mid-2027, consistent with the stated current date of July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "sc_china_rare_earth_controls",
+    "domain": "supply_chain",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "References June 2026 export data and a November 2026 deadline still pending, consistent with a July 2026 writing date.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "geo_iran_hormuz_reopening",
+    "domain": "geopolitics",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "References events through 19 July 2026 as most recent data and a forward window starting 1 September 2026, placing composition around late July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "geo_russia_ceasefire_sanctions",
+    "domain": "geopolitics",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.6,
+    "clues": "Question presupposes state as of 26 July 2026 with future window through mid-2027, matching current date context.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "geo_us_midterms_2026",
+    "domain": "geopolitics",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.95,
+    "clues": "Questions reference the future 2026 midterms and current 218-214 House split, consistent with mid-2026 writing.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "geo_taiwan_strait_pressure",
+    "domain": "geopolitics",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "References to March 2026 data and May 2026 defence budget indicate writing shortly before the window starts, consistent with July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "geo_export_controls_tit_for_tat",
+    "domain": "geopolitics",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "References a 15 January 2026 BIS policy and June 2026 entity listings as past events, with resolution windows extending to mid-2027, suggesting the set was written around mid-2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "geo_post_new_start_arms_control",
+    "domain": "geopolitics",
+    "written_estimate": "2026-06",
+    "months_off": -1,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "References to May 2026 statements and a forecast window starting September 2026 place the writing shortly before that, likely June-July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "geo_north_korea_escalation",
+    "domain": "geopolitics",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.7,
+    "clues": "Question window starts Sept 2026 and references events through April/June 2026, matching the stated current date of July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "geo_us_defense_appropriations",
+    "domain": "geopolitics",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question explicitly states 'As of 26 July 2026' describing current CR status, matching the given currentDate.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "ins_2026_global_insured_loss_bands",
+    "domain": "catastrophe_insurance",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "References H1 2026 data as already known, so written mid-2026, but the January 2027 report resolving the question hasn't been published yet.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "cat_us_hurricane_landfall_2026",
+    "domain": "catastrophe_insurance",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.9,
+    "clues": "The question explicitly states conditions as of 26 July 2026, a future date relative to my training, and asks about Sep-Nov 2026 outcomes not yet known.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "ins_2026_loss_severity_and_reinsurance_pricing",
+    "domain": "catastrophe_insurance",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "The questions reference events and data as of 26 July 2026, matching the stated current date, and ask about outcomes resolving later in 2026/2027.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "cat_us_wildfire_quake_2026_27",
+    "domain": "catastrophe_insurance",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question explicitly references 'as of late July 2026' data and forecasts events through Feb/Mar 2027, indicating current date near July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "pha_bezuclastinib_fda_decisions",
+    "domain": "pharma_regulatory",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question explicitly states 'as of 26 July 2026' with pending decisions and future PDUFA dates.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "pha_ivonescimab_readout_to_approval",
+    "domain": "pharma_regulatory",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "Question explicitly references data as of 26 July 2026 and forward-looking PDUFA/trial deadlines into 2027.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "pha_us_drug_pricing_policy",
+    "domain": "pharma_regulatory",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.6,
+    "clues": "Questions explicitly reference the state of play as of July 2026 with forward-looking resolution windows extending into 2027.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "pha_outbreak_public_health_declarations",
+    "domain": "pharma_regulatory",
+    "written_estimate": "2026-06",
+    "months_off": -1,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "References data through May 2026 and a forecast window starting Sept 2026, placing the writing around mid-2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "mr_fed_hike_path",
+    "domain": "macro_rates",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "References June 2026 FOMC meeting and 14 July 2026 CPI release with current rate as of 26 July 2026, matching the stated current date.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "mr_fed_dec2026_bands",
+    "domain": "macro_rates",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "References June 2026 FOMC and July 2026 BLS data as most recent, with question horizon extending to Dec 2026, indicating writing around late July 2026.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "mr_cpi_tenyear",
+    "domain": "macro_rates",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "References data through 27 July 2026 and forecasts events extending to November 2026 and January 2027, beyond my knowledge cutoff.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "mr_oil_hicp_ecb",
+    "domain": "macro_rates",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question presupposes real-time data as of 26-27 July 2026, with future resolution windows extending to December 2026, beyond current knowledge.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "mr_boj_yen",
+    "domain": "macro_rates",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Dates reference events up to 24-26 July 2026 with forward-looking resolution windows through March 2027.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "mr_labor_credit",
+    "domain": "macro_rates",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "References data through 23 July 2026 with forward-looking questions extending to April 2027, placing writing right at the current date.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "mr_equity_drawdown_fed",
+    "domain": "macro_rates",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.9,
+    "clues": "Questions reference late July 2026 data and forecast future events through June 2027, placing composition around 2026-07.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "mr_france_eurusd",
+    "domain": "macro_rates",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question references data current to 24-26 July 2026 and a forward-looking window through June 2027, indicating it was written right at that date.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "semis_dram_cycle_micron",
+    "domain": "semiconductors_tech",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "References Micron's fiscal Q3 2026 results and TrendForce's 2026-07-03 forecast as recent, with future events (FQ1 2027 earnings, 1Q27 pricing) still pending.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "semis_bis_china_nvidia",
+    "domain": "semiconductors_tech",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.75,
+    "clues": "Question explicitly references data current through 2026-07-26 and asks about future Q3/Q4 2026 filings and rules not yet published.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "semis_tsmc_2027_capex",
+    "domain": "semiconductors_tech",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "The question references a TSMC guidance update on 2026-07-16 and asks about a January 2027 earnings call outcome that has not yet occurred as of the current date.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "semis_hyperscaler_2027_capex",
+    "domain": "semiconductors_tech",
+    "written_estimate": "2026-07-26",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question references Alphabet's Q2 2026 earnings on 2026-07-22 and resolves based on 2027 guidance not yet given, placing writing near that date with resolution pending until 2027-03-31.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "semis_intel_foundry_14a",
+    "domain": "semiconductors_tech",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Questions reference Intel's Q2 2026 earnings reported 2026-07-23 and ask about future events through mid-2027, consistent with current date 2026-07-26.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "semis_dc_power_capex",
+    "domain": "semiconductors_tech",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "Question explicitly states 'As of 2026-07-26' matching the current date context, and references events through June 2026 with forward-looking deadlines into 2027.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "semis_analog_mna_antitrust",
+    "domain": "semiconductors_tech",
+    "written_estimate": "2026-07",
+    "months_off": 0,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "All questions reference a current date of 2026-07-26 with future-dated deadlines through mid-2027, and describe deals still pending regulatory/shareholder approval.",
+    "parsed": true,
+    "raw_head": null
+   },
+   {
+    "family_id": "semis_ai_compute_buildout",
+    "domain": "semiconductors_tech",
+    "written_estimate": "2026-06",
+    "months_off": -1,
+    "already_resolved": false,
+    "outcome": "UNKNOWN",
+    "confidence": 0.85,
+    "clues": "References Oracle RPO reported 2026-06-10 and Nvidia Q1 FY27 results as most recent data, with resolution events in early-mid 2027, placing writing around June 2026.",
+    "parsed": true,
+    "raw_head": null
+   }
+  ]
+ },
+ "controls": {
+  "path": "controls_resolved.json",
+  "n": 18,
+  "n_yes": 9,
+  "n_no": 9,
+  "by_domain": {
+   "energy": {
+    "n": 2,
+    "yes": 1
+   },
+   "geopolitics": {
+    "n": 4,
+    "yes": 2
+   },
+   "insurance": {
+    "n": 2,
+    "yes": 1
+   },
+   "macro": {
+    "n": 3,
+    "yes": 1
+   },
+   "pharma": {
+    "n": 4,
+    "yes": 2
+   },
+   "semis": {
+    "n": 3,
+    "yes": 2
+   }
+  },
+  "window": "2024-01-01 .. 2025-12-31",
+  "errors": []
+ },
+ "contamination_gap": {
+  "model": "claude-sonnet-5",
+  "n_controls_scored": 18,
+  "past": {
+   "brier": 0.0511,
+   "brier_skill_vs_uninformative": 0.7956,
+   "mean_confidence": 0.4694,
+   "accuracy_at_0.5": 0.9444,
+   "n_undecided_at_0.5": 0,
+   "mean_p_on_YES_controls": 0.87,
+   "mean_p_on_NO_controls": 0.0311,
+   "recall_separation": 0.8389
+  },
+  "future": {
+   "source": "out/forecasts_claude-sonnet-5.json",
+   "n_all": 240,
+   "n_uncond": 178,
+   "mean_conf_all": 0.29710416666666667,
+   "mean_conf_uncond": 0.2999719101123595,
+   "mean_p_uncond": 0.2869,
+   "notes": []
+  },
+  "gap_confidence_past_minus_future": 0.1695,
+  "implied_backtest_discount": 0.361,
+  "interpretation": "fraction of the model's control-set sharpness that does NOT survive onto genuinely open questions; an upper bound on contamination, since the past is also legitimately more knowable",
+  "clean_test_note": "matched-difficulty pre/post-cutoff split, runnable once questions/ resolves (2026-09..2027-06)",
+  "rows": [
+   {
+    "tid": "ctl_geo_assad_fall",
+    "domain": "geopolitics",
+    "outcome": 1,
+    "p": 0.99,
+    "brier": 0.0001,
+    "confidence": 0.49,
+    "rationale": "Assad fled Syria in December 2024 as opposition forces took Damascus, widely reported by Reuters and AP."
+   },
+   {
+    "tid": "ctl_geo_skorea_martial_law",
+    "domain": "geopolitics",
+    "outcome": 1,
+    "p": 0.99,
+    "brier": 0.0001,
+    "confidence": 0.49,
+    "rationale": "President Yoon Suk Yeol declared martial law on December 3, 2024, widely reported by Yonhap and Reuters."
+   },
+   {
+    "tid": "ctl_geo_hormuz_72h",
+    "domain": "geopolitics",
+    "outcome": 0,
+    "p": 0.02,
+    "brier": 0.0004,
+    "confidence": 0.48,
+    "rationale": "Despite tensions and threats in 2024-2025, Iran never actually suspended commercial transits through the Strait of Hormuz for 72+ consecutive hours."
+   },
+   {
+    "tid": "ctl_geo_ukraine_ceasefire",
+    "domain": "geopolitics",
+    "outcome": 0,
+    "p": 0.03,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "As of mid-2026 no formal signed ceasefire has occurred and negotiations remained deadlocked through late 2025, making retroactive YES highly unlikely."
+   },
+   {
+    "tid": "ctl_macro_fed_50bp_cut",
+    "domain": "macro",
+    "outcome": 1,
+    "p": 0.98,
+    "brier": 0.0004,
+    "confidence": 0.48,
+    "rationale": "The FOMC cut rates by 50bps at its September 2024 meeting, which falls within the specified window."
+   },
+   {
+    "tid": "ctl_macro_ust10y_5pct",
+    "domain": "macro",
+    "outcome": 0,
+    "p": 0.06,
+    "brier": 0.0036,
+    "confidence": 0.44,
+    "rationale": "10-year yields have stayed in the 3.6-4.8% range through mid-2026 with peaks near 4.7-4.8%, making a spike to 5.00% unlikely but not impossible."
+   },
+   {
+    "tid": "ctl_macro_nber_recession",
+    "domain": "macro",
+    "outcome": 0,
+    "p": 0.03,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "No strong recession signals through mid-2026 economic data and NBER announcements typically lag significantly, making a formal 2024-2025 peak declaration by end of 2025 highly unlikely."
+   },
+   {
+    "tid": "ctl_energy_new_us_reactor",
+    "domain": "energy",
+    "outcome": 1,
+    "p": 0.95,
+    "brier": 0.0025,
+    "confidence": 0.45,
+    "rationale": "Vogtle Unit 4 entered commercial operation in April 2024, satisfying the criterion."
+   },
+   {
+    "tid": "ctl_energy_germany_nuclear_restart",
+    "domain": "energy",
+    "outcome": 0,
+    "p": 0.03,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "Despite CDU/coalition discussions and feasibility studies on nuclear restart, no formal cabinet decision or enacted law has authorized reactor restarts, and operators have stated restarts are technically/economically unfeasible now."
+   },
+   {
+    "tid": "ctl_semis_nvda_4t_close",
+    "domain": "semis",
+    "outcome": 1,
+    "p": 0.97,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "Nvidia closed above $4T market cap in July 2025, well within the window."
+   },
+   {
+    "tid": "ctl_semis_nvda_dow",
+    "domain": "semis",
+    "outcome": 1,
+    "p": 0.97,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "Nvidia replaced Intel in the Dow Jones Industrial Average in November 2024, effective November 8, 2024, as announced by S&P Dow Jones Indices."
+   },
+   {
+    "tid": "ctl_semis_asml_highna_china",
+    "domain": "semis",
+    "outcome": 0,
+    "p": 0.02,
+    "brier": 0.0004,
+    "confidence": 0.48,
+    "rationale": "Export controls block High-NA EUV shipments to China, and ASML's limited High-NA units so far have gone only to leading-edge fabs in Taiwan, Korea, US and Europe."
+   },
+   {
+    "tid": "ctl_ins_wildfire_20b_insured",
+    "domain": "insurance",
+    "outcome": 1,
+    "p": 0.96,
+    "brier": 0.0016,
+    "confidence": 0.46,
+    "rationale": "The January 2025 Palisades/Eaton LA wildfires produced multiple insured loss estimates from Verisk, Moody's RMS, and Karen Clark & Co well above $20 billion, some exceeding $30-40 billion."
+   },
+   {
+    "tid": "ctl_ins_lloyds_uw_loss_2024",
+    "domain": "insurance",
+    "outcome": 0,
+    "p": 0.03,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "Lloyd's reported a combined ratio around 86.9% for FY2024, well below 100%, continuing strong profitability trend from 2023."
+   },
+   {
+    "tid": "ctl_pharma_novel_schizophrenia_drug",
+    "domain": "pharma",
+    "outcome": 1,
+    "p": 0.97,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "Cobenfy (xanomeline-trospium), a muscarinic M1/M4 agonist with no D2 blockade, was FDA-approved for schizophrenia in September 2024."
+   },
+   {
+    "tid": "ctl_pharma_oral_glp1_obesity",
+    "domain": "pharma",
+    "outcome": 1,
+    "p": 0.05,
+    "brier": 0.9025,
+    "confidence": 0.45,
+    "rationale": "Oral semaglutide (Rybelsus) is only approved for T2D, and oral amycretin/orforglipron for weight management were not yet FDA-approved by end of 2025."
+   },
+   {
+    "tid": "ctl_pharma_orforglipron",
+    "domain": "pharma",
+    "outcome": 0,
+    "p": 0.03,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "Lilly planned to submit orforglipron for weight management by end of 2025, but FDA review typically takes months, making approval by 2025-12-31 highly unlikely."
+   },
+   {
+    "tid": "ctl_pharma_mdma_ptsd",
+    "domain": "pharma",
+    "outcome": 0,
+    "p": 0.03,
+    "brier": 0.0009,
+    "confidence": 0.47,
+    "rationale": "FDA issued a CRL in August 2024 and as of mid-2026 no approval has been granted, with Lykos facing significant setbacks and no clear resubmission path completed by end of 2025."
+   }
+  ],
+  "errors": []
+ },
+ "verdict": "HINDSIGHT-FREE CERTIFIED: 0/40 families already resolved, 100% date within 2mo of 2026-07 | resolved controls (n=18, 9 YES): Brier 0.051 (skill +0.80), mean conf 0.469 | future conf 0.300 -> contamination gap +0.170 (36% of past sharpness does not transfer; ceiling, not point estimate)"
+}

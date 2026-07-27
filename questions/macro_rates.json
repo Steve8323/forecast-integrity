@@ -1,0 +1,528 @@
+[
+  {
+    "family_id": "mr_fed_hike_path",
+    "domain": "macro_rates",
+    "base_events": {
+      "FED400": {
+        "text": "The upper limit of the Federal Reserve's federal funds target range is 4.00% or higher on 30 June 2027 (at least one net 25 basis point increase from the 3.50%-3.75% range in effect on 26 July 2026)",
+        "resolution": "Resolves YES if the value of FRED series DFEDTARU (Federal Funds Target Range - Upper Limit) for 30 June 2027 is greater than or equal to 4.00. Resolves NO otherwise. The target range in effect on 26 July 2026 is 3.50%-3.75% (DFEDTARU = 3.75), set at the 16-17 June 2026 FOMC meeting. FOMC meetings that can change it before resolution: 28-29 July, 15-16 September, 27-28 October and 8-9 December 2026, and 26-27 January, 16-17 March, 27-28 April and 8-9 June 2027; unscheduled intermeeting actions also count. The value in effect on the resolution date is used; there are no revisions to this series.",
+        "source": "FRED series DFEDTARU (Federal Reserve Bank of St. Louis), cross-checked against the FOMC post-meeting policy statement at federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "resolve_by": "2027-06-30"
+      },
+      "FED425": {
+        "text": "The upper limit of the Federal Reserve's federal funds target range is 4.25% or higher on 30 June 2027 (at least two net 25 basis point increases from the 3.50%-3.75% range in effect on 26 July 2026)",
+        "resolution": "Resolves YES if the value of FRED series DFEDTARU (Federal Funds Target Range - Upper Limit) for 30 June 2027 is greater than or equal to 4.25. Resolves NO otherwise. The target range in effect on 26 July 2026 is 3.50%-3.75% (DFEDTARU = 3.75). The value in effect on the resolution date is used; there are no revisions to this series.",
+        "source": "FRED series DFEDTARU (Federal Reserve Bank of St. Louis), cross-checked against the FOMC post-meeting policy statement at federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "resolve_by": "2027-06-30"
+      },
+      "CORE30": {
+        "text": "US core CPI inflation, measured as the unadjusted 12-month percent change in the consumer price index for all items less food and energy, is 3.0% or higher in at least one BLS Consumer Price Index news release covering reference months September 2026 through February 2027",
+        "resolution": "Resolves YES if, in the BLS Consumer Price Index news release for any of the reference months September 2026, October 2026, November 2026, December 2026, January 2027 or February 2027, the figure printed for the 'All items less food and energy' unadjusted 12-month percent change is greater than or equal to 3.0. Only the number as it appears in that first-print release counts; later revisions and the annual seasonal-factor recalculation are ignored. If a release is delayed or cancelled, that reference month is treated as not satisfying the condition. For reference, the release of 14 July 2026 (June 2026 data) put this figure at 2.6%, down from 2.9% for May 2026.",
+        "source": "BLS Consumer Price Index News Release, bls.gov/news.release/cpi.nr0.htm, Table A line 'All items less food and energy', unadjusted 12-month percent change",
+        "resolve_by": "2027-03-31"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "FED425", "b": "FED400"}
+    ],
+    "targets": [
+      {
+        "tid": "mr_fed_hike_path.FED400",
+        "kind": "unconditional",
+        "text": "The Federal Reserve's federal funds target range has been 3.50%-3.75% since the 16-17 June 2026 FOMC meeting. What is the probability that the upper limit of the federal funds target range, as reported by FRED series DFEDTARU, is 4.00% or higher on 30 June 2027?",
+        "expr": "FED400"
+      },
+      {
+        "tid": "mr_fed_hike_path.FED425",
+        "kind": "unconditional",
+        "text": "The Federal Reserve's federal funds target range has been 3.50%-3.75% since the 16-17 June 2026 FOMC meeting. What is the probability that the upper limit of the federal funds target range, as reported by FRED series DFEDTARU, is 4.25% or higher on 30 June 2027?",
+        "expr": "FED425"
+      },
+      {
+        "tid": "mr_fed_hike_path.FED400_g_FED425",
+        "kind": "conditional",
+        "text": "Assume that the upper limit of the Federal Reserve's federal funds target range, as reported by FRED series DFEDTARU, is 4.25% or higher on 30 June 2027. What is the probability that the upper limit of the federal funds target range, as reported by that same series, is 4.00% or higher on 30 June 2027?",
+        "expr": "FED400",
+        "given": "FED425"
+      },
+      {
+        "tid": "mr_fed_hike_path.CORE30",
+        "kind": "unconditional",
+        "text": "The BLS Consumer Price Index release of 14 July 2026 reported the unadjusted 12-month change in US core CPI (all items less food and energy) at 2.6%, down from 2.9% for May 2026. What is the probability that this figure, as first printed, is 3.0% or higher in at least one BLS Consumer Price Index news release covering the reference months September 2026 through February 2027?",
+        "expr": "CORE30"
+      },
+      {
+        "tid": "mr_fed_hike_path.FED425_g_CORE30",
+        "kind": "conditional",
+        "text": "Assume that the unadjusted 12-month change in US core CPI (all items less food and energy), as first printed by the BLS, comes in at 3.0% or higher for at least one reference month between September 2026 and February 2027. Given that, what is the probability that the upper limit of the Federal Reserve's federal funds target range, as reported by FRED series DFEDTARU, is 4.25% or higher on 30 June 2027 (up from 3.75% on 26 July 2026)?",
+        "expr": "FED425",
+        "given": "CORE30"
+      },
+      {
+        "tid": "mr_fed_hike_path.FED425_and_CORE30",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) the unadjusted 12-month change in US core CPI (all items less food and energy), as first printed by the BLS, is 3.0% or higher for at least one reference month between September 2026 and February 2027, AND (b) the upper limit of the Federal Reserve's federal funds target range, as reported by FRED series DFEDTARU, is 4.25% or higher on 30 June 2027 (up from 3.75% on 26 July 2026)?",
+        "expr": "FED425 and CORE30"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "mr_fed_dec2026_bands",
+    "domain": "macro_rates",
+    "base_events": {
+      "FFR_BELOW": {
+        "text": "The upper limit of the Federal Reserve's federal funds target range in effect on 31 December 2026 is strictly below 3.75% (the Fed has cut, on net, from the 3.50%-3.75% range in effect on 26 July 2026)",
+        "resolution": "Resolves YES if the value of FRED series DFEDTARU (Federal Funds Target Range - Upper Limit) in effect on 31 December 2026 is strictly less than 3.75. The relevant FOMC meetings are 28-29 July, 15-16 September, 27-28 October and 8-9 December 2026; unscheduled intermeeting actions also count. There are no revisions to this series.",
+        "source": "FRED series DFEDTARU (Federal Reserve Bank of St. Louis), cross-checked against the FOMC post-meeting policy statement at federalreserve.gov",
+        "resolve_by": "2026-12-31"
+      },
+      "FFR_SAME": {
+        "text": "The upper limit of the Federal Reserve's federal funds target range in effect on 31 December 2026 is exactly 3.75%, i.e. the target range is still 3.50%-3.75%, unchanged on net from 26 July 2026",
+        "resolution": "Resolves YES if the value of FRED series DFEDTARU (Federal Funds Target Range - Upper Limit) in effect on 31 December 2026 is exactly 3.75. There are no revisions to this series.",
+        "source": "FRED series DFEDTARU (Federal Reserve Bank of St. Louis), cross-checked against the FOMC post-meeting policy statement at federalreserve.gov",
+        "resolve_by": "2026-12-31"
+      },
+      "FFR_ABOVE": {
+        "text": "The upper limit of the Federal Reserve's federal funds target range in effect on 31 December 2026 is strictly above 3.75% (the Fed has hiked, on net, from the 3.50%-3.75% range in effect on 26 July 2026)",
+        "resolution": "Resolves YES if the value of FRED series DFEDTARU (Federal Funds Target Range - Upper Limit) in effect on 31 December 2026 is strictly greater than 3.75. There are no revisions to this series.",
+        "source": "FRED series DFEDTARU (Federal Reserve Bank of St. Louis), cross-checked against the FOMC post-meeting policy statement at federalreserve.gov",
+        "resolve_by": "2026-12-31"
+      },
+      "UNEMP45": {
+        "text": "The US unemployment rate, as first published by the BLS, is 4.5% or higher for at least one reference month from September 2026 through December 2026",
+        "resolution": "Resolves YES if the seasonally adjusted civilian unemployment rate printed in the BLS Employment Situation news release is greater than or equal to 4.5 percent for at least one of the reference months September 2026, October 2026, November 2026 or December 2026, using the figure as it appears in the first release covering that month. Later revisions and annual benchmark or seasonal-factor revisions are ignored. The Employment Situation release of 2 July 2026 put the June 2026 unemployment rate at 4.2 percent. If a release is delayed or cancelled, that reference month is treated as not satisfying the condition.",
+        "source": "BLS Employment Situation News Release, bls.gov/news.release/empsit.nr0.htm, Table A-1 civilian unemployment rate (seasonally adjusted)",
+        "resolve_by": "2027-01-31"
+      }
+    },
+    "constraints": [
+      {"type": "exclusive", "events": ["FFR_BELOW", "FFR_SAME", "FFR_ABOVE"]},
+      {"type": "exhaustive", "events": ["FFR_BELOW", "FFR_SAME", "FFR_ABOVE"]}
+    ],
+    "targets": [
+      {
+        "tid": "mr_fed_dec2026_bands.BELOW",
+        "kind": "unconditional",
+        "text": "The Federal Reserve's federal funds target range has been 3.50%-3.75% since the 16-17 June 2026 FOMC meeting. What is the probability that the upper limit of the target range in effect on 31 December 2026, as reported by FRED series DFEDTARU, is strictly BELOW 3.75% (that is, the Fed has cut on net over the remaining 2026 meetings)?",
+        "expr": "FFR_BELOW"
+      },
+      {
+        "tid": "mr_fed_dec2026_bands.SAME",
+        "kind": "unconditional",
+        "text": "The Federal Reserve's federal funds target range has been 3.50%-3.75% since the 16-17 June 2026 FOMC meeting. What is the probability that the upper limit of the target range in effect on 31 December 2026, as reported by FRED series DFEDTARU, is exactly 3.75% (that is, the target range is still 3.50%-3.75%, unchanged on net)?",
+        "expr": "FFR_SAME"
+      },
+      {
+        "tid": "mr_fed_dec2026_bands.ABOVE",
+        "kind": "unconditional",
+        "text": "The Federal Reserve's federal funds target range has been 3.50%-3.75% since the 16-17 June 2026 FOMC meeting. What is the probability that the upper limit of the target range in effect on 31 December 2026, as reported by FRED series DFEDTARU, is strictly ABOVE 3.75% (that is, the Fed has hiked on net over the remaining 2026 meetings)?",
+        "expr": "FFR_ABOVE"
+      },
+      {
+        "tid": "mr_fed_dec2026_bands.UNEMP45",
+        "kind": "unconditional",
+        "text": "The BLS Employment Situation release of 2 July 2026 put the US unemployment rate at 4.2% for June 2026, with nonfarm payrolls up only 57,000 and the participation rate falling to 61.5%. What is the probability that the seasonally adjusted unemployment rate, as first printed by the BLS, is 4.5% or higher for at least one of the reference months September, October, November or December 2026?",
+        "expr": "UNEMP45"
+      },
+      {
+        "tid": "mr_fed_dec2026_bands.BELOW_g_UNEMP45",
+        "kind": "conditional",
+        "text": "Assume that the US unemployment rate, as first printed by the BLS, reaches 4.5% or higher in at least one of the reference months September, October, November or December 2026 (it was 4.2% in June 2026). Given that, what is the probability that the upper limit of the federal funds target range in effect on 31 December 2026, as reported by FRED series DFEDTARU, is strictly below 3.75% (down from 3.75% on 26 July 2026)?",
+        "expr": "FFR_BELOW",
+        "given": "UNEMP45"
+      },
+      {
+        "tid": "mr_fed_dec2026_bands.BELOW_g_notUNEMP45",
+        "kind": "conditional",
+        "text": "Assume that the US unemployment rate, as first printed by the BLS, stays below 4.5% in every one of the reference months September, October, November and December 2026 (it was 4.2% in June 2026). Given that, what is the probability that the upper limit of the federal funds target range in effect on 31 December 2026, as reported by FRED series DFEDTARU, is strictly below 3.75% (down from 3.75% on 26 July 2026)?",
+        "expr": "FFR_BELOW",
+        "given": "not UNEMP45"
+      }
+    ],
+    "axioms_tested": ["partition_sums_to_one", "exclusivity", "total_probability"]
+  },
+  {
+    "family_id": "mr_cpi_tenyear",
+    "domain": "macro_rates",
+    "base_events": {
+      "CPIOCT35": {
+        "text": "US headline CPI inflation, measured as the unadjusted 12-month percent change in the consumer price index for all urban consumers, all items, is 3.5% or higher as first published for reference month October 2026",
+        "resolution": "Resolves YES if the BLS Consumer Price Index news release covering reference month October 2026 (scheduled for 10 November 2026) prints an unadjusted 12-month percent change for 'All items' of greater than or equal to 3.5. Only the number as printed in that first release counts; later revisions are ignored. For reference, the release of 14 July 2026 put this figure at 3.5% for June 2026, down from 4.2% for May 2026. If the October 2026 release is cancelled outright, resolves NO.",
+        "source": "BLS Consumer Price Index News Release, bls.gov/news.release/cpi.nr0.htm, Table A line 'All items', unadjusted 12-month percent change",
+        "resolve_by": "2026-11-30"
+      },
+      "Y10_490": {
+        "text": "The US 10-year Treasury constant maturity yield closes at or above 4.90% on at least one business day between 1 September 2026 and 31 January 2027 inclusive",
+        "resolution": "Resolves YES if FRED series DGS10 (Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity) records a value greater than or equal to 4.90 for at least one date from 2026-09-01 through 2027-01-31 inclusive. Days on which DGS10 is not published (weekends, holidays, and days marked as no data) are skipped. DGS10 stood at 4.64 on 27 July 2026 and its 2026 high to date is approximately 4.70, reached on 23 July 2026.",
+        "source": "FRED series DGS10 (Board of Governors of the Federal Reserve System, H.15 Selected Interest Rates)",
+        "resolve_by": "2027-01-31"
+      }
+    },
+    "targets": [
+      {
+        "tid": "mr_cpi_tenyear.CPIOCT35",
+        "kind": "unconditional",
+        "text": "The BLS Consumer Price Index release of 14 July 2026 put the unadjusted 12-month change in US headline CPI (all items) at 3.5% for June 2026, down from 4.2% for May 2026, as energy prices fell sharply. What is the probability that the BLS release covering reference month October 2026 (scheduled for 10 November 2026) prints an unadjusted 12-month all-items change of 3.5% or higher?",
+        "expr": "CPIOCT35"
+      },
+      {
+        "tid": "mr_cpi_tenyear.Y10_490",
+        "kind": "unconditional",
+        "text": "The US 10-year Treasury constant maturity yield (FRED series DGS10) was 4.64% on 27 July 2026, with a 2026 high to date of about 4.70% on 23 July 2026. What is the probability that DGS10 records a value of 4.90% or higher on at least one business day between 1 September 2026 and 31 January 2027 inclusive?",
+        "expr": "Y10_490"
+      },
+      {
+        "tid": "mr_cpi_tenyear.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) the BLS Consumer Price Index release covering reference month October 2026 prints an unadjusted 12-month all-items change of 3.5% or higher (it was 3.5% for June 2026), AND (b) the US 10-year Treasury constant maturity yield (FRED series DGS10) records a value of 4.90% or higher on at least one business day between 1 September 2026 and 31 January 2027 (it was 4.64% on 27 July 2026)?",
+        "expr": "CPIOCT35 and Y10_490"
+      },
+      {
+        "tid": "mr_cpi_tenyear.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (a) the BLS Consumer Price Index release covering reference month October 2026 prints an unadjusted 12-month all-items change of 3.5% or higher (it was 3.5% for June 2026), OR (b) the US 10-year Treasury constant maturity yield (FRED series DGS10) records a value of 4.90% or higher on at least one business day between 1 September 2026 and 31 January 2027 (it was 4.64% on 27 July 2026)?",
+        "expr": "CPIOCT35 or Y10_490"
+      },
+      {
+        "tid": "mr_cpi_tenyear.Y10_g_CPI",
+        "kind": "conditional",
+        "text": "Assume that the BLS Consumer Price Index release covering reference month October 2026 prints an unadjusted 12-month all-items change of 3.5% or higher (it was 3.5% for June 2026, down from 4.2% for May). Given that, what is the probability that the US 10-year Treasury constant maturity yield (FRED series DGS10) records a value of 4.90% or higher on at least one business day between 1 September 2026 and 31 January 2027 (it was 4.64% on 27 July 2026)?",
+        "expr": "Y10_490",
+        "given": "CPIOCT35"
+      },
+      {
+        "tid": "mr_cpi_tenyear.Y10_g_notCPI",
+        "kind": "conditional",
+        "text": "Assume that the BLS Consumer Price Index release covering reference month October 2026 prints an unadjusted 12-month all-items change BELOW 3.5% (it was 3.5% for June 2026, down from 4.2% for May). Given that, what is the probability that the US 10-year Treasury constant maturity yield (FRED series DGS10) records a value of 4.90% or higher on at least one business day between 1 September 2026 and 31 January 2027 (it was 4.64% on 27 July 2026)?",
+        "expr": "Y10_490",
+        "given": "not CPIOCT35"
+      }
+    ],
+    "axioms_tested": ["product_rule", "conjunction_bound", "disjunction_identity", "total_probability"]
+  },
+  {
+    "family_id": "mr_oil_hicp_ecb",
+    "domain": "macro_rates",
+    "base_events": {
+      "BRENT110": {
+        "text": "ICE Brent crude front-month futures settle at or above 110.00 US dollars per barrel on at least one trading day between 1 September 2026 and 31 December 2026 inclusive",
+        "resolution": "Resolves YES if the official daily settlement price of the front-month ICE Brent Crude Futures contract (ICE Futures Europe, contract code B) is greater than or equal to 110.00 USD per barrel on at least one trading day from 2026-09-01 through 2026-12-31 inclusive. Front-month means the contract nearest to expiry as designated by ICE on that day. Front-month Brent settled at roughly 97 USD on 24 July 2026 and was quoted near 91 USD on 26-27 July 2026, after peaking near 100 USD in mid-July 2026 during US-Iran hostilities.",
+        "source": "ICE Futures Europe official daily settlement prices for Brent Crude Futures (theice.com), front-month contract",
+        "resolve_by": "2026-12-31"
+      },
+      "HICP30": {
+        "text": "The euro area annual inflation rate in Eurostat's flash HICP estimate is 3.0% or higher for at least one reference month from September 2026 through December 2026",
+        "resolution": "Resolves YES if the euro area (changing composition) annual inflation rate published in Eurostat's flash estimate news release is greater than or equal to 3.0% for at least one of the reference months September 2026, October 2026, November 2026 or December 2026. The flash estimate figure as first published counts; later full-HICP revisions are ignored. Eurostat's flash estimate published 1 July 2026 put June 2026 euro area annual inflation at 2.8%, down from 3.2% in May 2026.",
+        "source": "Eurostat euro indicators flash estimate news release, 'Euro area annual inflation', ec.europa.eu/eurostat/web/products-euro-indicators",
+        "resolve_by": "2027-01-31"
+      },
+      "ECB275": {
+        "text": "The interest rate on the ECB deposit facility, as set by the most recent ECB monetary policy decision published on or before 31 December 2026, is 2.75% or higher (at least two further 25 basis point increases from the 2.25% rate in effect on 26 July 2026)",
+        "resolution": "Resolves YES if the deposit facility rate stated in the most recent 'Monetary policy decisions' press release published by the ECB on or before 31 December 2026 is greater than or equal to 2.75%. The deposit facility rate on 26 July 2026 is 2.25%, raised from 2.00% on 11 June 2026 and left unchanged at the 23 July 2026 meeting. Remaining 2026 Governing Council monetary policy meetings: 9-10 September, 28-29 October and 16-17 December 2026.",
+        "source": "ECB 'Monetary policy decisions' press release, ecb.europa.eu/press/pr, and the ECB key interest rates table at ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates",
+        "resolve_by": "2026-12-31"
+      }
+    },
+    "targets": [
+      {
+        "tid": "mr_oil_hicp_ecb.BRENT110",
+        "kind": "unconditional",
+        "text": "ICE Brent crude front-month futures settled at roughly 97 US dollars per barrel on 24 July 2026 and were quoted near 91 dollars on 26-27 July, after peaking near 100 dollars in mid-July amid US-Iran hostilities and Strait of Hormuz shipping risk. What is the probability that the front-month ICE Brent Crude futures contract settles at or above 110.00 US dollars per barrel on at least one trading day between 1 September 2026 and 31 December 2026 inclusive?",
+        "expr": "BRENT110"
+      },
+      {
+        "tid": "mr_oil_hicp_ecb.HICP30",
+        "kind": "unconditional",
+        "text": "Eurostat's flash estimate published 1 July 2026 put euro area annual HICP inflation at 2.8% for June 2026, down from 3.2% in May 2026, with energy still running at 8.7% year on year. What is the probability that Eurostat's flash estimate reports euro area annual inflation of 3.0% or higher for at least one of the reference months September, October, November or December 2026?",
+        "expr": "HICP30"
+      },
+      {
+        "tid": "mr_oil_hicp_ecb.ECB275",
+        "kind": "unconditional",
+        "text": "The ECB deposit facility rate is 2.25% as of 26 July 2026, having been raised from 2.00% on 11 June 2026 and left unchanged at the 23 July 2026 meeting. What is the probability that the deposit facility rate set by the most recent ECB monetary policy decision published on or before 31 December 2026 is 2.75% or higher?",
+        "expr": "ECB275"
+      },
+      {
+        "tid": "mr_oil_hicp_ecb.HICP_g_BRENT",
+        "kind": "conditional",
+        "text": "Assume that the front-month ICE Brent Crude futures contract settles at or above 110.00 US dollars per barrel on at least one trading day between 1 September 2026 and 31 December 2026 (it settled at roughly 97 dollars on 24 July 2026 and traded near 91 in the following days). Given that, what is the probability that Eurostat's flash estimate reports euro area annual HICP inflation of 3.0% or higher for at least one of the reference months September through December 2026 (it was 2.8% for June 2026)?",
+        "expr": "HICP30",
+        "given": "BRENT110"
+      },
+      {
+        "tid": "mr_oil_hicp_ecb.HICP_and_BRENT",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) the front-month ICE Brent Crude futures contract settles at or above 110.00 US dollars per barrel on at least one trading day between 1 September 2026 and 31 December 2026 (it settled at roughly 97 dollars on 24 July 2026 and traded near 91 in the following days), AND (b) Eurostat's flash estimate reports euro area annual HICP inflation of 3.0% or higher for at least one of the reference months September through December 2026 (it was 2.8% for June 2026)?",
+        "expr": "HICP30 and BRENT110"
+      },
+      {
+        "tid": "mr_oil_hicp_ecb.ECB_g_HICP",
+        "kind": "conditional",
+        "text": "Assume that Eurostat's flash estimate reports euro area annual HICP inflation of 3.0% or higher for at least one of the reference months September through December 2026 (it was 2.8% for June 2026). Given that, what is the probability that the ECB deposit facility rate set by the most recent ECB monetary policy decision published on or before 31 December 2026 is 2.75% or higher, up from 2.25% on 26 July 2026?",
+        "expr": "ECB275",
+        "given": "HICP30"
+      }
+    ],
+    "axioms_tested": ["product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "mr_boj_yen",
+    "domain": "macro_rates",
+    "base_events": {
+      "BOJ125": {
+        "text": "The Bank of Japan's target for the uncollateralized overnight call rate in effect on 31 March 2027 is 1.25% or higher (at least one further 25 basis point increase from the around 1.0 percent target in effect on 26 July 2026)",
+        "resolution": "Resolves YES if the guideline for money market operations stated in the most recent Bank of Japan Monetary Policy Meeting statement effective on or before 31 March 2027 sets the target for the uncollateralized overnight call rate at 1.25 percent or higher (for example 'around 1.25 percent'). The target on 26 July 2026 is around 1.0 percent, set at the 16 June 2026 meeting and effective 17 June 2026. If the Bank changes its operating target to a different instrument, resolve using the announced level of the overnight policy rate.",
+        "source": "Bank of Japan 'Statement on Monetary Policy' / 'Change in the Guideline for Money Market Operations', boj.or.jp/en/mopo/mpmdeci",
+        "resolve_by": "2027-03-31"
+      },
+      "JPY168": {
+        "text": "The Japanese yen weakens to 168.00 yen per US dollar or beyond on at least one business day between 1 September 2026 and 31 March 2027 inclusive",
+        "resolution": "Resolves YES if FRED series DEXJPUS (Japanese Yen to US Dollar Spot Exchange Rate, from the Federal Reserve H.10 release) records a value greater than or equal to 168.00 for at least one date from 2026-09-01 through 2027-03-31 inclusive. Days on which DEXJPUS is not published are skipped. DEXJPUS was approximately 163.8 on 24 July 2026.",
+        "source": "FRED series DEXJPUS (Board of Governors of the Federal Reserve System, H.10 Foreign Exchange Rates)",
+        "resolve_by": "2027-03-31"
+      },
+      "MOFINT": {
+        "text": "Japan's Ministry of Finance reports a non-zero yen-buying foreign exchange intervention for at least one monthly reporting period from September 2026 through February 2027",
+        "resolution": "Resolves YES if the Ministry of Finance's monthly 'Foreign Exchange Intervention Operations' data report a non-zero amount of yen purchases (dollar sales) for at least one of the monthly reporting periods ending in September 2026, October 2026, November 2026, December 2026, January 2027 or February 2027. Zero-amount months resolve NO for that month. Japan's MOF last intervened between late April and early May 2026, spending a record 11.73 trillion yen.",
+        "source": "Japan Ministry of Finance, 'Foreign Exchange Intervention Operations' monthly data, mof.go.jp/english/policy/international_policy/reference/feint",
+        "resolve_by": "2027-03-31"
+      }
+    },
+    "targets": [
+      {
+        "tid": "mr_boj_yen.BOJ125",
+        "kind": "unconditional",
+        "text": "The Bank of Japan raised its target for the uncollateralized overnight call rate to around 1.0 percent on 16 June 2026, the highest level since 1995, and Reuters surveys in July 2026 pointed to the next increase most likely arriving in the fourth quarter of 2026. What is the probability that the BoJ's target for the uncollateralized overnight call rate in effect on 31 March 2027 is 1.25 percent or higher?",
+        "expr": "BOJ125"
+      },
+      {
+        "tid": "mr_boj_yen.JPY168",
+        "kind": "unconditional",
+        "text": "The dollar-yen exchange rate was about 163.8 yen per US dollar on 24 July 2026 (FRED series DEXJPUS), after Japan's Ministry of Finance spent a record 11.73 trillion yen defending the currency in April and May 2026. What is the probability that DEXJPUS records a value of 168.00 yen per dollar or higher on at least one business day between 1 September 2026 and 31 March 2027 inclusive?",
+        "expr": "JPY168"
+      },
+      {
+        "tid": "mr_boj_yen.MOFINT",
+        "kind": "unconditional",
+        "text": "Japan's Ministry of Finance last intervened in the foreign exchange market to buy yen between late April and early May 2026, spending a record 11.73 trillion yen. What is the probability that the Ministry of Finance's monthly 'Foreign Exchange Intervention Operations' data report a non-zero amount of yen purchases for at least one monthly reporting period from September 2026 through February 2027?",
+        "expr": "MOFINT"
+      },
+      {
+        "tid": "mr_boj_yen.MOF_g_JPY168",
+        "kind": "conditional",
+        "text": "Assume that the dollar-yen exchange rate (FRED series DEXJPUS) reaches 168.00 yen per US dollar or higher on at least one business day between 1 September 2026 and 31 March 2027 (it was about 163.8 on 24 July 2026). Given that, what is the probability that Japan's Ministry of Finance reports a non-zero yen-buying foreign exchange intervention for at least one monthly reporting period from September 2026 through February 2027?",
+        "expr": "MOFINT",
+        "given": "JPY168"
+      },
+      {
+        "tid": "mr_boj_yen.JPY_and_MOF",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) the dollar-yen exchange rate (FRED series DEXJPUS) reaches 168.00 yen per US dollar or higher on at least one business day between 1 September 2026 and 31 March 2027 (it was about 163.8 on 24 July 2026), AND (b) Japan's Ministry of Finance reports a non-zero yen-buying foreign exchange intervention for at least one monthly reporting period from September 2026 through February 2027?",
+        "expr": "JPY168 and MOFINT"
+      },
+      {
+        "tid": "mr_boj_yen.JPY_g_BOJ125",
+        "kind": "conditional",
+        "text": "Assume that the Bank of Japan's target for the uncollateralized overnight call rate in effect on 31 March 2027 is 1.25 percent or higher (it is around 1.0 percent as of 26 July 2026). Given that, what is the probability that the dollar-yen exchange rate (FRED series DEXJPUS) reaches 168.00 yen per US dollar or higher on at least one business day between 1 September 2026 and 31 March 2027 (it was about 163.8 on 24 July 2026)?",
+        "expr": "JPY168",
+        "given": "BOJ125"
+      }
+    ],
+    "axioms_tested": ["product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "mr_labor_credit",
+    "domain": "macro_rates",
+    "base_events": {
+      "U48": {
+        "text": "The US unemployment rate, as first published by the BLS, is 4.8% or higher for at least one reference month from September 2026 through March 2027",
+        "resolution": "Resolves YES if the seasonally adjusted civilian unemployment rate printed in the BLS Employment Situation news release is greater than or equal to 4.8 percent for at least one of the reference months September 2026 through March 2027 inclusive, using the figure as it appears in the first release covering that month. Later revisions and annual benchmark or seasonal-factor revisions are ignored. The release of 2 July 2026 put the June 2026 rate at 4.2 percent. If a release is delayed or cancelled, that reference month is treated as not satisfying the condition.",
+        "source": "BLS Employment Situation News Release, bls.gov/news.release/empsit.nr0.htm, Table A-1 civilian unemployment rate (seasonally adjusted)",
+        "resolve_by": "2027-04-30"
+      },
+      "U52": {
+        "text": "The US unemployment rate, as first published by the BLS, is 5.2% or higher for at least one reference month from September 2026 through March 2027",
+        "resolution": "Resolves YES if the seasonally adjusted civilian unemployment rate printed in the BLS Employment Situation news release is greater than or equal to 5.2 percent for at least one of the reference months September 2026 through March 2027 inclusive, using the figure as it appears in the first release covering that month. Later revisions are ignored. The release of 2 July 2026 put the June 2026 rate at 4.2 percent.",
+        "source": "BLS Employment Situation News Release, bls.gov/news.release/empsit.nr0.htm, Table A-1 civilian unemployment rate (seasonally adjusted)",
+        "resolve_by": "2027-04-30"
+      },
+      "HY400": {
+        "text": "The ICE BofA US High Yield Index option-adjusted spread reaches 4.00 percentage points (400 basis points) or wider on at least one business day between 1 September 2026 and 30 April 2027 inclusive",
+        "resolution": "Resolves YES if FRED series BAMLH0A0HYM2 (ICE BofA US High Yield Index Option-Adjusted Spread) records a value greater than or equal to 4.00 for at least one date from 2026-09-01 through 2027-04-30 inclusive. The series is quoted in percentage points. Days on which the series is not published are skipped. BAMLH0A0HYM2 was 2.77 on 23 July 2026, with a 2026 high of roughly 2.84 reached in April 2026.",
+        "source": "FRED series BAMLH0A0HYM2 (ICE Data Indices, LLC, via Federal Reserve Bank of St. Louis)",
+        "resolve_by": "2027-04-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "U52", "b": "U48"}
+    ],
+    "targets": [
+      {
+        "tid": "mr_labor_credit.U48",
+        "kind": "unconditional",
+        "text": "The BLS Employment Situation release of 2 July 2026 put the US unemployment rate at 4.2% for June 2026, with payrolls up only 57,000 and downward revisions to prior months. What is the probability that the seasonally adjusted unemployment rate, as first printed by the BLS, is 4.8% or higher for at least one reference month from September 2026 through March 2027?",
+        "expr": "U48"
+      },
+      {
+        "tid": "mr_labor_credit.U52",
+        "kind": "unconditional",
+        "text": "The BLS Employment Situation release of 2 July 2026 put the US unemployment rate at 4.2% for June 2026, with payrolls up only 57,000 and downward revisions to prior months. What is the probability that the seasonally adjusted unemployment rate, as first printed by the BLS, is 5.2% or higher for at least one reference month from September 2026 through March 2027?",
+        "expr": "U52"
+      },
+      {
+        "tid": "mr_labor_credit.U48_g_U52",
+        "kind": "conditional",
+        "text": "Assume that the US unemployment rate, as first printed by the BLS, is 5.2% or higher for at least one reference month between September 2026 and March 2027. Given that, what is the probability that the US unemployment rate, as first printed by the BLS, is 4.8% or higher for at least one reference month between September 2026 and March 2027?",
+        "expr": "U48",
+        "given": "U52"
+      },
+      {
+        "tid": "mr_labor_credit.HY400",
+        "kind": "unconditional",
+        "text": "The ICE BofA US High Yield Index option-adjusted spread (FRED series BAMLH0A0HYM2) was 2.77 percentage points on 23 July 2026, with a 2026 high of roughly 2.84 in April. What is the probability that this series records a value of 4.00 percentage points (400 basis points) or wider on at least one business day between 1 September 2026 and 30 April 2027 inclusive?",
+        "expr": "HY400"
+      },
+      {
+        "tid": "mr_labor_credit.HY400_g_U48",
+        "kind": "conditional",
+        "text": "Assume that the US unemployment rate, as first printed by the BLS, reaches 4.8% or higher in at least one reference month between September 2026 and March 2027 (it was 4.2% in June 2026). Given that, what is the probability that the ICE BofA US High Yield Index option-adjusted spread (FRED series BAMLH0A0HYM2) reaches 4.00 percentage points or wider on at least one business day between 1 September 2026 and 30 April 2027 (it was 2.77 on 23 July 2026)?",
+        "expr": "HY400",
+        "given": "U48"
+      },
+      {
+        "tid": "mr_labor_credit.HY400_and_U48",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) the US unemployment rate, as first printed by the BLS, reaches 4.8% or higher in at least one reference month between September 2026 and March 2027 (it was 4.2% in June 2026), AND (b) the ICE BofA US High Yield Index option-adjusted spread (FRED series BAMLH0A0HYM2) reaches 4.00 percentage points or wider on at least one business day between 1 September 2026 and 30 April 2027 (it was 2.77 on 23 July 2026)?",
+        "expr": "HY400 and U48"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "mr_equity_drawdown_fed",
+    "domain": "macro_rates",
+    "base_events": {
+      "DD10": {
+        "text": "The S&P 500 closes at least 10% below its highest-ever daily closing level on at least one trading day between 1 September 2026 and 30 June 2027 inclusive",
+        "resolution": "Resolves YES if, on at least one trading day D from 2026-09-01 through 2027-06-30 inclusive, the official S&P 500 closing index value on day D is less than or equal to 0.90 times the maximum S&P 500 daily closing value recorded on any trading day up to and including day D (that is, the running all-time closing high, using the full history of the index). As of 26 July 2026 the running all-time closing high is 7,609.78, set on 2 June 2026, and the index closed near 7,454 in late July 2026, so no 10% drawdown had occurred during 2026 to that point.",
+        "source": "S&P Dow Jones Indices official S&P 500 daily closing values (spglobal.com/spdji), equivalently FRED series SP500",
+        "resolve_by": "2027-06-30"
+      },
+      "DD20": {
+        "text": "The S&P 500 closes at least 20% below its highest-ever daily closing level on at least one trading day between 1 September 2026 and 30 June 2027 inclusive",
+        "resolution": "Resolves YES if, on at least one trading day D from 2026-09-01 through 2027-06-30 inclusive, the official S&P 500 closing index value on day D is less than or equal to 0.80 times the maximum S&P 500 daily closing value recorded on any trading day up to and including day D. As of 26 July 2026 the running all-time closing high is 7,609.78, set on 2 June 2026, and the index closed near 7,454 in late July 2026.",
+        "source": "S&P Dow Jones Indices official S&P 500 daily closing values (spglobal.com/spdji), equivalently FRED series SP500",
+        "resolve_by": "2027-06-30"
+      },
+      "FEDCUT": {
+        "text": "The upper limit of the Federal Reserve's federal funds target range is 3.50% or lower on 30 June 2027 (at least one net 25 basis point cut from the 3.50%-3.75% range in effect on 26 July 2026)",
+        "resolution": "Resolves YES if the value of FRED series DFEDTARU (Federal Funds Target Range - Upper Limit) for 30 June 2027 is less than or equal to 3.50. Resolves NO otherwise, including the case where the Fed hikes and then cuts back to a 3.50%-3.75% range. The target range in effect on 26 July 2026 is 3.50%-3.75% (DFEDTARU = 3.75). There are no revisions to this series.",
+        "source": "FRED series DFEDTARU (Federal Reserve Bank of St. Louis), cross-checked against the FOMC post-meeting policy statement at federalreserve.gov",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "DD20", "b": "DD10"}
+    ],
+    "targets": [
+      {
+        "tid": "mr_equity_drawdown_fed.DD10",
+        "kind": "unconditional",
+        "text": "The S&P 500 set a record closing high of 7,609.78 on 2 June 2026 and closed near 7,454 in late July 2026, having avoided any 10% correction so far in 2026. What is the probability that the S&P 500 closes at least 10% below its running all-time closing high on at least one trading day between 1 September 2026 and 30 June 2027 inclusive?",
+        "expr": "DD10"
+      },
+      {
+        "tid": "mr_equity_drawdown_fed.DD20",
+        "kind": "unconditional",
+        "text": "The S&P 500 set a record closing high of 7,609.78 on 2 June 2026 and closed near 7,454 in late July 2026. What is the probability that the S&P 500 closes at least 20% below its running all-time closing high on at least one trading day between 1 September 2026 and 30 June 2027 inclusive?",
+        "expr": "DD20"
+      },
+      {
+        "tid": "mr_equity_drawdown_fed.DD10_g_DD20",
+        "kind": "conditional",
+        "text": "Assume that the S&P 500 closes at least 20% below its running all-time closing high on at least one trading day between 1 September 2026 and 30 June 2027. Given that, what is the probability that the S&P 500 closes at least 10% below its running all-time closing high on at least one trading day between 1 September 2026 and 30 June 2027?",
+        "expr": "DD10",
+        "given": "DD20"
+      },
+      {
+        "tid": "mr_equity_drawdown_fed.FEDCUT",
+        "kind": "unconditional",
+        "text": "The Federal Reserve's federal funds target range has been 3.50%-3.75% since the 16-17 June 2026 FOMC meeting, and prediction markets in July 2026 put roughly 78% odds on zero cuts during 2026. What is the probability that the upper limit of the federal funds target range, as reported by FRED series DFEDTARU, is 3.50% or lower on 30 June 2027?",
+        "expr": "FEDCUT"
+      },
+      {
+        "tid": "mr_equity_drawdown_fed.FEDCUT_g_DD20",
+        "kind": "conditional",
+        "text": "Assume that the S&P 500 closes at least 20% below its running all-time closing high on at least one trading day between 1 September 2026 and 30 June 2027. Given that, what is the probability that the upper limit of the Federal Reserve's federal funds target range, as reported by FRED series DFEDTARU, is 3.50% or lower on 30 June 2027 (down from 3.75% on 26 July 2026)?",
+        "expr": "FEDCUT",
+        "given": "DD20"
+      },
+      {
+        "tid": "mr_equity_drawdown_fed.DD20_and_FEDCUT",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) the S&P 500 closes at least 20% below its running all-time closing high on at least one trading day between 1 September 2026 and 30 June 2027 (its record close was 7,609.78 on 2 June 2026), AND (b) the upper limit of the Federal Reserve's federal funds target range, as reported by FRED series DFEDTARU, is 3.50% or lower on 30 June 2027 (down from 3.75% on 26 July 2026)?",
+        "expr": "DD20 and FEDCUT"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "mr_france_eurusd",
+    "domain": "macro_rates",
+    "base_events": {
+      "FRDOWN": {
+        "text": "At least one of S&P Global Ratings, Moody's Ratings or Fitch Ratings lowers France's long-term foreign-currency sovereign credit rating by one notch or more in a rating action published between 1 September 2026 and 30 June 2027 inclusive",
+        "resolution": "Resolves YES if any of S&P Global Ratings, Moody's Ratings or Fitch Ratings publishes a rating action between 2026-09-01 and 2027-06-30 inclusive that lowers its long-term foreign-currency sovereign credit rating on the Republic of France by at least one notch. Outlook changes (for example stable to negative), placements on watch, and affirmations do NOT count. As of 26 July 2026 the ratings are: S&P Global Ratings A+ with stable outlook (cut from AA- on 17 October 2025 and affirmed at A+ on 30 May 2026), Moody's Ratings Aa3 with negative outlook (outlook cut to negative in October 2025), and Fitch Ratings A+ with stable outlook (cut from AA- in September 2025).",
+        "source": "Official sovereign rating action press releases from S&P Global Ratings (spglobal.com/ratings), Moody's Ratings (moodys.com) and Fitch Ratings (fitchratings.com)",
+        "resolve_by": "2027-06-30"
+      },
+      "EUR110": {
+        "text": "The euro weakens to 1.1000 US dollars per euro or below on at least one business day between 1 September 2026 and 30 June 2027 inclusive",
+        "resolution": "Resolves YES if FRED series DEXUSEU (US Dollars to Euro Spot Exchange Rate, from the Federal Reserve H.10 release) records a value less than or equal to 1.1000 for at least one date from 2026-09-01 through 2027-06-30 inclusive. Days on which DEXUSEU is not published are skipped. EUR/USD was approximately 1.1367 on 24 July 2026, and its 2026 low to that point was roughly 1.134.",
+        "source": "FRED series DEXUSEU (Board of Governors of the Federal Reserve System, H.10 Foreign Exchange Rates)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "mr_france_eurusd.FRDOWN",
+        "kind": "unconditional",
+        "text": "As of 26 July 2026 France is rated A+ with a stable outlook by S&P Global Ratings (affirmed 30 May 2026), Aa3 with a negative outlook by Moody's Ratings, and A+ with a stable outlook by Fitch Ratings, with deficits projected above 5% of GDP and a fragmented parliament. What is the probability that at least one of these three agencies lowers its long-term foreign-currency sovereign rating on France by one notch or more in a rating action published between 1 September 2026 and 30 June 2027 inclusive? Outlook changes alone do not count.",
+        "expr": "FRDOWN"
+      },
+      {
+        "tid": "mr_france_eurusd.EUR110",
+        "kind": "unconditional",
+        "text": "The euro traded at about 1.1367 US dollars on 24 July 2026 (FRED series DEXUSEU), with a 2026 low to that point of roughly 1.134, while the ECB was signalling further rate hikes. What is the probability that DEXUSEU records a value of 1.1000 US dollars per euro or below on at least one business day between 1 September 2026 and 30 June 2027 inclusive?",
+        "expr": "EUR110"
+      },
+      {
+        "tid": "mr_france_eurusd.both",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (a) at least one of S&P Global Ratings, Moody's Ratings or Fitch Ratings lowers its long-term foreign-currency sovereign rating on France by one notch or more between 1 September 2026 and 30 June 2027 (France is currently rated A+ by S&P, Aa3 by Moody's and A+ by Fitch), AND (b) the euro falls to 1.1000 US dollars or below on at least one business day in that same window as measured by FRED series DEXUSEU (it was about 1.1367 on 24 July 2026)?",
+        "expr": "FRDOWN and EUR110"
+      },
+      {
+        "tid": "mr_france_eurusd.either",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (a) at least one of S&P Global Ratings, Moody's Ratings or Fitch Ratings lowers its long-term foreign-currency sovereign rating on France by one notch or more between 1 September 2026 and 30 June 2027 (France is currently rated A+ by S&P, Aa3 by Moody's and A+ by Fitch), OR (b) the euro falls to 1.1000 US dollars or below on at least one business day in that same window as measured by FRED series DEXUSEU (it was about 1.1367 on 24 July 2026)?",
+        "expr": "FRDOWN or EUR110"
+      },
+      {
+        "tid": "mr_france_eurusd.neither",
+        "kind": "unconditional",
+        "text": "What is the probability that NEITHER of the following happens: (a) none of S&P Global Ratings, Moody's Ratings or Fitch Ratings lowers its long-term foreign-currency sovereign rating on France by even one notch between 1 September 2026 and 30 June 2027 (France is currently rated A+ by S&P, Aa3 by Moody's and A+ by Fitch), AND (b) the euro never trades at or below 1.1000 US dollars on any business day in that same window as measured by FRED series DEXUSEU (it was about 1.1367 on 24 July 2026)?",
+        "expr": "not FRDOWN and not EUR110"
+      },
+      {
+        "tid": "mr_france_eurusd.EUR_g_FRDOWN",
+        "kind": "conditional",
+        "text": "Assume that at least one of S&P Global Ratings, Moody's Ratings or Fitch Ratings lowers its long-term foreign-currency sovereign rating on France by one notch or more between 1 September 2026 and 30 June 2027 (France is currently rated A+ by S&P, Aa3 by Moody's and A+ by Fitch). Given that, what is the probability that the euro falls to 1.1000 US dollars or below on at least one business day in that same window, as measured by FRED series DEXUSEU (it was about 1.1367 on 24 July 2026)?",
+        "expr": "EUR110",
+        "given": "FRDOWN"
+      }
+    ],
+    "axioms_tested": ["disjunction_identity", "complement", "product_rule", "conjunction_bound"]
+  }
+]

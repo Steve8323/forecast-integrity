@@ -1,0 +1,47 @@
+# forecast_integrity - forecast commitment roots
+#
+# Publish this file VERBATIM (gist / git tag / OpenTimestamps / anywhere with a
+# third-party timestamp) BEFORE any question resolves. The root is the entire
+# claim: without a pre-resolution timestamp on it, a track record is unfalsifiable.
+#
+# To check a published root against a set of forecast records:
+#     python3 ledger.py --verify out/ledger_<model>.json
+#
+# hash        : sha256
+# leaf        : sha256(json.dumps({"model","p","tid"}, sort_keys=True, separators=(",",":")))
+#               (rationale / asked_utc are NOT hashed - cosmetic edits are allowed,
+#                and the trusted timestamp is when this file was published, not a
+#                timestamp the forecaster wrote inside their own record)
+# node        : sha256(raw32(left) || raw32(right))   # raw digests, not hex strings
+# odd node    : duplicate-last-node (pair the last node of an odd level with itself)
+# single leaf : root == that leaf
+# empty       : root == e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+#
+
+label    : claude-opus-5
+model    : claude-opus-5
+n        : 240
+asof_utc : 2026-07-27T03:01:35.401312+00:00
+source   : forecasts_claude-opus-5.json
+root     : d15545067fddd0d44bce02bc442d1862233a4b8053d9482729d051f70cb316bc
+
+label    : claude-opus-5_joint
+model    : claude-opus-5+joint
+n        : 240
+asof_utc : 2026-07-27T03:01:35.401312+00:00
+source   : forecasts_claude-opus-5_joint.json
+root     : c71354f180934469e787bf36475237597f18cd221c9efc81879b29b5385d9cb4
+
+label    : claude-sonnet-5
+model    : claude-sonnet-5
+n        : 240
+asof_utc : 2026-07-27T03:01:35.401312+00:00
+source   : forecasts_claude-sonnet-5.json
+root     : fa1dac0130e865ca3dea4b3350e705c31d569f4b8f99527cd97fdb0b5b52b3bf
+
+label    : claude-sonnet-5_joint
+model    : claude-sonnet-5+joint
+n        : 240
+asof_utc : 2026-07-27T03:01:35.401312+00:00
+source   : forecasts_claude-sonnet-5_joint.json
+root     : e67c8b05c3052e29203b9c09e80b295e85d322e529d18499280d08e982aa9431

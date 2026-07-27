@@ -1,0 +1,533 @@
+[
+  {
+    "family_id": "ins_2026_global_insured_loss_bands",
+    "domain": "catastrophe_insurance",
+    "base_events": {
+      "LOSS_LOW": {
+        "text": "Global insured losses from natural catastrophes in calendar year 2026 total less than USD 80 billion",
+        "resolution": "Resolves YES if the headline figure for global insured natural catastrophe losses in calendar year 2026, as stated in Gallagher Re's annual Natural Catastrophe and Climate Report for 2026 (published in January 2027), is less than USD 80 billion. For reference, Gallagher Re put global insured natural catastrophe losses at USD 46 billion for the first half of 2026 (28 percent below the USD 64 billion ten-year first-half average and the lowest first half since 2019) and at USD 129 billion for full-year 2025.",
+        "source": "Gallagher Re, Natural Catastrophe and Climate Report: 2026 Annual Report (ajg.com/gallagherre)",
+        "resolve_by": "2027-02-28"
+      },
+      "LOSS_MID": {
+        "text": "Global insured losses from natural catastrophes in calendar year 2026 total at least USD 80 billion but less than USD 125 billion",
+        "resolution": "Resolves YES if the headline figure for global insured natural catastrophe losses in calendar year 2026, as stated in Gallagher Re's annual Natural Catastrophe and Climate Report for 2026 (published in January 2027), is greater than or equal to USD 80 billion and less than USD 125 billion. For reference, Gallagher Re put global insured natural catastrophe losses at USD 46 billion for the first half of 2026 and at USD 129 billion for full-year 2025.",
+        "source": "Gallagher Re, Natural Catastrophe and Climate Report: 2026 Annual Report (ajg.com/gallagherre)",
+        "resolve_by": "2027-02-28"
+      },
+      "LOSS_HIGH": {
+        "text": "Global insured losses from natural catastrophes in calendar year 2026 total USD 125 billion or more",
+        "resolution": "Resolves YES if the headline figure for global insured natural catastrophe losses in calendar year 2026, as stated in Gallagher Re's annual Natural Catastrophe and Climate Report for 2026 (published in January 2027), is greater than or equal to USD 125 billion. For reference, Gallagher Re put global insured natural catastrophe losses at USD 46 billion for the first half of 2026 and at USD 129 billion for full-year 2025.",
+        "source": "Gallagher Re, Natural Catastrophe and Climate Report: 2026 Annual Report (ajg.com/gallagherre)",
+        "resolve_by": "2027-02-28"
+      }
+    },
+    "constraints": [
+      {"type": "exclusive", "events": ["LOSS_LOW", "LOSS_MID", "LOSS_HIGH"]},
+      {"type": "exhaustive", "events": ["LOSS_LOW", "LOSS_MID", "LOSS_HIGH"]}
+    ],
+    "targets": [
+      {
+        "tid": "ins_2026_global_insured_loss_bands.low",
+        "kind": "unconditional",
+        "text": "Gallagher Re publishes an annual Natural Catastrophe and Climate Report each January that states a single headline figure for global insured natural catastrophe losses for the prior calendar year. It reported USD 129 billion for full-year 2025 and USD 46 billion for the first half of 2026 (28 percent below the USD 64 billion ten-year first-half average, the lowest first half since 2019). What is the probability that the figure Gallagher Re publishes for calendar year 2026 is LESS THAN USD 80 billion?",
+        "expr": "LOSS_LOW"
+      },
+      {
+        "tid": "ins_2026_global_insured_loss_bands.mid",
+        "kind": "unconditional",
+        "text": "Gallagher Re publishes an annual Natural Catastrophe and Climate Report each January that states a single headline figure for global insured natural catastrophe losses for the prior calendar year. It reported USD 129 billion for full-year 2025 and USD 46 billion for the first half of 2026 (28 percent below the USD 64 billion ten-year first-half average, the lowest first half since 2019). What is the probability that the figure Gallagher Re publishes for calendar year 2026 is AT LEAST USD 80 billion BUT LESS THAN USD 125 billion?",
+        "expr": "LOSS_MID"
+      },
+      {
+        "tid": "ins_2026_global_insured_loss_bands.high",
+        "kind": "unconditional",
+        "text": "Gallagher Re publishes an annual Natural Catastrophe and Climate Report each January that states a single headline figure for global insured natural catastrophe losses for the prior calendar year. It reported USD 129 billion for full-year 2025 and USD 46 billion for the first half of 2026 (28 percent below the USD 64 billion ten-year first-half average, the lowest first half since 2019). What is the probability that the figure Gallagher Re publishes for calendar year 2026 is USD 125 billion OR MORE?",
+        "expr": "LOSS_HIGH"
+      },
+      {
+        "tid": "ins_2026_global_insured_loss_bands.mid_or_high",
+        "kind": "unconditional",
+        "text": "Gallagher Re publishes an annual Natural Catastrophe and Climate Report each January that states a single headline figure for global insured natural catastrophe losses for the prior calendar year. It reported USD 129 billion for full-year 2025 and USD 46 billion for the first half of 2026. What is the probability that the figure Gallagher Re publishes for calendar year 2026 falls in EITHER the band from USD 80 billion up to (but not including) USD 125 billion, OR the band of USD 125 billion or more?",
+        "expr": "LOSS_MID or LOSS_HIGH"
+      },
+      {
+        "tid": "ins_2026_global_insured_loss_bands.not_low",
+        "kind": "unconditional",
+        "text": "Gallagher Re publishes an annual Natural Catastrophe and Climate Report each January that states a single headline figure for global insured natural catastrophe losses for the prior calendar year. It reported USD 129 billion for full-year 2025 and USD 46 billion for the first half of 2026. What is the probability that the figure Gallagher Re publishes for calendar year 2026 is NOT below USD 80 billion, i.e. that it is USD 80 billion or more?",
+        "expr": "not LOSS_LOW"
+      },
+      {
+        "tid": "ins_2026_global_insured_loss_bands.mid_given_not_low",
+        "kind": "conditional",
+        "text": "Gallagher Re publishes an annual Natural Catastrophe and Climate Report each January that states a single headline figure for global insured natural catastrophe losses for the prior calendar year. Assume that the figure it publishes for calendar year 2026 turns out to be USD 80 billion or more. Conditional on that, what is the probability that the figure is LESS THAN USD 125 billion (i.e. it lands in the USD 80 billion to USD 125 billion band rather than at USD 125 billion or above)?",
+        "expr": "LOSS_MID",
+        "given": "not LOSS_LOW"
+      }
+    ],
+    "axioms_tested": ["partition_sum", "complement", "disjunction_identity", "product_rule"]
+  },
+  {
+    "family_id": "cat_us_hurricane_landfall_2026",
+    "domain": "catastrophe_insurance",
+    "base_events": {
+      "HUR1": {
+        "text": "At least one Atlantic hurricane makes landfall on the contiguous United States between 1 September and 30 November 2026",
+        "resolution": "Resolves YES if National Hurricane Center public advisories and post-season Tropical Cyclone Reports for the 2026 Atlantic season show at least one distinct tropical cyclone whose center crossed the coastline of the contiguous (lower 48) United States between 2026-09-01 and 2026-11-30 while its maximum sustained winds were at least 64 knots (74 mph), i.e. Category 1 or stronger. A single storm that makes more than one landfall counts once. Puerto Rico, the US Virgin Islands, Hawaii and Alaska do not count. As of 2026-07-26 the 2026 season had produced two named storms (Arthur, 17-18 June, and Bertha, 19-24 July) and zero hurricanes.",
+        "source": "NOAA National Hurricane Center public advisories and Tropical Cyclone Reports, 2026 Atlantic season (nhc.noaa.gov)",
+        "resolve_by": "2027-01-15"
+      },
+      "HUR3": {
+        "text": "At least three distinct Atlantic hurricanes make landfall on the contiguous United States between 1 September and 30 November 2026",
+        "resolution": "Resolves YES if National Hurricane Center public advisories and post-season Tropical Cyclone Reports for the 2026 Atlantic season show at least three distinct tropical cyclones whose centers crossed the coastline of the contiguous (lower 48) United States between 2026-09-01 and 2026-11-30 while their maximum sustained winds were at least 64 knots (74 mph). A single storm that makes more than one landfall counts once. As of 2026-07-26 the 2026 season had produced two named storms and zero hurricanes.",
+        "source": "NOAA National Hurricane Center public advisories and Tropical Cyclone Reports, 2026 Atlantic season (nhc.noaa.gov)",
+        "resolve_by": "2027-01-15"
+      },
+      "MAJ1": {
+        "text": "At least one major Atlantic hurricane (Category 3 or stronger) makes landfall on the contiguous United States between 1 September and 30 November 2026",
+        "resolution": "Resolves YES if National Hurricane Center public advisories and post-season Tropical Cyclone Reports for the 2026 Atlantic season show at least one tropical cyclone whose center crossed the coastline of the contiguous (lower 48) United States between 2026-09-01 and 2026-11-30 while its maximum sustained winds were at least 96 knots (111 mph), i.e. Category 3, 4 or 5 on the Saffir-Simpson scale. As of 2026-07-26 the 2026 season had produced two named storms and zero hurricanes.",
+        "source": "NOAA National Hurricane Center public advisories and Tropical Cyclone Reports, 2026 Atlantic season (nhc.noaa.gov)",
+        "resolve_by": "2027-01-15"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "HUR3", "b": "HUR1"},
+      {"type": "implies", "a": "MAJ1", "b": "HUR1"}
+    ],
+    "targets": [
+      {
+        "tid": "cat_us_hurricane_landfall_2026.hur1",
+        "kind": "unconditional",
+        "text": "NOAA's May 2026 outlook called for a below-normal 2026 Atlantic hurricane season (8-14 named storms, 3-6 hurricanes, 1-3 major hurricanes) as El Nino develops, and as of 26 July 2026 the season had produced only two named storms (Arthur and Bertha) and no hurricanes. What is the probability that AT LEAST ONE Atlantic hurricane (maximum sustained winds of 74 mph or more at landfall, Category 1 or stronger) makes landfall on the contiguous lower-48 United States between 1 September and 30 November 2026, as recorded in National Hurricane Center advisories and Tropical Cyclone Reports?",
+        "expr": "HUR1"
+      },
+      {
+        "tid": "cat_us_hurricane_landfall_2026.hur3",
+        "kind": "unconditional",
+        "text": "NOAA's May 2026 outlook called for a below-normal 2026 Atlantic hurricane season (8-14 named storms, 3-6 hurricanes, 1-3 major hurricanes) as El Nino develops, and as of 26 July 2026 the season had produced only two named storms and no hurricanes. What is the probability that AT LEAST THREE distinct Atlantic hurricanes (each with maximum sustained winds of 74 mph or more at landfall) make landfall on the contiguous lower-48 United States between 1 September and 30 November 2026, as recorded in National Hurricane Center advisories and Tropical Cyclone Reports? A storm making multiple landfalls counts once.",
+        "expr": "HUR3"
+      },
+      {
+        "tid": "cat_us_hurricane_landfall_2026.maj1",
+        "kind": "unconditional",
+        "text": "NOAA's May 2026 outlook called for a below-normal 2026 Atlantic hurricane season (8-14 named storms, 3-6 hurricanes, 1-3 major hurricanes) as El Nino develops, and as of 26 July 2026 the season had produced only two named storms and no hurricanes. What is the probability that AT LEAST ONE major Atlantic hurricane (Category 3 or stronger, maximum sustained winds of 111 mph or more at landfall) makes landfall on the contiguous lower-48 United States between 1 September and 30 November 2026, as recorded in National Hurricane Center advisories and Tropical Cyclone Reports?",
+        "expr": "MAJ1"
+      },
+      {
+        "tid": "cat_us_hurricane_landfall_2026.maj_given_hur1",
+        "kind": "conditional",
+        "text": "Assume that at least one Atlantic hurricane (maximum sustained winds of 74 mph or more at landfall) makes landfall on the contiguous lower-48 United States between 1 September and 30 November 2026. Conditional on that, what is the probability that at least one of the 2026 hurricanes making landfall on the contiguous United States in that window is a MAJOR hurricane, i.e. Category 3 or stronger with maximum sustained winds of 111 mph or more at landfall, as recorded in National Hurricane Center advisories and Tropical Cyclone Reports?",
+        "expr": "MAJ1",
+        "given": "HUR1"
+      },
+      {
+        "tid": "cat_us_hurricane_landfall_2026.hur3_or_maj",
+        "kind": "unconditional",
+        "text": "Consider Atlantic hurricane landfalls on the contiguous lower-48 United States between 1 September and 30 November 2026, as recorded in National Hurricane Center advisories and Tropical Cyclone Reports. As of 26 July 2026 the season had produced two named storms and no hurricanes, against a NOAA outlook of 8-14 named storms and 3-6 hurricanes. What is the probability that AT LEAST ONE of the following two things happens: (i) three or more distinct hurricanes make landfall on the contiguous United States in that window, or (ii) at least one major hurricane (Category 3 or stronger, 111 mph or more at landfall) makes landfall on the contiguous United States in that window?",
+        "expr": "HUR3 or MAJ1"
+      },
+      {
+        "tid": "cat_us_hurricane_landfall_2026.hur3_and_maj",
+        "kind": "unconditional",
+        "text": "Consider Atlantic hurricane landfalls on the contiguous lower-48 United States between 1 September and 30 November 2026, as recorded in National Hurricane Center advisories and Tropical Cyclone Reports. As of 26 July 2026 the season had produced two named storms and no hurricanes, against a NOAA outlook of 8-14 named storms and 3-6 hurricanes. What is the probability that BOTH of the following happen: three or more distinct hurricanes make landfall on the contiguous United States in that window, AND at least one major hurricane (Category 3 or stronger, 111 mph or more at landfall) makes landfall on the contiguous United States in that window?",
+        "expr": "HUR3 and MAJ1"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "disjunction_identity", "conjunction_bound"]
+  },
+  {
+    "family_id": "ins_2026_loss_severity_and_reinsurance_pricing",
+    "domain": "catastrophe_insurance",
+    "base_events": {
+      "NS12": {
+        "text": "The 2026 Atlantic hurricane season ends with 12 or more named storms",
+        "resolution": "Resolves YES if the number of Atlantic basin tropical or subtropical cyclones assigned a name from the 2026 Atlantic list, as reflected in the National Hurricane Center's 2026 Atlantic season archive and Tropical Cyclone Reports as of 2027-01-15, is 12 or greater. As of 2026-07-26 two named storms had formed (Arthur, 17-18 June; Bertha, 19-24 July); NOAA's May 2026 outlook called for 8-14 named storms.",
+        "source": "NOAA National Hurricane Center 2026 Atlantic hurricane season archive (nhc.noaa.gov/data/tcr/index.php?season=2026&basin=atl)",
+        "resolve_by": "2027-01-15"
+      },
+      "MEGA20": {
+        "text": "At least one individual natural catastrophe event with an occurrence date between 1 September and 31 December 2026 causes insured losses of USD 20 billion or more",
+        "resolution": "Resolves YES if Gallagher Re's Natural Catastrophe and Climate Report for full-year 2026 (published January 2027) identifies at least one single natural catastrophe event, anywhere in the world, with an occurrence or start date between 2026-09-01 and 2026-12-31 and an insured loss estimate of USD 20 billion or more. Context: Gallagher Re reported that the first half of 2026 marked the fifth consecutive quarter in which no single catastrophe generated more than USD 10 billion of insured loss; the costliest recent single event was the January 2025 Los Angeles wildfire sequence at about USD 41 billion.",
+        "source": "Gallagher Re, Natural Catastrophe and Climate Report: 2026 Annual Report (ajg.com/gallagherre)",
+        "resolve_by": "2027-02-28"
+      },
+      "ROL15": {
+        "text": "Guy Carpenter's Global Property Catastrophe Rate-on-Line Index falls by 15 percent or more at the 1 January 2027 reinsurance renewals",
+        "resolution": "Resolves YES if the Guy Carpenter Global Property Catastrophe Rate-on-Line Index value published by Guy Carpenter for the 1 January 2027 renewals is at least 15.0 percent below its 1 January 2026 value, as stated in Guy Carpenter's own January 2027 publication of the index. Context: the index fell an estimated 12 percent at the 1 January 2026 renewals (Europe minus 15 percent, US minus 12 percent), and Guy Carpenter reported the index down about 16 percent globally in 2026 after the July 2026 renewals; dedicated reinsurance capital hit a record USD 785 billion at year-end 2025.",
+        "source": "Guy Carpenter Global Property Catastrophe Rate-on-Line Index, January 2027 publication (guycarp.com renewal hub)",
+        "resolve_by": "2027-01-31"
+      }
+    },
+    "targets": [
+      {
+        "tid": "ins_2026_loss_severity_and_reinsurance_pricing.ns12",
+        "kind": "unconditional",
+        "text": "As of 26 July 2026 the 2026 Atlantic hurricane season had produced two named storms (Arthur and Bertha) and no hurricanes, and NOAA's May 2026 outlook called for a below-normal season of 8-14 named storms as El Nino develops. The season ends 30 November 2026. What is the probability that the 2026 Atlantic season ends with 12 OR MORE named storms, counted as tropical or subtropical cyclones assigned a name from the 2026 Atlantic list per the National Hurricane Center's season archive?",
+        "expr": "NS12"
+      },
+      {
+        "tid": "ins_2026_loss_severity_and_reinsurance_pricing.mega20",
+        "kind": "unconditional",
+        "text": "Gallagher Re reported that the first half of 2026 marked the fifth consecutive quarter in which no single natural catastrophe generated more than USD 10 billion of insured loss; the costliest recent single event was the January 2025 Los Angeles wildfire sequence at roughly USD 41 billion. What is the probability that Gallagher Re's annual Natural Catastrophe and Climate Report for 2026 identifies at least one INDIVIDUAL natural catastrophe event anywhere in the world, with an occurrence date between 1 September and 31 December 2026, whose insured losses are estimated at USD 20 BILLION OR MORE?",
+        "expr": "MEGA20"
+      },
+      {
+        "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15",
+        "kind": "unconditional",
+        "text": "Guy Carpenter publishes a Global Property Catastrophe Rate-on-Line Index each January measuring the change in property catastrophe reinsurance pricing at the 1 January renewals. The index fell an estimated 12 percent at 1 January 2026 and Guy Carpenter reported it down roughly 16 percent globally in 2026 after the July 2026 renewals, with dedicated reinsurance capital at a record USD 785 billion. What is the probability that the index Guy Carpenter publishes for the 1 JANUARY 2027 renewals is at least 15.0 PERCENT BELOW its 1 January 2026 value?",
+        "expr": "ROL15"
+      },
+      {
+        "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15_given_mega20",
+        "kind": "conditional",
+        "text": "Assume that at least one individual natural catastrophe event occurring between 1 September and 31 December 2026 causes insured losses of USD 20 billion or more (as identified in Gallagher Re's annual report for 2026). Conditional on that, what is the probability that the Guy Carpenter Global Property Catastrophe Rate-on-Line Index published for the 1 January 2027 reinsurance renewals is at least 15.0 percent below its 1 January 2026 value? For reference, the index fell about 12 percent at 1 January 2026 and was down roughly 16 percent globally in 2026 after the July 2026 renewals.",
+        "expr": "ROL15",
+        "given": "MEGA20"
+      },
+      {
+        "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15_given_no_mega20",
+        "kind": "conditional",
+        "text": "Assume that NO individual natural catastrophe event occurring between 1 September and 31 December 2026 causes insured losses of USD 20 billion or more (per Gallagher Re's annual report for 2026). Conditional on that, what is the probability that the Guy Carpenter Global Property Catastrophe Rate-on-Line Index published for the 1 January 2027 reinsurance renewals is at least 15.0 percent below its 1 January 2026 value? For reference, the index fell about 12 percent at 1 January 2026 and was down roughly 16 percent globally in 2026 after the July 2026 renewals.",
+        "expr": "ROL15",
+        "given": "not MEGA20"
+      },
+      {
+        "tid": "ins_2026_loss_severity_and_reinsurance_pricing.ns12_and_mega20",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (i) the 2026 Atlantic hurricane season ends with 12 or more named storms per the National Hurricane Center's season archive (two had formed as of 26 July 2026, against a NOAA outlook of 8-14), AND (ii) Gallagher Re's annual report for 2026 identifies at least one individual natural catastrophe event occurring between 1 September and 31 December 2026 with insured losses of USD 20 billion or more (no single event has topped USD 10 billion of insured loss for five consecutive quarters)?",
+        "expr": "NS12 and MEGA20"
+      }
+    ],
+    "axioms_tested": ["law_of_total_probability", "conjunction_bound", "product_rule"]
+  },
+  {
+    "family_id": "cat_us_wildfire_quake_2026_27",
+    "domain": "catastrophe_insurance",
+    "base_events": {
+      "FIRE100K": {
+        "text": "A single wildfire that ignites in California between 1 September 2026 and 28 February 2027 burns 100,000 acres or more",
+        "resolution": "Resolves YES if CAL FIRE's incident record (fire.ca.gov/incidents) shows at least one individual wildfire incident in California with a start date between 2026-09-01 and 2027-02-28 whose final or last-reported acreage is 100,000 acres or more. Complexes reported by CAL FIRE as a single named incident count as one fire. Context: as of late July 2026 California's 2026 season had burned about 54,000 acres across roughly 1,720 fires, the largest being the 18,379-acre Santa Rosa Island Fire, following a winter 2025-2026 with record-warm temperatures and record-low snowpack (10-20 percent of normal).",
+        "source": "CAL FIRE incident database (fire.ca.gov/incidents)",
+        "resolve_by": "2027-04-15"
+      },
+      "QUAKE60": {
+        "text": "The USGS reports an earthquake of magnitude 6.0 or greater with an epicenter inside the state of California between 1 September 2026 and 31 March 2027",
+        "resolution": "Resolves YES if the USGS earthquake catalog (earthquake.usgs.gov) lists at least one event with origin time between 2026-09-01T00:00Z and 2027-03-31T23:59Z, a USGS-preferred magnitude of 6.0 or greater, and an epicenter located within the land or offshore territorial boundary of the state of California. The USGS-preferred magnitude as listed on 2027-04-15 governs.",
+        "source": "USGS Earthquake Catalog / ANSS ComCat (earthquake.usgs.gov)",
+        "resolve_by": "2027-04-15"
+      },
+      "LOSS2B": {
+        "text": "At least one United States wildfire or earthquake event occurring between 1 September 2026 and 31 March 2027 causes insured losses of USD 2 billion or more",
+        "resolution": "Resolves YES if either Gallagher Re's Natural Catastrophe and Climate Report for full-year 2026 or its Q1 2027 Natural Catastrophe and Climate Report identifies at least one United States wildfire or earthquake event with an occurrence or start date between 2026-09-01 and 2027-03-31 and an insured loss estimate of USD 2 billion or more. Context: Gallagher Re counted 11 events worldwide with insured losses above USD 1 billion in the first half of 2026, and the January 2025 Los Angeles wildfires were the costliest insured event of 2025 at about USD 41 billion.",
+        "source": "Gallagher Re Natural Catastrophe and Climate Reports, 2026 Annual and Q1 2027 (ajg.com/gallagherre)",
+        "resolve_by": "2027-05-31"
+      }
+    },
+    "targets": [
+      {
+        "tid": "cat_us_wildfire_quake_2026_27.fire100k",
+        "kind": "unconditional",
+        "text": "As of late July 2026, California's 2026 wildfire season had burned roughly 54,000 acres across about 1,720 fires, the largest being the 18,379-acre Santa Rosa Island Fire, after a winter 2025-2026 with record-warm temperatures and a state snowpack at 10-20 percent of normal. What is the probability that at least one INDIVIDUAL wildfire igniting in California between 1 September 2026 and 28 February 2027 burns 100,000 ACRES OR MORE according to CAL FIRE's incident record?",
+        "expr": "FIRE100K"
+      },
+      {
+        "tid": "cat_us_wildfire_quake_2026_27.quake60",
+        "kind": "unconditional",
+        "text": "What is the probability that the USGS earthquake catalog lists at least one earthquake with a USGS-preferred magnitude of 6.0 OR GREATER whose epicenter lies within the state of California (including its offshore territorial waters), with origin time between 1 September 2026 and 31 March 2027?",
+        "expr": "QUAKE60"
+      },
+      {
+        "tid": "cat_us_wildfire_quake_2026_27.loss2b",
+        "kind": "unconditional",
+        "text": "Gallagher Re's catastrophe reports list individual events with insured loss estimates; it counted 11 events worldwide above USD 1 billion of insured loss in the first half of 2026, and the January 2025 Los Angeles wildfires were 2025's costliest insured event at about USD 41 billion. What is the probability that Gallagher Re's 2026 annual report or its Q1 2027 report identifies at least one UNITED STATES WILDFIRE OR EARTHQUAKE event occurring between 1 September 2026 and 31 March 2027 with insured losses estimated at USD 2 BILLION OR MORE?",
+        "expr": "LOSS2B"
+      },
+      {
+        "tid": "cat_us_wildfire_quake_2026_27.loss2b_given_fire100k",
+        "kind": "conditional",
+        "text": "Assume that at least one individual wildfire igniting in California between 1 September 2026 and 28 February 2027 burns 100,000 acres or more according to CAL FIRE. Conditional on that, what is the probability that Gallagher Re's 2026 annual report or Q1 2027 report identifies at least one United States wildfire or earthquake event occurring between 1 September 2026 and 31 March 2027 with insured losses estimated at USD 2 billion or more?",
+        "expr": "LOSS2B",
+        "given": "FIRE100K"
+      },
+      {
+        "tid": "cat_us_wildfire_quake_2026_27.fire_and_loss",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (i) at least one individual wildfire igniting in California between 1 September 2026 and 28 February 2027 burns 100,000 acres or more according to CAL FIRE's incident record, AND (ii) Gallagher Re's 2026 annual report or Q1 2027 report identifies at least one United States wildfire or earthquake event occurring between 1 September 2026 and 31 March 2027 with insured losses estimated at USD 2 billion or more?",
+        "expr": "FIRE100K and LOSS2B"
+      },
+      {
+        "tid": "cat_us_wildfire_quake_2026_27.loss2b_given_quake60",
+        "kind": "conditional",
+        "text": "Assume that the USGS catalog lists at least one earthquake of magnitude 6.0 or greater with an epicenter inside California between 1 September 2026 and 31 March 2027. Conditional on that, what is the probability that Gallagher Re's 2026 annual report or Q1 2027 report identifies at least one United States wildfire or earthquake event occurring between 1 September 2026 and 31 March 2027 with insured losses estimated at USD 2 billion or more?",
+        "expr": "LOSS2B",
+        "given": "QUAKE60"
+      }
+    ],
+    "axioms_tested": ["product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "pha_bezuclastinib_fda_decisions",
+    "domain": "pharma_regulatory",
+    "base_events": {
+      "NADV_JUN": {
+        "text": "The FDA approves Cogent Biosciences' bezuclastinib for non-advanced systemic mastocytosis on or before 30 June 2027",
+        "resolution": "Resolves YES if the FDA's Drugs@FDA database, an FDA approval letter, or an FDA press announcement shows an approval action for bezuclastinib with an indication covering non-advanced (indolent and smouldering) systemic mastocytosis, with an approval date on or before 2027-06-30. Context: the FDA accepted the NDA and set a PDUFA target action date of 30 December 2026; the pivotal SUMMIT trial hit its primary and all key secondary endpoints, and the FDA said it did not plan an advisory committee meeting and had identified no review issues. No approval had occurred as of 2026-07-26.",
+        "source": "FDA Drugs@FDA database (accessdata.fda.gov/scripts/cder/daf) and FDA approval letters",
+        "resolve_by": "2027-06-30"
+      },
+      "NADV_DEC": {
+        "text": "The FDA approves Cogent Biosciences' bezuclastinib for non-advanced systemic mastocytosis on or before 31 December 2026, i.e. by its 30 December 2026 PDUFA target action date",
+        "resolution": "Resolves YES if the FDA's Drugs@FDA database, an FDA approval letter, or an FDA press announcement shows an approval action for bezuclastinib with an indication covering non-advanced (indolent and smouldering) systemic mastocytosis, with an approval date on or before 2026-12-31. The assigned PDUFA target action date is 30 December 2026. No approval had occurred as of 2026-07-26.",
+        "source": "FDA Drugs@FDA database (accessdata.fda.gov/scripts/cder/daf) and FDA approval letters",
+        "resolve_by": "2027-01-15"
+      },
+      "ADV_JUN": {
+        "text": "The FDA approves Cogent Biosciences' bezuclastinib for advanced systemic mastocytosis on or before 30 June 2027",
+        "resolution": "Resolves YES if the FDA's Drugs@FDA database, an FDA approval letter, or an FDA press announcement shows an approval action for bezuclastinib with an indication covering advanced systemic mastocytosis, with an approval date on or before 2027-06-30. Context: Cogent submitted this NDA on 30 June 2026 on the strength of the APEX trial (65 percent overall response rate at the 150 mg dose); as of 2026-07-26 the FDA had not yet announced filing acceptance or a PDUFA target action date, so a standard 10-month review clock would place the action date around April 2027 and a priority review around December 2026.",
+        "source": "FDA Drugs@FDA database (accessdata.fda.gov/scripts/cder/daf) and FDA approval letters",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "NADV_DEC", "b": "NADV_JUN"}
+    ],
+    "targets": [
+      {
+        "tid": "pha_bezuclastinib_fda_decisions.nadv_jun",
+        "kind": "unconditional",
+        "text": "Cogent Biosciences' bezuclastinib has an FDA New Drug Application for NON-ADVANCED systemic mastocytosis with a PDUFA target action date of 30 December 2026; the pivotal SUMMIT trial met its primary and all key secondary endpoints and the FDA said it does not plan an advisory committee meeting. As of 26 July 2026 no approval had been granted. What is the probability that the FDA approves bezuclastinib for non-advanced systemic mastocytosis ON OR BEFORE 30 JUNE 2027, as shown in Drugs@FDA?",
+        "expr": "NADV_JUN"
+      },
+      {
+        "tid": "pha_bezuclastinib_fda_decisions.nadv_dec",
+        "kind": "unconditional",
+        "text": "Cogent Biosciences' bezuclastinib has an FDA New Drug Application for NON-ADVANCED systemic mastocytosis with a PDUFA target action date of 30 December 2026; the pivotal SUMMIT trial met its primary and all key secondary endpoints and the FDA said it does not plan an advisory committee meeting. As of 26 July 2026 no approval had been granted. What is the probability that the FDA approves bezuclastinib for non-advanced systemic mastocytosis ON OR BEFORE 31 DECEMBER 2026, i.e. by its PDUFA date rather than later?",
+        "expr": "NADV_DEC"
+      },
+      {
+        "tid": "pha_bezuclastinib_fda_decisions.adv_jun",
+        "kind": "unconditional",
+        "text": "Cogent Biosciences submitted an FDA New Drug Application for bezuclastinib in ADVANCED systemic mastocytosis on 30 June 2026, based on the APEX trial (65 percent overall response rate at 150 mg). As of 26 July 2026 the FDA had not announced filing acceptance or a PDUFA target action date; a standard 10-month clock would imply an action date around April 2027 and a priority review around December 2026. What is the probability that the FDA approves bezuclastinib for advanced systemic mastocytosis ON OR BEFORE 30 JUNE 2027, as shown in Drugs@FDA?",
+        "expr": "ADV_JUN"
+      },
+      {
+        "tid": "pha_bezuclastinib_fda_decisions.nadv_dec_given_jun",
+        "kind": "conditional",
+        "text": "Assume that the FDA does approve Cogent Biosciences' bezuclastinib for non-advanced systemic mastocytosis at some point on or before 30 June 2027. Conditional on that approval happening, what is the probability that it happens ON OR BEFORE 31 DECEMBER 2026, i.e. by the assigned PDUFA target action date of 30 December 2026 rather than in the first half of 2027?",
+        "expr": "NADV_DEC",
+        "given": "NADV_JUN"
+      },
+      {
+        "tid": "pha_bezuclastinib_fda_decisions.both_indications",
+        "kind": "unconditional",
+        "text": "Cogent Biosciences has two pending FDA applications for the same drug, bezuclastinib: one for non-advanced systemic mastocytosis (PDUFA target action date 30 December 2026) and one for advanced systemic mastocytosis (submitted 30 June 2026, no PDUFA date announced as of 26 July 2026). What is the probability that BOTH are approved by the FDA on or before 30 June 2027, as shown in Drugs@FDA?",
+        "expr": "NADV_JUN and ADV_JUN"
+      },
+      {
+        "tid": "pha_bezuclastinib_fda_decisions.adv_given_nadv_dec",
+        "kind": "conditional",
+        "text": "Assume that the FDA approves Cogent Biosciences' bezuclastinib for non-advanced systemic mastocytosis on or before 31 December 2026 (its PDUFA target action date is 30 December 2026). Conditional on that, what is the probability that the FDA also approves bezuclastinib for ADVANCED systemic mastocytosis on or before 30 June 2027? That second application was submitted on 30 June 2026 and had no announced PDUFA date as of 26 July 2026.",
+        "expr": "ADV_JUN",
+        "given": "NADV_DEC"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "pha_ivonescimab_readout_to_approval",
+    "domain": "pharma_regulatory",
+    "base_events": {
+      "APPROVE26": {
+        "text": "The FDA approves ivonescimab (Summit Therapeutics / Akeso) for previously treated EGFR-mutated advanced non-squamous non-small cell lung cancer on or before 31 December 2026",
+        "resolution": "Resolves YES if the FDA's Drugs@FDA database, an FDA approval letter, or an FDA press announcement shows a Biologics License Application approval for ivonescimab in non-small cell lung cancer with an approval date on or before 2026-12-31. Context: the BLA has a PDUFA goal action date of 14 November 2026 and rests on the global Phase 3 HARMONi trial, which met its progression-free survival endpoint but whose overall survival result was not statistically significant; the July 2026 updated analysis reported a Western-subgroup OS hazard ratio of 0.76 without statistical significance. No approval had occurred as of 2026-07-26.",
+        "source": "FDA Drugs@FDA database (accessdata.fda.gov/scripts/cder/daf) and Summit Therapeutics press releases (smmttx.com)",
+        "resolve_by": "2027-01-15"
+      },
+      "H3_OS": {
+        "text": "Summit Therapeutics announces on or before 30 June 2027 that the Phase 3 HARMONi-3 trial met a primary endpoint of overall survival with statistical significance",
+        "resolution": "Resolves YES if, on or before 2027-06-30, Summit Therapeutics issues a press release or SEC filing stating that HARMONi-3 (ivonescimab plus chemotherapy versus pembrolizumab plus chemotherapy in first-line metastatic non-small cell lung cancer, NCT05899608) met a primary endpoint of overall survival with statistical significance in a pre-specified analysis population. Resolves NO if no such statement is made by that date, including if the trial reads out without a statistically significant overall survival result or if the readout has not occurred. Context: the pre-specified interim progression-free survival analysis in the squamous arm did not meet its endpoint in April 2026, and as of July 2026 Summit had given no updated HARMONi-3 timing guidance beyond expecting final PFS and interim OS readouts during 2026.",
+        "source": "Summit Therapeutics press releases and SEC filings (smmttx.com, sec.gov) and ClinicalTrials.gov record NCT05899608",
+        "resolve_by": "2027-06-30"
+      },
+      "FILE_1L": {
+        "text": "Summit Therapeutics announces on or before 30 June 2027 that it has submitted an FDA marketing application for ivonescimab in first-line non-small cell lung cancer",
+        "resolution": "Resolves YES if, on or before 2027-06-30, Summit Therapeutics announces in a press release or SEC filing that it has submitted to the FDA a Biologics License Application or a supplemental BLA seeking approval of ivonescimab for the first-line treatment of metastatic or locally advanced non-small cell lung cancer. Announcements of intent to file, or of pre-submission meetings, do not count; the submission itself must be announced as made. No such submission had been announced as of 2026-07-26.",
+        "source": "Summit Therapeutics press releases and SEC filings (smmttx.com, sec.gov)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "pha_ivonescimab_readout_to_approval.approve26",
+        "kind": "unconditional",
+        "text": "Summit Therapeutics' Biologics License Application for ivonescimab in previously treated EGFR-mutated advanced non-squamous non-small cell lung cancer has an FDA PDUFA goal action date of 14 November 2026. It rests on the Phase 3 HARMONi trial, which met its progression-free survival endpoint but did not show a statistically significant overall survival benefit; a July 2026 updated analysis put the Western-subgroup OS hazard ratio at 0.76, still not statistically significant. What is the probability that the FDA APPROVES ivonescimab on or before 31 December 2026, as shown in Drugs@FDA?",
+        "expr": "APPROVE26"
+      },
+      {
+        "tid": "pha_ivonescimab_readout_to_approval.h3_os",
+        "kind": "unconditional",
+        "text": "HARMONi-3 (NCT05899608) is Summit Therapeutics' and Akeso's Phase 3 trial of ivonescimab plus chemotherapy versus pembrolizumab plus chemotherapy in first-line metastatic non-small cell lung cancer. Its pre-specified interim progression-free survival analysis in the squamous arm did not meet its endpoint in April 2026, and as of July 2026 Summit had given no updated timing guidance beyond expecting final PFS and interim OS readouts during 2026. What is the probability that on or before 30 JUNE 2027 Summit announces that HARMONi-3 MET A PRIMARY ENDPOINT OF OVERALL SURVIVAL WITH STATISTICAL SIGNIFICANCE?",
+        "expr": "H3_OS"
+      },
+      {
+        "tid": "pha_ivonescimab_readout_to_approval.file_1l",
+        "kind": "unconditional",
+        "text": "As of 26 July 2026, Summit Therapeutics had not announced any FDA marketing application for ivonescimab in first-line non-small cell lung cancer; its only pending application covers previously treated EGFR-mutated disease (PDUFA date 14 November 2026). What is the probability that on or before 30 June 2027 Summit announces that it HAS SUBMITTED to the FDA a Biologics License Application or supplemental BLA seeking approval of ivonescimab for FIRST-LINE treatment of metastatic or locally advanced non-small cell lung cancer? Statements of intent to file do not count.",
+        "expr": "FILE_1L"
+      },
+      {
+        "tid": "pha_ivonescimab_readout_to_approval.approve_given_h3",
+        "kind": "conditional",
+        "text": "Assume that on or before 30 June 2027 Summit Therapeutics announces that its Phase 3 HARMONi-3 trial of ivonescimab in first-line non-small cell lung cancer met a primary endpoint of overall survival with statistical significance. Conditional on that, what is the probability that the FDA approves ivonescimab for previously treated EGFR-mutated advanced non-squamous non-small cell lung cancer on or before 31 December 2026? That application has a PDUFA goal action date of 14 November 2026 and rests on the HARMONi trial, whose overall survival result was not statistically significant.",
+        "expr": "APPROVE26",
+        "given": "H3_OS"
+      },
+      {
+        "tid": "pha_ivonescimab_readout_to_approval.approve_given_not_h3",
+        "kind": "conditional",
+        "text": "Assume that Summit Therapeutics does NOT announce, on or before 30 June 2027, that its Phase 3 HARMONi-3 trial of ivonescimab in first-line non-small cell lung cancer met a primary endpoint of overall survival with statistical significance (whether because the trial missed, or because it has not read out). Conditional on that, what is the probability that the FDA approves ivonescimab for previously treated EGFR-mutated advanced non-squamous non-small cell lung cancer on or before 31 December 2026? That application has a PDUFA goal action date of 14 November 2026 and rests on the HARMONi trial, whose overall survival result was not statistically significant.",
+        "expr": "APPROVE26",
+        "given": "not H3_OS"
+      },
+      {
+        "tid": "pha_ivonescimab_readout_to_approval.h3_and_file",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen on or before 30 June 2027: (i) Summit Therapeutics announces that its Phase 3 HARMONi-3 trial of ivonescimab in first-line non-small cell lung cancer met a primary endpoint of overall survival with statistical significance, AND (ii) Summit announces that it has submitted to the FDA a Biologics License Application or supplemental BLA seeking approval of ivonescimab for first-line treatment of metastatic or locally advanced non-small cell lung cancer?",
+        "expr": "H3_OS and FILE_1L"
+      }
+    ],
+    "axioms_tested": ["law_of_total_probability", "conjunction_bound"]
+  },
+  {
+    "family_id": "pha_us_drug_pricing_policy",
+    "domain": "pharma_regulatory",
+    "base_events": {
+      "MFN3": {
+        "text": "The White House or HHS announces at least three additional most-favored-nation drug pricing agreements, with manufacturers that had no such agreement as of 31 August 2026, between 1 September 2026 and 31 March 2027",
+        "resolution": "Resolves YES if White House fact sheets or HHS press releases dated between 2026-09-01 and 2027-03-31 announce most-favored-nation (international reference pricing) agreements with at least three pharmaceutical manufacturers that were not party to any most-favored-nation agreement announced on or before 2026-08-31. Context: as of July 2026 the administration had announced roughly 17 such agreements covering about 86 percent of the branded US drug market, including Pfizer, AstraZeneca, Eli Lilly, Novo Nordisk, Merck, Amgen, Bristol Myers Squibb, Gilead, GSK, Novartis, Roche, Sanofi, Boehringer Ingelheim, EMD Serono and Regeneron.",
+        "source": "White House fact sheets (whitehouse.gov) and HHS press releases (hhs.gov)",
+        "resolve_by": "2027-04-15"
+      },
+      "IRP_RULE": {
+        "text": "A proposed rule, final rule, or CMS Innovation Center model tying a Medicare or Medicaid drug payment amount to prices paid in other countries is published in the Federal Register between 1 September 2026 and 30 June 2027",
+        "resolution": "Resolves YES if a document published in the Federal Register between 2026-09-01 and 2027-06-30 by HHS, CMS, or the CMS Innovation Center is a proposed rule, interim final rule, final rule, or model notice whose text would set or benchmark a Medicare (Part B or Part D) or Medicaid payment amount, ceiling, or target for one or more drugs by reference to prices in other countries (variously described as most-favored-nation or international reference pricing). Requests for information and comment solicitations that propose no payment methodology do not count. Context: the administration's most-favored-nation drug pricing programme has so far run through voluntary manufacturer agreements and the TrumpRx.gov direct-purchase site launched 5 February 2026, not through Medicare or Medicaid payment rules.",
+        "source": "Federal Register (federalregister.gov), agency HHS/CMS",
+        "resolve_by": "2027-06-30"
+      },
+      "TARIFF_CUT": {
+        "text": "The Section 232 tariff rate on imported patented pharmaceutical products is set below 100 percent, effective on or before 30 June 2027",
+        "resolution": "Resolves YES if a presidential proclamation, executive order, or Federal Register notice sets the general Section 232 tariff rate applicable to imported patented (branded) pharmaceutical products and their ingredients below 100 percent ad valorem, with an effective date on or before 2027-06-30. Company-specific or agreement-specific exemptions, and separate rates for generics or biosimilars, do not by themselves count; the general rate on patented pharmaceuticals must be below 100 percent. Context: a 100 percent Section 232 tariff on patented pharmaceutical products and ingredients took effect 2 April 2026, with generics, biosimilars and their ingredients exempt, and with three-year tariff exemptions granted to manufacturers signing most-favored-nation agreements; on 22 July 2026 the administration announced a separate phased tariff schedule for imported generics beginning August 2028.",
+        "source": "Federal Register (federalregister.gov) and whitehouse.gov presidential actions",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "pha_us_drug_pricing_policy.mfn3",
+        "kind": "unconditional",
+        "text": "By July 2026 the US administration had announced roughly 17 most-favored-nation drug pricing agreements with manufacturers, covering about 86 percent of the branded US drug market (including Pfizer, AstraZeneca, Eli Lilly, Novo Nordisk, Merck, Amgen, Bristol Myers Squibb, Gilead, GSK, Novartis, Roche, Sanofi, Boehringer Ingelheim, EMD Serono and Regeneron). What is the probability that White House fact sheets or HHS press releases dated between 1 September 2026 and 31 March 2027 announce most-favored-nation agreements with AT LEAST THREE ADDITIONAL manufacturers that had no such agreement as of 31 August 2026?",
+        "expr": "MFN3"
+      },
+      {
+        "tid": "pha_us_drug_pricing_policy.irp_rule",
+        "kind": "unconditional",
+        "text": "The US most-favored-nation drug pricing programme has so far operated through voluntary manufacturer agreements and the TrumpRx.gov direct-purchase site (launched 5 February 2026) rather than through Medicare or Medicaid payment rules. What is the probability that a proposed rule, interim final rule, final rule, or CMS Innovation Center model notice published in the FEDERAL REGISTER between 1 September 2026 and 30 June 2027 would set or benchmark a Medicare or Medicaid drug payment amount, ceiling, or target by reference to prices paid in other countries? Requests for information that propose no payment methodology do not count.",
+        "expr": "IRP_RULE"
+      },
+      {
+        "tid": "pha_us_drug_pricing_policy.tariff_cut",
+        "kind": "unconditional",
+        "text": "A 100 percent Section 232 tariff on imported patented (branded) pharmaceutical products and their ingredients took effect on 2 April 2026, with generics and biosimilars exempt and with three-year exemptions for manufacturers that signed most-favored-nation pricing agreements. What is the probability that a presidential proclamation, executive order, or Federal Register notice sets the GENERAL Section 232 tariff rate on imported patented pharmaceuticals BELOW 100 PERCENT with an effective date on or before 30 June 2027? Company-specific exemptions and separate generic rates do not count.",
+        "expr": "TARIFF_CUT"
+      },
+      {
+        "tid": "pha_us_drug_pricing_policy.irp_given_mfn3",
+        "kind": "conditional",
+        "text": "Assume that between 1 September 2026 and 31 March 2027 the White House or HHS announces most-favored-nation drug pricing agreements with at least three additional pharmaceutical manufacturers that had no such agreement as of 31 August 2026. Conditional on that, what is the probability that a proposed rule, final rule, or CMS Innovation Center model notice published in the Federal Register between 1 September 2026 and 30 June 2027 would set or benchmark a Medicare or Medicaid drug payment amount by reference to prices paid in other countries?",
+        "expr": "IRP_RULE",
+        "given": "MFN3"
+      },
+      {
+        "tid": "pha_us_drug_pricing_policy.irp_given_not_mfn3",
+        "kind": "conditional",
+        "text": "Assume that between 1 September 2026 and 31 March 2027 the White House and HHS announce most-favored-nation drug pricing agreements with FEWER THAN THREE additional pharmaceutical manufacturers that had no such agreement as of 31 August 2026. Conditional on that, what is the probability that a proposed rule, final rule, or CMS Innovation Center model notice published in the Federal Register between 1 September 2026 and 30 June 2027 would set or benchmark a Medicare or Medicaid drug payment amount by reference to prices paid in other countries?",
+        "expr": "IRP_RULE",
+        "given": "not MFN3"
+      },
+      {
+        "tid": "pha_us_drug_pricing_policy.mfn3_and_irp",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (i) White House fact sheets or HHS press releases dated between 1 September 2026 and 31 March 2027 announce most-favored-nation drug pricing agreements with at least three additional pharmaceutical manufacturers that had no such agreement as of 31 August 2026, AND (ii) a proposed rule, final rule, or CMS Innovation Center model notice published in the Federal Register between 1 September 2026 and 30 June 2027 would set or benchmark a Medicare or Medicaid drug payment amount by reference to prices paid in other countries?",
+        "expr": "MFN3 and IRP_RULE"
+      }
+    ],
+    "axioms_tested": ["law_of_total_probability", "product_rule", "conjunction_bound"]
+  },
+  {
+    "family_id": "pha_outbreak_public_health_declarations",
+    "domain": "pharma_regulatory",
+    "base_events": {
+      "PHEIC_NEW": {
+        "text": "The WHO Director-General declares at least one new Public Health Emergency of International Concern between 1 September 2026 and 30 June 2027",
+        "resolution": "Resolves YES if, between 2026-09-01 and 2027-06-30, the WHO Director-General determines that an event constitutes a Public Health Emergency of International Concern under the International Health Regulations, where that event was not already designated a PHEIC as of 2026-08-31. Continuations, extensions or re-affirmations of any PHEIC already in force on 2026-08-31 do not count, including the poliomyelitis PHEIC that has been extended quarterly since May 2014 and any PHEIC still in force for mpox. Context: eight PHEICs have been declared in total under the 2005 International Health Regulations (2009 A(H1N1), 2014 polio, 2014 Ebola in West Africa, 2016 Zika, 2019 Ebola in DRC, 2020 COVID-19, 2022 mpox, 2024 mpox).",
+        "source": "WHO IHR Emergency Committee statements and WHO news releases (who.int)",
+        "resolve_by": "2027-06-30"
+      },
+      "PHEIC_FLU": {
+        "text": "The WHO Director-General declares a new Public Health Emergency of International Concern for an event caused by an influenza virus between 1 September 2026 and 30 June 2027",
+        "resolution": "Resolves YES if, between 2026-09-01 and 2027-06-30, the WHO Director-General determines that an event whose primary cause is an influenza virus (any type or subtype, including influenza A(H5N1)) constitutes a Public Health Emergency of International Concern under the International Health Regulations, where that event was not already designated a PHEIC as of 2026-08-31. Continuations or extensions of a PHEIC already in force on 2026-08-31 do not count. Context: the only influenza PHEIC ever declared was for the 2009 A(H1N1) pandemic.",
+        "source": "WHO IHR Emergency Committee statements and WHO news releases (who.int)",
+        "resolve_by": "2027-06-30"
+      },
+      "H5_3US": {
+        "text": "The CDC reports at least three additional confirmed human cases of A(H5) avian influenza in the United States between 1 September 2026 and 31 May 2027",
+        "resolution": "Resolves YES if the CDC's A(H5) Bird Flu Current Situation page (or an equivalent CDC report) shows that the cumulative count of confirmed human A(H5) cases in the United States has risen by three or more between 2026-09-01 and 2027-05-31. Context: the cumulative US total stood at 71 confirmed human cases with 2 deaths from March 2024 through May 2026, and roughly 70 of those had already been reported by early 2025, so only about one new US case was confirmed over the fifteen months to May 2026. CDC assesses the risk to the general public as low and no person-to-person transmission has been identified.",
+        "source": "CDC A(H5) Bird Flu Current Situation (cdc.gov/bird-flu/situation-summary)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "PHEIC_FLU", "b": "PHEIC_NEW"}
+    ],
+    "targets": [
+      {
+        "tid": "pha_outbreak_public_health_declarations.pheic_new",
+        "kind": "unconditional",
+        "text": "Eight Public Health Emergencies of International Concern have been declared by the WHO Director-General since the instrument was created in 2005 (2009 A(H1N1), 2014 polio, 2014 Ebola in West Africa, 2016 Zika, 2019 Ebola in DRC, 2020 COVID-19, 2022 mpox, 2024 mpox), an average of roughly one every two years. The poliomyelitis PHEIC has been extended quarterly since May 2014. What is the probability that the WHO Director-General declares AT LEAST ONE NEW PHEIC between 1 September 2026 and 30 June 2027, for an event not already designated a PHEIC as of 31 August 2026? Extensions or continuations of a PHEIC already in force do not count.",
+        "expr": "PHEIC_NEW"
+      },
+      {
+        "tid": "pha_outbreak_public_health_declarations.pheic_flu",
+        "kind": "unconditional",
+        "text": "The only influenza Public Health Emergency of International Concern ever declared by the WHO was for the 2009 A(H1N1) pandemic. A(H5N1) avian influenza remains widespread in wild birds, poultry and US dairy cattle, with sporadic human cases and no identified person-to-person transmission. What is the probability that the WHO Director-General declares a NEW PHEIC for an event whose primary cause is an INFLUENZA VIRUS (any type or subtype, including A(H5N1)) between 1 September 2026 and 30 June 2027?",
+        "expr": "PHEIC_FLU"
+      },
+      {
+        "tid": "pha_outbreak_public_health_declarations.h5_3us",
+        "kind": "unconditional",
+        "text": "The CDC's cumulative count of confirmed human A(H5) avian influenza cases in the United States stood at 71 (with 2 deaths) from March 2024 through May 2026; roughly 70 of those had already been reported by early 2025, so only about one new US case was confirmed in the fifteen months to May 2026. What is the probability that the CDC's confirmed US human A(H5) case count rises by THREE OR MORE between 1 September 2026 and 31 May 2027?",
+        "expr": "H5_3US"
+      },
+      {
+        "tid": "pha_outbreak_public_health_declarations.flu_given_h5",
+        "kind": "conditional",
+        "text": "Assume that the CDC's cumulative count of confirmed human A(H5) avian influenza cases in the United States rises by three or more between 1 September 2026 and 31 May 2027 (the count stood at 71 from March 2024 through May 2026, with only about one new case in the fifteen months to May 2026). Conditional on that, what is the probability that the WHO Director-General declares a new Public Health Emergency of International Concern for an event whose primary cause is an influenza virus between 1 September 2026 and 30 June 2027?",
+        "expr": "PHEIC_FLU",
+        "given": "H5_3US"
+      },
+      {
+        "tid": "pha_outbreak_public_health_declarations.flu_and_h5",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (i) the WHO Director-General declares a new Public Health Emergency of International Concern for an event whose primary cause is an influenza virus between 1 September 2026 and 30 June 2027, AND (ii) the CDC's cumulative count of confirmed human A(H5) avian influenza cases in the United States rises by three or more between 1 September 2026 and 31 May 2027? The US count stood at 71 confirmed cases from March 2024 through May 2026, with only about one new case in the fifteen months to May 2026.",
+        "expr": "PHEIC_FLU and H5_3US"
+      },
+      {
+        "tid": "pha_outbreak_public_health_declarations.pheic_nonflu",
+        "kind": "unconditional",
+        "text": "What is the probability that the WHO Director-General declares at least one new Public Health Emergency of International Concern between 1 September 2026 and 30 June 2027 (for an event not already designated a PHEIC as of 31 August 2026) AND that NO new PHEIC declared in that window is for an event whose primary cause is an influenza virus? In other words, the probability that a new PHEIC happens and it is for something other than influenza. Extensions or continuations of a PHEIC already in force on 31 August 2026, such as the poliomyelitis PHEIC extended quarterly since May 2014, do not count.",
+        "expr": "PHEIC_NEW and not PHEIC_FLU"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound", "complement"]
+  }
+]

@@ -1,0 +1,2418 @@
+{
+ "generated_utc": "2026-07-27T02:56:21+00:00",
+ "model": "claude-opus-5",
+ "arm": "fresh",
+ "repeat": 3,
+ "source_file": "/Users/steven/forecast_integrity/out/forecasts_claude-opus-5.json",
+ "n_targets": 240,
+ "n_targets_with_sd": 240,
+ "mean_sd": 0.025039820739322777,
+ "median_sd": 0.011547005383792526,
+ "p90_sd": 0.060827625302982184,
+ "max_sd": 0.2954657340538831,
+ "axiom_gap_mean_abs_repair": 0.02598168476812491,
+ "sd_over_gap": 0.9637489240129017,
+ "axiom_gap_note": null,
+ "per_tid": {
+  "en_brent_q4_2026_bands.lt75": {
+   "draws": [
+    0.88,
+    0.82,
+    0.91
+   ],
+   "n": 3,
+   "mean": 0.87,
+   "sd": 0.04582575694955844
+  },
+  "en_brent_q4_2026_bands.mid": {
+   "draws": [
+    0.28,
+    0.4,
+    0.28
+   ],
+   "n": 3,
+   "mean": 0.32,
+   "sd": 0.06928203230275509
+  },
+  "en_brent_q4_2026_bands.ge105": {
+   "draws": [
+    0.02,
+    0.03,
+    0.02
+   ],
+   "n": 3,
+   "mean": 0.023333333333333334,
+   "sd": 0.005773502691896256
+  },
+  "en_brent_q4_2026_bands.lt105": {
+   "draws": [
+    0.975,
+    0.985,
+    0.97
+   ],
+   "n": 3,
+   "mean": 0.9766666666666666,
+   "sd": 0.00763762615825974
+  },
+  "en_brent_q4_2026_bands.ge75": {
+   "draws": [
+    0.22,
+    0.34,
+    0.17
+   ],
+   "n": 3,
+   "mean": 0.24333333333333332,
+   "sd": 0.08736894948054105
+  },
+  "en_brent_q4_2026_bands.ge105_given_ge75": {
+   "draws": [
+    0.05,
+    0.05,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.05333333333333334,
+   "sd": 0.0057735026918962545
+  },
+  "en_opecplus_price_floor.pause": {
+   "draws": [
+    0.89,
+    0.8,
+    0.87
+   ],
+   "n": 3,
+   "mean": 0.8533333333333334,
+   "sd": 0.04725815626252606
+  },
+  "en_opecplus_price_floor.brent70": {
+   "draws": [
+    0.93,
+    0.85,
+    0.93
+   ],
+   "n": 3,
+   "mean": 0.9033333333333333,
+   "sd": 0.0461880215351701
+  },
+  "en_opecplus_price_floor.both": {
+   "draws": [
+    0.85,
+    0.83,
+    0.75
+   ],
+   "n": 3,
+   "mean": 0.8099999999999999,
+   "sd": 0.052915026221291794
+  },
+  "en_opecplus_price_floor.either": {
+   "draws": [
+    0.96,
+    0.96,
+    0.95
+   ],
+   "n": 3,
+   "mean": 0.9566666666666667,
+   "sd": 0.005773502691896262
+  },
+  "en_opecplus_price_floor.pause_given_brent70": {
+   "draws": [
+    0.82,
+    0.86,
+    0.87
+   ],
+   "n": 3,
+   "mean": 0.85,
+   "sd": 0.026457513110645932
+  },
+  "en_opecplus_price_floor.pause_given_no_brent70": {
+   "draws": [
+    0.72,
+    0.55,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.6633333333333333,
+   "sd": 0.09814954576223633
+  },
+  "sc_suez_container_freight.wci6000": {
+   "draws": [
+    0.2,
+    0.17,
+    0.25
+   ],
+   "n": 3,
+   "mean": 0.20666666666666667,
+   "sd": 0.040414518843273795
+  },
+  "sc_suez_container_freight.wci8000": {
+   "draws": [
+    0.04,
+    0.06,
+    0.04
+   ],
+   "n": 3,
+   "mean": 0.04666666666666667,
+   "sd": 0.011547005383792512
+  },
+  "sc_suez_container_freight.suez55": {
+   "draws": [
+    0.17,
+    0.15,
+    0.14
+   ],
+   "n": 3,
+   "mean": 0.15333333333333335,
+   "sd": 0.015275252316519468
+  },
+  "sc_suez_container_freight.wci6000_and_suez55": {
+   "draws": [
+    0.02,
+    0.02,
+    0.03
+   ],
+   "n": 3,
+   "mean": 0.023333333333333334,
+   "sd": 0.005773502691896256
+  },
+  "sc_suez_container_freight.wci6000_given_suez55": {
+   "draws": [
+    0.09,
+    0.12,
+    0.1
+   ],
+   "n": 3,
+   "mean": 0.10333333333333333,
+   "sd": 0.015275252316519465
+  },
+  "sc_suez_container_freight.wci6000_given_no_suez55": {
+   "draws": [
+    0.14,
+    0.12,
+    0.12
+   ],
+   "n": 3,
+   "mean": 0.12666666666666668,
+   "sd": 0.011547005383792525
+  },
+  "en_eu_gas_storage_winter.stor70": {
+   "draws": [
+    0.85,
+    0.87,
+    0.87
+   ],
+   "n": 3,
+   "mean": 0.8633333333333333,
+   "sd": 0.011547005383792525
+  },
+  "en_eu_gas_storage_winter.stor80": {
+   "draws": [
+    0.89,
+    0.87,
+    0.9
+   ],
+   "n": 3,
+   "mean": 0.8866666666666667,
+   "sd": 0.01527525231651948
+  },
+  "en_eu_gas_storage_winter.ttf80": {
+   "draws": [
+    0.13,
+    0.15,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.14333333333333334,
+   "sd": 0.011547005383792509
+  },
+  "en_eu_gas_storage_winter.stor80_and_ttf80": {
+   "draws": [
+    0.16,
+    0.13,
+    0.13
+   ],
+   "n": 3,
+   "mean": 0.14,
+   "sd": 0.017320508075688773
+  },
+  "en_eu_gas_storage_winter.ttf80_given_stor80": {
+   "draws": [
+    0.15,
+    0.15,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.15,
+   "sd": 0.0
+  },
+  "en_eu_gas_storage_winter.ttf80_given_no_stor80": {
+   "draws": [
+    0.42,
+    0.4,
+    0.34
+   ],
+   "n": 3,
+   "mean": 0.3866666666666667,
+   "sd": 0.04163331998932264
+  },
+  "en_lng_exports_capacity.lng18": {
+   "draws": [
+    0.87,
+    0.88,
+    0.89
+   ],
+   "n": 3,
+   "mean": 0.88,
+   "sd": 0.010000000000000009
+  },
+  "en_lng_exports_capacity.lng19": {
+   "draws": [
+    0.55,
+    0.48,
+    0.55
+   ],
+   "n": 3,
+   "mean": 0.5266666666666667,
+   "sd": 0.040414518843273836
+  },
+  "en_lng_exports_capacity.gpt2": {
+   "draws": [
+    0.6,
+    0.55,
+    0.6
+   ],
+   "n": 3,
+   "mean": 0.5833333333333334,
+   "sd": 0.02886751345948125
+  },
+  "en_lng_exports_capacity.lng18_and_gpt2": {
+   "draws": [
+    0.5,
+    0.5,
+    0.42
+   ],
+   "n": 3,
+   "mean": 0.47333333333333333,
+   "sd": 0.04618802153517007
+  },
+  "en_lng_exports_capacity.lng18_or_gpt2": {
+   "draws": [
+    0.93,
+    0.93,
+    0.93
+   ],
+   "n": 3,
+   "mean": 0.93,
+   "sd": 0.0
+  },
+  "en_lng_exports_capacity.lng18_given_gpt2": {
+   "draws": [
+    0.55,
+    0.6,
+    0.68
+   ],
+   "n": 3,
+   "mean": 0.61,
+   "sd": 0.06557438524302002
+  },
+  "en_us_winter_grid_stress.load88": {
+   "draws": [
+    0.32,
+    0.32,
+    0.3
+   ],
+   "n": 3,
+   "mean": 0.3133333333333333,
+   "sd": 0.011547005383792525
+  },
+  "en_us_winter_grid_stress.load92": {
+   "draws": [
+    0.11,
+    0.11,
+    0.12
+   ],
+   "n": 3,
+   "mean": 0.11333333333333333,
+   "sd": 0.0057735026918962545
+  },
+  "en_us_winter_grid_stress.eea": {
+   "draws": [
+    0.25,
+    0.25,
+    0.24
+   ],
+   "n": 3,
+   "mean": 0.24666666666666667,
+   "sd": 0.005773502691896263
+  },
+  "en_us_winter_grid_stress.load88_and_eea": {
+   "draws": [
+    0.08,
+    0.05,
+    0.1
+   ],
+   "n": 3,
+   "mean": 0.07666666666666667,
+   "sd": 0.025166114784235832
+  },
+  "en_us_winter_grid_stress.eea_given_load88": {
+   "draws": [
+    0.62,
+    0.62,
+    0.62
+   ],
+   "n": 3,
+   "mean": 0.62,
+   "sd": 0.0
+  },
+  "en_us_winter_grid_stress.eea_given_no_load88": {
+   "draws": [
+    0.09,
+    0.09,
+    0.09
+   ],
+   "n": 3,
+   "mean": 0.09000000000000001,
+   "sd": 1.6996749443881478e-17
+  },
+  "sc_elnino_panama_refining.oni20": {
+   "draws": [
+    0.6,
+    0.6,
+    0.6
+   ],
+   "n": 3,
+   "mean": 0.6,
+   "sd": 0.0
+  },
+  "sc_elnino_panama_refining.pan45": {
+   "draws": [
+    0.25,
+    0.13,
+    0.16
+   ],
+   "n": 3,
+   "mean": 0.18000000000000002,
+   "sd": 0.06244997998398398
+  },
+  "sc_elnino_panama_refining.ref82": {
+   "draws": [
+    0.35,
+    0.66,
+    0.27
+   ],
+   "n": 3,
+   "mean": 0.4266666666666667,
+   "sd": 0.20599352740640503
+  },
+  "sc_elnino_panama_refining.pan45_and_oni20": {
+   "draws": [
+    0.24,
+    0.13,
+    0.14
+   ],
+   "n": 3,
+   "mean": 0.17,
+   "sd": 0.060827625302982184
+  },
+  "sc_elnino_panama_refining.pan45_given_oni20": {
+   "draws": [
+    0.7,
+    0.6,
+    0.6
+   ],
+   "n": 3,
+   "mean": 0.6333333333333333,
+   "sd": 0.05773502691896257
+  },
+  "sc_elnino_panama_refining.ref82_given_oni20": {
+   "draws": [
+    0.28,
+    0.85,
+    0.7
+   ],
+   "n": 3,
+   "mean": 0.61,
+   "sd": 0.2954657340538831
+  },
+  "sc_china_rare_earth_controls.extend": {
+   "draws": [
+    0.55,
+    0.6,
+    0.55
+   ],
+   "n": 3,
+   "mean": 0.5666666666666668,
+   "sd": 0.02886751345948125
+  },
+  "sc_china_rare_earth_controls.no_extend": {
+   "draws": [
+    0.4,
+    0.6,
+    0.48
+   ],
+   "n": 3,
+   "mean": 0.49333333333333335,
+   "sd": 0.10066445913694332
+  },
+  "sc_china_rare_earth_controls.newctrl": {
+   "draws": [
+    0.62,
+    0.6,
+    0.62
+   ],
+   "n": 3,
+   "mean": 0.6133333333333333,
+   "sd": 0.011547005383792525
+  },
+  "sc_china_rare_earth_controls.newctrl_and_no_extend": {
+   "draws": [
+    0.2,
+    0.16,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.17,
+   "sd": 0.026457513110645915
+  },
+  "sc_china_rare_earth_controls.newctrl_given_no_extend": {
+   "draws": [
+    0.72,
+    0.7,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.7133333333333333,
+   "sd": 0.011547005383792525
+  },
+  "sc_china_rare_earth_controls.exports_and_newctrl": {
+   "draws": [
+    0.2,
+    0.16,
+    0.14
+   ],
+   "n": 3,
+   "mean": 0.16666666666666666,
+   "sd": 0.030550504633038933
+  },
+  "geo_iran_hormuz_reopening.strike": {
+   "draws": [
+    0.35,
+    0.42,
+    0.4
+   ],
+   "n": 3,
+   "mean": 0.38999999999999996,
+   "sd": 0.036055512754639904
+  },
+  "geo_iran_hormuz_reopening.h50": {
+   "draws": [
+    0.93,
+    0.93,
+    0.93
+   ],
+   "n": 3,
+   "mean": 0.93,
+   "sd": 0.0
+  },
+  "geo_iran_hormuz_reopening.h80": {
+   "draws": [
+    0.55,
+    0.62,
+    0.55
+   ],
+   "n": 3,
+   "mean": 0.5733333333333334,
+   "sd": 0.040414518843273774
+  },
+  "geo_iran_hormuz_reopening.h50_g_strike": {
+   "draws": [
+    0.55,
+    0.55,
+    0.52
+   ],
+   "n": 3,
+   "mean": 0.54,
+   "sd": 0.01732050807568879
+  },
+  "geo_iran_hormuz_reopening.h50_g_nostrike": {
+   "draws": [
+    0.87,
+    0.88,
+    0.85
+   ],
+   "n": 3,
+   "mean": 0.8666666666666667,
+   "sd": 0.01527525231651948
+  },
+  "geo_iran_hormuz_reopening.h80_and_strike": {
+   "draws": [
+    0.22,
+    0.22,
+    0.3
+   ],
+   "n": 3,
+   "mean": 0.24666666666666667,
+   "sd": 0.04618802153517005
+  },
+  "geo_russia_ceasefire_sanctions.ceasefire": {
+   "draws": [
+    0.12,
+    0.12,
+    0.12
+   ],
+   "n": 3,
+   "mean": 0.12,
+   "sd": 0.0
+  },
+  "geo_russia_ceasefire_sanctions.delist": {
+   "draws": [
+    0.12,
+    0.12,
+    0.12
+   ],
+   "n": 3,
+   "mean": 0.12,
+   "sd": 0.0
+  },
+  "geo_russia_ceasefire_sanctions.cf_and_delist": {
+   "draws": [
+    0.05,
+    0.04,
+    0.04
+   ],
+   "n": 3,
+   "mean": 0.043333333333333335,
+   "sd": 0.005773502691896259
+  },
+  "geo_russia_ceasefire_sanctions.cf_or_delist": {
+   "draws": [
+    0.14,
+    0.16,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.15,
+   "sd": 0.009999999999999995
+  },
+  "geo_russia_ceasefire_sanctions.delist_g_cf": {
+   "draws": [
+    0.35,
+    0.35,
+    0.35
+   ],
+   "n": 3,
+   "mean": 0.3499999999999999,
+   "sd": 6.798699777552591e-17
+  },
+  "geo_russia_ceasefire_sanctions.euassets_and_nocf": {
+   "draws": [
+    0.1,
+    0.09,
+    0.11
+   ],
+   "n": 3,
+   "mean": 0.09999999999999999,
+   "sd": 0.010000000000000002
+  },
+  "geo_us_midterms_2026.house": {
+   "draws": [
+    0.85,
+    0.85,
+    0.83
+   ],
+   "n": 3,
+   "mean": 0.8433333333333333,
+   "sd": 0.011547005383792525
+  },
+  "geo_us_midterms_2026.senate": {
+   "draws": [
+    0.1,
+    0.11,
+    0.11
+   ],
+   "n": 3,
+   "mean": 0.10666666666666667,
+   "sd": 0.0057735026918962545
+  },
+  "geo_us_midterms_2026.both": {
+   "draws": [
+    0.09,
+    0.09,
+    0.09
+   ],
+   "n": 3,
+   "mean": 0.09000000000000001,
+   "sd": 1.6996749443881478e-17
+  },
+  "geo_us_midterms_2026.either": {
+   "draws": [
+    0.85,
+    0.85,
+    0.85
+   ],
+   "n": 3,
+   "mean": 0.85,
+   "sd": 0.0
+  },
+  "geo_us_midterms_2026.neither": {
+   "draws": [
+    0.28,
+    0.28,
+    0.19
+   ],
+   "n": 3,
+   "mean": 0.25,
+   "sd": 0.05196152422706633
+  },
+  "geo_us_midterms_2026.senate_g_house": {
+   "draws": [
+    0.16,
+    0.14,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.15,
+   "sd": 0.009999999999999995
+  },
+  "geo_taiwan_strait_pressure.sortie45": {
+   "draws": [
+    0.85,
+    0.82,
+    0.82
+   ],
+   "n": 3,
+   "mean": 0.83,
+   "sd": 0.01732050807568879
+  },
+  "geo_taiwan_strait_pressure.fms1b": {
+   "draws": [
+    0.75,
+    0.72,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.73,
+   "sd": 0.01732050807568879
+  },
+  "geo_taiwan_strait_pressure.quarantine": {
+   "draws": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "n": 3,
+   "mean": 0.05000000000000001,
+   "sd": 8.498374721940739e-18
+  },
+  "geo_taiwan_strait_pressure.quar_g_sortie": {
+   "draws": [
+    0.05,
+    0.06,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.056666666666666664,
+   "sd": 0.0057735026918962545
+  },
+  "geo_taiwan_strait_pressure.sortie_and_quar": {
+   "draws": [
+    0.05,
+    0.05,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.05333333333333334,
+   "sd": 0.0057735026918962545
+  },
+  "geo_taiwan_strait_pressure.fms_and_quar": {
+   "draws": [
+    0.04,
+    0.04,
+    0.04
+   ],
+   "n": 3,
+   "mean": 0.04,
+   "sd": 0.0
+  },
+  "geo_export_controls_tit_for_tat.reearth": {
+   "draws": [
+    0.25,
+    0.25,
+    0.25
+   ],
+   "n": 3,
+   "mean": 0.25,
+   "sd": 0.0
+  },
+  "geo_export_controls_tit_for_tat.bis_jan": {
+   "draws": [
+    0.09,
+    0.09,
+    0.08
+   ],
+   "n": 3,
+   "mean": 0.08666666666666667,
+   "sd": 0.0057735026918962545
+  },
+  "geo_export_controls_tit_for_tat.bis_jun": {
+   "draws": [
+    0.12,
+    0.12,
+    0.12
+   ],
+   "n": 3,
+   "mean": 0.12,
+   "sd": 0.0
+  },
+  "geo_export_controls_tit_for_tat.bisjan_g_reearth": {
+   "draws": [
+    0.22,
+    0.2,
+    0.25
+   ],
+   "n": 3,
+   "mean": 0.22333333333333336,
+   "sd": 0.02516611478423583
+  },
+  "geo_export_controls_tit_for_tat.reearth_and_bisjan": {
+   "draws": [
+    0.04,
+    0.03,
+    0.03
+   ],
+   "n": 3,
+   "mean": 0.03333333333333333,
+   "sd": 0.005773502691896259
+  },
+  "geo_export_controls_tit_for_tat.reearth_and_bisjun": {
+   "draws": [
+    0.09,
+    0.06,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.06999999999999999,
+   "sd": 0.017320508075688773
+  },
+  "geo_post_new_start_arms_control.ssd": {
+   "draws": [
+    0.14,
+    0.12,
+    0.12
+   ],
+   "n": 3,
+   "mean": 0.12666666666666668,
+   "sd": 0.011547005383792525
+  },
+  "geo_post_new_start_arms_control.newlimits": {
+   "draws": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "n": 3,
+   "mean": 0.05000000000000001,
+   "sd": 8.498374721940739e-18
+  },
+  "geo_post_new_start_arms_control.newlimits_g_ssd": {
+   "draws": [
+    0.08,
+    0.09,
+    0.09
+   ],
+   "n": 3,
+   "mean": 0.08666666666666667,
+   "sd": 0.0057735026918962545
+  },
+  "geo_post_new_start_arms_control.newlimits_g_nossd": {
+   "draws": [
+    0.012,
+    0.012,
+    0.012
+   ],
+   "n": 3,
+   "mean": 0.012000000000000002,
+   "sd": 2.1245936804851847e-18
+  },
+  "geo_post_new_start_arms_control.ssd_and_newlimits": {
+   "draws": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "n": 3,
+   "mean": 0.02,
+   "sd": 0.0
+  },
+  "geo_post_new_start_arms_control.ntest_and_nolimits": {
+   "draws": [
+    0.1,
+    0.11,
+    0.1
+   ],
+   "n": 3,
+   "mean": 0.10333333333333333,
+   "sd": 0.0057735026918962545
+  },
+  "geo_north_korea_escalation.nuketest": {
+   "draws": [
+    0.06,
+    0.06,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.06,
+   "sd": 0.0
+  },
+  "geo_north_korea_escalation.icbm": {
+   "draws": [
+    0.3,
+    0.3,
+    0.3
+   ],
+   "n": 3,
+   "mean": 0.3,
+   "sd": 0.0
+  },
+  "geo_north_korea_escalation.summit": {
+   "draws": [
+    0.09,
+    0.09,
+    0.09
+   ],
+   "n": 3,
+   "mean": 0.09000000000000001,
+   "sd": 1.6996749443881478e-17
+  },
+  "geo_north_korea_escalation.nuke_and_icbm": {
+   "draws": [
+    0.04,
+    0.03,
+    0.04
+   ],
+   "n": 3,
+   "mean": 0.03666666666666667,
+   "sd": 0.005773502691896259
+  },
+  "geo_north_korea_escalation.nuke_g_icbm": {
+   "draws": [
+    0.1,
+    0.1,
+    0.09
+   ],
+   "n": 3,
+   "mean": 0.09666666666666668,
+   "sd": 0.005773502691896263
+  },
+  "geo_north_korea_escalation.summit_g_noicbm": {
+   "draws": [
+    0.1,
+    0.12,
+    0.12
+   ],
+   "n": 3,
+   "mean": 0.11333333333333333,
+   "sd": 0.011547005383792509
+  },
+  "geo_us_defense_appropriations.shutdown": {
+   "draws": [
+    0.35,
+    0.3,
+    0.32
+   ],
+   "n": 3,
+   "mean": 0.3233333333333333,
+   "sd": 0.025166114784235825
+  },
+  "geo_us_defense_appropriations.dodjan": {
+   "draws": [
+    0.25,
+    0.28,
+    0.3
+   ],
+   "n": 3,
+   "mean": 0.27666666666666667,
+   "sd": 0.02516611478423583
+  },
+  "geo_us_defense_appropriations.dodjun": {
+   "draws": [
+    0.72,
+    0.75,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.73,
+   "sd": 0.01732050807568879
+  },
+  "geo_us_defense_appropriations.no_dodjun": {
+   "draws": [
+    0.2,
+    0.15,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.18333333333333335,
+   "sd": 0.028867513459481298
+  },
+  "geo_us_defense_appropriations.shutdown_and_dodjan": {
+   "draws": [
+    0.11,
+    0.06,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.07666666666666666,
+   "sd": 0.02886751345948129
+  },
+  "geo_us_defense_appropriations.dodjan_g_shutdown": {
+   "draws": [
+    0.12,
+    0.08,
+    0.09
+   ],
+   "n": 3,
+   "mean": 0.09666666666666666,
+   "sd": 0.020816659994661323
+  },
+  "ins_2026_global_insured_loss_bands.low": {
+   "draws": [
+    0.07,
+    0.08,
+    0.07
+   ],
+   "n": 3,
+   "mean": 0.07333333333333335,
+   "sd": 0.0057735026918962545
+  },
+  "ins_2026_global_insured_loss_bands.mid": {
+   "draws": [
+    0.47,
+    0.55,
+    0.47
+   ],
+   "n": 3,
+   "mean": 0.49666666666666665,
+   "sd": 0.0461880215351701
+  },
+  "ins_2026_global_insured_loss_bands.high": {
+   "draws": [
+    0.3,
+    0.15,
+    0.28
+   ],
+   "n": 3,
+   "mean": 0.24333333333333332,
+   "sd": 0.08144527815247078
+  },
+  "ins_2026_global_insured_loss_bands.mid_or_high": {
+   "draws": [
+    0.95,
+    0.89,
+    0.9
+   ],
+   "n": 3,
+   "mean": 0.9133333333333334,
+   "sd": 0.032145502536643146
+  },
+  "ins_2026_global_insured_loss_bands.not_low": {
+   "draws": [
+    0.93,
+    0.9,
+    0.9
+   ],
+   "n": 3,
+   "mean": 0.91,
+   "sd": 0.01732050807568879
+  },
+  "ins_2026_global_insured_loss_bands.mid_given_not_low": {
+   "draws": [
+    0.83,
+    0.78,
+    0.78
+   ],
+   "n": 3,
+   "mean": 0.7966666666666667,
+   "sd": 0.02886751345948125
+  },
+  "cat_us_hurricane_landfall_2026.hur1": {
+   "draws": [
+    0.45,
+    0.55,
+    0.55
+   ],
+   "n": 3,
+   "mean": 0.5166666666666667,
+   "sd": 0.057735026918962595
+  },
+  "cat_us_hurricane_landfall_2026.hur3": {
+   "draws": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "n": 3,
+   "mean": 0.05000000000000001,
+   "sd": 8.498374721940739e-18
+  },
+  "cat_us_hurricane_landfall_2026.maj1": {
+   "draws": [
+    0.2,
+    0.2,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.20000000000000004,
+   "sd": 3.3993498887762956e-17
+  },
+  "cat_us_hurricane_landfall_2026.maj_given_hur1": {
+   "draws": [
+    0.45,
+    0.45,
+    0.43
+   ],
+   "n": 3,
+   "mean": 0.44333333333333336,
+   "sd": 0.011547005383792526
+  },
+  "cat_us_hurricane_landfall_2026.hur3_or_maj": {
+   "draws": [
+    0.31,
+    0.32,
+    0.31
+   ],
+   "n": 3,
+   "mean": 0.3133333333333333,
+   "sd": 0.005773502691896262
+  },
+  "cat_us_hurricane_landfall_2026.hur3_and_maj": {
+   "draws": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "n": 3,
+   "mean": 0.06333333333333334,
+   "sd": 0.005773502691896262
+  },
+  "ins_2026_loss_severity_and_reinsurance_pricing.ns12": {
+   "draws": [
+    0.3,
+    0.42,
+    0.42
+   ],
+   "n": 3,
+   "mean": 0.37999999999999995,
+   "sd": 0.06928203230275509
+  },
+  "ins_2026_loss_severity_and_reinsurance_pricing.mega20": {
+   "draws": [
+    0.24,
+    0.16,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.19999999999999998,
+   "sd": 0.039999999999999994
+  },
+  "ins_2026_loss_severity_and_reinsurance_pricing.rol15": {
+   "draws": [
+    0.44,
+    0.28,
+    0.25
+   ],
+   "n": 3,
+   "mean": 0.3233333333333333,
+   "sd": 0.10214368964029708
+  },
+  "ins_2026_loss_severity_and_reinsurance_pricing.rol15_given_mega20": {
+   "draws": [
+    0.22,
+    0.35,
+    0.28
+   ],
+   "n": 3,
+   "mean": 0.2833333333333333,
+   "sd": 0.06506407098647711
+  },
+  "ins_2026_loss_severity_and_reinsurance_pricing.rol15_given_no_mega20": {
+   "draws": [
+    0.85,
+    0.85,
+    0.85
+   ],
+   "n": 3,
+   "mean": 0.85,
+   "sd": 0.0
+  },
+  "ins_2026_loss_severity_and_reinsurance_pricing.ns12_and_mega20": {
+   "draws": [
+    0.19,
+    0.11,
+    0.16
+   ],
+   "n": 3,
+   "mean": 0.15333333333333335,
+   "sd": 0.0404145188432738
+  },
+  "cat_us_wildfire_quake_2026_27.fire100k": {
+   "draws": [
+    0.3,
+    0.22,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.24,
+   "sd": 0.0529150262212918
+  },
+  "cat_us_wildfire_quake_2026_27.quake60": {
+   "draws": [
+    0.27,
+    0.32,
+    0.35
+   ],
+   "n": 3,
+   "mean": 0.3133333333333333,
+   "sd": 0.04041451884327378
+  },
+  "cat_us_wildfire_quake_2026_27.loss2b": {
+   "draws": [
+    0.35,
+    0.25,
+    0.24
+   ],
+   "n": 3,
+   "mean": 0.27999999999999997,
+   "sd": 0.060827625302982184
+  },
+  "cat_us_wildfire_quake_2026_27.loss2b_given_fire100k": {
+   "draws": [
+    0.5,
+    0.42,
+    0.5
+   ],
+   "n": 3,
+   "mean": 0.47333333333333333,
+   "sd": 0.04618802153517007
+  },
+  "cat_us_wildfire_quake_2026_27.fire_and_loss": {
+   "draws": [
+    0.13,
+    0.12,
+    0.13
+   ],
+   "n": 3,
+   "mean": 0.12666666666666668,
+   "sd": 0.005773502691896263
+  },
+  "cat_us_wildfire_quake_2026_27.loss2b_given_quake60": {
+   "draws": [
+    0.28,
+    0.38,
+    0.27
+   ],
+   "n": 3,
+   "mean": 0.31,
+   "sd": 0.060827625302982184
+  },
+  "pha_bezuclastinib_fda_decisions.nadv_jun": {
+   "draws": [
+    0.9,
+    0.9,
+    0.9
+   ],
+   "n": 3,
+   "mean": 0.9,
+   "sd": 0.0
+  },
+  "pha_bezuclastinib_fda_decisions.nadv_dec": {
+   "draws": [
+    0.82,
+    0.82,
+    0.82
+   ],
+   "n": 3,
+   "mean": 0.82,
+   "sd": 0.0
+  },
+  "pha_bezuclastinib_fda_decisions.adv_jun": {
+   "draws": [
+    0.66,
+    0.62,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.6666666666666666,
+   "sd": 0.05033222956847165
+  },
+  "pha_bezuclastinib_fda_decisions.nadv_dec_given_jun": {
+   "draws": [
+    0.85,
+    0.85,
+    0.85
+   ],
+   "n": 3,
+   "mean": 0.85,
+   "sd": 0.0
+  },
+  "pha_bezuclastinib_fda_decisions.both_indications": {
+   "draws": [
+    0.55,
+    0.45,
+    0.47
+   ],
+   "n": 3,
+   "mean": 0.49,
+   "sd": 0.052915026221291836
+  },
+  "pha_bezuclastinib_fda_decisions.adv_given_nadv_dec": {
+   "draws": [
+    0.55,
+    0.62,
+    0.7
+   ],
+   "n": 3,
+   "mean": 0.6233333333333334,
+   "sd": 0.0750555349946513
+  },
+  "pha_ivonescimab_readout_to_approval.approve26": {
+   "draws": [
+    0.2,
+    0.2,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.20000000000000004,
+   "sd": 3.3993498887762956e-17
+  },
+  "pha_ivonescimab_readout_to_approval.h3_os": {
+   "draws": [
+    0.12,
+    0.12,
+    0.1
+   ],
+   "n": 3,
+   "mean": 0.11333333333333333,
+   "sd": 0.011547005383792509
+  },
+  "pha_ivonescimab_readout_to_approval.file_1l": {
+   "draws": [
+    0.16,
+    0.2,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.18666666666666668,
+   "sd": 0.023094010767585035
+  },
+  "pha_ivonescimab_readout_to_approval.approve_given_h3": {
+   "draws": [
+    0.22,
+    0.24,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.22,
+   "sd": 0.01999999999999999
+  },
+  "pha_ivonescimab_readout_to_approval.approve_given_not_h3": {
+   "draws": [
+    0.2,
+    0.22,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.20666666666666667,
+   "sd": 0.011547005383792509
+  },
+  "pha_ivonescimab_readout_to_approval.h3_and_file": {
+   "draws": [
+    0.05,
+    0.06,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.056666666666666664,
+   "sd": 0.0057735026918962545
+  },
+  "pha_us_drug_pricing_policy.mfn3": {
+   "draws": [
+    0.45,
+    0.42,
+    0.55
+   ],
+   "n": 3,
+   "mean": 0.47333333333333333,
+   "sd": 0.06806859285554048
+  },
+  "pha_us_drug_pricing_policy.irp_rule": {
+   "draws": [
+    0.2,
+    0.2,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.20000000000000004,
+   "sd": 3.3993498887762956e-17
+  },
+  "pha_us_drug_pricing_policy.tariff_cut": {
+   "draws": [
+    0.15,
+    0.15,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.15,
+   "sd": 0.0
+  },
+  "pha_us_drug_pricing_policy.irp_given_mfn3": {
+   "draws": [
+    0.2,
+    0.22,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.20666666666666667,
+   "sd": 0.011547005383792509
+  },
+  "pha_us_drug_pricing_policy.irp_given_not_mfn3": {
+   "draws": [
+    0.17,
+    0.2,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.19000000000000003,
+   "sd": 0.017320508075688773
+  },
+  "pha_us_drug_pricing_policy.mfn3_and_irp": {
+   "draws": [
+    0.1,
+    0.08,
+    0.09
+   ],
+   "n": 3,
+   "mean": 0.09000000000000001,
+   "sd": 0.010000000000000002
+  },
+  "pha_outbreak_public_health_declarations.pheic_new": {
+   "draws": [
+    0.16,
+    0.15,
+    0.16
+   ],
+   "n": 3,
+   "mean": 0.15666666666666665,
+   "sd": 0.005773502691896262
+  },
+  "pha_outbreak_public_health_declarations.pheic_flu": {
+   "draws": [
+    0.03,
+    0.03,
+    0.03
+   ],
+   "n": 3,
+   "mean": 0.03,
+   "sd": 0.0
+  },
+  "pha_outbreak_public_health_declarations.h5_3us": {
+   "draws": [
+    0.25,
+    0.25,
+    0.25
+   ],
+   "n": 3,
+   "mean": 0.25,
+   "sd": 0.0
+  },
+  "pha_outbreak_public_health_declarations.flu_given_h5": {
+   "draws": [
+    0.04,
+    0.04,
+    0.05
+   ],
+   "n": 3,
+   "mean": 0.043333333333333335,
+   "sd": 0.005773502691896259
+  },
+  "pha_outbreak_public_health_declarations.flu_and_h5": {
+   "draws": [
+    0.012,
+    0.012,
+    0.012
+   ],
+   "n": 3,
+   "mean": 0.012000000000000002,
+   "sd": 2.1245936804851847e-18
+  },
+  "pha_outbreak_public_health_declarations.pheic_nonflu": {
+   "draws": [
+    0.07,
+    0.07,
+    0.17
+   ],
+   "n": 3,
+   "mean": 0.10333333333333335,
+   "sd": 0.05773502691896258
+  },
+  "mr_fed_hike_path.FED400": {
+   "draws": [
+    0.07,
+    0.07,
+    0.07
+   ],
+   "n": 3,
+   "mean": 0.07,
+   "sd": 0.0
+  },
+  "mr_fed_hike_path.FED425": {
+   "draws": [
+    0.04,
+    0.05,
+    0.04
+   ],
+   "n": 3,
+   "mean": 0.043333333333333335,
+   "sd": 0.005773502691896259
+  },
+  "mr_fed_hike_path.FED400_g_FED425": {
+   "draws": [
+    0.995,
+    0.995,
+    0.99
+   ],
+   "n": 3,
+   "mean": 0.9933333333333333,
+   "sd": 0.0028867513459481316
+  },
+  "mr_fed_hike_path.CORE30": {
+   "draws": [
+    0.15,
+    0.15,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.15,
+   "sd": 0.0
+  },
+  "mr_fed_hike_path.FED425_g_CORE30": {
+   "draws": [
+    0.06,
+    0.06,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.06,
+   "sd": 0.0
+  },
+  "mr_fed_hike_path.FED425_and_CORE30": {
+   "draws": [
+    0.05,
+    0.04,
+    0.03
+   ],
+   "n": 3,
+   "mean": 0.04,
+   "sd": 0.010000000000000002
+  },
+  "mr_fed_dec2026_bands.BELOW": {
+   "draws": [
+    0.72,
+    0.65,
+    0.65
+   ],
+   "n": 3,
+   "mean": 0.6733333333333333,
+   "sd": 0.040414518843273774
+  },
+  "mr_fed_dec2026_bands.SAME": {
+   "draws": [
+    0.25,
+    0.28,
+    0.3
+   ],
+   "n": 3,
+   "mean": 0.27666666666666667,
+   "sd": 0.02516611478423583
+  },
+  "mr_fed_dec2026_bands.ABOVE": {
+   "draws": [
+    0.03,
+    0.03,
+    0.03
+   ],
+   "n": 3,
+   "mean": 0.03,
+   "sd": 0.0
+  },
+  "mr_fed_dec2026_bands.UNEMP45": {
+   "draws": [
+    0.27,
+    0.31,
+    0.32
+   ],
+   "n": 3,
+   "mean": 0.3,
+   "sd": 0.026457513110645897
+  },
+  "mr_fed_dec2026_bands.BELOW_g_UNEMP45": {
+   "draws": [
+    0.93,
+    0.93,
+    0.93
+   ],
+   "n": 3,
+   "mean": 0.93,
+   "sd": 0.0
+  },
+  "mr_fed_dec2026_bands.BELOW_g_notUNEMP45": {
+   "draws": [
+    0.62,
+    0.62,
+    0.65
+   ],
+   "n": 3,
+   "mean": 0.63,
+   "sd": 0.01732050807568879
+  },
+  "mr_cpi_tenyear.CPIOCT35": {
+   "draws": [
+    0.35,
+    0.35,
+    0.34
+   ],
+   "n": 3,
+   "mean": 0.3466666666666667,
+   "sd": 0.005773502691896231
+  },
+  "mr_cpi_tenyear.Y10_490": {
+   "draws": [
+    0.6,
+    0.42,
+    0.5
+   ],
+   "n": 3,
+   "mean": 0.5066666666666667,
+   "sd": 0.09018499505645788
+  },
+  "mr_cpi_tenyear.both": {
+   "draws": [
+    0.2,
+    0.2,
+    0.19
+   ],
+   "n": 3,
+   "mean": 0.19666666666666668,
+   "sd": 0.005773502691896263
+  },
+  "mr_cpi_tenyear.either": {
+   "draws": [
+    0.63,
+    0.62,
+    0.62
+   ],
+   "n": 3,
+   "mean": 0.6233333333333334,
+   "sd": 0.005773502691896263
+  },
+  "mr_cpi_tenyear.Y10_g_CPI": {
+   "draws": [
+    0.55,
+    0.45,
+    0.55
+   ],
+   "n": 3,
+   "mean": 0.5166666666666667,
+   "sd": 0.057735026918962595
+  },
+  "mr_cpi_tenyear.Y10_g_notCPI": {
+   "draws": [
+    0.24,
+    0.24,
+    0.24
+   ],
+   "n": 3,
+   "mean": 0.24,
+   "sd": 0.0
+  },
+  "mr_oil_hicp_ecb.BRENT110": {
+   "draws": [
+    0.13,
+    0.15,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.14333333333333334,
+   "sd": 0.011547005383792509
+  },
+  "mr_oil_hicp_ecb.HICP30": {
+   "draws": [
+    0.3,
+    0.3,
+    0.3
+   ],
+   "n": 3,
+   "mean": 0.3,
+   "sd": 0.0
+  },
+  "mr_oil_hicp_ecb.ECB275": {
+   "draws": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "n": 3,
+   "mean": 0.10000000000000002,
+   "sd": 1.6996749443881478e-17
+  },
+  "mr_oil_hicp_ecb.HICP_g_BRENT": {
+   "draws": [
+    0.62,
+    0.62,
+    0.62
+   ],
+   "n": 3,
+   "mean": 0.62,
+   "sd": 0.0
+  },
+  "mr_oil_hicp_ecb.HICP_and_BRENT": {
+   "draws": [
+    0.06,
+    0.05,
+    0.05
+   ],
+   "n": 3,
+   "mean": 0.05333333333333334,
+   "sd": 0.0057735026918962545
+  },
+  "mr_oil_hicp_ecb.ECB_g_HICP": {
+   "draws": [
+    0.35,
+    0.3,
+    0.25
+   ],
+   "n": 3,
+   "mean": 0.3,
+   "sd": 0.04999999999999999
+  },
+  "mr_boj_yen.BOJ125": {
+   "draws": [
+    0.62,
+    0.6,
+    0.62
+   ],
+   "n": 3,
+   "mean": 0.6133333333333333,
+   "sd": 0.011547005383792525
+  },
+  "mr_boj_yen.JPY168": {
+   "draws": [
+    0.68,
+    0.6,
+    0.62
+   ],
+   "n": 3,
+   "mean": 0.6333333333333333,
+   "sd": 0.04163331998932269
+  },
+  "mr_boj_yen.MOFINT": {
+   "draws": [
+    0.35,
+    0.35,
+    0.35
+   ],
+   "n": 3,
+   "mean": 0.3499999999999999,
+   "sd": 6.798699777552591e-17
+  },
+  "mr_boj_yen.MOF_g_JPY168": {
+   "draws": [
+    0.72,
+    0.72,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.7200000000000001,
+   "sd": 1.3597399555105182e-16
+  },
+  "mr_boj_yen.JPY_and_MOF": {
+   "draws": [
+    0.3,
+    0.32,
+    0.34
+   ],
+   "n": 3,
+   "mean": 0.32,
+   "sd": 0.020000000000000018
+  },
+  "mr_boj_yen.JPY_g_BOJ125": {
+   "draws": [
+    0.45,
+    0.42,
+    0.44
+   ],
+   "n": 3,
+   "mean": 0.4366666666666667,
+   "sd": 0.01527525231651948
+  },
+  "mr_labor_credit.U48": {
+   "draws": [
+    0.15,
+    0.17,
+    0.16
+   ],
+   "n": 3,
+   "mean": 0.16,
+   "sd": 0.010000000000000009
+  },
+  "mr_labor_credit.U52": {
+   "draws": [
+    0.1,
+    0.09,
+    0.1
+   ],
+   "n": 3,
+   "mean": 0.09666666666666668,
+   "sd": 0.005773502691896263
+  },
+  "mr_labor_credit.U48_g_U52": {
+   "draws": [
+    0.995,
+    0.995,
+    0.995
+   ],
+   "n": 3,
+   "mean": 0.995,
+   "sd": 0.0
+  },
+  "mr_labor_credit.HY400": {
+   "draws": [
+    0.16,
+    0.15,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.15333333333333332,
+   "sd": 0.005773502691896263
+  },
+  "mr_labor_credit.HY400_g_U48": {
+   "draws": [
+    0.72,
+    0.72,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.7200000000000001,
+   "sd": 1.3597399555105182e-16
+  },
+  "mr_labor_credit.HY400_and_U48": {
+   "draws": [
+    0.05,
+    0.06,
+    0.05
+   ],
+   "n": 3,
+   "mean": 0.05333333333333334,
+   "sd": 0.0057735026918962545
+  },
+  "mr_equity_drawdown_fed.DD10": {
+   "draws": [
+    0.35,
+    0.31,
+    0.32
+   ],
+   "n": 3,
+   "mean": 0.32666666666666666,
+   "sd": 0.020816659994661313
+  },
+  "mr_equity_drawdown_fed.DD20": {
+   "draws": [
+    0.09,
+    0.09,
+    0.09
+   ],
+   "n": 3,
+   "mean": 0.09000000000000001,
+   "sd": 1.6996749443881478e-17
+  },
+  "mr_equity_drawdown_fed.DD10_g_DD20": {
+   "draws": [
+    0.995,
+    0.995,
+    0.995
+   ],
+   "n": 3,
+   "mean": 0.995,
+   "sd": 0.0
+  },
+  "mr_equity_drawdown_fed.FEDCUT": {
+   "draws": [
+    0.63,
+    0.65,
+    0.62
+   ],
+   "n": 3,
+   "mean": 0.6333333333333333,
+   "sd": 0.01527525231651948
+  },
+  "mr_equity_drawdown_fed.FEDCUT_g_DD20": {
+   "draws": [
+    0.9,
+    0.88,
+    0.88
+   ],
+   "n": 3,
+   "mean": 0.8866666666666667,
+   "sd": 0.011547005383792525
+  },
+  "mr_equity_drawdown_fed.DD20_and_FEDCUT": {
+   "draws": [
+    0.06,
+    0.06,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.06,
+   "sd": 0.0
+  },
+  "mr_france_eurusd.FRDOWN": {
+   "draws": [
+    0.42,
+    0.4,
+    0.42
+   ],
+   "n": 3,
+   "mean": 0.41333333333333333,
+   "sd": 0.011547005383792493
+  },
+  "mr_france_eurusd.EUR110": {
+   "draws": [
+    0.45,
+    0.16,
+    0.16
+   ],
+   "n": 3,
+   "mean": 0.25666666666666665,
+   "sd": 0.16743157806499148
+  },
+  "mr_france_eurusd.both": {
+   "draws": [
+    0.06,
+    0.06,
+    0.06
+   ],
+   "n": 3,
+   "mean": 0.06,
+   "sd": 0.0
+  },
+  "mr_france_eurusd.either": {
+   "draws": [
+    0.62,
+    0.42,
+    0.42
+   ],
+   "n": 3,
+   "mean": 0.48666666666666664,
+   "sd": 0.11547005383792516
+  },
+  "mr_france_eurusd.neither": {
+   "draws": [
+    0.13,
+    0.14,
+    0.16
+   ],
+   "n": 3,
+   "mean": 0.14333333333333334,
+   "sd": 0.015275252316519465
+  },
+  "mr_france_eurusd.EUR_g_FRDOWN": {
+   "draws": [
+    0.15,
+    0.15,
+    0.17
+   ],
+   "n": 3,
+   "mean": 0.15666666666666665,
+   "sd": 0.011547005383792526
+  },
+  "semis_dram_cycle_micron.dram_up": {
+   "draws": [
+    0.85,
+    0.82,
+    0.85
+   ],
+   "n": 3,
+   "mean": 0.84,
+   "sd": 0.01732050807568879
+  },
+  "semis_dram_cycle_micron.mu55": {
+   "draws": [
+    0.72,
+    0.62,
+    0.62
+   ],
+   "n": 3,
+   "mean": 0.6533333333333333,
+   "sd": 0.05773502691896257
+  },
+  "semis_dram_cycle_micron.mu62": {
+   "draws": [
+    0.32,
+    0.4,
+    0.35
+   ],
+   "n": 3,
+   "mean": 0.3566666666666667,
+   "sd": 0.040414518843273815
+  },
+  "semis_dram_cycle_micron.both": {
+   "draws": [
+    0.37,
+    0.37,
+    0.38
+   ],
+   "n": 3,
+   "mean": 0.37333333333333335,
+   "sd": 0.005773502691896262
+  },
+  "semis_dram_cycle_micron.mu55_g_dram": {
+   "draws": [
+    0.72,
+    0.78,
+    0.79
+   ],
+   "n": 3,
+   "mean": 0.7633333333333333,
+   "sd": 0.03785938897200186
+  },
+  "semis_dram_cycle_micron.mu55_g_notdram": {
+   "draws": [
+    0.42,
+    0.55,
+    0.5
+   ],
+   "n": 3,
+   "mean": 0.49,
+   "sd": 0.06557438524302003
+  },
+  "semis_bis_china_nvidia.bis_rule": {
+   "draws": [
+    0.88,
+    0.87,
+    0.88
+   ],
+   "n": 3,
+   "mean": 0.8766666666666666,
+   "sd": 0.005773502691896263
+  },
+  "semis_bis_china_nvidia.nv6": {
+   "draws": [
+    0.2,
+    0.22,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.19000000000000003,
+   "sd": 0.0360555127546399
+  },
+  "semis_bis_china_nvidia.nv10": {
+   "draws": [
+    0.08,
+    0.09,
+    0.1
+   ],
+   "n": 3,
+   "mean": 0.09000000000000001,
+   "sd": 0.010000000000000002
+  },
+  "semis_bis_china_nvidia.both": {
+   "draws": [
+    0.13,
+    0.14,
+    0.14
+   ],
+   "n": 3,
+   "mean": 0.1366666666666667,
+   "sd": 0.005773502691896263
+  },
+  "semis_bis_china_nvidia.nv6_g_rule": {
+   "draws": [
+    0.25,
+    0.2,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.21666666666666667,
+   "sd": 0.028867513459481284
+  },
+  "semis_bis_china_nvidia.either": {
+   "draws": [
+    0.9,
+    0.93,
+    0.88
+   ],
+   "n": 3,
+   "mean": 0.9033333333333333,
+   "sd": 0.025166114784235857
+  },
+  "semis_tsmc_2027_capex.low": {
+   "draws": [
+    0.44,
+    0.42,
+    0.44
+   ],
+   "n": 3,
+   "mean": 0.43333333333333335,
+   "sd": 0.011547005383792526
+  },
+  "semis_tsmc_2027_capex.mid": {
+   "draws": [
+    0.38,
+    0.42,
+    0.42
+   ],
+   "n": 3,
+   "mean": 0.4066666666666667,
+   "sd": 0.023094010767585018
+  },
+  "semis_tsmc_2027_capex.high": {
+   "draws": [
+    0.25,
+    0.3,
+    0.2
+   ],
+   "n": 3,
+   "mean": 0.25,
+   "sd": 0.04999999999999999
+  },
+  "semis_tsmc_2027_capex.at_least_75": {
+   "draws": [
+    0.62,
+    0.55,
+    0.63
+   ],
+   "n": 3,
+   "mean": 0.6,
+   "sd": 0.04358898943540671
+  },
+  "semis_tsmc_2027_capex.high_g_at_least_75": {
+   "draws": [
+    0.27,
+    0.25,
+    0.25
+   ],
+   "n": 3,
+   "mean": 0.25666666666666665,
+   "sd": 0.011547005383792526
+  },
+  "semis_tsmc_2027_capex.not_low": {
+   "draws": [
+    0.35,
+    0.45,
+    0.37
+   ],
+   "n": 3,
+   "mean": 0.38999999999999996,
+   "sd": 0.05291502622129183
+  },
+  "semis_hyperscaler_2027_capex.goog260": {
+   "draws": [
+    0.42,
+    0.45,
+    0.45
+   ],
+   "n": 3,
+   "mean": 0.44,
+   "sd": 0.01732050807568879
+  },
+  "semis_hyperscaler_2027_capex.goog300": {
+   "draws": [
+    0.3,
+    0.28,
+    0.33
+   ],
+   "n": 3,
+   "mean": 0.30333333333333334,
+   "sd": 0.02516611478423583
+  },
+  "semis_hyperscaler_2027_capex.meta185": {
+   "draws": [
+    0.42,
+    0.42,
+    0.42
+   ],
+   "n": 3,
+   "mean": 0.42,
+   "sd": 0.0
+  },
+  "semis_hyperscaler_2027_capex.both": {
+   "draws": [
+    0.22,
+    0.12,
+    0.24
+   ],
+   "n": 3,
+   "mean": 0.19333333333333333,
+   "sd": 0.06429100507328636
+  },
+  "semis_hyperscaler_2027_capex.either": {
+   "draws": [
+    0.6,
+    0.6,
+    0.63
+   ],
+   "n": 3,
+   "mean": 0.61,
+   "sd": 0.01732050807568879
+  },
+  "semis_hyperscaler_2027_capex.meta_g_goog": {
+   "draws": [
+    0.45,
+    0.55,
+    0.45
+   ],
+   "n": 3,
+   "mean": 0.4833333333333334,
+   "sd": 0.057735026918962595
+  },
+  "semis_intel_foundry_14a.cust14a": {
+   "draws": [
+    0.42,
+    0.35,
+    0.35
+   ],
+   "n": 3,
+   "mean": 0.3733333333333333,
+   "sd": 0.0404145188432738
+  },
+  "semis_intel_foundry_14a.q4rev": {
+   "draws": [
+    0.2,
+    0.35,
+    0.3
+   ],
+   "n": 3,
+   "mean": 0.2833333333333333,
+   "sd": 0.07637626158259732
+  },
+  "semis_intel_foundry_14a.foundryloss": {
+   "draws": [
+    0.15,
+    0.15,
+    0.15
+   ],
+   "n": 3,
+   "mean": 0.15,
+   "sd": 0.0
+  },
+  "semis_intel_foundry_14a.both": {
+   "draws": [
+    0.11,
+    0.12,
+    0.11
+   ],
+   "n": 3,
+   "mean": 0.11333333333333333,
+   "sd": 0.0057735026918962545
+  },
+  "semis_intel_foundry_14a.rev_g_cust": {
+   "draws": [
+    0.18,
+    0.24,
+    0.16
+   ],
+   "n": 3,
+   "mean": 0.19333333333333333,
+   "sd": 0.04163331998932265
+  },
+  "semis_intel_foundry_14a.rev_g_nocust": {
+   "draws": [
+    0.14,
+    0.13,
+    0.1
+   ],
+   "n": 3,
+   "mean": 0.12333333333333334,
+   "sd": 0.02081665999466133
+  },
+  "semis_dc_power_capex.ceg1gw": {
+   "draws": [
+    0.28,
+    0.28,
+    0.24
+   ],
+   "n": 3,
+   "mean": 0.26666666666666666,
+   "sd": 0.02309401076758505
+  },
+  "semis_dc_power_capex.msft60": {
+   "draws": [
+    0.45,
+    0.42,
+    0.42
+   ],
+   "n": 3,
+   "mean": 0.43,
+   "sd": 0.01732050807568879
+  },
+  "semis_dc_power_capex.cranegrid": {
+   "draws": [
+    0.35,
+    0.35,
+    0.4
+   ],
+   "n": 3,
+   "mean": 0.3666666666666667,
+   "sd": 0.028867513459481315
+  },
+  "semis_dc_power_capex.both": {
+   "draws": [
+    0.11,
+    0.14,
+    0.13
+   ],
+   "n": 3,
+   "mean": 0.12666666666666668,
+   "sd": 0.015275252316519472
+  },
+  "semis_dc_power_capex.either": {
+   "draws": [
+    0.58,
+    0.68,
+    0.63
+   ],
+   "n": 3,
+   "mean": 0.63,
+   "sd": 0.050000000000000044
+  },
+  "semis_dc_power_capex.msft_g_ceg": {
+   "draws": [
+    0.45,
+    0.55,
+    0.35
+   ],
+   "n": 3,
+   "mean": 0.45,
+   "sd": 0.10000000000000003
+  },
+  "semis_analog_mna_antitrust.ti_slab": {
+   "draws": [
+    0.85,
+    0.85,
+    0.85
+   ],
+   "n": 3,
+   "mean": 0.85,
+   "sd": 0.0
+  },
+  "semis_analog_mna_antitrust.syna_vote": {
+   "draws": [
+    0.87,
+    0.89,
+    0.9
+   ],
+   "n": 3,
+   "mean": 0.8866666666666667,
+   "sd": 0.01527525231651948
+  },
+  "semis_analog_mna_antitrust.syna_close": {
+   "draws": [
+    0.35,
+    0.35,
+    0.35
+   ],
+   "n": 3,
+   "mean": 0.3499999999999999,
+   "sd": 6.798699777552591e-17
+  },
+  "semis_analog_mna_antitrust.vote_and_close": {
+   "draws": [
+    0.32,
+    0.2,
+    0.32
+   ],
+   "n": 3,
+   "mean": 0.28,
+   "sd": 0.06928203230275509
+  },
+  "semis_analog_mna_antitrust.close_g_vote": {
+   "draws": [
+    0.42,
+    0.42,
+    0.4
+   ],
+   "n": 3,
+   "mean": 0.41333333333333333,
+   "sd": 0.011547005383792493
+  },
+  "semis_analog_mna_antitrust.either_close": {
+   "draws": [
+    0.72,
+    0.72,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.7200000000000001,
+   "sd": 1.3597399555105182e-16
+  },
+  "semis_ai_compute_buildout.orcl800": {
+   "draws": [
+    0.38,
+    0.42,
+    0.44
+   ],
+   "n": 3,
+   "mean": 0.41333333333333333,
+   "sd": 0.03055050463303893
+  },
+  "semis_ai_compute_buildout.nvda115": {
+   "draws": [
+    0.45,
+    0.42,
+    0.55
+   ],
+   "n": 3,
+   "mean": 0.47333333333333333,
+   "sd": 0.06806859285554048
+  },
+  "semis_ai_compute_buildout.nvda125": {
+   "draws": [
+    0.2,
+    0.2,
+    0.25
+   ],
+   "n": 3,
+   "mean": 0.21666666666666667,
+   "sd": 0.028867513459481284
+  },
+  "semis_ai_compute_buildout.both": {
+   "draws": [
+    0.27,
+    0.21,
+    0.27
+   ],
+   "n": 3,
+   "mean": 0.25,
+   "sd": 0.03464101615137756
+  },
+  "semis_ai_compute_buildout.orcl_g_nvda": {
+   "draws": [
+    0.42,
+    0.45,
+    0.38
+   ],
+   "n": 3,
+   "mean": 0.4166666666666667,
+   "sd": 0.035118845842842465
+  },
+  "semis_ai_compute_buildout.either": {
+   "draws": [
+    0.62,
+    0.72,
+    0.72
+   ],
+   "n": 3,
+   "mean": 0.6866666666666666,
+   "sd": 0.05773502691896257
+  }
+ }
+}

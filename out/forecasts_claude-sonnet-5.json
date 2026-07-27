@@ -1,0 +1,2162 @@
+[
+ {
+  "tid": "en_brent_q4_2026_bands.lt75",
+  "model": "claude-sonnet-5",
+  "p": 0.42,
+  "rationale": "Brent has recently traded around mid-$60s to low-$70s amid oversupply concerns, making a sub-$75 Q4 average plausible but not overwhelmingly likely given some upside risk from geopolitical or OPEC+ supply actions.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.mid",
+  "model": "claude-sonnet-5",
+  "p": 0.75,
+  "rationale": "Brent has traded roughly $65-80 recently, and current forwards/futures point to a Q4 average likely in the mid-$70s, making a range of $75-105 quite likely but not certain given downside risk near the boundary.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.ge105",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Brent is currently trading around $65-70/barrel with no fundamental catalyst for a sustained jump to $105+ by Q4 2026, making this scenario highly unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.lt105",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "Brent is currently trading around $65-70/barrel, far below $105, making a sub-$105 Q4 average highly likely absent an extraordinary price spike.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.ge75",
+  "model": "claude-sonnet-5",
+  "p": 0.72,
+  "rationale": "Brent has been trading roughly in the mid-$60s to low $70s in 2026 amid ample supply, so $75+ average requires a moderate rally, plausible but not the base case; combined with negligible chance of $105+, probability of the 75-105 band being hit leans moderate but below even odds.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.ge105_given_ge75",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Current Brent prices are far below $105 and no plausible near-term shock scenario within Q4 2026 makes an average above $105 likely even conditional on being above $75.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.pause",
+  "model": "claude-sonnet-5",
+  "p": 0.65,
+  "rationale": "OPEC+ has been steadily unwinding cuts through 2025-26 but has paused/plateaued at points before, and with production nearing pre-cut baseline levels plus soft prices, a pause or reversal in at least one of four meetings is fairly likely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.brent70",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "Brent has been trading in the low-to-mid $60s-$70s recently amid ample supply and OPEC+ increases, so a dip below $70 over a 7-month window is fairly likely though not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.both",
+  "model": "claude-sonnet-5",
+  "p": 0.72,
+  "rationale": "OPEC+ pausing/cutting increases at some point in Sept-Dec is quite likely given recent pace deceleration, and Brent dipping below $70 sometime in a 7-month window is also fairly likely given current soft price trends, so their joint probability is moderately high but not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.either",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "OPEC+ is highly likely to pause or cut production at some point given oversupply concerns, and Brent has already been trading near/below $70 recently, making at least one sub-$70 day over a 7-month window very likely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.pause_given_brent70",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "If Brent falls below $70, OPEC+ would likely pause or reverse output increases to defend prices, and given they've already been raising output through 2025-26, low prices strongly incentivize a pause or cut at some meeting in that four-month window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.pause_given_no_brent70",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "If Brent stays above $70 throughout this window, OPEC+ would likely continue or accelerate its recent unwinding of cuts, but given high prices they'd still be inclined to pause or continue phased increases with some months flat/paused rather than perpetual increases, making at least one non-increase announcement fairly likely over four meetings.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci6000",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Current WCI is $4,374 and would need to rise ~37% during a period historically weaker for spot rates (post-peak season, absent major disruption), making a jump to $6,000 unlikely but not impossible given past volatility from events like Red Sea diversions.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci8000",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "WCI has been in the $2,000-3,000 range through mid-2026, far below the ~$8,000 peak levels seen only during the 2021-22 pandemic surge, and no current catalysts suggest such a spike is imminent.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.suez55",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "Traffic has stayed suppressed near 40-42 for over a year due to Red Sea security concerns, and reaching 55 would require a substantial and sustained recovery within the window, which seems unlikely absent a major resolution of shipping risks.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci6000_and_suez55",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Both a major freight-rate spike (WCI near 4374 to 6000+) and a Suez transit recovery to 55+ from ~41.6 currently are individually unlikely within this window, and jointly quite improbable given current trends of low rates and depressed Suez traffic due to Red Sea disruptions.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci6000_given_suez55",
+  "model": "claude-sonnet-5",
+  "p": 0.07,
+  "rationale": "Suez traffic normalizing to 55+ suggests reduced Red Sea risk/shipping disruption, making a jump to $6,000 WCI (from ~$4,374, requiring huge freight rate spikes typically driven by Red Sea diversions) quite unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci6000_given_no_suez55",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Reaching $6,000 from $4,374 would require a ~37% surge in freight rates, which historically only occurs amid major Suez disruption\u2014conditioning on Suez remaining closed/low-traffic (below 55 transits) makes such a spike very unlikely absent that specific shock.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.stor70",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "At 54.2% on July 21 with roughly 3 months of typical summer injection remaining (~15-16 pts/month historically), reaching 70% by Nov 1 is plausible but not assured given relaxed 80% target suggesting slower pace and possible late-summer heat/demand disruptions.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.stor80",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "EU had relaxed the 90% mandatory target with flexibility, storage refill has been lagging historical norms in 2025-2026 due to lower Russian pipeline flows and higher summer withdrawals, making 80% by Nov 1 plausible but below the historical average trajectory.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.ttf80",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "TTF is currently trading in the high-50s to low-60s and would need a roughly 30-40% winter spike to hit 80, which is possible amid cold weather or supply shocks but not the base case given current mild market conditions and ample storage.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.stor80_and_ttf80",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "EU storage likely near/above 80% by Nov 1 given current trends, but TTF reaching 80 EUR/MWh from ~60 requires a ~33% spike, which is unlikely absent a major supply shock this winter.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.ttf80_given_stor80",
+  "model": "claude-sonnet-5",
+  "p": 0.13,
+  "rationale": "High storage fill (\u226580% by Nov 1) signals ample supply and typically limits winter price spikes, though cold snaps or supply shocks could still push TTF above 80 EUR/MWh briefly.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.ttf80_given_no_stor80",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Below-target storage entering winter signals tighter supply and raises spike risk, but current prices (~60) would need a large rally to reach 80, which typically requires a significant cold snap or supply shock over the 5-month window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng18",
+  "model": "claude-sonnet-5",
+  "p": 0.82,
+  "rationale": "With feedgas already near 17.5 Bcf/d in June 2026 and new capacity (Plaquemines Phase 2, Corpus Christi Stage 3) continuing to ramp through winter, at least one peak-demand winter month reaching 18.0 Bcf/d is likely though not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng19",
+  "model": "claude-sonnet-5",
+  "p": 0.75,
+  "rationale": "U.S. LNG export capacity has been ramping with Plaque mines/Corpus Christi Stage 3 and Plaquemines expansions through 2026, making levels near/above 19 Bcf/d plausible in peak winter months given current trends around 17-18 Bcf/d and continued growth.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.gpt2",
+  "model": "claude-sonnet-5",
+  "p": 0.42,
+  "rationale": "Guidance targets 1H2027 for Train 2 first LNG, but LNG megaprojects frequently slip a few months, making an on-time finish by June 30 2027 roughly a coin flip, slightly below even.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng18_and_gpt2",
+  "model": "claude-sonnet-5",
+  "p": 0.22,
+  "rationale": "LNG exports reaching 18 Bcf/d in the winter window is plausible given rising capacity, but Golden Pass Train 2 first production by June 2027 is uncertain given delays, and both must occur jointly.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng18_or_gpt2",
+  "model": "claude-sonnet-5",
+  "p": 0.87,
+  "rationale": "With LNG exports already near 17.5 Bcf/d and Plaquemines/Corpus Christi ramping plus winter demand, hitting 18.0 Bcf/d in at least one winter month is fairly likely, and Golden Pass Train 2 starting by mid-2027 is also plausible, making at least one occurring quite probable.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng18_given_gpt2",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "With Golden Pass Train 1 ramping plus other terminal expansions (Plaquemines, Corpus Christi Stage 3), exports already near 17-17.5 Bcf/d could plausibly hit 18 Bcf/d in a peak winter month, but seasonal maintenance and variability make it a close call rather than a certainty.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.load88",
+  "model": "claude-sonnet-5",
+  "p": 0.2,
+  "rationale": "Winter peak record (~84,000 MW) is well below 88,000 MW, and reaching that would require an extreme cold snap combined with continued load growth, which is possible but not the base case.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.load92",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "ERCOT winter peaks have historically been well below summer peaks (~75-80 GW record during extreme cold), and while load growth from data centers is pushing demand higher, reaching 92,000 MW would require both record load growth and an extreme winter storm simultaneously.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.eea",
+  "model": "claude-sonnet-5",
+  "p": 0.28,
+  "rationale": "ERCOT winters have seen frequent cold-weather grid stress events in recent years (Uri 2021, Elliott 2022, Heather 2024, Fern 2026), making another EEA plausible but not certain given ERCOT's ongoing grid improvements and demand response measures.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.load88_and_eea",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Reaching 88,000 MW in winter would require far exceeding the winter record (84,000 MW) and even the all-time summer peak, which is very unlikely absent extreme demand growth plus an extreme cold snap, making the joint probability with an EEA declaration low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.eea_given_load88",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "Demand at 88,000 MW would exceed the all-time record and likely occur during extreme cold with high load, implying tight reserves that would plausibly trigger at least an EEA1, though ERCOT's expanded winterization and reserves since 2021-2026 could avert it.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.eea_given_no_load88",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Without extreme demand near 88,000 MW, an EEA would require unusual generation outages/cold snap without record demand, which is possible but less likely given ERCOT's improved winterization since Uri and the fact that Fern's EEA coincided with high demand.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.oni20",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "AMJ value of +1.0 with rapid warming and NOAA's own 63-75% estimate for 'very strong' event suggests meaningful but not majority probability of reaching +2.0 by NDJ given historical difficulty of such extreme thresholds.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.pan45",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "Current draft is 49.0 ft with a scheduled reduction only to 48.5 ft in August, well above 45.0 ft, and after the 2023-24 drought recovery Gatun Lake levels have generally been managed to avoid such severe restrictions absent another major drought.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.ref82",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "This window spans typical fall maintenance and winter/spring turnaround seasons, during which utilization historically dips to 81-85%, so a drop to \u226482% is quite likely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.pan45_and_oni20",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "A very strong El Nino (ONI>=2.0) is plausible but not likely (~15-20%), and canal draft restrictions typically occur during La Nina/drought, so joint probability of both is low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.pan45_given_oni20",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "A very strong El Nino conditional scenario implies wet conditions favoring above-normal Panama rainfall/lake levels, making draft restrictions to 45.0 ft or below unlikely absent drought, though some residual risk remains from current already-reduced levels.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.ref82_given_oni20",
+  "model": "claude-sonnet-5",
+  "p": 0.92,
+  "rationale": "Refinery utilization typically dips into the low-to-mid 80s during fall/spring turnaround seasons virtually every year regardless of ENSO state, so this is largely independent of the El Nino condition and highly likely to occur over such a long window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.extend",
+  "model": "claude-sonnet-5",
+  "p": 0.6,
+  "rationale": "Given the broader trade truce dynamics and incentives for both sides to maintain stability, an extension or repeal announcement before the deadline is more likely than not, but not certain given geopolitical volatility.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.no_extend",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Given the ongoing US-China trade truce dynamics, an extension announcement close to the deadline is plausible but far from certain, so the probability of NO extension/repeal by 10 Nov 2026 is moderate but below even odds given incentives to renew the truce.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.newctrl",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "China has repeatedly expanded rare-earth export controls throughout 2025-2026 as a trade-leverage tool, making further additions in this 7-month window fairly likely though not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.newctrl_and_no_extend",
+  "model": "claude-sonnet-5",
+  "p": 0.28,
+  "rationale": "Given ongoing US-China trade tensions, China plausibly extends/renews suspension near deadline (making (a) uncertain but leaning toward some extension likely announced, though could stay silent until deadline), while continued incremental rare-earth control additions are fairly likely, so the joint probability is moderate but constrained by uncertainty over (a).",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.newctrl_given_no_extend",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "If the suspension lapses without extension/repeal, tensions likely resumed, making further list expansions plausible but not highly likely within this specific window given China's demonstrated pattern of incremental additions historically.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.exports_and_newctrl",
+  "model": "claude-sonnet-5",
+  "p": 0.13,
+  "rationale": "Both events are plausible individually but joint occurrence (exports dropping below 4,000 tonnes AND new control list additions) requires two somewhat independent conditions, making the combined probability meaningfully lower than either alone.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.strike",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "Given ongoing tensions, an active but fragile negotiation process, and history of recurring strikes, there's a meaningful but not dominant chance of renewed overt strikes within this 10-month window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h50",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "Traffic likely recovers substantially once active conflict ends, and over a 10-month window there's strong likelihood the strait returns to near-normal (50+) levels barring renewed escalation.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h80",
+  "model": "claude-sonnet-5",
+  "p": 0.2,
+  "rationale": "A severe crisis dropped traffic to ~15/day suggesting major disruption (possible conflict/blockade), and full recovery to near pre-crisis 88/day within 9-10 months is plausible but not assured given geopolitical uncertainty.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h50_g_strike",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "Given traffic is already severely depressed (~15/day vs 88 norm) implying an ongoing crisis, a new overt strike could either trigger closure/further disruption or, if limited and traffic gradually recovers as Iran avoids full closure, the 7-day average could rebound above 50 at some point over a 10-month window, making partial recovery more likely than sustained severe disruption for the entire period.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h50_g_nostrike",
+  "model": "claude-sonnet-5",
+  "p": 0.65,
+  "rationale": "Absent overt strikes, traffic likely recovers substantially toward the pre-crisis norm of ~88 over a 10-month window, making a 50+ trailing average plausible but not certain given lingering risk perception and insurance costs.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h80_and_strike",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Traffic recovery to near-normal levels plausible over 10 months but requires sustained de-escalation, while a fresh overt US/Israel strike on Iran during that same window is a distinct low-probability event, making the conjunction unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.ceasefire",
+  "model": "claude-sonnet-5",
+  "p": 0.07,
+  "rationale": "Despite ongoing diplomatic efforts, a full front-wide ceasefire holding for 30 days remains unlikely given entrenched positions and lack of durable trust between the parties.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.delist",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Sanctions remain a key leverage point on Russia amid ongoing war, and full delisting would require a broader peace settlement unlikely to materialize and be finalized within this window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.cf_and_delist",
+  "model": "claude-sonnet-5",
+  "p": 0.045,
+  "rationale": "Both a full stable ceasefire and formal SDN delisting within this window are individually unlikely and correlated but still low-probability given ongoing conflict dynamics and sanctions leverage politics.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.cf_or_delist",
+  "model": "claude-sonnet-5",
+  "p": 0.22,
+  "rationale": "Both a full durable ceasefire and SDN delisting of Rosneft/Lukoil remain unlikely individually but not negligible given ongoing diplomatic pressure, so combined probability is moderate-low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.delist_g_cf",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "A durable ceasefire would create strong pressure for sanctions relief as part of a broader deal, but delisting major sanctioned entities like Rosneft/Lukoil typically requires sustained peace and negotiated conditions, which may not fully materialize within the narrow window even if a ceasefire holds.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.euassets_and_nocf",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Ceasefire unlikely (~15-20% chance of durable YES) but EU already chose joint borrowing over reparations loan, making principal seizure adoption highly unlikely, so joint probability is low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.house",
+  "model": "claude-sonnet-5",
+  "p": 0.68,
+  "rationale": "Historical midterm swings against the incumbent president's party, combined with modest generic ballot Democratic leads, make a 3-seat net gain more likely than not, though redistricting and incumbency effects add uncertainty.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.senate",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "The 2026 Senate map is very unfavorable for Democrats, who would need a net gain of 4 seats against a light Republican-defended map, making a 51+ seat majority unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.both",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "House flip is plausible for Democrats given midterm dynamics, but Senate net gain of 4 seats to reach 51 is very unlikely given the unfavorable map, making both chambers together improbable.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.either",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "House flip is quite likely given midterm dynamics against the incumbent party and a small 3-seat requirement, even though Senate flip is unlikely, making 'at least one chamber' highly probable.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.neither",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Senate map heavily favors GOP so they likely retain it, but House is genuinely competitive with midterm dynamics favoring Democrats, making the combined 'retain both' outcome roughly a coin-flip-ish but slightly below even given House vulnerability.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.senate_g_house",
+  "model": "claude-sonnet-5",
+  "p": 0.13,
+  "rationale": "Conditional on Democrats winning the House (implying a strong Democratic environment), a net Senate gain of 4 seats is still very difficult given the unfavorable 2026 Senate map, but somewhat more plausible than in an average environment.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.sortie45",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "Given a 10-month window and historical precedent of large PLA exercises (often around Taiwan elections, national holidays, or US-Taiwan interactions) frequently producing 45+ sorties spikes despite a lull in early 2026, it's likely at least one such surge occurs.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.fms1b",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "Taiwan has already earmarked a large special budget for a follow-on package and DSCA notifications have historically followed reserved funds within a year, but timing over a 10-month window is uncertain given typical bureaucratic delays.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.quarantine",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "This would represent a major escalation toward blockade-like measures that China has not yet implemented despite rising tensions, making it unlikely within this specific 10-month window absent a major triggering crisis.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.quar_g_sortie",
+  "model": "claude-sonnet-5",
+  "p": 0.07,
+  "rationale": "Even amid a large PLA aircraft surge, formal PRC vessel inspection/customs-declaration mandates for Taiwan ports would be a major escalation beyond historical precedent (like the 2024/2025 blockade-style drills which used exercise-zone declarations, not general customs requirements), making it plausible but unlikely within this window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.sortie_and_quar",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Event 1 is plausible given past large-scale exercises, but event 2 (a general PRC-announced inspection/customs requirement for Taiwan-bound commercial vessels) would be a major escalation with no current precedent, making the joint probability low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.fms_and_quar",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Arms sale >$1B in this window is plausible (~40-50%) but a general PRC vessel-inspection mandate is a rare escalatory step (~10-15%), and both co-occurring is unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.reearth",
+  "model": "claude-sonnet-5",
+  "p": 0.25,
+  "rationale": "Suspension runs to 10 November 2026, and given ongoing US-China trade tensions there's a meaningful but not dominant chance of reinstatement or lapse before year-end, though both sides have incentive to maintain the truce.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.bis_jan",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "Formal regulatory rescission via Federal Register within this narrow 5-month window is unlikely given typical rulemaking timelines and current policy direction, though political pressure creates some non-trivial chance.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.bis_jun",
+  "model": "claude-sonnet-5",
+  "p": 0.13,
+  "rationale": "Formal BIS rulemaking to rescind or tighten the policy within this window is possible amid political pressure but requires a deliberate regulatory action, which is less likely than continuation of the current stance given administration's export deal orientation.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.bisjan_g_reearth",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "Conditional on China's rare-earth controls being back in force by year-end, this would signal a breakdown of the truce dynamic that underpinned the January 2026 chip policy, making a US retaliatory tightening likely though not certain given bureaucratic lag and possible partial/negotiated responses.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.reearth_and_bisjan",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Both events require significant policy reversals against current de-escalation trends, and their conjunction makes it quite unlikely though not negligible given ongoing US-China tensions.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.reearth_and_bisjun",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Both events require significant policy reversals against current de-escalation trends in US-China trade truce, making joint occurrence unlikely though each has modest individual probability.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.ssd",
+  "model": "claude-sonnet-5",
+  "p": 0.22,
+  "rationale": "Dialogue is suspended and relations strained, but New START expiring in Feb 2026 creates pressure for renewed talks, leaving moderate but below-even odds of a qualifying high-level meeting within the window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.newlimits",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Given strained US-Russia relations, ongoing war in Ukraine, and no active formal negotiations toward a numerical successor treaty, a signed reciprocal ceiling agreement within this narrow window is unlikely though not impossible.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.newlimits_g_ssd",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "Even if high-level talks resume, negotiating and finalizing a numerically specific reciprocal ceiling within this narrow window is a high bar given current tensions and typical treaty negotiation timelines.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.newlimits_g_nossd",
+  "model": "claude-sonnet-5",
+  "p": 0.01,
+  "rationale": "Without high-level bilateral talks even occurring, reaching a signed numerical arms-control agreement in this window is extremely unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.ssd_and_newlimits",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Given suspended strategic stability dialogue and no negotiation track, both a high-level meeting and a signed numerical arms treaty within this short window is highly unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.ntest_and_nolimits",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Nuclear testing by any of these states remains very unlikely despite rhetoric, while a new bilateral treaty is also unlikely given post-New START tensions, making the low-probability test event the binding constraint on this conjunction.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.nuketest",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "Despite readiness at Punggye-ri, North Korea has refrained from testing since 2017, and a 10-month window without strong new triggers makes an actual test unlikely though not negligible.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.icbm",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "New solid-fuel ICBM engine tested and unveiled system pending flight test suggest elevated but uncertain likelihood within the 10-month window, tempered by North Korea's pattern of prolonged pauses and possible diplomatic timing considerations.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.summit",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Trump has expressed interest in meeting Kim again, but no concrete summit plans exist and North Korea has shown limited reciprocal interest amid its deepening Russia ties, making a confirmed meeting in this window plausible but unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.nuke_and_icbm",
+  "model": "claude-sonnet-5",
+  "p": 0.04,
+  "rationale": "Nuclear test remains unlikely in this window despite readiness, though ICBM flight test alone is plausible; the conjunction of both is low probability.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.nuke_g_icbm",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "An ICBM test alone doesn't strongly imply a nuclear test given North Korea's historical pattern of separating these events and no clear political signal of imminent seventh test.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.summit_g_noicbm",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "Absence of ICBM tests suggests a calmer period possibly conducive to diplomacy, but a full Trump-Kim summit within this narrow 10-month window with dual confirmation remains logistically and politically unlikely given no current summit planning signals.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.shutdown",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Given the history of frequent CR brinkmanship and recent 2025 shutdown precedent, there's a meaningful but not majority chance Congress again fails to pass appropriations or another CR by the Dec 4 deadline for 24+ hours.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.dodjan",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "Given both chambers hadn't passed defense appropriations as of late July 2026 and Congress historically relies on CRs into the new year, full-year enactment by Jan 31, 2027 is unlikely though not impossible.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.dodjun",
+  "model": "claude-sonnet-5",
+  "p": 0.6,
+  "rationale": "Congress historically enacts full-year defense appropriations by mid-year in most cycles, and by June 30 there is typically substantial pressure to pass at least an omnibus/defense bill, though recent years show frequent delays into CRs past that date, giving a moderate but not high probability.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.no_dodjun",
+  "model": "claude-sonnet-5",
+  "p": 0.25,
+  "rationale": "Historically DoD full-year appropriations are often enacted by mid-year, but given current congressional dysfunction and frequent CR reliance, there's a meaningful chance funding remains under a CR through June 30, 2027.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.shutdown_and_dodjan",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Both a shutdown and rapid full-year DoD appropriations by Jan 31 are individually plausible but jointly unlikely given historical slow pace of defense appropriations especially after a shutdown disruption.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.dodjan_g_shutdown",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "A shutdown implies the CR lapsed without full-year appropriations passing, and defense bills historically lag even further behind in resolution given ongoing disputes, making full enactment by Jan 31 unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.low",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "H1 was well below average, but H2 includes peak Atlantic hurricane season and typhoon season, so a single major landfalling event could push full-year totals above 80B despite the low first half.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.mid",
+  "model": "claude-sonnet-5",
+  "p": 0.5,
+  "rationale": "H1 was low (46B), but H2 typically includes hurricane season peak losses, so full-year could land in the 80-125B range given historical variance, though there's meaningful chance it stays below 80B if H2 stays quiet like H1.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.high",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "H1 2026 was already 28% below average and the second half would need to be extraordinarily catastrophic (~$79B, well above typical H2 averages) to reach $125B for the full year, making this unlikely though not impossible given hurricane/wildfire season risk.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.mid_or_high",
+  "model": "claude-sonnet-5",
+  "p": 0.94,
+  "rationale": "These two bands together cover all outcomes \u2265$80B, and given H1 losses of $46B plus typical H2 seasonal catastrophe activity (hurricanes, etc.), full-year 2026 losses falling below $80B is quite unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.not_low",
+  "model": "claude-sonnet-5",
+  "p": 0.68,
+  "rationale": "H2 typically includes major hurricane season losses (often exceeding H1), and even a below-average H2 (~$40-50B) combined with $46B H1 would push totals near or above $80-90B, though a very quiet H2 season could keep it below $80B.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.mid_given_not_low",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "H1 was low (46B), so H2 losses would need to be moderate-to-high to reach 125B+; given the slow start, a mid-range full-year total (80-125B) is more likely than a strong late-year surge pushing it above 125B.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.hur1",
+  "model": "claude-sonnet-5",
+  "p": 0.42,
+  "rationale": "Below-normal season forecast lowers odds somewhat, but historical base rate of a US hurricane landfall Sep-Nov is fairly high (~50-60%), so a moderate reduction gives roughly 0.4-0.45.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.hur3",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Below-normal season forecast with slow start makes 3+ US hurricane landfalls in Sep-Nov a low-probability but not impossible outcome.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.maj1",
+  "model": "claude-sonnet-5",
+  "p": 0.19,
+  "rationale": "Below-normal season with slow start reduces base rate historical probability (~40%) of a major US hurricane landfall to roughly this level.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.maj_given_hur1",
+  "model": "claude-sonnet-5",
+  "p": 0.42,
+  "rationale": "Historically roughly 40% of US hurricane landfalls are major hurricanes, so conditional on a landfall occurring, this base rate applies.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.hur3_or_maj",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Given an active NOAA outlook with 3-6 hurricanes expected, historical base rates suggest roughly a one-third chance of either 3+ hurricane landfalls or a major hurricane landfall in the Sep-Nov window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.hur3_and_maj",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Three or more distinct hurricane landfalls plus a major hurricane landfall in a single season is a historically rare combination, occurring in only a handful of seasons on record.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.ns12",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Below-normal El Ni\u00f1o outlook (8-14 named storms, midpoint ~11) with only 2 storms by late July suggests a slower pace, making 12+ plausible but somewhat below even odds.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.mega20",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "Sep-Dec covers peak Atlantic hurricane season, but a single event reaching $20B+ insured loss is a relatively rare tail event, especially given the recent quiet streak.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Soft market trend (down 12% Jan, 16% by July) suggests continued softening into January 2027, but reaching a full 15% annual decline requires acceleration beyond the mid-year pace, making it plausible but not the base case.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15_given_mega20",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "A large Q4 catastrophe (e.g., major hurricane) combined with already softening trend (16% down mid-year) could push rates down further, but a fresh $20bn+ loss event would likely dampen further softening or even firm rates somewhat, making a further acceleration to -15% at Jan 2027 plausible but not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15_given_no_mega20",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "Given no major Q4 catastrophe and momentum already at -16% mid-year, softening likely continues or accelerates toward year-end, making a further cumulative drop of at least 15% plausible but not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.ns12_and_mega20",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "12+ named storms is roughly a coin-flip-to-slightly-below likelihood, but a $20B+ single event in Sep-Dec given the recent quiet streak is much less likely, making the joint probability low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.fire100k",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Given severe drought conditions, low snowpack, and the Sep-Feb window covering peak Santa Ana/Diablo wind fire season historically producing megafires like the 2017-2018 and 2020 fires, there's a substantial but not majority chance of a 100k+ acre fire.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.quake60",
+  "model": "claude-sonnet-5",
+  "p": 0.09,
+  "rationale": "California M6+ events occur roughly once every 3-6 years on average, so a 7-month window has a base rate of roughly 8-10%.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.loss2b",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "This window covers peak California wildfire season (Sept-Nov) and includes possibility of a major CA earthquake, but a $2B+ single event is not guaranteed every year given variability in wildfire severity and rarity of major damaging earthquakes.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.loss2b_given_fire100k",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "A 100,000+ acre California wildfire suggests severe fire conditions that could drive insured losses near urban interfaces, but many large wildfires burn mostly wildland with insured losses well under $2B, so this remains a meaningful but not overwhelming probability.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.fire_and_loss",
+  "model": "claude-sonnet-5",
+  "p": 0.14,
+  "rationale": "Both a 100k-acre CA fire in the Sept-Feb window and a correlated \u2265$2B insured wildfire/earthquake loss are individually plausible but not likely given dry conditions increase risk somewhat, yet historically most seasons don't produce a single 100k-acre fire nor a $2B+ event in that specific window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.loss2b_given_quake60",
+  "model": "claude-sonnet-5",
+  "p": 0.22,
+  "rationale": "A California M6+ quake doesn't guarantee $2B+ insured losses (many large CA quakes are offshore/remote), and fall/winter wildfire season could independently trigger a $2B+ event, but neither is highly likely in this specific window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.nadv_jun",
+  "model": "claude-sonnet-5",
+  "p": 0.87,
+  "rationale": "Strong pivotal data, no adcomm planned, no flagged review issues, and PDUFA date of 30 Dec 2026 falls well before the 30 June 2027 cutoff, leaving buffer for typical minor delays.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.nadv_dec",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "Strong pivotal data, no adcom planned, and priority review with clean endpoints suggest high likelihood of on-time approval, though minor delays/CRLs remain possible.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.adv_jun",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "Standard 10-month review with strong efficacy data suggests likely action around April 2027, well before deadline, but filing acceptance and priority review status remain uncertain, and approval is not guaranteed given no safety issues known yet.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.nadv_dec_given_jun",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "FDA approvals typically occur on or shortly before the PDUFA date rather than being delayed months later, especially with no adcom and no identified review issues.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.both_indications",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Non-advanced approval by Dec 2026 PDUFA is likely (~80%), but advanced indication lacks a PDUFA date and standard review would land near April 2027, leaving tight margin before June 30 2027, so joint probability is moderate.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.adv_given_nadv_dec",
+  "model": "claude-sonnet-5",
+  "p": 0.15,
+  "rationale": "Standard review clock without priority designation would place action around April 2027, but filing acceptance, potential priority review, and possible delays make approval by June 30 2027 uncertain though plausible given strong efficacy data and first approval already granted.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.approve26",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "The lack of statistically significant OS benefit and only modest, non-significant Western-subgroup HR of 0.76 raises real regulatory risk despite PFS success, making approval plausible but far from certain by year-end.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.h3_os",
+  "model": "claude-sonnet-5",
+  "p": 0.15,
+  "rationale": "The missed PFS interim in squamous suggests weaker efficacy signal, and OS statistical significance within this timeframe is uncertain given typical OS maturation timelines and mixed prior data.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.file_1l",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "Summit has strong HARMONi first-line data and has expressed intent to file, but regulatory submission timelines with FDA discussions post-CRL concerns for the EGFR indication make an actual sBLA submission by mid-2027 plausible but not highly likely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.approve_given_h3",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Even with positive HARMONi-3 news boosting confidence in the drug, the HARMONi BLA's own OS data remains non-significant and the PDUFA date is close, so FDA is unlikely to approve based on a different trial's positive readout by year-end 2026.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.approve_given_not_h3",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "Given HARMONi's OS result was not statistically significant and HARMONi-3 also failed to confirm benefit, FDA approval by year-end 2026 on this weak survival data seems unlikely despite the PFS benefit and unmet need, though some chance remains given accelerated approval pathways or PFS-based approval.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.h3_and_file",
+  "model": "claude-sonnet-5",
+  "p": 0.04,
+  "rationale": "Both a positive OS readout and a full BLA submission within under a year is an aggressive timeline given prior PFS miss and no submission guidance yet.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.mfn3",
+  "model": "claude-sonnet-5",
+  "p": 0.25,
+  "rationale": "With 86% of the branded market already covered by ~17 major manufacturers, remaining unsigned companies are smaller/less pressured, so reaching 3 new deals in this window is possible but not highly likely given diminishing momentum and negotiation complexity.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.irp_rule",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "The administration has favored voluntary agreements and TrumpRx over formal MFN rulemaking, and legal/political obstacles make a binding Medicare/Medicaid rule in this window unlikely though not implausible given ongoing pressure to formalize the program.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.tariff_cut",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "The administration has shown commitment to the 100% rate with exemption mechanisms rather than broad rate reduction, making a general rate cut below 100% before mid-2027 unlikely though not implausible given trade negotiation pressures.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.irp_given_mfn3",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Even with continued voluntary MFN agreements, the administration has favored non-regulatory mechanisms (direct deals, TrumpRx), and formal Medicare/Medicaid payment rulemaking tying prices to international benchmarks would face significant legal and procedural hurdles within this timeframe.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.irp_given_not_mfn3",
+  "model": "claude-sonnet-5",
+  "p": 0.07,
+  "rationale": "Slower deal-making suggests the administration remains focused on voluntary agreements rather than formal rulemaking, and codifying MFN pricing into binding Medicare/Medicaid rules faces significant legal and administrative hurdles unlikely to be resolved in this short window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.mfn3_and_irp",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "New MFN deals with remaining smaller manufacturers are plausible but far from certain within the window, while a formal Federal Register rule tying Medicare/Medicaid payment to foreign prices remains unlikely given the administration's reliance on voluntary agreements and TrumpRx rather than binding rulemaking, and both conditions must hold jointly.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.pheic_new",
+  "model": "claude-sonnet-5",
+  "p": 0.13,
+  "rationale": "Base rate of ~8 PHEICs in 21 years (~0.38/year) applied to a 10-month window suggests roughly 12-15% probability of a new declaration.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.pheic_flu",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "No sustained human-to-human transmission has emerged despite years of H5N1 spread, so a new influenza PHEIC in this 10-month window is unlikely but not negligible given ongoing dairy cattle outbreaks.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.h5_3us",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Case rate has slowed dramatically (only ~1 new case in 15 months), and while poultry/dairy exposure risk continues into fall/winter, reaching 3+ new confirmed cases in this 9-month window would require a marked uptick from the recent trend.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.flu_given_h5",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Even with a modest rise in US H5 cases, a full PHEIC declaration requires sustained human-to-human transmission or global spread, which remains unlikely in this timeframe.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.flu_and_h5",
+  "model": "claude-sonnet-5",
+  "p": 0.01,
+  "rationale": "PHEIC declaration for influenza is rare and unlikely in this window, making the joint probability very low even though H5 case growth alone is plausible.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.pheic_nonflu",
+  "model": "claude-sonnet-5",
+  "p": 0.07,
+  "rationale": "PHEIC declarations are rare (roughly one every 2-3 years historically), and most plausible candidates in this window are non-influenza, but base rate for any new PHEIC in a 10-month window remains modest.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED400",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "Given the Fed cut to 3.50-3.75% by mid-2026 amid economic weakness, a rate hike back above 4.00% within the next year is unlikely absent a significant inflation resurgence.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED425",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Fed policy has been easing/holding in 2026, and two rate hikes back to 4.25%+ by mid-2027 would require a significant inflation resurgence not currently signaled.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED400_g_FED425",
+  "model": "claude-sonnet-5",
+  "p": 0.99,
+  "rationale": "If the rate is at or above 4.25%, it necessarily is at or above 4.00%, so this is nearly certain by logical containment.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.CORE30",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "Core CPI has been declining trend-wise (2.9%\u21922.6%) and reaching 3.0%+ within six months would require a sharp reversal, which seems unlikely absent major tariff-driven shocks.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED425_g_CORE30",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "If core CPI stays at or above 3.0% through early 2027, the Fed would likely hold or cut rather than hike, making two 25bp increases to 4.25%+ unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED425_and_CORE30",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Core CPI hitting 3.0%+ is plausible given tariff pressures, but two 25bp Fed hikes by mid-2027 is very unlikely given current easing bias, making the joint probability quite low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.BELOW",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Fed has already cut through mid-2026 to 3.50-3.75%, and with four more meetings remaining and inflation/labor data uncertain, further cuts are plausible but not clearly the base case given recent pause signals.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.SAME",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "With three FOMC meetings remaining (Sep, Oct, Dec) and the Fed already at 3.50-3.75% amid a cutting cycle, further cuts are plausible but not certain, making unchanged less likely than a cut.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.ABOVE",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Fed has been cutting/holding in 2026, and a rate hike by year-end seems very unlikely given current easing bias and no inflation resurgence signals reported.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.UNEMP45",
+  "model": "claude-sonnet-5",
+  "p": 0.2,
+  "rationale": "Given current 4.2% rate and weak but not collapsing labor market, a rise to 4.5%+ within four months requires notable deterioration, which is possible but not the base case.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.BELOW_g_UNEMP45",
+  "model": "claude-sonnet-5",
+  "p": 0.85,
+  "rationale": "A jump to 4.5%+ unemployment by year-end would signal significant labor market deterioration, making aggressive Fed easing (at least one 25bp cut below current 3.75% upper bound) highly likely given three remaining meetings.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.BELOW_g_notUNEMP45",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "With unemployment staying benign (below 4.5%), the Fed has less urgency to cut aggressively, making a full percentage point of cuts by year-end (to below 3.75% upper limit) plausible but not the base case\u2014likely one or two 25bp cuts rather than the required cumulative move below current levels.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.CPIOCT35",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Given the sharp drop from 4.2% to 3.5% suggests disinflationary momentum and base effects from prior year, but uncertainty over tariff pass-through and energy volatility could keep inflation near this level, though further declines toward 3% seem more likely than staying at or above 3.5%.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.Y10_490",
+  "model": "claude-sonnet-5",
+  "p": 0.15,
+  "rationale": "Requires a ~26bp rise above recent highs over 5 months, plausible but not likely absent a major inflation/rate-shock scenario.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.both",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "CPI staying at/above 3.5% is plausible (~40-50%), but DGS10 reaching 4.90% from 4.64-4.70% requires a substantial yield rise (~15-25%), and joint probability with some positive correlation is roughly 10%.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.either",
+  "model": "claude-sonnet-5",
+  "p": 0.32,
+  "rationale": "CPI likely stays near or below 3.5% given recent decline to 3.5% in June with disinflationary trend, but 10Y yield reaching 4.90% from 4.64-4.70% requires a meaningful rise which is plausible but not likely within the window, so combined probability of either trigger is moderate but under 50%.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.Y10_g_CPI",
+  "model": "claude-sonnet-5",
+  "p": 0.28,
+  "rationale": "Persistent high inflation (\u22653.5%) would push yields up from 4.64-4.70%, but reaching 4.90% within 5 months requires a notably larger move than recent range, making it plausible but not favored.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.Y10_g_notCPI",
+  "model": "claude-sonnet-5",
+  "p": 0.13,
+  "rationale": "With CPI below 3.5% suggesting continued disinflation, upward pressure on yields from inflation concerns is reduced, making a 26bp+ rise from current ~4.64-4.70% to 4.90% over five months less likely though not implausible given fiscal/supply factors.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.BRENT110",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Requires a ~20% jump from current ~91 levels amid de-escalating Iran tensions, which is possible but unlikely absent a new major supply shock.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.HICP30",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Given the declining trend from 3.2% to 2.8% and easing energy base effects, a jump back to 3.0%+ in any single month through year-end seems unlikely but not negligible given energy inflation volatility.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.ECB275",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Two more 25bp hikes within three meetings seems unlikely given ECB just paused after reaching 2.25%, with no strong signal of accelerating tightening cycle.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.HICP_g_BRENT",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "A sustained Brent surge to $110+ would raise energy inflation pressure enough to push euro area HICP back near or above 3%, but base effects and current disinflation trend (2.8% in June) make a sustained jump to 3.0%+ within just a few months uncertain rather than likely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.HICP_and_BRENT",
+  "model": "claude-sonnet-5",
+  "p": 0.02,
+  "rationale": "Brent reaching $110 from ~$91 would require a major supply shock, and even then euro area inflation hitting 3.0%+ simultaneously is unlikely given current disinflation trend, making the joint probability quite low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.ECB_g_HICP",
+  "model": "claude-sonnet-5",
+  "p": 0.12,
+  "rationale": "Even with inflation surprising above 3%, ECB has been on hold and would likely need sustained evidence before hiking twice more by year-end, making two additional 25bp hikes unlikely but not negligible.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.BOJ125",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Reuters surveys point to Q4 2026 hike likely, but a second hike by end-March 2027 is less certain given BoJ's gradual approach and data-dependency.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.JPY168",
+  "model": "claude-sonnet-5",
+  "p": 0.28,
+  "rationale": "A move from 163.8 to 168.00 (~2.6%) over 7 months is plausible given yen volatility and prior MOF intervention near these levels, but interventions historically cap sharp moves beyond such thresholds.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.MOFINT",
+  "model": "claude-sonnet-5",
+  "p": 0.25,
+  "rationale": "MOF interventions are rare and event-driven; a 6-month window gives moderate but not high chance given yen volatility history but recent record intervention suggests threshold for further action is now higher.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.MOF_g_JPY168",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "If yen hits 168+ (a level near prior intervention zones), MOF has historically shown willingness to intervene, though thresholds and political calculus vary, making it a close call but slightly more likely than not.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.JPY_and_MOF",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "168 requires ~2.6% further yen depreciation which is plausible but not likely within 7 months, and intervention historically occurs near/after such levels, so joint probability is modest but well below independent guesses.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.JPY_g_BOJ125",
+  "model": "claude-sonnet-5",
+  "p": 0.15,
+  "rationale": "Conditional on BOJ hiking further to 1.25%+ (a hawkish tightening scenario), yen would likely strengthen against the dollar rather than weaken to 168, making a move from 163.8 to 168+ unlikely though not impossible given still-large rate differentials and potential dollar strength shocks.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.U48",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "A 0.6pp jump from 4.2% to 4.8% within 7 months would require a sharp labor market deterioration not currently signaled by the gradual softening trend described.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.U52",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "A jump from 4.2% to 5.2%+ within 3-9 months would require a rapid, severe deterioration in labor markets not currently signaled by trend data.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.U48_g_U52",
+  "model": "claude-sonnet-5",
+  "p": 0.97,
+  "rationale": "If unemployment reaches 5.2%+ at any point, it almost certainly also crosses 4.8% earlier or in the same trajectory given current 4.2% baseline and gradual monthly changes.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.HY400",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "Spreads are near cycle lows (~2.77-2.84) and would need a sharp risk-off/recession-like shock to jump 120+bps within 8 months, which is possible but not the base case.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.HY400_g_U48",
+  "model": "claude-sonnet-5",
+  "p": 0.65,
+  "rationale": "A jump to 4.8%+ unemployment implies significant labor market deterioration, likely accompanied by recession fears or credit stress that would widen HY spreads from 2.77 to 4.00+, though spreads have been resilient historically at similar unemployment levels.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.HY400_and_U48",
+  "model": "claude-sonnet-5",
+  "p": 0.03,
+  "rationale": "Both a 0.6pp unemployment jump and a spread spike above 4.00 would require a significant recession/credit stress scenario within 9 months, which is possible but unlikely given current low levels and no signs of imminent deterioration; joint probability is low since both events are correlated but each individually unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.DD10",
+  "model": "claude-sonnet-5",
+  "p": 0.32,
+  "rationale": "10-month window with historical base rate of ~30-35% for a 10% correction, currently already 2% off highs increasing near-term risk.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.DD20",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "A 20% bear market within a 10-month window is historically rare (~10-15% base rate) and current drawdown is only ~2%, requiring a substantial new selloff with no strong current catalyst evident.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.DD10_g_DD20",
+  "model": "claude-sonnet-5",
+  "p": 0.99,
+  "rationale": "A 20% drawdown almost certainly passes through a 10% drawdown first given the continuous nature of price paths.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.FEDCUT",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "Given nearly a year until resolution and markets only pricing 78% odds of zero cuts within 2026 alone, further easing by mid-2027 is quite plausible, making at least one 25bp cut by then more likely than not.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.FEDCUT_g_DD20",
+  "model": "claude-sonnet-5",
+  "p": 0.75,
+  "rationale": "A 20% bear market by mid-2027 would almost certainly prompt aggressive Fed easing from the current 3.75% upper bound, making at least one 25bp cut highly likely though not certain given inflation constraints.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.DD20_and_FEDCUT",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "A 20% market crash combined with substantial Fed rate cuts by mid-2027 is plausible only in a recession scenario, which given current market highs and gradual easing expectations seems relatively unlikely though not negligible.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.FRDOWN",
+  "model": "claude-sonnet-5",
+  "p": 0.22,
+  "rationale": "France's fiscal trajectory and political fragmentation keep downgrade risk elevated, but recent affirmations and negative-outlook-first patterns suggest agencies are more likely to hold or shift outlooks before actually cutting within this 10-month window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.EUR110",
+  "model": "claude-sonnet-5",
+  "p": 0.2,
+  "rationale": "Requires ~3.2% depreciation over 10 months against a backdrop of ECB hawkishness, which is plausible but not the base case given current levels near 1.135-1.137.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.both",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Both a downgrade and a significant EUR/USD drop to 1.10 are individually unlikely given recent affirmations and current spot ~1.137, making the joint probability low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.either",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "A France rating downgrade in this specific window seems unlikely given recent affirmations, but EUR/USD reaching 1.1000 within ~10 months from 1.1367 is a meaningful move (~3% depreciation) that has a non-trivial probability given FX volatility.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.neither",
+  "model": "claude-sonnet-5",
+  "p": 0.28,
+  "rationale": "Rating downgrades in this 10-month window seem unlikely (~15-20%) given recent affirmations, but EUR/USD dropping to 1.10 from 1.1367 is plausible (~20-25%) given volatility, so the probability both fail to happen (neither event occurs) is roughly the product of their complements, adjusted for some correlation.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.EUR_g_FRDOWN",
+  "model": "claude-sonnet-5",
+  "p": 0.15,
+  "rationale": "A France downgrade would pressure EUR modestly but a move from ~1.13 to 1.10 (about 3%) within 10 months requires broader euro-negative catalysts beyond a French-specific downgrade, making it plausible but not likely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.dram_up",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Given the current strong DRAM price upcycle driven by AI-related supply constraints and TrendForce's own warning of moderation but continued increases, a 5%+ QoQ rise forecast for 1Q27 is plausible but momentum is expected to decelerate through subsequent quarters, making it a close call.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.mu55",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Requires ~10-20% QoQ growth beyond already aggressive Q4 guidance ($50B), consistent with strong memory upcycle momentum but still a stretch given typical sequential growth rates.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.mu62",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "Reaching $62B would require ~24% QoQ growth after already guiding to $50B, an extremely aggressive jump beyond typical sequential growth patterns even amid strong memory demand.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.both",
+  "model": "claude-sonnet-5",
+  "p": 0.18,
+  "rationale": "Both require a continued aggressive DRAM upcycle; each individually is plausible but not base case (Micron needing ~10% QoQ growth beyond guidance, and TrendForce sustaining 5%+ price hikes into 1Q27), and their joint requirement further reduces probability despite positive correlation.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.mu55_g_dram",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Given continued strong DRAM pricing momentum implied by the conditional, Micron's FQ1'27 revenue growth from the ~$50B FQ4'26 guide to $55B+ (10%+ QoQ) is plausible but not the base case, given typical sequential growth rates and supply constraints.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.mu55_g_notdram",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "Conditional on DRAM price growth moderating below 5% QoQ in 1Q27, Micron's revenue momentum would likely slow toward or below the $50-51B trajectory, making $55B unlikely though not impossible given AI/HBM demand strength.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.bis_rule",
+  "model": "claude-sonnet-5",
+  "p": 0.6,
+  "rationale": "Given the fast-evolving, politically contentious nature of AI chip export policy and frequent regulatory activity in this space over a 10-month window, further rule changes are more likely than not, though not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.nv6",
+  "model": "claude-sonnet-5",
+  "p": 0.28,
+  "rationale": "Given US export restrictions blocking H20/data center sales and Nvidia's own guidance assuming no China compute revenue, reaching $6B would require significant policy easing or resumed shipments, which is plausible but not the base case within this timeframe.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.nv10",
+  "model": "claude-sonnet-5",
+  "p": 0.07,
+  "rationale": "China revenue has been depressed by export restrictions, and doubling to $10B+ in one quarter would require a major policy reversal that seems unlikely by October 2026.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.both",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "Both conditions require significant near-term changes (new BIS rule loosening/tightening export policy and a sharp China revenue rebound to $6B+), each individually uncertain and jointly less likely given ongoing policy volatility and Nvidia's cautious China outlook.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.nv6_g_rule",
+  "model": "claude-sonnet-5",
+  "p": 0.22,
+  "rationale": "Reaching $6.0B from a $4.55B base within two quarters requires substantial China Data Center recovery, which even a favorable licensing rule change likely wouldn't fully deliver by the Oct 2026 quarter given lead times and geopolitical uncertainty.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.either",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "Given active regulatory volatility around advanced chip export policy and the plausible rebound in Nvidia's China revenue after H200-class approvals, at least one of these two fairly likely triggers should occur within the window.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.low",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Given 2026 midpoint of ~62B and >40% revenue growth trajectory, continued AI capex acceleration makes a further increase toward or above 75B midpoint plausible, though not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.mid",
+  "model": "claude-sonnet-5",
+  "p": 0.5,
+  "rationale": "Given 2026 midpoint ~62B and TSMC's historical ~10-20% annual capex growth trend plus AI demand acceleration, 2027 guidance likely lands in the low-to-mid 70s to high 80s, making the 75-90B range plausible but not certain.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.high",
+  "model": "claude-sonnet-5",
+  "p": 0.2,
+  "rationale": "TSMC's 2026 midpoint is ~$62B, and reaching a $90B midpoint for 2027 would require an extraordinary ~45% jump in one year, which is plausible given AI demand trends but still a large stretch beyond typical growth rates.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.at_least_75",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Given consistent ~15-20% YoY capex growth trend and 2026 midpoint of $62B, a 2027 range with midpoint $75-89B is plausible but not certain given AI demand uncertainty and possible moderation.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.high_g_at_least_75",
+  "model": "claude-sonnet-5",
+  "p": 0.15,
+  "rationale": "Given midpoint reaches at least $75B, a jump to $90B+ (50% YoY growth) would be an extreme acceleration beyond typical incremental increases seen historically.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.not_low",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Given 2026 capex midpoint of ~$62B and continued strong AI-driven demand growth trends, a 2027 midpoint reaching or exceeding $75B (a ~20%+ increase) is plausible but not certain, so the probability that it stays below $75B is moderate but somewhat less than even.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.goog260",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "2026 midpoint is ~$200B with 'significant increase' expected in 2027, so $260B midpoint (30% growth) is plausible but not the modal outcome given typical guidance conservatism.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.goog300",
+  "model": "claude-sonnet-5",
+  "p": 0.25,
+  "rationale": "2026 midpoint is ~$200B with explicit guidance for 'significant' growth in 2027, but jumping to $300B midpoint (50% growth) is a large leap beyond typical increments, making it plausible but not the most likely outcome.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.meta185",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Given the steep 2026 midpoint (~$135B) and continued AI infrastructure buildout trend, a 2027 midpoint above $185B (roughly 37% growth) is plausible but not certain, especially with possible moderation in capex growth rate.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.both",
+  "model": "claude-sonnet-5",
+  "p": 0.05,
+  "rationale": "Both thresholds require capex growth far exceeding recent trends (Alphabet ~30% increase to 260B midpoint, Meta ~37% increase to 185B midpoint) within a single guidance jump, which is plausible for continued AI investment but unlikely for both to hit such aggressive levels simultaneously by early 2027.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.either",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "Both thresholds require huge YoY jumps (~30% for Alphabet midpoint vs 2026, ~37% for Meta) that seem aggressive given typical guidance increments, though continued AI capex growth makes some rise likely but probably not to these levels by the early 2027 deadline.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.meta_g_goog",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "If Alphabet signals capex growth to ~$260B+ (33% growth over 2026 midpoint), Meta faces similar AI infrastructure pressures and its 2026 midpoint of $135B would need to rise ~37% to $185B, which is plausible but not certain given Meta's more measured guidance pattern and correlated but not identical capex trajectories.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.cust14a",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "Intel's own guidance points to firm decisions arriving in H2 2026-H1 2027, giving meaningful but not high odds of a committed customer announcement within this window given ongoing 14A yield and execution risks.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.q4rev",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Q4 typically sees seasonal uplift from Q3, and with Q3 guided at 15.8-16.8B and strong AI/data center growth, reaching 17.5B is plausible but not assured given historical Q3-to-Q4 patterns and execution risk.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.foundryloss",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "The trend shows narrowing losses (~$300-1100M improvement per quarter), so reaching under $1.5B by Q4 2026 is plausible but requires continued strong improvement in two more quarters, making it uncertain but not unlikely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.both",
+  "model": "claude-sonnet-5",
+  "p": 0.14,
+  "rationale": "Both events are plausible but uncertain individually (14A customer win maybe ~35-40%, Q4 revenue of $17.5B+ maybe ~35-40% given seasonal Q4 strength), and their joint probability assuming rough independence lands around 0.13-0.15.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.rev_g_cust",
+  "model": "claude-sonnet-5",
+  "p": 0.2,
+  "rationale": "Q3 guide midpoint ~16.3B implies typical seasonal Q4 uplift would need to be unusually strong (~7-8% QoQ) to hit 17.5B, and a 14A customer win signals positive momentum but wouldn't materially boost near-term revenue given long lead times to production.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.rev_g_nocust",
+  "model": "claude-sonnet-5",
+  "p": 0.3,
+  "rationale": "Q3 guide midpoint ~16.3B with typical seasonal Q4 uptick could reach mid-16s to low-17s, but hitting 17.5B+ requires stronger growth than trend suggests, especially absent a 14A customer catalyst boosting sentiment/orders.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.ceg1gw",
+  "model": "claude-sonnet-5",
+  "p": 0.28,
+  "rationale": "Given the active pace of large-scale nuclear/data center deals from Constellation in 2026, another 1GW+ single-counterparty deal within a 10-month window is plausible but not highly likely given capacity constraints on existing fleet.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.msft60",
+  "model": "claude-sonnet-5",
+  "p": 0.08,
+  "rationale": "The $190B for CY2026 implies quarterly capex averaging under $50B, with sequential growth from $31.9B likely but reaching $60B in a single quarter by Q4 seems steep given typical growth trajectories and prior guidance patterns.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.cranegrid",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Target is 2027 with restart progressing (LARs under review, draft EA published, FERC waiver granted), but nuclear restart projects commonly slip and the 2027-06-30 deadline only gives narrow margin against '2027' target.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.both",
+  "model": "claude-sonnet-5",
+  "p": 0.06,
+  "rationale": "Microsoft hitting $60B in a single quarter (vs $31.9B and ~$47.5B avg quarterly pace for $190B/yr) is a stretch requiring a huge jump, and Constellation announcing another 1GW+ deal in the window is plausible but not certain, so the joint probability is low.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.either",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Microsoft hitting $60B in a single quarter from ~$32B baseline seems unlikely near-term, but Constellation announcing another 1GW+ deal within a 10-month window given current AI power demand momentum is plausible, making at least one occurring moderately likely.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.msft_g_ceg",
+  "model": "claude-sonnet-5",
+  "p": 0.2,
+  "rationale": "Given $190B annual capex guidance (~$47.5B/quarter average) and steady quarterly growth, $60B in a single quarter would require a sharp acceleration beyond trend, which is plausible but not the base case even conditional on a large PPA announcement.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.ti_slab",
+  "model": "claude-sonnet-5",
+  "p": 0.8,
+  "rationale": "Guidance already targets close by H1 2027 with major regulatory hurdles (US HSR) cleared and only routine non-US antitrust approvals pending, so meeting the deadline is likely but not certain given China SAMR-type risks.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.syna_vote",
+  "model": "claude-sonnet-5",
+  "p": 0.82,
+  "rationale": "Stockholder approval votes for negotiated all-stock mergers typically pass, and the timeline (mid-2027 close guidance) leaves room for a special meeting before June 2027, though some risk exists from regulatory delays or deal terms changes pushing the vote past the deadline.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.syna_close",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "Guidance is 'mid-2027' close, which straddles the 2027-06-30 deadline, so there's meaningful but not overwhelming probability the deal closes by then given typical merger timelines and regulatory review risk.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.vote_and_close",
+  "model": "claude-sonnet-5",
+  "p": 0.35,
+  "rationale": "Guidance is 'mid-2027' close with regulatory and shareholder approval steps, so hitting the deadline of exactly 2027-06-30 for both vote and close is plausible but tight given typical semiconductor merger timelines and antitrust review risk.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.close_g_vote",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "Conditional on shareholder approval (typically occurring after regulatory review is largely complete), remaining regulatory clearances would need to finish by the mid-2027 target, which is plausible but tight given a ~$7B all-stock semiconductor deal facing multi-jurisdiction antitrust review.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.either_close",
+  "model": "claude-sonnet-5",
+  "p": 0.62,
+  "rationale": "Both deals are on track with H1/mid-2027 guidance and no reported obstacles, making it likely at least one closes by 2027-06-30, though timing guidance often slips slightly past deadlines.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.orcl800",
+  "model": "claude-sonnet-5",
+  "p": 0.55,
+  "rationale": "Given RPO growth trajectory (+$85B last quarter, huge AI deal pipeline) and roughly 3 quarters ahead, reaching $800B is plausible but requires continued strong bookings, making it a close call slightly favoring YES.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.nvda115",
+  "model": "claude-sonnet-5",
+  "p": 0.38,
+  "rationale": "Extrapolating from Q1 $81.6B and Q2 guide $91.0B at a ~10% sequential growth pace implies Q4 around $108-112B, so hitting $115B requires acceleration from the Rubin ramp, which is plausible but not the base case.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.nvda125",
+  "model": "claude-sonnet-5",
+  "p": 0.27,
+  "rationale": "Extrapolating recent ~10-12% QoQ growth from the $91B Q2 guide gives Q4 around $112-118B, so $125B requires an acceleration beyond trend, making it plausible but not the base case.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.both",
+  "model": "claude-sonnet-5",
+  "p": 0.1,
+  "rationale": "Both thresholds require aggressive extrapolation beyond current trajectories; Oracle RPO growth would need to slow less than trend and Nvidia revenue growth acceleration beyond guidance trend, making the joint event unlikely though plausible.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.orcl_g_nvda",
+  "model": "claude-sonnet-5",
+  "p": 0.4,
+  "rationale": "Strong Nvidia growth signals robust AI capex and demand consistent with Oracle's rapid RPO growth trajectory, but reaching $800B from $638B within three quarters requires continued huge bookings which is plausible but not assured.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.either",
+  "model": "claude-sonnet-5",
+  "p": 0.82,
+  "rationale": "Both metrics are on strong growth trajectories that plausibly hit the thresholds individually (~55-65% each), so the probability that at least one clears the bar is high.",
+  "asked_utc": "2026-07-27T03:01:35+00:00",
+  "arm": "fresh",
+  "sample": 0
+ }
+]

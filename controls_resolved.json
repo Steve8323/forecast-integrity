@@ -1,0 +1,182 @@
+[
+  {
+    "tid": "ctl_geo_assad_fall",
+    "domain": "geopolitics",
+    "text": "What is the probability that Bashar al-Assad ceased to hold power in Syria -- fleeing the country or otherwise losing control of Damascus to an opposition offensive -- at some point between 2024-01-01 and 2025-12-31?",
+    "resolution": "Resolves YES if Reuters and AP both reported within the window that Assad had left power and that opposition forces controlled Damascus. Resolves NO otherwise.",
+    "source": "Reuters / Associated Press wire reporting",
+    "resolved_on": "2024-12-08",
+    "outcome": 1,
+    "verified": "Assad fled and HTS-led forces took Damascus on 2024-12-08, ending 53 years of Assad family rule (Al Jazeera 1-year timeline; CNN 2024-12-09)."
+  },
+  {
+    "tid": "ctl_geo_skorea_martial_law",
+    "domain": "geopolitics",
+    "text": "What is the probability that the sitting President of South Korea declared martial law at any point between 2024-01-01 and 2025-12-31?",
+    "resolution": "Resolves YES if Yonhap or Reuters reported a formal declaration of martial law by the South Korean president within the window, regardless of how long the declaration remained in force. Resolves NO otherwise.",
+    "source": "Yonhap News Agency / Reuters",
+    "resolved_on": "2024-12-03",
+    "outcome": 1,
+    "verified": "Yoon Suk Yeol declared martial law at 22:27 KST on 2024-12-03; the National Assembly voted 190-0 to overturn it and the Cabinet terminated it ~6 hours later (CNN, CNBC, NPR)."
+  },
+  {
+    "tid": "ctl_geo_hormuz_72h",
+    "domain": "geopolitics",
+    "text": "What is the probability that Iran closed the Strait of Hormuz to commercial shipping for at least 72 consecutive hours at any point between 2024-01-01 and 2025-12-31?",
+    "resolution": "Resolves YES if Lloyd's List Intelligence or the US Navy reported that commercial transits through the strait were suspended for 72 or more consecutive hours inside the window. Parliamentary motions, threats, harassment of individual vessels, or brief disruptions do not count. Resolves NO otherwise.",
+    "source": "Lloyd's List Intelligence transit data / US 5th Fleet statements",
+    "resolved_on": "2025-12-31",
+    "outcome": 0,
+    "verified": "Iran's parliament approved a closure proposal on 2025-06-22 after US strikes on its nuclear sites, but Iran did not act to close the strait and commercial transits continued (International Crisis Group Hormuz flashpoint page; CSIS 'Strait of Hormuz in 8 Charts')."
+  },
+  {
+    "tid": "ctl_geo_ukraine_ceasefire",
+    "domain": "geopolitics",
+    "text": "What is the probability that Russia and Ukraine signed a formal ceasefire or armistice agreement halting hostilities on or before 2025-12-31?",
+    "resolution": "Resolves YES if both governments signed a written ceasefire or armistice document, as reported by Reuters. Unilaterally declared short truces, negotiation frameworks, draft texts, and unsigned peace plans do not count. Resolves NO otherwise.",
+    "source": "Reuters / European Council statements",
+    "resolved_on": "2025-12-31",
+    "outcome": 0,
+    "verified": "As of the 2025-12-18 European Council statement the EU was still urging Russia to accept a ceasefire; December 2025 Florida talks left a draft roughly '90 percent complete' but nothing signed, and the first actual truce is dated 2026 (Jamestown; Consilium press release 2025-12-19; Wikipedia '2026 Russo-Ukrainian truce')."
+  },
+  {
+    "tid": "ctl_macro_fed_50bp_cut",
+    "domain": "macro",
+    "text": "What is the probability that the US Federal Open Market Committee lowered its federal funds target range by a full 50 basis points at a single scheduled meeting at some point between 2024-01-01 and 2025-12-31?",
+    "resolution": "Resolves YES if an FOMC statement published on federalreserve.gov inside the window announces a 1/2 percentage point reduction in the target range. Resolves NO otherwise.",
+    "source": "FOMC statements, federalreserve.gov",
+    "resolved_on": "2024-09-18",
+    "outcome": 1,
+    "verified": "The 2024-09-18 FOMC statement cut the target range by 1/2 percentage point to 4-3/4 to 5 percent, 11-1 (federalreserve.gov monetary20240918a; J.P. Morgan; CNBC)."
+  },
+  {
+    "tid": "ctl_macro_ust10y_5pct",
+    "domain": "macro",
+    "text": "What is the probability that the yield on the 10-year US Treasury note was at or above 5.00 percent on any business day in calendar year 2025?",
+    "resolution": "Resolves YES if any daily observation of FRED series DGS10 dated in 2025 is greater than or equal to 5.00. Resolves NO otherwise.",
+    "source": "FRED series DGS10 (Board of Governors, H.15)",
+    "resolved_on": "2025-12-31",
+    "outcome": 0,
+    "verified": "The 2025 high was 4.79% on 2025-01-14; the yield never reached 5% in 2025, and as of mid-2026 the post-January-2025 high was ~4.7% (TradingView/TE 'US 10Y Yield Holds 2025 Peak'; CNBC 2026-07-23)."
+  },
+  {
+    "tid": "ctl_macro_nber_recession",
+    "domain": "macro",
+    "text": "What is the probability that the NBER Business Cycle Dating Committee had announced, on or before 2025-12-31, a US business-cycle peak dated in 2024 or 2025 -- that is, formally declared a new recession?",
+    "resolution": "Resolves YES if the NBER Business Cycle Dating Committee announcements page listed, as of 2025-12-31, a peak with a date in 2024 or 2025. Commentary, sahm-rule triggers, and two-quarter GDP declines do not count. Resolves NO otherwise.",
+    "source": "NBER Business Cycle Dating Committee announcements page",
+    "resolved_on": "2025-12-31",
+    "outcome": 0,
+    "verified": "NBER has announced no peak since February 2020; the committee's most recent announcement remains the 2021-07-19 dating of the April 2020 trough (nber.org business-cycle-dating announcements)."
+  },
+  {
+    "tid": "ctl_energy_new_us_reactor",
+    "domain": "energy",
+    "text": "What is the probability that a newly constructed commercial nuclear power reactor in the United States entered commercial operation between 2024-01-01 and 2025-12-31?",
+    "resolution": "Resolves YES if the US Energy Information Administration or the Nuclear Regulatory Commission records a newly built commercial power reactor declaring commercial operation inside the window. Restarts of previously operating units and research reactors do not count. Resolves NO otherwise.",
+    "source": "US EIA Today in Energy / NRC power reactor status",
+    "resolved_on": "2024-04-29",
+    "outcome": 1,
+    "verified": "Georgia Power declared Plant Vogtle Unit 4 (1,114 MW) in commercial operation on 2024-04-29 after grid connection in March 2024 (georgiapower.com press release; EIA Today in Energy id=61963)."
+  },
+  {
+    "tid": "ctl_energy_germany_nuclear_restart",
+    "domain": "energy",
+    "text": "What is the probability that the German federal government formally decided, on or before 2025-12-31, to restart at least one of the nuclear power reactors shut down under its nuclear phase-out?",
+    "resolution": "Resolves YES if a German federal cabinet decision or enacted law authorising the restart of a shut-down reactor was reported by Reuters or Clean Energy Wire on or before 2025-12-31. Ministerial regret, coalition-paper language, opposition motions, and feasibility studies do not count. Resolves NO otherwise.",
+    "source": "Reuters / Clean Energy Wire",
+    "resolved_on": "2025-12-31",
+    "outcome": 0,
+    "verified": "No restart decision was taken; the Merz government called the phase-out a 'huge mistake' but also 'irreversible', and the last three reactors (shut April 2023) have been de-fuelled and partly dismantled (Clean Energy Wire; Brussels Signal 2026-01 and 2026-03)."
+  },
+  {
+    "tid": "ctl_semis_nvda_4t_close",
+    "domain": "semis",
+    "text": "What is the probability that Nvidia finished a regular US trading session with a market capitalization above 4 trillion US dollars at some point between 2024-01-01 and 2025-12-31?",
+    "resolution": "Resolves YES if Nvidia's closing share price times shares outstanding exceeded $4.0 trillion on any regular session inside the window, as reported by major financial press. Intraday-only touches do not count. Resolves NO otherwise.",
+    "source": "Nasdaq closing prices; Reuters / Washington Post market reporting",
+    "resolved_on": "2025-07-10",
+    "outcome": 1,
+    "verified": "Nvidia touched $4T intraday on 2025-07-09 but closed at $3.97T; it closed above $4T on 2025-07-10 at $164.10/share (Washington Post 2025-07-10; CNBC 2025-07-09)."
+  },
+  {
+    "tid": "ctl_semis_nvda_dow",
+    "domain": "semis",
+    "text": "What is the probability that Nvidia replaced Intel as a component of the Dow Jones Industrial Average between 2024-01-01 and 2025-12-31?",
+    "resolution": "Resolves YES if an S&P Dow Jones Indices index-change press release inside the window announced Nvidia's addition to the DJIA in place of Intel, and the change took effect. Resolves NO otherwise.",
+    "source": "S&P Dow Jones Indices index announcements (press.spglobal.com)",
+    "resolved_on": "2024-11-08",
+    "outcome": 1,
+    "verified": "S&P DJI announced on 2024-11-01 that Nvidia would replace Intel in the DJIA before the open on 2024-11-08, ending Intel's 25-year run (press.spglobal.com 2024-11-01; CNBC; Bloomberg)."
+  },
+  {
+    "tid": "ctl_semis_asml_highna_china",
+    "domain": "semis",
+    "text": "What is the probability that ASML shipped a High-NA EUV lithography system to a customer located in mainland China on or before 2025-12-31?",
+    "resolution": "Resolves YES if ASML disclosure, Dutch export-licence records, or Reuters reporting confirm delivery of a High-NA EUV (EXE-series) tool to a mainland-China site on or before 2025-12-31. Allegations under investigation and shipments of DUV or component-level hardware do not count. Resolves NO otherwise.",
+    "source": "ASML annual report and quarterly disclosures / Reuters",
+    "resolved_on": "2025-12-31",
+    "outcome": 0,
+    "verified": "ASML has never shipped any EUV system to a Chinese customer; its 2025 total was 48 EUV units, with the first High-NA units slated for other markets, and it denied 2026 US allegations that an EUV tool reached China (Reuters/Yahoo Finance 'ASML asserts compliance'; TechCrunch 2026-06-19)."
+  },
+  {
+    "tid": "ctl_ins_wildfire_20b_insured",
+    "domain": "insurance",
+    "text": "What is the probability that a US wildfire event between 2024-01-01 and 2025-12-31 produced industry insured-loss estimates above 20 billion US dollars from a major catastrophe modelling firm?",
+    "resolution": "Resolves YES if Verisk, Moody's RMS, Karen Clark & Co, or Aon published an industry insured-loss estimate whose midpoint or lower bound exceeds US$20 billion for a US wildfire event occurring inside the window. Economic (uninsured) loss estimates do not count. Resolves NO otherwise.",
+    "source": "Verisk / Moody's RMS event-response press releases",
+    "resolved_on": "2025-01-22",
+    "outcome": 1,
+    "verified": "Verisk estimated industry insured property losses of US$28-35B for the January 2025 Palisades and Eaton fires (release 2025-01-22); Moody's RMS put the firestorm at US$20-30B on 2025-01-17 (verisk.com newsroom; moodys.com event response)."
+  },
+  {
+    "tid": "ctl_ins_lloyds_uw_loss_2024",
+    "domain": "insurance",
+    "text": "What is the probability that Lloyd's of London reported an underwriting loss -- a combined ratio above 100 percent -- for full-year 2024 in its published annual results?",
+    "resolution": "Resolves YES if the Lloyd's full-year 2024 results published on lloyds.com show a market-wide combined ratio above 100 percent. Resolves NO otherwise.",
+    "source": "Lloyd's of London full-year 2024 results, lloyds.com",
+    "resolved_on": "2025-03-20",
+    "outcome": 0,
+    "verified": "Lloyd's reported its FY2024 results on 2025-03-20 with an underwriting profit of GBP 5.3bn and a combined ratio of 86.9% (79.1% underlying), plus a 21% return on capital (lloyds.com FY2024 release; Artemis.bm)."
+  },
+  {
+    "tid": "ctl_pharma_novel_schizophrenia_drug",
+    "domain": "pharma",
+    "text": "What is the probability that the US FDA approved a drug for schizophrenia with a novel mechanism of action that does not rely on blocking dopamine D2 receptors, between 2024-01-01 and 2025-12-31?",
+    "resolution": "Resolves YES if an FDA approval inside the window covers a schizophrenia indication for an agent whose labelled mechanism is not D2-receptor antagonism, per Drugs@FDA and the FDA approval announcement. Resolves NO otherwise.",
+    "source": "FDA press announcements / Drugs@FDA",
+    "resolved_on": "2024-09-26",
+    "outcome": 1,
+    "verified": "FDA approved Cobenfy (xanomeline/trospium, formerly KarXT) for adult schizophrenia on 2024-09-26 -- an M1/M4 muscarinic agonist and the first new pharmacological approach in decades (PharmaLive; ALZFORUM KarXT entry)."
+  },
+  {
+    "tid": "ctl_pharma_oral_glp1_obesity",
+    "domain": "pharma",
+    "text": "What is the probability that the US FDA approved an oral (pill) GLP-1 receptor agonist carrying a chronic weight management indication on or before 2025-12-31?",
+    "resolution": "Resolves YES if Drugs@FDA shows an approval on or before 2025-12-31 of an orally administered GLP-1 receptor agonist labelled for chronic weight management in adults. Injectable products and type-2-diabetes-only labels do not count. Resolves NO otherwise.",
+    "source": "Drugs@FDA / FDA approval announcements",
+    "resolved_on": "2025-12-22",
+    "outcome": 1,
+    "verified": "FDA approved the Wegovy pill (oral semaglutide 25 mg) for chronic weight management and MACE risk reduction on 2025-12-22, the first oral GLP-1 for weight loss; launch was early January 2026 (Novo Nordisk news release; AJMC; PR Newswire)."
+  },
+  {
+    "tid": "ctl_pharma_orforglipron",
+    "domain": "pharma",
+    "text": "What is the probability that the US FDA approved Eli Lilly's orforglipron for chronic weight management on or before 2025-12-31?",
+    "resolution": "Resolves YES if Drugs@FDA or an Eli Lilly press release records FDA approval of orforglipron for chronic weight management dated on or before 2025-12-31. Phase 3 readouts, submission of the application, and priority-review grants do not count. Resolves NO otherwise.",
+    "source": "Drugs@FDA / Eli Lilly investor press releases",
+    "resolved_on": "2025-12-31",
+    "outcome": 0,
+    "verified": "Orforglipron was approved as Foundayo on 2026-04-01, three months after the window closed (Lilly investor press release; AJMC; Pharmacy Times)."
+  },
+  {
+    "tid": "ctl_pharma_mdma_ptsd",
+    "domain": "pharma",
+    "text": "What is the probability that the US FDA approved MDMA (midomafetamine) for post-traumatic stress disorder on or before 2025-12-31?",
+    "resolution": "Resolves YES if Drugs@FDA records an approval of midomafetamine for PTSD dated on or before 2025-12-31. A Complete Response Letter, an advisory-committee vote, a resubmission, or state-level access programmes do not count. Resolves NO otherwise.",
+    "source": "Drugs@FDA / Lykos Therapeutics press releases",
+    "resolved_on": "2025-12-31",
+    "outcome": 0,
+    "verified": "FDA issued a Complete Response Letter to Lykos on 2024-08-09 demanding an additional phase 3 trial; no approval had followed as of late 2025 and Lykos cut 75% of staff (Lykos/PR Newswire; Psychedelic Alpha; AJMC)."
+  }
+]

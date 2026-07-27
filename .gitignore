@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# cache/ and out/ ARE committed on purpose:
+#   cache/  1,590 raw model replies -> anyone can reproduce every number for $0.00,
+#           and it is the audit trail showing no forecast was re-rolled or cherry-picked.
+#   out/    the sealed Merkle ledgers and ROOTS.txt. A commitment nobody can see is not
+#           a commitment, so these are the point of the repo, not build artifacts.

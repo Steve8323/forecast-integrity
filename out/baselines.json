@@ -1,0 +1,70 @@
+{
+  "n_families": 40,
+  "reps": 400,
+  "arms": {
+    "claude-opus-5|fresh": {
+      "model": "claude-opus-5",
+      "arm": "fresh",
+      "families_covered": 40,
+      "retest_sd_used": 0.025039820739322777,
+      "observed_mean_g": 0.03335789333417533,
+      "observed_median_g": 0.02583966807868623,
+      "noise_floor_mean_g": 0.012684790504447138,
+      "ceiling_mean_g": 0.1749281461411902,
+      "ratio_to_floor": 2.629755164066797,
+      "frac_of_ceiling": 0.19069483139237692,
+      "p_noise_explains": 0.005,
+      "observed_dollars_per_100": 3.3357893334175333,
+      "floor_dollars_per_100": 1.2684790504447139,
+      "ceiling_dollars_per_100": 17.49281461411902
+    },
+    "claude-opus-5+joint|joint": {
+      "model": "claude-opus-5+joint",
+      "arm": "joint",
+      "families_covered": 40,
+      "retest_sd_used": 0.025039820739322777,
+      "observed_mean_g": 0.0005295922295355411,
+      "observed_median_g": 0.0004066336166194265,
+      "noise_floor_mean_g": 0.013093281006437538,
+      "ceiling_mean_g": 0.17306679807256567,
+      "ratio_to_floor": 0.040447633352950874,
+      "frac_of_ceiling": 0.003060045227817105,
+      "p_noise_explains": 0.985,
+      "observed_dollars_per_100": 0.05295922295355411,
+      "floor_dollars_per_100": 1.3093281006437538,
+      "ceiling_dollars_per_100": 17.306679807256568
+    },
+    "claude-sonnet-5|fresh": {
+      "model": "claude-sonnet-5",
+      "arm": "fresh",
+      "families_covered": 40,
+      "retest_sd_used": 0.017537013987509033,
+      "observed_mean_g": 0.04362534224592474,
+      "observed_median_g": 0.040095900587559935,
+      "noise_floor_mean_g": 0.008883690687590593,
+      "ceiling_mean_g": 0.17912706678173934,
+      "ratio_to_floor": 4.910722781789769,
+      "frac_of_ceiling": 0.24354411105877619,
+      "p_noise_explains": 0.0,
+      "observed_dollars_per_100": 4.3625342245924745,
+      "floor_dollars_per_100": 0.8883690687590593,
+      "ceiling_dollars_per_100": 17.912706678173933
+    },
+    "claude-sonnet-5+joint|joint": {
+      "model": "claude-sonnet-5+joint",
+      "arm": "joint",
+      "families_covered": 40,
+      "retest_sd_used": 0.017537013987509033,
+      "observed_mean_g": 0.0042166959467384675,
+      "observed_median_g": 0.0026136363636363623,
+      "noise_floor_mean_g": 0.008667538258805608,
+      "ceiling_mean_g": 0.17980354137421184,
+      "ratio_to_floor": 0.48649291423139684,
+      "frac_of_ceiling": 0.023451684624846012,
+      "p_noise_explains": 0.7625,
+      "observed_dollars_per_100": 0.42166959467384674,
+      "floor_dollars_per_100": 0.8667538258805608,
+      "ceiling_dollars_per_100": 17.980354137421184
+    }
+  }
+}

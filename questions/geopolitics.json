@@ -1,0 +1,527 @@
+[
+  {
+    "family_id": "geo_iran_hormuz_reopening",
+    "domain": "geopolitics",
+    "base_events": {
+      "STRIKE": {
+        "text": "The United States or Israel conducts an overt military strike against a target located inside Iranian territory at some point between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, at any time from 1 September 2026 through 30 June 2027 inclusive, (a) the US Department of Defense, US Central Command, the Israel Defense Forces, or the head of government of either country publicly acknowledges a military strike on a target located inside the internationally recognized territory of the Islamic Republic of Iran, or (b) such a strike is reported as having occurred by at least two of Reuters, the Associated Press, and Agence France-Presse. Covert action, cyber operations, assassinations by unacknowledged means, and strikes on Iranian personnel or assets located outside Iranian territory do NOT count. Resolves NO if no such strike is acknowledged or so reported in that window.",
+        "source": "US Department of Defense / US Central Command press releases, Israel Defense Forces official statements, and Reuters / AP / AFP wire reporting",
+        "resolve_by": "2027-06-30"
+      },
+      "HORMUZ50": {
+        "text": "The trailing seven-day average of daily vessel transit calls through the Strait of Hormuz reaches 50 or more on at least one day between 2026-09-01 and 2027-06-30",
+        "resolution": "Download the IMF PortWatch 'Daily Chokepoint Transit Calls' dataset and filter to the Strait of Hormuz (chokepoint6). For each calendar day D from 1 September 2026 through 30 June 2027, compute the arithmetic mean of the daily transit-call count over D and the six preceding days. Resolves YES if that mean is greater than or equal to 50 for at least one such day D; resolves NO otherwise. For context, PortWatch reported roughly 15 transit calls on 19 July 2026 against a pre-crisis norm of roughly 88 per day.",
+        "source": "IMF PortWatch, Daily Chokepoint Transit Calls dataset (portwatch.imf.org), Strait of Hormuz / chokepoint6",
+        "resolve_by": "2027-06-30"
+      },
+      "HORMUZ80": {
+        "text": "The trailing seven-day average of daily vessel transit calls through the Strait of Hormuz reaches 80 or more on at least one day between 2026-09-01 and 2027-06-30",
+        "resolution": "Identical method to the 50-call threshold: from the IMF PortWatch 'Daily Chokepoint Transit Calls' dataset for the Strait of Hormuz (chokepoint6), compute for each calendar day D from 1 September 2026 through 30 June 2027 the arithmetic mean of daily transit calls over D and the six preceding days. Resolves YES if that mean is greater than or equal to 80 for at least one such day D; resolves NO otherwise.",
+        "source": "IMF PortWatch, Daily Chokepoint Transit Calls dataset (portwatch.imf.org), Strait of Hormuz / chokepoint6",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "HORMUZ80", "b": "HORMUZ50"}
+    ],
+    "targets": [
+      {
+        "tid": "geo_iran_hormuz_reopening.strike",
+        "kind": "unconditional",
+        "text": "What is the probability that the United States or Israel conducts an overt military strike against a target located inside Iranian territory at some point between 1 September 2026 and 30 June 2027? A US-Israel-Iran war ran from late February to 8 April 2026, when a ceasefire took effect; the US and Iran signed a 14-point memorandum of understanding on 17 June 2026 opening a 60-day negotiating period. Resolution: YES if the US Department of Defense, US Central Command, the IDF, or either head of government acknowledges a strike inside Iranian territory in that window, or at least two of Reuters, AP and AFP report one. Covert action, cyber operations, and strikes on Iranian assets outside Iran do not count.",
+        "expr": "STRIKE"
+      },
+      {
+        "tid": "geo_iran_hormuz_reopening.h50",
+        "kind": "unconditional",
+        "text": "What is the probability that the trailing seven-day average of daily vessel transit calls through the Strait of Hormuz reaches 50 or more on at least one day between 1 September 2026 and 30 June 2027? Traffic through the strait collapsed during the 2026 US-Israel-Iran war: IMF PortWatch reported roughly 15 transit calls on 19 July 2026 versus a pre-crisis norm near 88 per day. Resolution: using the IMF PortWatch 'Daily Chokepoint Transit Calls' dataset for the Strait of Hormuz (chokepoint6), compute the mean daily transit calls over each day and the six preceding days; YES if that mean is at least 50 on any day in the window.",
+        "expr": "HORMUZ50"
+      },
+      {
+        "tid": "geo_iran_hormuz_reopening.h80",
+        "kind": "unconditional",
+        "text": "What is the probability that the trailing seven-day average of daily vessel transit calls through the Strait of Hormuz reaches 80 or more on at least one day between 1 September 2026 and 30 June 2027? That would be a near-complete return to the pre-crisis norm of roughly 88 transit calls per day; IMF PortWatch reported roughly 15 on 19 July 2026. Resolution: using the IMF PortWatch 'Daily Chokepoint Transit Calls' dataset for the Strait of Hormuz (chokepoint6), compute the mean daily transit calls over each day and the six preceding days; YES if that mean is at least 80 on any day in the window.",
+        "expr": "HORMUZ80"
+      },
+      {
+        "tid": "geo_iran_hormuz_reopening.h50_g_strike",
+        "kind": "conditional",
+        "text": "Assume that between 1 September 2026 and 30 June 2027 the United States or Israel conducts an overt, acknowledged military strike against a target inside Iranian territory. Under that assumption, what is the probability that the trailing seven-day average of daily vessel transit calls through the Strait of Hormuz reaches 50 or more on at least one day in the same window (1 September 2026 to 30 June 2027)? Transit calls are measured by the IMF PortWatch 'Daily Chokepoint Transit Calls' dataset for the Strait of Hormuz (chokepoint6), which reported roughly 15 calls on 19 July 2026 against a pre-crisis norm near 88 per day.",
+        "expr": "HORMUZ50",
+        "given": "STRIKE"
+      },
+      {
+        "tid": "geo_iran_hormuz_reopening.h50_g_nostrike",
+        "kind": "conditional",
+        "text": "Assume that between 1 September 2026 and 30 June 2027 neither the United States nor Israel conducts any overt, acknowledged military strike against a target inside Iranian territory. Under that assumption, what is the probability that the trailing seven-day average of daily vessel transit calls through the Strait of Hormuz reaches 50 or more on at least one day in the same window (1 September 2026 to 30 June 2027)? Transit calls are measured by the IMF PortWatch 'Daily Chokepoint Transit Calls' dataset for the Strait of Hormuz (chokepoint6), which reported roughly 15 calls on 19 July 2026 against a pre-crisis norm near 88 per day.",
+        "expr": "HORMUZ50",
+        "given": "not STRIKE"
+      },
+      {
+        "tid": "geo_iran_hormuz_reopening.h80_and_strike",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen between 1 September 2026 and 30 June 2027: (1) the trailing seven-day average of daily vessel transit calls through the Strait of Hormuz reaches 80 or more on at least one day, as measured by the IMF PortWatch 'Daily Chokepoint Transit Calls' dataset for chokepoint6 (roughly 15 calls per day were recorded on 19 July 2026 versus a pre-crisis norm near 88); AND (2) the United States or Israel conducts an overt, acknowledged military strike against a target inside Iranian territory?",
+        "expr": "HORMUZ80 and STRIKE"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "total_probability", "conjunction_bound"]
+  },
+
+  {
+    "family_id": "geo_russia_ceasefire_sanctions",
+    "domain": "geopolitics",
+    "base_events": {
+      "CEASEFIRE": {
+        "text": "A general ceasefire covering the entire Russia-Ukraine front line takes effect between 2026-09-01 and 2027-06-01 and is still in effect 30 days later",
+        "resolution": "Resolves YES if both the Government of Ukraine and the Government of the Russian Federation publicly announce a ceasefire covering the entire land front line that takes effect on a date between 1 September 2026 and 1 June 2027 inclusive, AND, 30 calendar days after it takes effect, Reuters reports that neither government has declared the ceasefire terminated and the Institute for the Study of War's daily Russian Offensive Campaign Assessment has not reported a resumption of offensive ground operations by either side across the front. Local or sectoral truces, air-only or energy-infrastructure-only moratoria, prisoner-exchange pauses, and holiday truces do NOT count.",
+        "source": "Reuters wire reporting plus the Institute for the Study of War daily Russian Offensive Campaign Assessment (understandingwar.org)",
+        "resolve_by": "2027-06-30"
+      },
+      "DELIST": {
+        "text": "The US Treasury removes Rosneft Oil Company or Lukoil OAO from the Specially Designated Nationals list between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if OFAC's Recent Actions page or the SDN List itself records the deletion of the SDN entry for Rosneft Oil Company or for Lukoil OAO (also listed as PJSC Lukoil) at any time from 1 September 2026 through 30 June 2027. Both companies were designated on 22 October 2025 and remain designated as of 26 July 2026. Issuing, amending, extending or broadening a General License (for example GL 131H of 24 July 2026) does NOT count; only removal of the entry from the SDN List counts.",
+        "source": "US Treasury Office of Foreign Assets Control SDN List and OFAC Recent Actions page (ofac.treasury.gov)",
+        "resolve_by": "2027-06-30"
+      },
+      "EUASSETS": {
+        "text": "The Council of the European Union adopts a legal act published in the Official Journal authorising use of the principal of immobilised Russian central bank assets to finance Ukraine, between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if a Council regulation or Council decision published in the Official Journal of the European Union (searchable on EUR-Lex) between 1 September 2026 and 30 June 2027 authorises the transfer, lending or other use of the PRINCIPAL of immobilised Russian Central Bank assets to fund the Ukrainian budget, Ukrainian reconstruction, or Ukrainian defence procurement. Acts that use only profits or windfall revenues generated by those assets, acts that merely extend or make permanent the immobilisation, and Commission proposals not yet adopted by the Council do NOT count. In December 2025 EU leaders declined the 'reparations loan' option and funded Ukraine with joint EU borrowing instead.",
+        "source": "Official Journal of the European Union via EUR-Lex (eur-lex.europa.eu)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "geo_russia_ceasefire_sanctions.ceasefire",
+        "kind": "unconditional",
+        "text": "What is the probability that a general ceasefire covering the entire Russia-Ukraine land front line takes effect on some date between 1 September 2026 and 1 June 2027 and is still in effect 30 days after taking effect? Resolution requires that both the Ukrainian and Russian governments publicly announce a front-wide ceasefire, and that 30 days later Reuters reports neither government has declared it terminated and the Institute for the Study of War's daily Russian Offensive Campaign Assessment has not reported resumed offensive ground operations. Local truces, air-only or energy-infrastructure-only moratoria, and holiday truces do not count.",
+        "expr": "CEASEFIRE"
+      },
+      {
+        "tid": "geo_russia_ceasefire_sanctions.delist",
+        "kind": "unconditional",
+        "text": "What is the probability that the US Treasury's Office of Foreign Assets Control removes Rosneft Oil Company or Lukoil OAO (PJSC Lukoil) from the Specially Designated Nationals list at some point between 1 September 2026 and 30 June 2027? Both were designated on 22 October 2025 and remain designated as of 26 July 2026. Only deletion of the SDN entry counts, as shown on OFAC's Recent Actions page or the SDN List; issuing, amending or extending a General License does not count.",
+        "expr": "DELIST"
+      },
+      {
+        "tid": "geo_russia_ceasefire_sanctions.cf_and_delist",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) a general ceasefire covering the entire Russia-Ukraine land front line takes effect between 1 September 2026 and 1 June 2027 and is still in effect 30 days later, as confirmed by Reuters reporting and the Institute for the Study of War's daily assessments; AND (2) the US Treasury's Office of Foreign Assets Control removes Rosneft Oil Company or Lukoil OAO from the Specially Designated Nationals list between 1 September 2026 and 30 June 2027?",
+        "expr": "CEASEFIRE and DELIST"
+      },
+      {
+        "tid": "geo_russia_ceasefire_sanctions.cf_or_delist",
+        "kind": "unconditional",
+        "text": "What is the probability that AT LEAST ONE of the following happens: (1) a general ceasefire covering the entire Russia-Ukraine land front line takes effect between 1 September 2026 and 1 June 2027 and is still in effect 30 days later, as confirmed by Reuters reporting and the Institute for the Study of War's daily assessments; OR (2) the US Treasury's Office of Foreign Assets Control removes Rosneft Oil Company or Lukoil OAO from the Specially Designated Nationals list between 1 September 2026 and 30 June 2027?",
+        "expr": "CEASEFIRE or DELIST"
+      },
+      {
+        "tid": "geo_russia_ceasefire_sanctions.delist_g_cf",
+        "kind": "conditional",
+        "text": "Assume that a general ceasefire covering the entire Russia-Ukraine land front line takes effect between 1 September 2026 and 1 June 2027 and is still in effect 30 days after taking effect. Under that assumption, what is the probability that the US Treasury's Office of Foreign Assets Control removes Rosneft Oil Company or Lukoil OAO (PJSC Lukoil) from the Specially Designated Nationals list at some point between 1 September 2026 and 30 June 2027? Both companies were designated on 22 October 2025 and remain designated as of 26 July 2026; only deletion of the SDN entry counts.",
+        "expr": "DELIST",
+        "given": "CEASEFIRE"
+      },
+      {
+        "tid": "geo_russia_ceasefire_sanctions.euassets_and_nocf",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following hold: (1) NO general ceasefire covering the entire Russia-Ukraine land front line takes effect between 1 September 2026 and 1 June 2027 and survives 30 days; AND (2) the Council of the European Union adopts a legal act, published in the Official Journal of the European Union, that authorises using the PRINCIPAL of immobilised Russian central bank assets to finance the Ukrainian budget, reconstruction, or defence procurement, between 1 September 2026 and 30 June 2027? For part (2), acts that use only the profits on those assets, acts that merely extend the immobilisation, and unadopted Commission proposals do not count; EU leaders declined this 'reparations loan' option in December 2025 and used joint EU borrowing instead.",
+        "expr": "EUASSETS and not CEASEFIRE"
+      }
+    ],
+    "axioms_tested": ["disjunction_identity", "product_rule", "conjunction_bound"]
+  },
+
+  {
+    "family_id": "geo_us_midterms_2026",
+    "domain": "geopolitics",
+    "base_events": {
+      "HOUSE": {
+        "text": "Democrats hold a majority of US House seats when the 120th Congress convenes in January 2027",
+        "resolution": "Resolves YES if the official party division of the US House of Representatives for the 120th Congress, as published by the Clerk of the House of Representatives (clerk.house.gov) as of 31 January 2027, shows 218 or more of the 435 seats held by members of the Democratic Party. Resolves NO otherwise. Going into the 3 November 2026 election Republicans hold 218 seats and Democrats 214, with 3 vacancies, so Democrats need a net gain of 3 districts.",
+        "source": "Clerk of the US House of Representatives, official party division / list of members (clerk.house.gov)",
+        "resolve_by": "2027-01-31"
+      },
+      "SENATE": {
+        "text": "Democrats and independents caucusing with them hold at least 51 US Senate seats when the 120th Congress convenes in January 2027",
+        "resolution": "Resolves YES if, as of 31 January 2027, the Senate party division published by the Secretary of the Senate (senate.gov) shows at least 51 senators who are Democrats or are independents who caucus with the Democratic Party. Resolves NO otherwise, including at a 50-50 split. 35 of 100 seats are contested on 3 November 2026 and Democrats need a net gain of 4 seats.",
+        "source": "Secretary of the US Senate, party division of the Senate (senate.gov)",
+        "resolve_by": "2027-01-31"
+      }
+    },
+    "targets": [
+      {
+        "tid": "geo_us_midterms_2026.house",
+        "kind": "unconditional",
+        "text": "What is the probability that the Democratic Party holds 218 or more of the 435 seats in the US House of Representatives when the 120th Congress convenes in January 2027, following the 3 November 2026 midterm elections? Republicans currently hold 218 seats and Democrats 214 with 3 vacancies, so Democrats need a net gain of 3 districts. Resolution is by the official House party division published by the Clerk of the House of Representatives as of 31 January 2027.",
+        "expr": "HOUSE"
+      },
+      {
+        "tid": "geo_us_midterms_2026.senate",
+        "kind": "unconditional",
+        "text": "What is the probability that at least 51 of the 100 US senators seated in the 120th Congress in January 2027 are Democrats or independents who caucus with the Democratic Party, following the 3 November 2026 midterm elections? 35 seats are contested and Democrats need a net gain of 4; a 50-50 split resolves NO. Resolution is by the Senate party division published by the Secretary of the Senate as of 31 January 2027.",
+        "expr": "SENATE"
+      },
+      {
+        "tid": "geo_us_midterms_2026.both",
+        "kind": "unconditional",
+        "text": "What is the probability that after the 3 November 2026 US midterm elections the Democratic Party holds BOTH chambers of the 120th Congress, meaning 218 or more of the 435 House seats (per the Clerk of the House party division as of 31 January 2027) AND at least 51 Senate seats counting independents who caucus with Democrats (per the Secretary of the Senate party division as of 31 January 2027)?",
+        "expr": "HOUSE and SENATE"
+      },
+      {
+        "tid": "geo_us_midterms_2026.either",
+        "kind": "unconditional",
+        "text": "What is the probability that after the 3 November 2026 US midterm elections the Democratic Party holds AT LEAST ONE chamber of the 120th Congress, meaning either 218 or more of the 435 House seats (per the Clerk of the House party division as of 31 January 2027) or at least 51 Senate seats counting independents who caucus with Democrats (per the Secretary of the Senate party division as of 31 January 2027), or both?",
+        "expr": "HOUSE or SENATE"
+      },
+      {
+        "tid": "geo_us_midterms_2026.neither",
+        "kind": "unconditional",
+        "text": "What is the probability that after the 3 November 2026 US midterm elections Republicans retain control of BOTH chambers of the 120th Congress, meaning Democrats hold fewer than 218 of the 435 House seats (per the Clerk of the House party division as of 31 January 2027) AND fewer than 51 Senate seats counting independents who caucus with Democrats (per the Secretary of the Senate party division as of 31 January 2027)? A 50-50 Senate counts as Republicans retaining the Senate.",
+        "expr": "not HOUSE and not SENATE"
+      },
+      {
+        "tid": "geo_us_midterms_2026.senate_g_house",
+        "kind": "conditional",
+        "text": "Assume that after the 3 November 2026 US midterm elections the Democratic Party holds 218 or more of the 435 seats in the US House of Representatives in the 120th Congress, per the Clerk of the House party division as of 31 January 2027. Under that assumption, what is the probability that at least 51 of the 100 senators seated in the 120th Congress are Democrats or independents who caucus with the Democratic Party, per the Secretary of the Senate party division as of 31 January 2027? Democrats need a net gain of 4 Senate seats, and a 50-50 split resolves NO.",
+        "expr": "SENATE",
+        "given": "HOUSE"
+      }
+    ],
+    "axioms_tested": ["disjunction_identity", "complement_partition", "product_rule", "conjunction_bound"]
+  },
+
+  {
+    "family_id": "geo_taiwan_strait_pressure",
+    "domain": "geopolitics",
+    "base_events": {
+      "SORTIE45": {
+        "text": "Taiwan's Ministry of National Defense reports 45 or more PLA aircraft crossing the Taiwan Strait median line or entering Taiwan's air defence identification zone in a single daily reporting period, on some day between 2026-09-01 and 2027-06-30",
+        "resolution": "Taiwan's Ministry of National Defense publishes a daily release titled 'PLA activities in the waters and airspace around Taiwan' covering the 24 hours to 06:00 local time, stating the number of PLA aircraft detected and, of those, the number that crossed the median line of the Taiwan Strait or entered Taiwan's ADIZ. Resolves YES if any such daily release covering a period ending between 1 September 2026 and 30 June 2027 states that 45 or more PLA aircraft crossed the median line or entered Taiwan's ADIZ. For calibration: 90 aircraft crossed during the PLA's late-December 2025 exercise, while PLA air activity fell sharply through the first half of 2026 (173 sorties in the whole of March 2026).",
+        "source": "Republic of China (Taiwan) Ministry of National Defense daily 'PLA activities in the waters and airspace around Taiwan' releases (air.mnd.gov.tw and mnd.gov.tw)",
+        "resolve_by": "2027-06-30"
+      },
+      "FMS1B": {
+        "text": "The US Defense Security Cooperation Agency announces a new major arms sale to Taiwan with an estimated value of at least US$1 billion, between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if the US Defense Security Cooperation Agency publishes on its 'Major Arms Sales' press page, between 1 September 2026 and 30 June 2027, one or more congressional notifications of a Foreign Military Sale to Taipei Economic and Cultural Representative Office in the United States (TECRO) whose stated estimated cost is at least US$1 billion, either as a single notification or as the sum of notifications issued on the same date. The most recent prior tranche was the eight notifications totalling roughly US$11.1 billion certified on 17 December 2025; Taiwan's May 2026 special defence act reserved about NT$480 billion for a future package not yet announced.",
+        "source": "US Defense Security Cooperation Agency, Major Arms Sales notifications (dsca.mil/press-media/major-arms-sales)",
+        "resolve_by": "2027-06-30"
+      },
+      "QUARANTINE": {
+        "text": "China publicly announces a mandatory inspection, boarding or customs-declaration requirement applying to commercial vessels bound for or departing Taiwanese ports, between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, between 1 September 2026 and 30 June 2027, an official organ of the People's Republic of China (for example the China Coast Guard, the Ministry of Transport, the General Administration of Customs, the Taiwan Affairs Office, or the PLA Eastern Theater Command) publicly announces a requirement that commercial vessels calling at or departing from ports in Taiwan proper submit to PRC inspection or boarding, or file declarations with PRC customs or maritime authorities as a condition of transit. Announcements limited to declared live-fire or exercise closure areas, and enforcement actions against individual named vessels without a general announced requirement, do NOT count.",
+        "source": "Official PRC government announcements (China Coast Guard, PRC Ministry of Transport, General Administration of Customs, PLA Eastern Theater Command) as reported by Reuters and Taiwan's Ministry of National Defense",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "geo_taiwan_strait_pressure.sortie45",
+        "kind": "unconditional",
+        "text": "What is the probability that on at least one day between 1 September 2026 and 30 June 2027, Taiwan's Ministry of National Defense daily 'PLA activities in the waters and airspace around Taiwan' release reports 45 or more PLA aircraft crossing the Taiwan Strait median line or entering Taiwan's air defence identification zone within a single 24-hour reporting period? For calibration, 90 aircraft crossed during the PLA's late-December 2025 exercise around Taiwan, but PLA air activity declined sharply through the first half of 2026, with only 173 sorties recorded in all of March 2026.",
+        "expr": "SORTIE45"
+      },
+      {
+        "tid": "geo_taiwan_strait_pressure.fms1b",
+        "kind": "unconditional",
+        "text": "What is the probability that the US Defense Security Cooperation Agency publishes, between 1 September 2026 and 30 June 2027, congressional notification of one or more Foreign Military Sales to Taiwan with a stated estimated value totalling at least US$1 billion on a single date? The previous tranche was eight notifications worth about US$11.1 billion certified on 17 December 2025, and Taiwan's May 2026 special defence budget reserved roughly NT$480 billion for a future US package that has not yet been announced. Resolution is by the DSCA 'Major Arms Sales' press page.",
+        "expr": "FMS1B"
+      },
+      {
+        "tid": "geo_taiwan_strait_pressure.quarantine",
+        "kind": "unconditional",
+        "text": "What is the probability that between 1 September 2026 and 30 June 2027 an official body of the People's Republic of China (such as the China Coast Guard, the Ministry of Transport, the General Administration of Customs, the Taiwan Affairs Office, or the PLA Eastern Theater Command) publicly announces a requirement that commercial vessels calling at or departing from ports in Taiwan proper submit to PRC inspection or boarding, or file declarations with PRC customs or maritime authorities as a condition of transit? Announcements of live-fire or exercise closure areas, and one-off enforcement against individual named ships without a general announced requirement, do not count.",
+        "expr": "QUARANTINE"
+      },
+      {
+        "tid": "geo_taiwan_strait_pressure.quar_g_sortie",
+        "kind": "conditional",
+        "text": "Assume that on at least one day between 1 September 2026 and 30 June 2027, Taiwan's Ministry of National Defense reports 45 or more PLA aircraft crossing the Taiwan Strait median line or entering Taiwan's air defence identification zone in a single 24-hour reporting period. Under that assumption, what is the probability that in the same window an official body of the People's Republic of China publicly announces a requirement that commercial vessels calling at or departing from ports in Taiwan proper submit to PRC inspection or boarding, or file declarations with PRC customs or maritime authorities as a condition of transit?",
+        "expr": "QUARANTINE",
+        "given": "SORTIE45"
+      },
+      {
+        "tid": "geo_taiwan_strait_pressure.sortie_and_quar",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen between 1 September 2026 and 30 June 2027: (1) Taiwan's Ministry of National Defense reports, on at least one day, 45 or more PLA aircraft crossing the Taiwan Strait median line or entering Taiwan's air defence identification zone within a single 24-hour reporting period; AND (2) an official body of the People's Republic of China publicly announces a requirement that commercial vessels calling at or departing from ports in Taiwan proper submit to PRC inspection or boarding, or file declarations with PRC customs or maritime authorities as a condition of transit?",
+        "expr": "SORTIE45 and QUARANTINE"
+      },
+      {
+        "tid": "geo_taiwan_strait_pressure.fms_and_quar",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen between 1 September 2026 and 30 June 2027: (1) the US Defense Security Cooperation Agency publishes congressional notification of Foreign Military Sales to Taiwan worth at least US$1 billion in total on a single date, per its 'Major Arms Sales' press page; AND (2) an official body of the People's Republic of China publicly announces a requirement that commercial vessels calling at or departing from ports in Taiwan proper submit to PRC inspection or boarding, or file declarations with PRC customs or maritime authorities as a condition of transit?",
+        "expr": "FMS1B and QUARANTINE"
+      }
+    ],
+    "axioms_tested": ["product_rule", "conjunction_bound"]
+  },
+
+  {
+    "family_id": "geo_export_controls_tit_for_tat",
+    "domain": "geopolitics",
+    "base_events": {
+      "REEARTH": {
+        "text": "China's suspended 9 October 2025 rare-earth export-control measures are in force again as of 2026-12-31",
+        "resolution": "On 9 October 2025 China's Ministry of Commerce (MOFCOM) issued six announcements expanding export controls on rare-earth items, equipment and technology, including extraterritorial and 0.1 percent de minimis provisions: MOFCOM/GAC Announcements No. 55, 56, 57 and 58 and MOFCOM Announcements No. 61 and 62 of 2025. In November 2025 MOFCOM suspended all six for one year, with the suspension running to 10 November 2026, in parallel with a US suspension of its 50 percent affiliates rule. Resolves YES if, as of 31 December 2026, any of those six announcements is again in force, whether because MOFCOM published an announcement reinstating it in whole or in part or because the suspension lapsed without a published extension. Resolves NO if all six remain suspended (or have been withdrawn) and none is in force on 31 December 2026. China's separate April 2025 controls on seven medium and heavy rare earths, and entity-specific dual-use bans such as the June 2026 listings of US firms, do NOT by themselves resolve this question.",
+        "source": "PRC Ministry of Commerce official announcements (mofcom.gov.cn, Announcement / Gonggao series)",
+        "resolve_by": "2026-12-31"
+      },
+      "BIS_JAN": {
+        "text": "As of 2027-01-31, the US Bureau of Industry and Security has published a Federal Register rule rescinding or narrowing the January 2026 case-by-case licence policy for advanced AI chips to China",
+        "resolution": "On 15 January 2026 BIS published a final rule (Federal Register document 2026-00789) moving licence review for Nvidia H200-class and AMD MI325X-class advanced computing items destined for China and Macau from a presumption of denial to case-by-case review, subject to volume caps and other conditions. Resolves YES if, at any time from 1 September 2026 through 31 January 2027, BIS publishes a rule in the Federal Register that rescinds that case-by-case review policy, returns any item covered by it to a presumption of denial for China, or reduces the permitted export volume cap below the level set by the January 2026 rule. Denials of individual licence applications, public statements, and non-BIS actions such as tariffs do NOT count; the change must appear as a BIS rule in the Federal Register.",
+        "source": "US Federal Register, Bureau of Industry and Security rules (federalregister.gov)",
+        "resolve_by": "2027-01-31"
+      },
+      "BIS_JUN": {
+        "text": "As of 2027-06-30, the US Bureau of Industry and Security has published a Federal Register rule rescinding or narrowing the January 2026 case-by-case licence policy for advanced AI chips to China",
+        "resolution": "Same criterion as the 31 January 2027 version, with a longer window: resolves YES if at any time from 1 September 2026 through 30 June 2027 BIS publishes a rule in the Federal Register that rescinds the case-by-case review policy established by its 15 January 2026 rule, returns any item covered by that rule to a presumption of denial for China, or reduces the permitted export volume cap below the level that rule set. Individual licence denials, public statements, and non-BIS actions do NOT count.",
+        "source": "US Federal Register, Bureau of Industry and Security rules (federalregister.gov)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "BIS_JAN", "b": "BIS_JUN"}
+    ],
+    "targets": [
+      {
+        "tid": "geo_export_controls_tit_for_tat.reearth",
+        "kind": "unconditional",
+        "text": "What is the probability that, as of 31 December 2026, any of the six expanded rare-earth export-control announcements China's Ministry of Commerce issued on 9 October 2025 (MOFCOM/GAC Announcements No. 55-58 and MOFCOM Announcements No. 61 and 62 of 2025, which added extraterritorial and 0.1 percent de minimis provisions) is in force again? MOFCOM suspended all six for one year, with the suspension running to 10 November 2026. The question resolves YES either if MOFCOM publishes an announcement reinstating any of them in whole or in part, or if the suspension simply lapses with no published extension; it resolves NO if all six remain suspended or withdrawn and none is in force on 31 December 2026. China's separate April 2025 controls on seven medium and heavy rare earths, and entity-specific dual-use bans such as the June 2026 listings of US firms, do not by themselves resolve this question.",
+        "expr": "REEARTH"
+      },
+      {
+        "tid": "geo_export_controls_tit_for_tat.bis_jan",
+        "kind": "unconditional",
+        "text": "What is the probability that, at some point between 1 September 2026 and 31 January 2027, the US Bureau of Industry and Security publishes a rule in the Federal Register that rescinds the case-by-case export licence review policy it established on 15 January 2026 for Nvidia H200-class and AMD MI325X-class advanced computing items destined for China, returns any item covered by that rule to a presumption of denial, or lowers the permitted export volume cap below the level that rule set? Individual licence denials, public statements and non-BIS actions such as tariffs do not count; the change must appear as a BIS rule in the Federal Register.",
+        "expr": "BIS_JAN"
+      },
+      {
+        "tid": "geo_export_controls_tit_for_tat.bis_jun",
+        "kind": "unconditional",
+        "text": "What is the probability that, at some point between 1 September 2026 and 30 June 2027, the US Bureau of Industry and Security publishes a rule in the Federal Register that rescinds the case-by-case export licence review policy it established on 15 January 2026 for Nvidia H200-class and AMD MI325X-class advanced computing items destined for China, returns any item covered by that rule to a presumption of denial, or lowers the permitted export volume cap below the level that rule set? Individual licence denials, public statements and non-BIS actions such as tariffs do not count; the change must appear as a BIS rule in the Federal Register.",
+        "expr": "BIS_JUN"
+      },
+      {
+        "tid": "geo_export_controls_tit_for_tat.bisjan_g_reearth",
+        "kind": "conditional",
+        "text": "Assume that, as of 31 December 2026, the expanded rare-earth export-control measures China's Ministry of Commerce announced on 9 October 2025 (and suspended for one year on 10 November 2025) are in force again, whether by reinstatement or by lapse of the suspension. Under that assumption, what is the probability that between 1 September 2026 and 31 January 2027 the US Bureau of Industry and Security publishes a Federal Register rule rescinding its 15 January 2026 case-by-case licence policy for Nvidia H200-class and AMD MI325X-class chips to China, returning any covered item to a presumption of denial, or lowering the permitted volume cap below the level that rule set?",
+        "expr": "BIS_JAN",
+        "given": "REEARTH"
+      },
+      {
+        "tid": "geo_export_controls_tit_for_tat.reearth_and_bisjan",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following hold: (1) as of 31 December 2026, any of the expanded rare-earth export-control measures China's Ministry of Commerce announced on 9 October 2025 are in force again, whether by reinstatement or by lapse of the one-year suspension entered on 10 November 2025; AND (2) between 1 September 2026 and 31 January 2027 the US Bureau of Industry and Security publishes a Federal Register rule rescinding its 15 January 2026 case-by-case licence policy for Nvidia H200-class and AMD MI325X-class chips to China, returning any covered item to a presumption of denial, or lowering the permitted volume cap?",
+        "expr": "REEARTH and BIS_JAN"
+      },
+      {
+        "tid": "geo_export_controls_tit_for_tat.reearth_and_bisjun",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following hold: (1) as of 31 December 2026, any of the expanded rare-earth export-control measures China's Ministry of Commerce announced on 9 October 2025 are in force again, whether by reinstatement or by lapse of the one-year suspension entered on 10 November 2025; AND (2) at some point between 1 September 2026 and 30 June 2027 the US Bureau of Industry and Security publishes a Federal Register rule rescinding its 15 January 2026 case-by-case licence policy for Nvidia H200-class and AMD MI325X-class chips to China, returning any covered item to a presumption of denial, or lowering the permitted volume cap?",
+        "expr": "REEARTH and BIS_JUN"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "product_rule", "conjunction_bound"]
+  },
+
+  {
+    "family_id": "geo_post_new_start_arms_control",
+    "domain": "geopolitics",
+    "base_events": {
+      "SSD": {
+        "text": "The United States and Russia hold an announced bilateral meeting on strategic stability or nuclear arms control at deputy-foreign-minister level or above, between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, between 1 September 2026 and 30 June 2027, the US Department of State or the Russian Ministry of Foreign Affairs publicly announces that delegations of the two governments met in person, with the delegation on each side headed by an official of at least deputy-foreign-minister or under-secretary-of-state rank (or by the head of state or government), for talks whose announced agenda includes strategic stability, strategic offensive arms, or nuclear arms control. Meetings on Ukraine alone, phone calls, and meetings at ambassadorial or working level do NOT count. Russia's deputy foreign minister stated in May 2026 that Moscow had suspended the strategic stability dialogue and saw no basis for resuming it.",
+        "source": "US Department of State press releases and Russian Ministry of Foreign Affairs official statements (state.gov, mid.ru)",
+        "resolve_by": "2027-06-30"
+      },
+      "NEWLIMITS": {
+        "text": "The United States and Russia announce a new bilateral agreement or reciprocal formal commitment limiting deployed strategic nuclear warheads, between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, between 1 September 2026 and 30 June 2027, both the US and Russian governments officially announce a signed bilateral treaty, executive agreement, or reciprocal formal political commitment that places a numerical ceiling on each side's deployed strategic nuclear warheads or deployed strategic delivery vehicles. New START expired on 5 February 2026 with no successor; a unilateral Russian offer to observe its central limits, unreciprocated by the United States, does NOT count, nor do statements of intent to negotiate, nor agreements that do not specify numerical ceilings. Ratification is not required, but both governments must confirm the commitment.",
+        "source": "US Department of State and White House official announcements plus Kremlin (kremlin.ru) and Russian MFA official announcements",
+        "resolve_by": "2027-06-30"
+      },
+      "NTEST": {
+        "text": "The United States, Russia or China conducts a nuclear explosive test with a yield greater than zero, between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, between 1 September 2026 and 30 June 2027, the government of the United States, the Russian Federation or the People's Republic of China officially announces that it has conducted a nuclear explosive test producing a yield greater than zero, or the Comprehensive Nuclear-Test-Ban Treaty Organization reports that its International Monitoring System detected an event consistent with a nuclear explosion at a test site of one of those three states. Subcritical experiments, non-nuclear or 'non-critical' high-explosive experiments, hydrodynamic tests, and computer simulations do NOT count. Tests by any other state do NOT count. The United States last conducted an explosive nuclear test in 1992.",
+        "source": "Comprehensive Nuclear-Test-Ban Treaty Organization (ctbto.org) plus official US Department of Energy / NNSA, Russian and Chinese government announcements",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "geo_post_new_start_arms_control.ssd",
+        "kind": "unconditional",
+        "text": "What is the probability that between 1 September 2026 and 30 June 2027 the United States and Russia hold an announced in-person bilateral meeting on strategic stability, strategic offensive arms, or nuclear arms control, with each delegation headed by an official of at least deputy-foreign-minister or under-secretary-of-state rank (or by the head of state or government)? Russia's deputy foreign minister said in May 2026 that Moscow had suspended the strategic stability dialogue and saw no basis for resuming it. Meetings on Ukraine alone, phone calls, and ambassadorial or working-level contacts do not count. Resolution is by US State Department or Russian Foreign Ministry announcements.",
+        "expr": "SSD"
+      },
+      {
+        "tid": "geo_post_new_start_arms_control.newlimits",
+        "kind": "unconditional",
+        "text": "What is the probability that between 1 September 2026 and 30 June 2027 the United States and Russia both officially announce a signed bilateral treaty, executive agreement, or reciprocal formal political commitment placing a numerical ceiling on each side's deployed strategic nuclear warheads or deployed strategic delivery vehicles? New START expired on 5 February 2026 with no successor. A unilateral Russian offer to observe the old central limits that the United States does not reciprocate does not count, nor do statements of intent to negotiate, nor agreements without numerical ceilings; ratification is not required but both governments must confirm the commitment.",
+        "expr": "NEWLIMITS"
+      },
+      {
+        "tid": "geo_post_new_start_arms_control.newlimits_g_ssd",
+        "kind": "conditional",
+        "text": "Assume that between 1 September 2026 and 30 June 2027 the United States and Russia hold an announced in-person bilateral meeting on strategic stability or nuclear arms control, with each delegation headed by an official of at least deputy-foreign-minister or under-secretary-of-state rank or above. Under that assumption, what is the probability that in the same window both governments officially announce a signed bilateral treaty, executive agreement, or reciprocal formal political commitment placing a numerical ceiling on each side's deployed strategic nuclear warheads or deployed strategic delivery vehicles? New START expired on 5 February 2026 with no successor.",
+        "expr": "NEWLIMITS",
+        "given": "SSD"
+      },
+      {
+        "tid": "geo_post_new_start_arms_control.newlimits_g_nossd",
+        "kind": "conditional",
+        "text": "Assume that between 1 September 2026 and 30 June 2027 the United States and Russia hold NO announced in-person bilateral meeting on strategic stability or nuclear arms control at deputy-foreign-minister or under-secretary-of-state level or above. Under that assumption, what is the probability that in the same window both governments nonetheless officially announce a signed bilateral treaty, executive agreement, or reciprocal formal political commitment placing a numerical ceiling on each side's deployed strategic nuclear warheads or deployed strategic delivery vehicles? New START expired on 5 February 2026 with no successor.",
+        "expr": "NEWLIMITS",
+        "given": "not SSD"
+      },
+      {
+        "tid": "geo_post_new_start_arms_control.ssd_and_newlimits",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen between 1 September 2026 and 30 June 2027: (1) the United States and Russia hold an announced in-person bilateral meeting on strategic stability or nuclear arms control with each delegation headed at deputy-foreign-minister or under-secretary-of-state level or above; AND (2) both governments officially announce a signed bilateral treaty, executive agreement, or reciprocal formal political commitment placing a numerical ceiling on each side's deployed strategic nuclear warheads or deployed strategic delivery vehicles?",
+        "expr": "SSD and NEWLIMITS"
+      },
+      {
+        "tid": "geo_post_new_start_arms_control.ntest_and_nolimits",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following hold for the period 1 September 2026 to 30 June 2027: (1) the United States, Russia or China conducts a nuclear explosive test with a yield greater than zero, as officially announced by that government or as reported by the Comprehensive Nuclear-Test-Ban Treaty Organization's International Monitoring System (subcritical, 'non-critical' and hydrodynamic experiments do not count; the United States last tested explosively in 1992); AND (2) the United States and Russia do NOT announce any new bilateral treaty, executive agreement or reciprocal formal commitment placing a numerical ceiling on deployed strategic nuclear warheads or delivery vehicles?",
+        "expr": "NTEST and not NEWLIMITS"
+      }
+    ],
+    "axioms_tested": ["total_probability", "product_rule", "conjunction_bound"]
+  },
+
+  {
+    "family_id": "geo_north_korea_escalation",
+    "domain": "geopolitics",
+    "base_events": {
+      "NUKETEST": {
+        "text": "North Korea conducts a nuclear explosive test between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, between 1 September 2026 and 30 June 2027, North Korean state media (KCNA or Rodong Sinmun) announces that the DPRK has conducted a nuclear test, or the Comprehensive Nuclear-Test-Ban Treaty Organization or South Korea's Korea Meteorological Administration reports a seismic event assessed as an artificial explosion at or near the Punggye-ri test site. North Korea's sixth and most recent nuclear test was on 3 September 2017; US and South Korean defence intelligence assess the site as ready for a seventh test on short notice.",
+        "source": "Comprehensive Nuclear-Test-Ban Treaty Organization (ctbto.org), Korea Meteorological Administration, and DPRK state media (KCNA)",
+        "resolve_by": "2027-06-30"
+      },
+      "ICBM": {
+        "text": "North Korea conducts a flight test of an intercontinental-range ballistic missile between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, between 1 September 2026 and 30 June 2027, South Korea's Joint Chiefs of Staff or Japan's Ministry of Defense publicly assesses that North Korea flight-tested a ballistic missile of intercontinental class (nominal range of at least 5,500 km, including lofted-trajectory launches so assessed). Satellite launch vehicles, medium- and intermediate-range missiles, cruise missiles, hypersonic glide vehicles below ICBM class, and static or ground engine tests do NOT count. For context: North Korea conducted no ICBM flight test in 2025; its 2026 launches through June were short- and medium-range ballistic, hypersonic and cruise systems; Kim Jong Un oversaw a high-thrust solid-fuel ICBM engine ground test in March 2026; and the Hwasong-20 solid-fuel ICBM unveiled in October 2025 had not been flight-tested as of April 2026.",
+        "source": "Republic of Korea Joint Chiefs of Staff and Japan Ministry of Defense public statements (jcs.mil.kr, mod.go.jp)",
+        "resolve_by": "2027-06-30"
+      },
+      "SUMMIT": {
+        "text": "Donald Trump and Kim Jong Un meet in person between 2026-09-01 and 2027-06-30",
+        "resolution": "Resolves YES if, between 1 September 2026 and 30 June 2027, Donald Trump and Kim Jong Un are together in the same place at the same time in a meeting confirmed both by the White House and by DPRK state media (KCNA), at any location. Video calls, exchanges of letters, and meetings with subordinates do NOT count. Their most recent in-person meeting was at Panmunjom in June 2019.",
+        "source": "White House official statements and DPRK state media (KCNA)",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "targets": [
+      {
+        "tid": "geo_north_korea_escalation.nuketest",
+        "kind": "unconditional",
+        "text": "What is the probability that North Korea conducts a nuclear explosive test between 1 September 2026 and 30 June 2027? Resolution: YES if KCNA or Rodong Sinmun announces a DPRK nuclear test in that window, or the Comprehensive Nuclear-Test-Ban Treaty Organization or South Korea's Korea Meteorological Administration reports a seismic event assessed as an artificial explosion at or near the Punggye-ri test site. North Korea's sixth and most recent nuclear test was on 3 September 2017, and US and South Korean defence intelligence assess the site as ready for a seventh test on short notice.",
+        "expr": "NUKETEST"
+      },
+      {
+        "tid": "geo_north_korea_escalation.icbm",
+        "kind": "unconditional",
+        "text": "What is the probability that North Korea conducts a flight test of an intercontinental-range ballistic missile between 1 September 2026 and 30 June 2027? Resolution: YES if South Korea's Joint Chiefs of Staff or Japan's Ministry of Defense publicly assesses that the DPRK flight-tested a ballistic missile of intercontinental class (nominal range of at least 5,500 km, including lofted-trajectory launches so assessed). Satellite launches, shorter-range and intermediate-range missiles, cruise missiles, hypersonic glide vehicles below ICBM class, and ground engine tests do not count. For context, North Korea conducted no ICBM flight test in 2025, its 2026 launches through June were short- and medium-range ballistic, hypersonic and cruise systems, Kim Jong Un oversaw a high-thrust solid-fuel ICBM engine ground test in March 2026, and the Hwasong-20 solid-fuel ICBM unveiled in October 2025 had not been flight-tested as of April 2026.",
+        "expr": "ICBM"
+      },
+      {
+        "tid": "geo_north_korea_escalation.summit",
+        "kind": "unconditional",
+        "text": "What is the probability that Donald Trump and Kim Jong Un meet in person, at any location, between 1 September 2026 and 30 June 2027, with the meeting confirmed both by the White House and by DPRK state media? Their last in-person meeting was at Panmunjom in June 2019. Video calls, letters, and meetings with subordinates do not count.",
+        "expr": "SUMMIT"
+      },
+      {
+        "tid": "geo_north_korea_escalation.nuke_and_icbm",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen between 1 September 2026 and 30 June 2027: (1) North Korea conducts a nuclear explosive test, as announced by DPRK state media or reported as an artificial explosion at Punggye-ri by the Comprehensive Nuclear-Test-Ban Treaty Organization or South Korea's Korea Meteorological Administration; AND (2) North Korea flight-tests a ballistic missile assessed by South Korea's Joint Chiefs of Staff or Japan's Ministry of Defense as intercontinental class, with a nominal range of at least 5,500 km?",
+        "expr": "NUKETEST and ICBM"
+      },
+      {
+        "tid": "geo_north_korea_escalation.nuke_g_icbm",
+        "kind": "conditional",
+        "text": "Assume that between 1 September 2026 and 30 June 2027 North Korea flight-tests a ballistic missile that South Korea's Joint Chiefs of Staff or Japan's Ministry of Defense assesses as intercontinental class, with a nominal range of at least 5,500 km. Under that assumption, what is the probability that in the same window North Korea also conducts a nuclear explosive test, as announced by DPRK state media or reported as an artificial explosion at or near the Punggye-ri test site by the Comprehensive Nuclear-Test-Ban Treaty Organization or South Korea's Korea Meteorological Administration? The DPRK's last nuclear test was in September 2017.",
+        "expr": "NUKETEST",
+        "given": "ICBM"
+      },
+      {
+        "tid": "geo_north_korea_escalation.summit_g_noicbm",
+        "kind": "conditional",
+        "text": "Assume that between 1 September 2026 and 30 June 2027 North Korea conducts NO flight test of a ballistic missile assessed by South Korea's Joint Chiefs of Staff or Japan's Ministry of Defense as intercontinental class. Under that assumption, what is the probability that Donald Trump and Kim Jong Un meet in person at any location in the same window, with the meeting confirmed both by the White House and by DPRK state media? Their last in-person meeting was at Panmunjom in June 2019.",
+        "expr": "SUMMIT",
+        "given": "not ICBM"
+      }
+    ],
+    "axioms_tested": ["product_rule", "conjunction_bound"]
+  },
+
+  {
+    "family_id": "geo_us_defense_appropriations",
+    "domain": "geopolitics",
+    "base_events": {
+      "SHUTDOWN": {
+        "text": "A lapse in federal appropriations causes a shutdown of at least one full day for any US federal agency between 2026-12-01 and 2027-03-31",
+        "resolution": "The US federal government is operating under a continuing resolution that expires on 4 December 2026. Resolves YES if, at any point from 1 December 2026 through 31 March 2027, appropriations for one or more federal agencies lapse and the Office of Management and Budget directs agencies to execute orderly-shutdown plans, with the lapse lasting at least 24 hours, as recorded by the Congressional Research Service appropriations status materials for FY2027 and reported by Reuters. Brief technical lapses resolved within 24 hours, and reductions in force or funding disputes without a lapse in appropriations, do NOT count.",
+        "source": "Congressional Research Service 'Appropriations Status Table: FY2027' on congress.gov, US Office of Management and Budget guidance, and Reuters reporting",
+        "resolve_by": "2027-03-31"
+      },
+      "DODJAN": {
+        "text": "A full-year FY2027 Department of Defense appropriations act is enacted as of 2027-01-31",
+        "resolution": "Resolves YES if, on or before 31 January 2027, an act providing full-year fiscal year 2027 appropriations for the Department of Defense has become law, as shown by its 'Became Public Law' status on congress.gov and by the Congressional Research Service FY2027 appropriations status table. A full-year defense division within a consolidated or omnibus appropriations act counts. A continuing resolution counts only if it provides full-year FY2027 funding for the Department of Defense at newly enacted account levels rather than extending prior-year levels to a date before 30 September 2027. As of 26 July 2026 the FY2027 defense appropriations bills had not passed either chamber and the FY2027 National Defense Authorization Act was stalled.",
+        "source": "congress.gov public law status and Congressional Research Service 'Appropriations Status Table: FY2027'",
+        "resolve_by": "2027-01-31"
+      },
+      "DODJUN": {
+        "text": "A full-year FY2027 Department of Defense appropriations act is enacted as of 2027-06-30",
+        "resolution": "Same criterion as the 31 January 2027 version, with a later cutoff: resolves YES if on or before 30 June 2027 an act providing full-year fiscal year 2027 appropriations for the Department of Defense has become law, per its 'Became Public Law' status on congress.gov and the Congressional Research Service FY2027 appropriations status table. A full-year defense division of a consolidated or omnibus act counts; a continuing resolution counts only if it provides full-year FY2027 Department of Defense funding at newly enacted account levels.",
+        "source": "congress.gov public law status and Congressional Research Service 'Appropriations Status Table: FY2027'",
+        "resolve_by": "2027-06-30"
+      }
+    },
+    "constraints": [
+      {"type": "implies", "a": "DODJAN", "b": "DODJUN"}
+    ],
+    "targets": [
+      {
+        "tid": "geo_us_defense_appropriations.shutdown",
+        "kind": "unconditional",
+        "text": "What is the probability that a lapse in federal appropriations causes at least one US federal agency to shut down for 24 hours or more at some point between 1 December 2026 and 31 March 2027? The federal government is operating under a continuing resolution that expires on 4 December 2026. Resolution is by the Congressional Research Service FY2027 appropriations status materials, Office of Management and Budget shutdown guidance, and Reuters reporting; technical lapses resolved within 24 hours do not count.",
+        "expr": "SHUTDOWN"
+      },
+      {
+        "tid": "geo_us_defense_appropriations.dodjan",
+        "kind": "unconditional",
+        "text": "What is the probability that an act providing full-year fiscal year 2027 appropriations for the US Department of Defense has become law on or before 31 January 2027? A full-year defense division of a consolidated or omnibus appropriations act counts; a continuing resolution counts only if it provides full-year FY2027 Department of Defense funding at newly enacted account levels. As of 26 July 2026 the FY2027 defense appropriations bills had passed neither chamber, the FY2027 National Defense Authorization Act was stalled after failed procedural votes, and the government was funded by a continuing resolution expiring 4 December 2026. Resolution is by public-law status on congress.gov and the Congressional Research Service FY2027 appropriations status table.",
+        "expr": "DODJAN"
+      },
+      {
+        "tid": "geo_us_defense_appropriations.dodjun",
+        "kind": "unconditional",
+        "text": "What is the probability that an act providing full-year fiscal year 2027 appropriations for the US Department of Defense has become law on or before 30 June 2027? A full-year defense division of a consolidated or omnibus appropriations act counts; a continuing resolution counts only if it provides full-year FY2027 Department of Defense funding at newly enacted account levels. As of 26 July 2026 the FY2027 defense appropriations bills had passed neither chamber and the government was funded by a continuing resolution expiring 4 December 2026. Resolution is by public-law status on congress.gov and the Congressional Research Service FY2027 appropriations status table.",
+        "expr": "DODJUN"
+      },
+      {
+        "tid": "geo_us_defense_appropriations.no_dodjun",
+        "kind": "unconditional",
+        "text": "What is the probability that NO act providing full-year fiscal year 2027 appropriations for the US Department of Defense has become law by 30 June 2027, meaning the Department is still operating on continuing-resolution funding at prior-year levels or on a lapse as of that date? Resolution is by public-law status on congress.gov and the Congressional Research Service FY2027 appropriations status table; a full-year defense division of a consolidated or omnibus act would count as enactment.",
+        "expr": "not DODJUN"
+      },
+      {
+        "tid": "geo_us_defense_appropriations.shutdown_and_dodjan",
+        "kind": "unconditional",
+        "text": "What is the probability that BOTH of the following happen: (1) a lapse in federal appropriations causes at least one US federal agency to shut down for 24 hours or more at some point between 1 December 2026 and 31 March 2027, the current continuing resolution having expired on 4 December 2026; AND (2) an act providing full-year fiscal year 2027 appropriations for the US Department of Defense nonetheless becomes law on or before 31 January 2027?",
+        "expr": "SHUTDOWN and DODJAN"
+      },
+      {
+        "tid": "geo_us_defense_appropriations.dodjan_g_shutdown",
+        "kind": "conditional",
+        "text": "Assume that a lapse in federal appropriations causes at least one US federal agency to shut down for 24 hours or more at some point between 1 December 2026 and 31 March 2027. Under that assumption, what is the probability that an act providing full-year fiscal year 2027 appropriations for the US Department of Defense has become law on or before 31 January 2027? A full-year defense division of a consolidated or omnibus act counts; a continuing resolution counts only if it funds the Department for the full fiscal year at newly enacted account levels.",
+        "expr": "DODJAN",
+        "given": "SHUTDOWN"
+      }
+    ],
+    "axioms_tested": ["monotonicity", "complement_partition", "product_rule", "conjunction_bound"]
+  }
+]

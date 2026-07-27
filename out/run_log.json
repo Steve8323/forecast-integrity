@@ -1,0 +1,44 @@
+[
+  {
+    "stage": "validate",
+    "ok": true,
+    "families": 40,
+    "targets": 240,
+    "errors": []
+  },
+  {
+    "stage": "elicit claude-sonnet-5",
+    "ok": true,
+    "secs": 0.1
+  },
+  {
+    "stage": "elicit claude-opus-5",
+    "ok": true,
+    "secs": 0.1
+  },
+  {
+    "stage": "ledger (commit)",
+    "ok": true,
+    "secs": 0.0
+  },
+  {
+    "stage": "coherence (QP projection)",
+    "ok": true,
+    "secs": 3.0
+  },
+  {
+    "stage": "dutchbook (LP arbitrage)",
+    "ok": true,
+    "secs": 0.5
+  },
+  {
+    "stage": "scoring (armed)",
+    "ok": true,
+    "secs": 0.6
+  },
+  {
+    "stage": "report",
+    "ok": true,
+    "secs": 0.0
+  }
+]

@@ -1,0 +1,2162 @@
+[
+ {
+  "tid": "en_brent_q4_2026_bands.lt75",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Current Brent prices near mid-$60s to $70s with oversupply expectations make sub-$75 average plausible.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.mid",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.58,
+  "rationale": "Most likely range given current price trajectory and typical volatility bounds.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.ge105",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.02,
+  "rationale": "Would require a major supply shock; currently far from this level.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.lt105",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.98,
+  "rationale": "Complement of ge105.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.ge75",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.6,
+  "rationale": "Complement of lt75.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_brent_q4_2026_bands.ge105_given_ge75",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.033,
+  "rationale": "Conditional on being above 75, still very unlikely to reach 105 without a shock.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.pause",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.9,
+  "rationale": "OPEC+ has already paused/slowed increases repeatedly in 2025-26 and is likely to continue pausing given oversupply concerns.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.brent70",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "Brent has been hovering near $65-75 with oversupply pressures; a dip below $70 over a 7-month window is fairly likely but not certain.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.52,
+  "rationale": "Both events are individually likely and positively correlated since low prices would drive OPEC+ to pause.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.95,
+  "rationale": "Given both individual probabilities are high, at least one occurring is very likely.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.pause_given_brent70",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.95,
+  "rationale": "If prices fall below $70, OPEC+ would almost certainly pause or cut to defend prices.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_opecplus_price_floor.pause_given_no_brent70",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.8,
+  "rationale": "Even without breaching $70, OPEC+ has shown a pattern of pausing increases amid oversupply concerns.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci6000",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "Would require ~37% jump from current $4374; possible but not baseline scenario without major disruption.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci8000",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.02,
+  "rationale": "Would require an extreme disruption comparable to 2021 or Red Sea crisis peak; low likelihood.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.suez55",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "Suez transits have been suppressed by Red Sea rerouting; a sustained return to 55+ requires significant normalization, unlikely within timeframe.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci6000_and_suez55",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.03,
+  "rationale": "Both high-rate and high-Suez-transit scenarios are somewhat correlated (Suez reopening could ease rates, not spike them), but joint probability remains low.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci6000_given_suez55",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "If Suez normalizes, rates likely fall due to shorter routes and capacity relief, reducing chance of $6000 spike, though other disruptions could still occur.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_suez_container_freight.wci6000_given_no_suez55",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "If Suez remains disrupted, rerouting keeps freight costs elevated but a jump to $6000 still requires additional demand or supply shock.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.stor70",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.6,
+  "rationale": "Current 54.2% with relaxed 80% target suggests moderate but plausible pace to reach 70% by Nov 1.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.stor80",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Relaxed target to 80% and current low levels make full compliance less likely though not implausible with strong summer injection.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.ttf80",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Winter volatility and geopolitical risk could push TTF to 80 EUR/MWh even from a 58-63 base, but sustained high levels aren't certain.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.stor80_and_ttf80",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.06,
+  "rationale": "Joint probability of high storage (lower price pressure) and high price spike is lower than either individually due to negative correlation.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.ttf80_given_stor80",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.25,
+  "rationale": "High storage typically eases price pressure, reducing but not eliminating spike probability.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_eu_gas_storage_winter.ttf80_given_no_stor80",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.42,
+  "rationale": "Lower storage increases scarcity risk and likelihood of price spikes during winter.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng18",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.72,
+  "rationale": "Winter peak demand plus growing capacity likely pushes at least one month to 18 Bcf/d given June already at 17.5.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng19",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.32,
+  "rationale": "19 Bcf/d requires a larger jump than current trajectory suggests, though winter peaks and new capacity make it plausible.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.gpt2",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.45,
+  "rationale": "Operator guidance points to H1 2027 start, roughly even odds it falls by end of June.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng18_and_gpt2",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.33,
+  "rationale": "Joint probability reflecting mild positive correlation between Golden Pass Train 2 startup and higher aggregate exports.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng18_or_gpt2",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.83,
+  "rationale": "Union of a fairly likely export event and a moderately likely startup event.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_lng_exports_capacity.lng18_given_gpt2",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.8,
+  "rationale": "If Train 2 is online, incremental capacity makes hitting 18 Bcf/d somewhat more likely than baseline.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.load88",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.18,
+  "rationale": "Requires new all-time-adjacent peak exceeding recent record, plausible but needs extreme cold plus load growth.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.load92",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Would need to far exceed all-time record, unlikely in one winter.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.eea",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "EEA events occur in a good fraction of winters given tight reserve margins.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.load88_and_eea",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Joint occurrence requires both extreme demand and reserve shortfall, correlated but not certain.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.eea_given_load88",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.65,
+  "rationale": "Extreme demand near record levels strongly correlates with emergency conditions.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "en_us_winter_grid_stress.eea_given_no_load88",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "EEAs can still occur from generation outages or cold snaps without record demand.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.oni20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.06,
+  "rationale": "AMJ at +1.0 with El Nino developing, but reaching +2.0 by NDJ (very strong) is a rare, extreme outcome.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.pan45",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "El Nino tends to bring wetter conditions to Panama, reducing likelihood of severe draft restrictions unlike the 2023-24 La Nina drought.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.ref82",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.85,
+  "rationale": "Refinery utilization regularly dips to or below 82% during fall/winter turnaround seasons in most years.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.pan45_and_oni20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.015,
+  "rationale": "Joint probability of both a rare extreme El Nino and canal restrictions (which are less likely under El Nino wetness) is low.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.pan45_given_oni20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Even with a very strong El Nino, elevated Gatun Lake levels typically reduce the need for draft restrictions.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_elnino_panama_refining.ref82_given_oni20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.85,
+  "rationale": "Refinery utilization seasonality is largely independent of ENSO state, so conditional probability remains similar to base rate.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.extend",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.62,
+  "rationale": "Trade truce dynamics suggest likely extension or continued suspension given ongoing negotiations, though not certain.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.no_extend",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.38,
+  "rationale": "Complement of extension probability.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.newctrl",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "China has a pattern of periodically expanding control lists even amid truces, especially for new compounds/alloys.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.newctrl_and_no_extend",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.21,
+  "rationale": "Joint probability of no extension (0.38) and new controls (~0.55), with some positive correlation since non-extension environment may coincide with more control additions.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.newctrl_given_no_extend",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.58,
+  "rationale": "If suspension lapses, China is somewhat more likely to also expand control lists as part of a harder stance.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "sc_china_rare_earth_controls.exports_and_newctrl",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.13,
+  "rationale": "Requires both a low export month (unlikely given current trend ~5000+ tonnes) and new control additions, a fairly low joint probability.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.strike",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "Ceasefire and ongoing negotiations reduce but don't eliminate risk of renewed strikes over a 10-month window.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h50",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "Traffic likely recovers substantially as negotiations progress and shipping confidence returns over many months.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h80",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "Near-full pre-crisis recovery is plausible but less certain within this window given lingering risk premiums.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h50_g_strike",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.25,
+  "rationale": "A renewed strike would likely suppress shipping traffic well below 50/day for much of the remaining window.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h50_g_nostrike",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.65,
+  "rationale": "Absent strikes, gradual normalization of shipping traffic toward pre-crisis levels is likely over 10 months.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_iran_hormuz_reopening.h80_and_strike",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Both a strike occurring and near-full traffic recovery to 80+ are largely contradictory outcomes, making joint occurrence unlikely.",
+  "asked_utc": "2026-07-27T02:56:42+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.ceasefire",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "Full front-wide ceasefire with 30-day durability remains unlikely given ongoing intensity and lack of framework.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.delist",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.08,
+  "rationale": "Delisting requires major policy shift unlikely absent broader settlement.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.cf_and_delist",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.035,
+  "rationale": "Joint occurrence requires both a durable ceasefire and sanctions relief, correlated but each individually unlikely.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.cf_or_delist",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Union of two low-probability but partially correlated events.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.delist_g_cf",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Conditional on a real ceasefire, sanctions relief becomes much more plausible as part of a deal.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_russia_ceasefire_sanctions.euassets_and_nocf",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "No-ceasefire is likely, but EU adopting principal-use of frozen assets remains politically difficult given prior December 2025 decision.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.house",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.68,
+  "rationale": "Favorable midterm environment for opposition party historically, plus modest seat gain needed.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.senate",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Senate map is very unfavorable to Democrats, requiring a large net gain.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "Requires both House flip and unlikely Senate flip simultaneously.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.7,
+  "rationale": "House flip alone is fairly likely and dominates this probability.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.neither",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.3,
+  "rationale": "Complement of Democrats winning at least one chamber.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_midterms_2026.senate_g_house",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Conditional on House gains, Senate map still heavily favors Republicans.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.sortie45",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.75,
+  "rationale": "Large PLA incursions (45+) have occurred repeatedly in past exercises around major triggers, and a 10-month window likely includes at least one flashpoint (elections, US visits, anniversaries).",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.fms1b",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "Given the reserved NT$480bn budget and pattern of periodic large FMS tranches, a $1B+ notification within 10 months is fairly likely but not certain.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.quarantine",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "This would be a significant escalation beyond current PRC practice; possible but historically rare and would signal quasi-blockade posture.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.quar_g_sortie",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "A large sortie surge could accompany or precede a quarantine-type announcement, raising conditional probability above baseline but still not likely given no precedent yet.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.sortie_and_quar",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.17,
+  "rationale": "Joint probability roughly sortie probability times conditional quarantine probability given sorties.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_taiwan_strait_pressure.fms_and_quar",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.08,
+  "rationale": "Both independent-ish events with moderate/low probabilities multiplied, adjusted slightly for correlation via rising tensions.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.reearth",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Truce likely extended given mutual de-escalation incentives, but tensions could flare and reinstatement risk is non-trivial.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.bis_jan",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.08,
+  "rationale": "BIS just eased policy in Jan 2026; reversal within this short window is unlikely absent major provocation.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.bis_jun",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.13,
+  "rationale": "Longer window increases chance of policy reversal but still requires a significant shift in US-China relations.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.bisjan_g_reearth",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.25,
+  "rationale": "If China reinstates rare-earth controls, tit-for-tat dynamics make US reversal more likely but still not the base case within 5 months.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.reearth_and_bisjan",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Joint probability of both reinstatement and BIS reversal by Jan 2027, reflecting correlated but still low-probability events.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_export_controls_tit_for_tat.reearth_and_bisjun",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.08,
+  "rationale": "Slightly higher due to longer BIS window increasing chance of reversal conditional on rare-earth reinstatement.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.ssd",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Current suspension and hostile climate make a high-level meeting unlikely but not impossible given diplomatic incentives.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.newlimits",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Highly unlikely given collapsed dialogue and short timeframe for negotiating numerical limits.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.newlimits_g_ssd",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Even if talks resume, reaching a signed numerical agreement within the window is difficult.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.newlimits_g_nossd",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.01,
+  "rationale": "Without high-level talks, a formal numerical agreement is very improbable.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.ssd_and_newlimits",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.035,
+  "rationale": "Requires both meeting and agreement, both individually unlikely and agreement conditional on meeting is modest.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_post_new_start_arms_control.ntest_and_nolimits",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.03,
+  "rationale": "Nuclear testing resumption is rare/unlikely, and no-limits outcome is likely but joint probability is small.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.nuketest",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.06,
+  "rationale": "No test since 2017 despite readiness; low but nonzero base rate given rising tensions.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.icbm",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Hwasong-20 unveiled and engine-tested, flight test plausible but not certain within 10 months.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.summit",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Trump has shown interest in re-engaging Kim, but no concrete summit signals yet.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.nuke_and_icbm",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.03,
+  "rationale": "Joint occurrence requires both rare events in same window.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.nuke_g_icbm",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "An ICBM test could be paired with a nuclear test for major escalation, but still not the base case.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_north_korea_escalation.summit_g_noicbm",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.14,
+  "rationale": "Absent major provocation, diplomatic opening slightly more likely.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.shutdown",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.38,
+  "rationale": "Recurring CR brinkmanship makes a shutdown plausible but not more likely than not given historical patterns of last-minute deals.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.dodjan",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.13,
+  "rationale": "Given stalled NDAA and no chamber passage as of July 2026, full enactment by Jan 31 is unlikely given typical congressional timelines.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.dodjun",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "By June 30 there is more time for negotiations, omnibus deals, or defense-specific bills to pass even if January deadline is missed.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.no_dodjun",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.45,
+  "rationale": "Complement of the June enactment probability, reflecting meaningful chance of continued CR funding through mid-2027.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.shutdown_and_dodjan",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Joint probability of both a shutdown occurring and full-year DoD appropriations passing quickly is low since these outcomes are somewhat contradictory.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "geo_us_defense_appropriations.dodjan_g_shutdown",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "If a shutdown occurs, it signals dysfunction that makes rapid full-year DoD appropriations by Jan 31 less likely.",
+  "asked_utc": "2026-07-27T02:56:49+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.low",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "Low H1 losses suggest a quieter year, but H2 hurricane season could still push totals above 80B.",
+  "asked_utc": "2026-07-27T02:56:50+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.mid",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.52,
+  "rationale": "Most likely outcome given typical H2 catastrophe activity added to a low H1 base.",
+  "asked_utc": "2026-07-27T02:56:50+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.high",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.2,
+  "rationale": "Would require an unusually severe H2 given the record-low H1 figure.",
+  "asked_utc": "2026-07-27T02:56:50+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.mid_or_high",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.72,
+  "rationale": "Sum of mid and high band probabilities.",
+  "asked_utc": "2026-07-27T02:56:50+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.not_low",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.72,
+  "rationale": "Complement of the low-band probability.",
+  "asked_utc": "2026-07-27T02:56:50+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_global_insured_loss_bands.mid_given_not_low",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.72,
+  "rationale": "Conditional on reaching 80B+, more likely to land in the 80-125B range than exceed 125B.",
+  "asked_utc": "2026-07-27T02:56:50+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.hur1",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.62,
+  "rationale": "Below-normal season lowers base rate somewhat but historical odds of at least one US hurricane landfall remain fairly high.",
+  "asked_utc": "2026-07-27T02:56:55+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.hur3",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Three distinct hurricane landfalls in one season is rare, especially in a below-normal season.",
+  "asked_utc": "2026-07-27T02:56:55+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.maj1",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "Major hurricane US landfalls occur in roughly a third of seasons historically, slightly reduced for below-normal outlook.",
+  "asked_utc": "2026-07-27T02:56:55+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.maj_given_hur1",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.42,
+  "rationale": "Conditional on any landfall, roughly 40% chance at least one is major based on historical distribution.",
+  "asked_utc": "2026-07-27T02:56:55+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.hur3_or_maj",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.32,
+  "rationale": "Union of two moderately rare events, dominated by major hurricane probability.",
+  "asked_utc": "2026-07-27T02:56:55+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_hurricane_landfall_2026.hur3_and_maj",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.06,
+  "rationale": "Both rare events co-occurring is quite unlikely.",
+  "asked_utc": "2026-07-27T02:56:55+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.ns12",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.45,
+  "rationale": "Below-normal outlook with only 2 storms by late July suggests moderate chance of reaching 12, roughly coin-flip to slightly below.",
+  "asked_utc": "2026-07-27T02:56:56+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.mega20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Q3-Q4 includes peak hurricane season, but recent quarters show no $10B+ single event, making a $20B+ event unlikely but plausible.",
+  "asked_utc": "2026-07-27T02:56:56+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Given the index was already down ~16% by mid-2026 amid soft market and record capital, a further 15%+ decline by Jan 2027 is plausible but not certain.",
+  "asked_utc": "2026-07-27T02:56:56+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15_given_mega20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "A major $20B+ Q4 catastrophe would likely halt or reverse the softening trend, making a 15%+ drop less likely.",
+  "asked_utc": "2026-07-27T02:56:56+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.rol15_given_no_mega20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.5,
+  "rationale": "Absent a major loss event, continued soft market conditions make a 15%+ decline more likely.",
+  "asked_utc": "2026-07-27T02:56:56+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "ins_2026_loss_severity_and_reinsurance_pricing.ns12_and_mega20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Joint probability of both a high named-storm count and a $20B+ Q4 catastrophe, roughly the product of their marginal probabilities with some positive correlation.",
+  "asked_utc": "2026-07-27T02:56:56+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.fire100k",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Dry conditions and low snowpack raise fire risk, but 100k+ single fires remain uncommon events historically occurring in roughly 1 in 2-3 severe seasons.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.quake60",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "Base rate for M6+ in California over a 7-month window is roughly 25-30% historically.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.loss2b",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Given elevated wildfire risk and California's exposure, a $2B+ insured loss event is plausible but not assured given the shorter/less catastrophic season so far.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.loss2b_given_fire100k",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.75,
+  "rationale": "A 100k+ acre fire in CA strongly correlates with high insured losses given WUI exposure.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.fire_and_loss",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.27,
+  "rationale": "Joint probability combining fire100k base rate with high conditional loss probability.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "cat_us_wildfire_quake_2026_27.loss2b_given_quake60",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.45,
+  "rationale": "A M6+ quake doesn't guarantee major insured losses unless near dense urban areas, but raises probability somewhat above baseline.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.nadv_jun",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.88,
+  "rationale": "Strong trial results, no adcom planned, no review issues identified\u2014high likelihood of approval by mid-2027.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.nadv_dec",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.72,
+  "rationale": "Most NDAs with clean reviews approve on/near the PDUFA date, but some slip slightly past.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.adv_jun",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "Filing acceptance and priority review status unconfirmed, and standard review timeline could extend past June 2027.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.nadv_dec_given_jun",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.82,
+  "rationale": "Given eventual approval, most likely occurs at or near the PDUFA date rather than slipping.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.both_indications",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.48,
+  "rationale": "Requires both approvals within window; advanced indication timeline is less certain.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_bezuclastinib_fda_decisions.adv_given_nadv_dec",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.58,
+  "rationale": "Positive signal from non-advanced approval suggests good regulatory relationship, but advanced timeline still uncertain.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.approve26",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "OS not statistically significant creates real risk of CRL or delay despite PFS benefit and PDUFA date within window.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.h3_os",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Missed squamous PFS interim and general difficulty of OS significance in first-line trials versus pembrolizumab lower the odds within this timeframe.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.file_1l",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Filing typically requires strong readout data first, and timeline to submission plus FDA interactions makes June 2027 tight.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.approve_given_h3",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.45,
+  "rationale": "Positive HARMONi-3 OS would bolster confidence in ivonescimab's mechanism but wouldn't directly fix HARMONi's own OS shortfall by the PDUFA date.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.approve_given_not_h3",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.32,
+  "rationale": "Without supportive first-line OS data, approval rests solely on HARMONi's PFS benefit and marginal OS trend.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_ivonescimab_readout_to_approval.h3_and_file",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "Requires both a positive OS readout and a completed BLA submission within the same short window, a low-probability compound event.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.mfn3",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.25,
+  "rationale": "Most major manufacturers already signed, leaving fewer holdouts and diminishing pace of new deals.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.irp_rule",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Administration has favored voluntary agreements over formal rulemaking, and rulemaking timelines are slow.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.tariff_cut",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Tariff serves as leverage for MFN deals, so reducing it broadly seems unlikely before mid-2027.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.irp_given_mfn3",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Even with more voluntary deals, formal payment rulemaking remains a separate, slower track.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.irp_given_not_mfn3",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "If voluntary deals stall, administration might pursue rulemaking but base rate remains low.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_us_drug_pricing_policy.mfn3_and_irp",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Joint occurrence requires both continued deal-making momentum and rare formal rulemaking within the window.",
+  "asked_utc": "2026-07-27T02:56:57+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.pheic_new",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Base rate ~1 per 2 years over 10-month window, no imminent candidate known.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.pheic_flu",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.02,
+  "rationale": "H5N1 remains sporadic with no sustained human transmission, very low near-term likelihood.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.h5_3us",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.25,
+  "rationale": "Recent trend shows very slow case accumulation, but seasonal dairy/poultry exposure could pick up.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.flu_given_h5",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.08,
+  "rationale": "Even with more US cases, PHEIC requires sustained transmission/severity escalation, which is unlikely in this timeframe.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.flu_and_h5",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.02,
+  "rationale": "Joint probability of both rare events co-occurring is low.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "pha_outbreak_public_health_declarations.pheic_nonflu",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.13,
+  "rationale": "Most plausible new PHEIC would be non-influenza (e.g., Ebola, Marburg, other outbreak), consistent with overall base rate minus small flu probability.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED400",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.06,
+  "rationale": "Fed is in cutting/hold trend since mid-2026; hiking back above 4.00% by mid-2027 would require inflation resurgence not currently expected.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED425",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.02,
+  "rationale": "Two hikes from current stance is even less likely given easing bias.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED400_g_FED425",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.97,
+  "rationale": "If rate reaches 4.25%+ it necessarily also satisfies the 4.00%+ threshold.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.CORE30",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Core CPI at 2.6% and declining trend makes a jump to 3.0%+ in the next six prints unlikely but not negligible given tariff pass-through risk.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED425_g_CORE30",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.07,
+  "rationale": "Even with inflation surprise, the Fed would likely first hold rather than hike twice within the window given lags.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_hike_path.FED425_and_CORE30",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.008,
+  "rationale": "Joint probability of both a core CPI upside surprise and aggressive Fed hiking back to 4.25%+ is quite small.",
+  "asked_utc": "2026-07-27T02:56:58+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.BELOW",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.42,
+  "rationale": "Fed has been cutting through 2026 and labor market softening suggests further cuts likely but not certain by year-end.",
+  "asked_utc": "2026-07-27T02:57:03+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.SAME",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.53,
+  "rationale": "Most likely outcome is one cut or hold, with pause after recent cuts a plausible base case.",
+  "asked_utc": "2026-07-27T02:57:03+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.ABOVE",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Hiking is very unlikely given weak labor data and existing cutting trajectory.",
+  "asked_utc": "2026-07-27T02:57:03+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.UNEMP45",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Unemployment at 4.2% with weakening payrolls makes a rise to 4.5% plausible but not the base case within four months.",
+  "asked_utc": "2026-07-27T02:57:03+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.BELOW_g_UNEMP45",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.75,
+  "rationale": "If unemployment rises to 4.5%+, the Fed would likely respond with additional cuts.",
+  "asked_utc": "2026-07-27T02:57:03+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_fed_dec2026_bands.BELOW_g_notUNEMP45",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "Without labor deterioration, the Fed is less likely to cut further, though some easing bias may persist.",
+  "asked_utc": "2026-07-27T02:57:03+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.CPIOCT35",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.42,
+  "rationale": "CPI has been trending down from 4.2% to 3.5%, so staying at/above 3.5% by October is plausible but slightly more likely to drift lower.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.Y10_490",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Yield needs to rise ~26bp from recent highs within 5 months, which is possible but not the base case given current trajectory.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.08,
+  "rationale": "Joint probability reflecting positive correlation between sticky inflation and higher yields but each individually below 50%.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.49,
+  "rationale": "Union of two moderate-probability, positively correlated events.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.Y10_g_CPI",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.19,
+  "rationale": "If inflation stays elevated, yields somewhat more likely to spike toward 4.90%.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_cpi_tenyear.Y10_g_notCPI",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.11,
+  "rationale": "If inflation falls further, less pressure for yields to rise to 4.90%.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.BRENT110",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.06,
+  "rationale": "Would require a large new supply shock; prices are already retreating from recent geopolitical peak near 100.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.HICP30",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Inflation trending down from 3.2% to 2.8%, with energy base effects likely easing further, though some volatility possible.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.ECB275",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "ECB just paused after two hikes; further tightening to 2.75%+ within the year seems unlikely absent a new inflation spike.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.HICP_g_BRENT",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.55,
+  "rationale": "A Brent spike to 110+ would push energy inflation up meaningfully, raising odds of a 3.0%+ print but not guaranteeing it given base effects.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.HICP_and_BRENT",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.035,
+  "rationale": "Joint probability of both a large oil spike and inflation crossing 3.0% is low, roughly product of marginal probabilities with some positive correlation.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_oil_hicp_ecb.ECB_g_HICP",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.25,
+  "rationale": "Even if inflation ticks back to 3.0%+, ECB likely to view it as transitory before hiking twice more by December.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.BOJ125",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.3,
+  "rationale": "Reuters surveys point to Q4 2026 hike but reaching 1.25% by March 2027 requires timely follow-through amid uncertain conditions.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.JPY168",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.25,
+  "rationale": "Yen would need to weaken ~2.6% further, plausible but not likely given intervention risk and BOJ tightening bias.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.MOFINT",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.3,
+  "rationale": "MOF has shown willingness to intervene at extreme levels but only if yen weakens significantly further.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.MOF_g_JPY168",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.65,
+  "rationale": "If yen hits 168, intervention becomes much more likely given prior record intervention near similar levels.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.JPY_and_MOF",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.16,
+  "rationale": "Joint probability of both yen weakening to 168 and MOF intervening.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_boj_yen.JPY_g_BOJ125",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "A 1.25% BOJ rate would likely support yen strength, making a move to 168 less probable, though not negligible.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.U48",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.12,
+  "rationale": "Would require notable deterioration from 4.2% trend within 6 months, plausible but not likely given labor market softening but not collapsing.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.U52",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.03,
+  "rationale": "Would require a sharp recession-level jump, unlikely absent clear crisis signals.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.U48_g_U52",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.95,
+  "rationale": "If 5.2% is reached, 4.8% almost certainly was reached first or concurrently.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.HY400",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.1,
+  "rationale": "Spreads are currently low and stable; reaching 400bp requires a credit stress event not currently signaled.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.HY400_g_U48",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "A labor market deterioration to 4.8%+ would likely coincide with risk-off credit conditions, raising spread probability substantially above base case.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_labor_credit.HY400_and_U48",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.045,
+  "rationale": "Joint probability combining modest unemployment deterioration chance with conditional credit stress probability.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.DD10",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.32,
+  "rationale": "10-month window with elevated valuations gives meaningful but not high chance of a 10% correction.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.DD20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.09,
+  "rationale": "A 20% bear market within 10 months without a clear catalyst is a lower-probability tail event.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.DD10_g_DD20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.97,
+  "rationale": "If a 20% drawdown occurs, a 10% drawdown almost certainly occurred first.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.FEDCUT",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Markets see modest odds of cuts in 2026, but by mid-2027 further easing becomes more likely given typical cutting cycles.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.FEDCUT_g_DD20",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.75,
+  "rationale": "A severe equity selloff would likely prompt Fed easing well below 3.50% by mid-2027.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_equity_drawdown_fed.DD20_and_FEDCUT",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.07,
+  "rationale": "Joint probability of a severe drawdown and substantial Fed cuts, roughly DD20 * conditional cut probability.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.FRDOWN",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Fragile fiscal trajectory and negative Moody's outlook create moderate downgrade risk within 10 months, but recent affirmations suggest agencies are holding steady for now.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.EUR110",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.2,
+  "rationale": "EUR/USD would need to fall over 3% from current levels amid an ECB hiking cycle that typically supports the euro, making a move to 1.10 possible but not likely.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.05,
+  "rationale": "Joint occurrence requires both a fairly unlikely downgrade and a fairly unlikely euro depreciation, with limited correlation between the two.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.37,
+  "rationale": "Union of two moderately unlikely, weakly correlated events.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.neither",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.63,
+  "rationale": "Complement of the 'either' probability.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "mr_france_eurusd.EUR_g_FRDOWN",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.25,
+  "rationale": "A downgrade could modestly weaken sentiment toward the euro, but the ECB hiking cycle should limit large depreciation.",
+  "asked_utc": "2026-07-27T02:57:04+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.dram_up",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Strong upcycle momentum but TrendForce explicitly warned of moderation, making sustained 5%+ QoQ into 1Q27 plausible but not likely.",
+  "asked_utc": "2026-07-27T02:57:05+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.mu55",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Requires ~10% QoQ growth beyond Q4 guidance midpoint, plausible given DRAM upcycle but not the base case.",
+  "asked_utc": "2026-07-27T02:57:05+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.mu62",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.08,
+  "rationale": "Would require an extremely aggressive ~24% QoQ jump, unlikely even in a strong upcycle.",
+  "asked_utc": "2026-07-27T02:57:05+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Joint probability of both strong pricing momentum and outsized Micron revenue beat.",
+  "asked_utc": "2026-07-27T02:57:05+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.mu55_g_dram",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.6,
+  "rationale": "If pricing is confirmed strong into 1Q27, Micron revenue guidance for Nov quarter likely benefits, raising odds above unconditional case.",
+  "asked_utc": "2026-07-27T02:57:05+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dram_cycle_micron.mu55_g_notdram",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.22,
+  "rationale": "Without confirmed strong pricing momentum, Micron hitting $55B is less likely though still possible from volume/HBM growth.",
+  "asked_utc": "2026-07-27T02:57:05+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.bis_rule",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "BIS policy is actively evolving with recent rule changes, but another formal rule within this specific window is uncertain given regulatory lag.",
+  "asked_utc": "2026-07-27T02:57:10+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.nv6",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Recovery to $6B requires substantial China demand resumption beyond the $4.55B baseline, plausible but not assured given policy uncertainty.",
+  "asked_utc": "2026-07-27T02:57:10+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.nv10",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Reaching $10B would require near-full recovery to prior-year levels within two quarters, less likely given ongoing restrictions.",
+  "asked_utc": "2026-07-27T02:57:10+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.16,
+  "rationale": "Joint probability of both a new BIS rule and $6B+ revenue, treating them as positively correlated but each individually uncertain.",
+  "asked_utc": "2026-07-27T02:57:10+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.nv6_g_rule",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.5,
+  "rationale": "Conditional on a further liberalizing rule, revenue recovery to $6B becomes more likely but still not certain given implementation lags.",
+  "asked_utc": "2026-07-27T02:57:10+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_bis_china_nvidia.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.58,
+  "rationale": "Union of two moderately likely, positively correlated events yields a somewhat higher combined probability.",
+  "asked_utc": "2026-07-27T02:57:10+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.low",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "2026 capex already 60-64B with strong AI demand growth; 2027 likely rises but could stay just under 75B.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.mid",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.45,
+  "rationale": "Most likely range given continued but moderating growth trajectory from 60-64B base.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.high",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.2,
+  "rationale": "Requires very aggressive continued AI capex acceleration to reach 90B+.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.at_least_75",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.65,
+  "rationale": "Complement of low scenario, reflecting strong growth momentum in AI-driven capex.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.high_g_at_least_75",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.31,
+  "rationale": "Conditional on being above 75B, roughly a third chance it reaches 90B+.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_tsmc_2027_capex.not_low",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.65,
+  "rationale": "Same as at_least_75 by construction.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.goog260",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.32,
+  "rationale": "2026 midpoint is $200B; a jump to $260B midpoint (+30%) is plausible given 'significantly higher' language but far from certain.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.goog300",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.09,
+  "rationale": "A 50% jump to $300B midpoint is a steep escalation beyond typical guidance increases even with AI capex boom.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.meta185",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "2026 midpoint is $135B; reaching $185B midpoint requires ~37% growth, plausible but not the base case.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.13,
+  "rationale": "Joint probability of both aggressive increases occurring together, with some correlation from shared AI capex cycle.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.47,
+  "rationale": "Union of two moderately likely but uncertain events with positive correlation.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_hyperscaler_2027_capex.meta_g_goog",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.42,
+  "rationale": "Given Alphabet hits an aggressive $260B+ target, industry-wide capex acceleration raises likelihood Meta also hits its threshold.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.cust14a",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "Firm decisions expected H2 2026-H1 2027 but public confirmation of a binding deal within this narrow window is uncertain given Intel's cautious disclosure history.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.q4rev",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.35,
+  "rationale": "Q4 typically seasonally strong but $17.5B requires growth beyond Q3 guidance midpoint, plausible but not base case.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.foundryloss",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Trend of narrowing losses (2.4B->2.1B) suggests further improvement toward 1.5B is plausible but not assured by Q4.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.11,
+  "rationale": "Joint probability of both independent-ish but correlated positive outcomes occurring together.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.rev_g_cust",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "A customer win signals positive momentum, slightly raising odds of strong revenue but not decisively.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_intel_foundry_14a.rev_g_nocust",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.33,
+  "rationale": "Absent a customer announcement, revenue growth trajectory continues on existing core business trends.",
+  "asked_utc": "2026-07-27T02:57:11+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.ceg1gw",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.45,
+  "rationale": "Active hyperscaler demand and prior large deals suggest reasonable chance of another 1GW+ deal within 10 months.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.msft60",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.28,
+  "rationale": "Implied quarterly run-rate from $190B annual guidance is ~$47-50B, so $60B requires significant acceleration.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.cranegrid",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Regulatory approvals still pending with tight timeline to mid-2027 target.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.14,
+  "rationale": "Joint probability of both independent-ish events occurring.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.6,
+  "rationale": "Union of two moderately likely independent events.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_dc_power_capex.msft_g_ceg",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.3,
+  "rationale": "Weak correlation between CEG deal and MSFT capex timing, so conditional probability close to base rate.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.ti_slab",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.45,
+  "rationale": "Guided H1 2027 close with a June 30 deadline exactly matching guidance leaves meaningful risk of slippage from remaining non-US antitrust reviews.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.syna_vote",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.9,
+  "rationale": "Stockholder votes on friendly strategic mergers with board recommendation are routinely approved well before mid-2027 guidance.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.syna_close",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Deal guided to mid-2027 close, so June 30 cutoff is tight and regulatory/registration timing could push past that date.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.vote_and_close",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.37,
+  "rationale": "Vote is likely but combined with close by June 30 given mid-2027 guidance is less certain.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.close_g_vote",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.42,
+  "rationale": "Conditional on vote occurring, remaining regulatory/S-4 steps still leave real chance of slipping past June 30.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_analog_mna_antitrust.either_close",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.65,
+  "rationale": "Two independent deals both targeting first half/mid-2027 closes gives reasonable combined chance at least one closes by June 30.",
+  "asked_utc": "2026-07-27T02:57:12+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.orcl800",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.33,
+  "rationale": "Requires ~25% additional growth in RPO over three quarters, plausible but not certain given recent trend of large sequential jumps.",
+  "asked_utc": "2026-07-27T02:57:14+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.nvda115",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.4,
+  "rationale": "Extrapolating ~10-12% sequential growth from Q2 guide of $91B over two more quarters lands near $110-118B.",
+  "asked_utc": "2026-07-27T02:57:14+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.nvda125",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.15,
+  "rationale": "Would require unusually steep acceleration beyond current guidance trajectory.",
+  "asked_utc": "2026-07-27T02:57:14+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.both",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.16,
+  "rationale": "Joint probability of both aggressive growth outcomes occurring, with some positive correlation from shared AI capex cycle.",
+  "asked_utc": "2026-07-27T02:57:14+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.orcl_g_nvda",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.42,
+  "rationale": "Conditioning on strong Nvidia growth signals robust AI demand that likely also boosts Oracle's contracted RPO.",
+  "asked_utc": "2026-07-27T02:57:14+00:00",
+  "arm": "joint",
+  "sample": 0
+ },
+ {
+  "tid": "semis_ai_compute_buildout.either",
+  "model": "claude-sonnet-5+joint",
+  "p": 0.58,
+  "rationale": "Union of two moderately likely events with some positive correlation reduces from simple sum.",
+  "asked_utc": "2026-07-27T02:57:14+00:00",
+  "arm": "joint",
+  "sample": 0
+ }
+]
