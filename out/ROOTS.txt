@@ -20,28 +20,28 @@
 
 label    : claude-opus-5
 model    : claude-opus-5
-n        : 240
-asof_utc : 2026-07-27T03:01:35.401312+00:00
+n        : 720
+asof_utc : 2026-07-27T13:43:08.418687+00:00
 source   : forecasts_claude-opus-5.json
-root     : d15545067fddd0d44bce02bc442d1862233a4b8053d9482729d051f70cb316bc
+root     : 36a72edbd9d95e3f1191adc256d8422cbb11584ada6ea906b6612963684a2f78
 
 label    : claude-opus-5_joint
 model    : claude-opus-5+joint
 n        : 240
-asof_utc : 2026-07-27T03:01:35.401312+00:00
+asof_utc : 2026-07-27T13:43:08.418687+00:00
 source   : forecasts_claude-opus-5_joint.json
 root     : c71354f180934469e787bf36475237597f18cd221c9efc81879b29b5385d9cb4
 
 label    : claude-sonnet-5
 model    : claude-sonnet-5
-n        : 240
-asof_utc : 2026-07-27T03:01:35.401312+00:00
+n        : 720
+asof_utc : 2026-07-27T13:43:08.418687+00:00
 source   : forecasts_claude-sonnet-5.json
-root     : fa1dac0130e865ca3dea4b3350e705c31d569f4b8f99527cd97fdb0b5b52b3bf
+root     : f92de5c361e231fb0ff0ec0f6817bb703151cfd2257ba4078f46bc249935a6b4
 
 label    : claude-sonnet-5_joint
 model    : claude-sonnet-5+joint
 n        : 240
-asof_utc : 2026-07-27T03:01:35.401312+00:00
+asof_utc : 2026-07-27T13:43:08.418687+00:00
 source   : forecasts_claude-sonnet-5_joint.json
 root     : e67c8b05c3052e29203b9c09e80b295e85d322e529d18499280d08e982aa9431
